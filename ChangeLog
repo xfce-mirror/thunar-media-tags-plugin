@@ -1,5 +1,12 @@
 2006-03-23  Jannis Pohlmann <jannis@xfce.org>
 
+  * thunar-tag-renamer-plugin/thunar-sbr-tag-renamer.{c,h}: Add
+    more naming schemes. Implement lowercase and space replacing 
+    options.
+  * po/*.*: Update pot-file and German translations.
+
+2006-03-23  Jannis Pohlmann <jannis@xfce.org>
+
   * configure.in.in, Makefile.am: Added intltool support.
   * po/de.po, po/POTFILES, po/thunar-tag-renamer-plugin.pot: Updated 
     translation files as well as the German translations.

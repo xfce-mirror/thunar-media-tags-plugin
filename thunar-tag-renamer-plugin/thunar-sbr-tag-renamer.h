@@ -35,7 +35,12 @@ G_BEGIN_DECLS;
  **/
 typedef enum
 {
-  THUNAR_SBR_TAG_RENAMER_SCHEME_TRACK_ARTIST_SONG,
+  THUNAR_SBR_TAG_RENAMER_SCHEME_TRACK_TITLE,
+  THUNAR_SBR_TAG_RENAMER_SCHEME_TRACK_ARTIST_TITLE,
+  THUNAR_SBR_TAG_RENAMER_SCHEME_TITLE,
+  THUNAR_SBR_TAG_RENAMER_SCHEME_ARTIST_TITLE,
+  THUNAR_SBR_TAG_RENAMER_SCHEME_TRACK_DOT_TITLE,
+  THUNAR_SBR_TAG_RENAMER_SCHEME_TRACK_DOT_ARTIST_TITLE,
 } ThunarSbrTagRenamerScheme;
 
 GType thunar_sbr_tag_renamer_scheme_get_type (void) G_GNUC_CONST G_GNUC_INTERNAL;
@@ -53,14 +58,20 @@ typedef struct _ThunarSbrTagRenamer ThunarSbrTagRenamer;
 #define THUNAR_SBR_IS_TAG_RENAMER_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), THUNAR_SBR_TYPE_TAG_RENAMER))
 #define THUNAR_SBR_TAG_RENAMER_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), THUNAR_SBR_TYPE_TAG_RENAMER, ThunarSbrTagRenamerClass))
 
-GType                    thunar_sbr_tag_renamer_get_type      (void) G_GNUC_CONST G_GNUC_INTERNAL;
-void                     thunar_sbr_tag_renamer_register_type (ThunarxProviderPlugin *plugin) G_GNUC_INTERNAL;
+GType                    thunar_sbr_tag_renamer_get_type            (void) G_GNUC_CONST G_GNUC_INTERNAL;
+void                     thunar_sbr_tag_renamer_register_type       (ThunarxProviderPlugin    *plugin) G_GNUC_INTERNAL;
 
-ThunarSbrTagRenamer      *thunar_sbr_tag_renamer_new          (void) G_GNUC_CONST G_GNUC_INTERNAL G_GNUC_MALLOC;
+ThunarSbrTagRenamer      *thunar_sbr_tag_renamer_new                (void) G_GNUC_CONST G_GNUC_INTERNAL G_GNUC_MALLOC;
 
-ThunarSbrTagRenamerScheme thunar_sbr_tag_renamer_get_scheme   (ThunarSbrTagRenamer      *tag_renamer) G_GNUC_INTERNAL;
-void                      thunar_sbr_tag_renamer_set_scheme   (ThunarSbrTagRenamer      *tag_renamer,
-                                                               ThunarSbrTagRenamerScheme scheme) G_GNUC_INTERNAL;
+ThunarSbrTagRenamerScheme thunar_sbr_tag_renamer_get_scheme         (ThunarSbrTagRenamer      *tag_renamer) G_GNUC_INTERNAL;
+void                      thunar_sbr_tag_renamer_set_scheme         (ThunarSbrTagRenamer      *tag_renamer,
+                                                                     ThunarSbrTagRenamerScheme scheme) G_GNUC_INTERNAL;
+gboolean                  thunar_sbr_tag_renamer_get_replace_spaces (ThunarSbrTagRenamer      *tag_renamer) G_GNUC_INTERNAL;
+void                      thunar_sbr_tag_renamer_set_replace_spaces (ThunarSbrTagRenamer      *tag_renamer,
+                                                                     gboolean                  replace) G_GNUC_INTERNAL;
+gboolean                  thunar_sbr_tag_renamer_get_lowercase      (ThunarSbrTagRenamer      *tag_renamer) G_GNUC_INTERNAL;
+void                      thunar_sbr_tag_renamer_set_lowercase      (ThunarSbrTagRenamer      *tag_renamer,
+                                                                     gboolean                  lowercase) G_GNUC_INTERNAL;
 
 G_END_DECLS;
 

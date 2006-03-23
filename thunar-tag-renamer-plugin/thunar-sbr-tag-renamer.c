@@ -54,10 +54,13 @@ thunar_sbr_register_tag_enum_types (ThunarxProviderPlugin *plugin)
 {
   static const GEnumValue tag_renamer_scheme_values[] =
   {
-    { THUNAR_SBR_TAG_RENAMER_SCHEME_TRACK_ARTIST_SONG, "THUNAR_SBR_TAG_RENAMER_SCHEME_TRACK_ARTIST_SONG", 
-      N_ ("Track - Artist - Title"), },
-    { 0,                                               NULL,                                              
-      NULL, },
+    { THUNAR_SBR_TAG_RENAMER_SCHEME_TRACK_TITLE,            "THUNAR_SBR_TAG_RENAMER_SCHEME_TRACK_TITLE",            N_ ("Track - Title"), },
+    { THUNAR_SBR_TAG_RENAMER_SCHEME_TRACK_ARTIST_TITLE,     "THUNAR_SBR_TAG_RENAMER_SCHEME_TRACK_ARTIST_TITLE",     N_ ("Track - Artist - Title"), },
+    { THUNAR_SBR_TAG_RENAMER_SCHEME_TITLE,                  "THUNAR_SBR_TAG_RENAMER_SCHEME_TITLE",                  N_ ("Title"),  },
+    { THUNAR_SBR_TAG_RENAMER_SCHEME_ARTIST_TITLE,           "THUNAR_SBR_TAG_RENAMER_SCHEME_ARTIST_TITLE",           N_ ("Artist - Title"), },
+    { THUNAR_SBR_TAG_RENAMER_SCHEME_TRACK_DOT_TITLE,        "THUNAR_SBR_TAG_RENAMER_SCHEME_TRACK_DOT_TITLE",        N_ ("Track. Title"), },
+    { THUNAR_SBR_TAG_RENAMER_SCHEME_TRACK_DOT_ARTIST_TITLE, "THUNAR_SBR_TAG_RENAMER_SCHEME_TRACK_DOT_ARTIST_TITLE", N_ ("Track. Artist - Title"), },
+    { 0,                                                    NULL,                                                   NULL, },
   };
 
   tag_renamer_scheme_type = thunarx_provider_plugin_register_enum (plugin, "ThunarSbrTagRenamerScheme", tag_renamer_scheme_values);
@@ -70,6 +73,8 @@ enum
 {
   PROP_0,
   PROP_NAMING_SCHEME,
+  PROP_REPLACE_SPACES,
+  PROP_LOWERCASE,
 };
 
 
@@ -102,8 +107,13 @@ struct _ThunarSbrTagRenamer
 {
   ThunarxRenamer __parent__;
 
+  /* Widgets */
+  GtkTooltips              *tooltips;
+
   /* Properties */
   ThunarSbrTagRenamerScheme scheme;
+  gboolean                  replace_spaces;
+  gboolean                  lowercase;
 };
 
 
@@ -141,8 +151,34 @@ thunar_sbr_tag_renamer_class_init (ThunarSbrTagRenamerClass *klass)
                                                       "naming-scheme",
                                                       "naming-scheme",
                                                       THUNAR_SBR_TYPE_TAG_RENAMER_SCHEME,
-                                                      THUNAR_SBR_TAG_RENAMER_SCHEME_TRACK_ARTIST_SONG,
+                                                      THUNAR_SBR_TAG_RENAMER_SCHEME_TRACK_TITLE,
                                                       G_PARAM_READWRITE));
+
+  /**
+   * ThunarSbrTagRenamer:replace-spaces:
+   *
+   * Whether spaces should be replaced with _ or not
+   **/
+  g_object_class_install_property (gobject_class,
+                                   PROP_REPLACE_SPACES,
+                                   g_param_spec_boolean ("replace-spaces",
+                                                         "replace-spaces",
+                                                         "replace-spaces",
+                                                         FALSE,
+                                                         G_PARAM_READWRITE));
+
+  /**
+   * ThunarSbrTagRenamer:lowercase:
+   *
+   * Whether all chars will be converted to lowercase.
+   **/
+  g_object_class_install_property (gobject_class,
+                                   PROP_LOWERCASE,
+                                   g_param_spec_boolean ("lowercase",
+                                                         "lowercase",
+                                                         "lowercase",
+                                                         FALSE,
+                                                         G_PARAM_READWRITE));
 }
 
 
@@ -153,14 +189,24 @@ thunar_sbr_tag_renamer_init (ThunarSbrTagRenamer *tag_renamer)
   AtkRelationSet *relations;
   AtkRelation    *relation;
   AtkObject      *object;
+  GtkWidget      *vbox;
   GtkWidget      *hbox;
   GtkWidget      *label;
   GtkWidget      *combo;
+  GtkWidget      *button;
   GEnumClass     *klass;
   gint            n;
+
+  /* Allocate shared tooltips */
+  tag_renamer->tooltips = gtk_tooltips_new ();
+  exo_gtk_object_ref_sink (GTK_OBJECT (tag_renamer->tooltips));
+
+  vbox = gtk_vbox_new (FALSE, 12);
+  gtk_box_pack_start (GTK_BOX (tag_renamer), vbox, FALSE, FALSE, 0);
+  gtk_widget_show (vbox);
   
   hbox = gtk_hbox_new (FALSE, 12);
-  gtk_box_pack_start (GTK_BOX (tag_renamer), hbox, FALSE, FALSE, 0);
+  gtk_box_pack_start (GTK_BOX (vbox), hbox, FALSE, FALSE, 0);
   gtk_widget_show (hbox);
 
   /* Naming scheme label */
@@ -185,6 +231,24 @@ thunar_sbr_tag_renamer_init (ThunarSbrTagRenamer *tag_renamer)
   relation = atk_relation_new (&object, 1, ATK_RELATION_LABEL_FOR);
   atk_relation_set_add (relations, relation);
   g_object_unref (G_OBJECT (relation));
+
+  hbox = gtk_hbox_new (FALSE, 12);
+  gtk_box_pack_start (GTK_BOX (vbox), hbox, FALSE, FALSE, 0);
+  gtk_widget_show (hbox);
+
+  button = gtk_check_button_new_with_mnemonic (_("_Replace spaces with underscores"));
+  exo_mutual_binding_new (G_OBJECT (button), "active", G_OBJECT (tag_renamer), "replace-spaces");
+  gtk_tooltips_set_tip (tag_renamer->tooltips, button, _("Activating this option will replace all spaces in the target filename "
+        "with underscores."), NULL);
+  gtk_box_pack_start (GTK_BOX (hbox), button, FALSE, FALSE, 0);
+  gtk_widget_show (button);
+
+  button = gtk_check_button_new_with_mnemonic (_("Convert to _lowercase"));
+  exo_mutual_binding_new (G_OBJECT (button), "active", G_OBJECT (tag_renamer), "lowercase");
+  gtk_tooltips_set_tip (tag_renamer->tooltips, button, _("If you activate this, the resulting filename will not contain any "
+        "uppercase letters."), NULL);
+  gtk_box_pack_start (GTK_BOX (hbox), button, FALSE, FALSE, 0);
+  gtk_widget_show (button);
 }
 
 
@@ -212,6 +276,14 @@ thunar_sbr_tag_renamer_get_property (GObject    *object,
     case PROP_NAMING_SCHEME:
       g_value_set_enum (value, thunar_sbr_tag_renamer_get_scheme (tag_renamer));
       break;
+
+    case PROP_REPLACE_SPACES:
+      g_value_set_boolean (value, thunar_sbr_tag_renamer_get_replace_spaces (tag_renamer));
+      break;
+
+    case PROP_LOWERCASE:
+      g_value_set_boolean (value, thunar_sbr_tag_renamer_get_lowercase (tag_renamer));
+      break;
       
     default:
       G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
@@ -233,6 +305,14 @@ thunar_sbr_tag_renamer_set_property (GObject      *object,
     {
     case PROP_NAMING_SCHEME:
       thunar_sbr_tag_renamer_set_scheme (tag_renamer, g_value_get_enum (value));
+      break;
+
+    case PROP_REPLACE_SPACES:
+      thunar_sbr_tag_renamer_set_replace_spaces (tag_renamer, g_value_get_boolean (value));
+      break;
+
+    case PROP_LOWERCASE:
+      thunar_sbr_tag_renamer_set_lowercase (tag_renamer, g_value_get_boolean (value));
       break;
       
     default:
@@ -307,13 +387,46 @@ thunar_sbr_tag_renamer_process (ThunarxRenamer  *renamer,
 
   switch (thunar_sbr_tag_renamer_get_scheme (tag_renamer))
     {
-    case THUNAR_SBR_TAG_RENAMER_SCHEME_TRACK_ARTIST_SONG:
-      //if (thunar_sb_tag_renamer_get_replace_spaces (tag_renamer))
-        result = g_strconcat (track, "_-_", artist, "_-_", title, NULL);
-      //else
-      //  result = g_strconcat (track, " - ", artist, " - ", title, NULL);
+    case THUNAR_SBR_TAG_RENAMER_SCHEME_TRACK_TITLE:
+      result = g_strconcat (track, " - ", title, NULL);
+      break;
+
+    case THUNAR_SBR_TAG_RENAMER_SCHEME_TRACK_ARTIST_TITLE:
+      result = g_strconcat (track, " - ", artist, " - ", title, NULL);
+      break;
+
+    case THUNAR_SBR_TAG_RENAMER_SCHEME_TITLE:
+      result = g_strconcat (title, NULL);
+      break;
+
+    case THUNAR_SBR_TAG_RENAMER_SCHEME_ARTIST_TITLE:
+      result = g_strconcat (artist, " - ", title, NULL);
+      break;
+
+    case THUNAR_SBR_TAG_RENAMER_SCHEME_TRACK_DOT_TITLE:
+      result = g_strconcat (track, ". ", title, NULL);
+      break;
+
+    case THUNAR_SBR_TAG_RENAMER_SCHEME_TRACK_DOT_ARTIST_TITLE:
+      result = g_strconcat (track, ". ", artist, " - ", title, NULL);
+      break;
+    
+    default:
+      result = g_strdup (text);
       break;
     }
+
+  /* Replace spaces if requested */
+  if (thunar_sbr_tag_renamer_get_replace_spaces (tag_renamer))
+    result = g_strdelimit (result, " ", '_');
+  
+  /* Convert to lowercase if requested */
+  if (thunar_sbr_tag_renamer_get_lowercase (tag_renamer))
+  {
+    gchar *tmp = result;
+    result = g_utf8_strdown (result, -1);
+    g_free (tmp);
+  }
   
   /* Free strings */
   g_free (filename);
@@ -325,10 +438,7 @@ thunar_sbr_tag_renamer_process (ThunarxRenamer  *renamer,
   /* Destroy the taglib file */
   taglib_file_free (taglib_file);
 
-  if (G_LIKELY (result != NULL))
-    return result;
-  else
-    return g_strdup (text);
+  return result;
 }
 
 
@@ -362,7 +472,7 @@ thunar_sbr_tag_renamer_new (void)
 ThunarSbrTagRenamerScheme
 thunar_sbr_tag_renamer_get_scheme (ThunarSbrTagRenamer *tag_renamer)
 {
-  g_return_val_if_fail (THUNAR_SBR_IS_TAG_RENAMER (tag_renamer), THUNAR_SBR_TAG_RENAMER_SCHEME_TRACK_ARTIST_SONG);
+  g_return_val_if_fail (THUNAR_SBR_IS_TAG_RENAMER (tag_renamer), THUNAR_SBR_TAG_RENAMER_SCHEME_TRACK_TITLE);
   return tag_renamer->scheme;
 }
 
@@ -391,6 +501,98 @@ thunar_sbr_tag_renamer_set_scheme (ThunarSbrTagRenamer      *tag_renamer,
 
   /* Notify listeners */
   g_object_notify (G_OBJECT (tag_renamer), "naming-scheme");
+
+  /* Emit the "changed" signal */
+  thunarx_renamer_changed (THUNARX_RENAMER (tag_renamer));
+}
+
+
+
+/**
+ * thunar_sbr_tag_renamer_get_replace_spaces:
+ * @tag_renamer : a #ThunarSbrTagRenamer.
+ *
+ * Returns whether spaces are going to be replaced with underscores or not.
+ *
+ * Return value: whether spaces are going to be replaced or not.
+ **/
+gboolean
+thunar_sbr_tag_renamer_get_replace_spaces (ThunarSbrTagRenamer *tag_renamer)
+{
+  g_return_val_if_fail (THUNAR_SBR_IS_TAG_RENAMER (tag_renamer), FALSE);
+  return tag_renamer->replace_spaces;
+}
+
+
+
+/**
+ * thunar_sbr_tag_renamer_set_replace_spaces:
+ * @tag_renamer : a #ThunarSbrTagRenamer.
+ * @replace     : a boolean flag.
+ *
+ * Sets whether spaces are going to be replaced with underscores or not.
+ **/
+void
+thunar_sbr_tag_renamer_set_replace_spaces (ThunarSbrTagRenamer *tag_renamer,
+                                           gboolean             replace)
+{
+  g_return_if_fail (THUNAR_SBR_IS_TAG_RENAMER (tag_renamer));
+
+  /* Abort if flag is already set */
+  if (G_UNLIKELY (tag_renamer->replace_spaces == replace))
+    return;
+
+  /* Apply the new setting */
+  tag_renamer->replace_spaces = replace;
+
+  /* Notify listeners */
+  g_object_notify (G_OBJECT (tag_renamer), "replace-spaces");
+
+  /* Emit the "changed" signal */
+  thunarx_renamer_changed (THUNARX_RENAMER (tag_renamer));
+}
+
+
+
+/**
+ * thunar_sbr_tag_renamer_get_lowercase:
+ * @tag_renamer : a #ThunarSbrTagRenamer.
+ *
+ * Returns whether the resulting filename will be completely lowercase.
+ *
+ * Return value: whether all letters will be lowercase.
+ **/
+gboolean
+thunar_sbr_tag_renamer_get_lowercase (ThunarSbrTagRenamer *tag_renamer)
+{
+  g_return_val_if_fail (THUNAR_SBR_IS_TAG_RENAMER (tag_renamer), FALSE);
+  return tag_renamer->lowercase;
+}
+
+
+
+/**
+ * thunar_sbr_tag_renamer_set_lowercase:
+ * @tag_renamer : a #ThunarSbrTagRenamer.
+ * @lowercase     : a boolean flag.
+ *
+ * Sets whether all letters are going to be converted to lowercase.
+ **/
+void
+thunar_sbr_tag_renamer_set_lowercase (ThunarSbrTagRenamer *tag_renamer,
+                                      gboolean             lowercase)
+{
+  g_return_if_fail (THUNAR_SBR_IS_TAG_RENAMER (tag_renamer));
+
+  /* Abort if flag is already set */
+  if (G_UNLIKELY (tag_renamer->lowercase == lowercase))
+    return;
+
+  /* Apply the new setting */
+  tag_renamer->lowercase = lowercase;
+
+  /* Notify listeners */
+  g_object_notify (G_OBJECT (tag_renamer), "lowercase");
 
   /* Emit the "changed" signal */
   thunarx_renamer_changed (THUNARX_RENAMER (tag_renamer));

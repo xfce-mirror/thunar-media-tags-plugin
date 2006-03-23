@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: thunar-tag-renamer-plugin 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-03-23 09:14+0100\n"
-"PO-Revision-Date: 2006-03-01 19:05+0100\n"
+"POT-Creation-Date: 2006-03-23 10:48+0100\n"
+"PO-Revision-Date: 2006-03-23 10:49+0100\n"
 "Last-Translator: Jannis Pohlmann <jannis@xfce.org>\n"
 "Language-Team: German <de@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -16,15 +16,55 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
+#: ../thunar-tag-renamer-plugin/thunar-sbr-tag-renamer.c:57
+msgid "Track - Title"
+msgstr "Titelnummer - Titel"
+
 #: ../thunar-tag-renamer-plugin/thunar-sbr-tag-renamer.c:58
 msgid "Track - Artist - Title"
 msgstr "Titelnummer - Interpret - Titel"
 
+#: ../thunar-tag-renamer-plugin/thunar-sbr-tag-renamer.c:59
+msgid "Title"
+msgstr "Title"
+
+#: ../thunar-tag-renamer-plugin/thunar-sbr-tag-renamer.c:60
+msgid "Artist - Title"
+msgstr "Interpret - Titel"
+
+#: ../thunar-tag-renamer-plugin/thunar-sbr-tag-renamer.c:61
+msgid "Track. Title"
+msgstr "Titelnummer. Titel"
+
+#: ../thunar-tag-renamer-plugin/thunar-sbr-tag-renamer.c:62
+msgid "Track. Artist - Title"
+msgstr "Titelnummer. Interpret - Titel"
+
 #. Naming scheme label
-#: ../thunar-tag-renamer-plugin/thunar-sbr-tag-renamer.c:167
+#: ../thunar-tag-renamer-plugin/thunar-sbr-tag-renamer.c:213
 msgid "Naming _scheme:"
 msgstr "_Schema:"
 
-#: ../thunar-tag-renamer-plugin/thunar-sbr-tag-renamer.c:347
+#: ../thunar-tag-renamer-plugin/thunar-sbr-tag-renamer.c:239
+msgid "_Replace spaces with underscores"
+msgstr "Leerzeichen durch Unterstriche e_rsetzen"
+
+#: ../thunar-tag-renamer-plugin/thunar-sbr-tag-renamer.c:241
+msgid ""
+"Activating this option will replace all spaces in the target filename with "
+"underscores."
+msgstr "Mit dieser Option werden alle Leerzeichen durch Unterstriche ersetzt."
+
+#: ../thunar-tag-renamer-plugin/thunar-sbr-tag-renamer.c:246
+msgid "Convert to _lowercase"
+msgstr "In K_leinbuchstaben umwandeln"
+
+#: ../thunar-tag-renamer-plugin/thunar-sbr-tag-renamer.c:248
+msgid ""
+"If you activate this, the resulting filename will not contain any uppercase "
+"letters."
+msgstr "Konvertiert alle Zeichen in Kleinbuchstaben."
+
+#: ../thunar-tag-renamer-plugin/thunar-sbr-tag-renamer.c:457
 msgid "ID3 and Vorbis Tags"
 msgstr "ID3- und Vorbis-Tags"

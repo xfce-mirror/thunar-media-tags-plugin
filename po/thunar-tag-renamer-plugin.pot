@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-03-23 09:14+0100\n"
+"POT-Creation-Date: 2006-03-23 10:48+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,15 +16,55 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
+#: ../thunar-tag-renamer-plugin/thunar-sbr-tag-renamer.c:57
+msgid "Track - Title"
+msgstr ""
+
 #: ../thunar-tag-renamer-plugin/thunar-sbr-tag-renamer.c:58
 msgid "Track - Artist - Title"
 msgstr ""
 
+#: ../thunar-tag-renamer-plugin/thunar-sbr-tag-renamer.c:59
+msgid "Title"
+msgstr ""
+
+#: ../thunar-tag-renamer-plugin/thunar-sbr-tag-renamer.c:60
+msgid "Artist - Title"
+msgstr ""
+
+#: ../thunar-tag-renamer-plugin/thunar-sbr-tag-renamer.c:61
+msgid "Track. Title"
+msgstr ""
+
+#: ../thunar-tag-renamer-plugin/thunar-sbr-tag-renamer.c:62
+msgid "Track. Artist - Title"
+msgstr ""
+
 #. Naming scheme label
-#: ../thunar-tag-renamer-plugin/thunar-sbr-tag-renamer.c:167
+#: ../thunar-tag-renamer-plugin/thunar-sbr-tag-renamer.c:213
 msgid "Naming _scheme:"
 msgstr ""
 
-#: ../thunar-tag-renamer-plugin/thunar-sbr-tag-renamer.c:347
+#: ../thunar-tag-renamer-plugin/thunar-sbr-tag-renamer.c:239
+msgid "_Replace spaces with underscores"
+msgstr ""
+
+#: ../thunar-tag-renamer-plugin/thunar-sbr-tag-renamer.c:241
+msgid ""
+"Activating this option will replace all spaces in the target filename with "
+"underscores."
+msgstr ""
+
+#: ../thunar-tag-renamer-plugin/thunar-sbr-tag-renamer.c:246
+msgid "Convert to _lowercase"
+msgstr ""
+
+#: ../thunar-tag-renamer-plugin/thunar-sbr-tag-renamer.c:248
+msgid ""
+"If you activate this, the resulting filename will not contain any uppercase "
+"letters."
+msgstr ""
+
+#: ../thunar-tag-renamer-plugin/thunar-sbr-tag-renamer.c:457
 msgid "ID3 and Vorbis Tags"
 msgstr ""
