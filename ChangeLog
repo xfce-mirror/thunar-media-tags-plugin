@@ -1,5 +1,15 @@
 2006-03-23  Jannis Pohlmann <jannis@xfce.org>
 
+  * thunar-plugin/Makefile.am, 
+    thunar-plugin/tag-renamer-property-page.h,
+    thunar-plugin/tag-renamer-property-page.c,
+    thunar-plugin/tag-renamer-plugin.c,
+    thunar-plugin/tag-renamer-provider.c: Added a property page class 
+    for editing tags in the file properties dialog. Implemented 
+    ThunarxPropertyPageProvider in the plugin.
+
+2006-03-23  Jannis Pohlmann <jannis@xfce.org>
+
   * configure.in.in: Hungarian translations added.
 
 2006-03-23  Jannis Pohlmann <jannis@xfce.org>

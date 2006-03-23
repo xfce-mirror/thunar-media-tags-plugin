@@ -17,6 +17,8 @@ thunar_tag_renamer_plugin_la_SOURCES =					\
 	tag-renamer-provider.c						\
 	tag-renamer.h							\
 	tag-renamer.c							\
+	tag-renamer-property-page.h					\
+	tag-renamer-property-page.c					\
 	tag-renamer-plugin.c
 
 thunar_tag_renamer_plugin_la_CFLAGS =					\

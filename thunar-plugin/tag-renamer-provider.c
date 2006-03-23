@@ -1,4 +1,4 @@
-/* $Id: tag-renamer-provider.c 1205 2006-03-23 12:43:58Z jpohlmann $ */
+/* $Id$ */
 /*-
  * Copyright (c) 2006 Benedikt Meurer <benny@xfce.org>
  *                    Jannis Pohlmann <jannis@xfce.org>
@@ -23,15 +23,21 @@
 #include <config.h>
 #endif
 
+#include <taglib/tag_c.h>
+
 #include <tag-renamer-provider.h>
 #include <tag-renamer.h>
+#include <tag-renamer-property-page.h>
 
 
 
-static void   tag_renamer_provider_class_init            (TagRenamerProviderClass     *klass);
-static void   tag_renamer_provider_renamer_provider_init (ThunarxRenamerProviderIface *iface);
-static void   tag_renamer_provider_init                  (TagRenamerProvider          *sbr_provider);
-static GList *tag_renamer_provider_get_renamers          (ThunarxRenamerProvider      *renamer_provider);
+static void   tag_renamer_provider_class_init                  (TagRenamerProviderClass          *klass);
+static void   tag_renamer_provider_renamer_provider_init       (ThunarxRenamerProviderIface      *iface);
+static void   tag_renamer_provider_init                        (TagRenamerProvider               *sbr_provider);
+static GList *tag_renamer_provider_get_renamers                (ThunarxRenamerProvider           *renamer_provider);
+static void   tag_renamer_provider_property_page_provider_init (ThunarxPropertyPageProviderIface *iface);
+static GList *tag_renamer_provider_get_pages                   (ThunarxPropertyPageProvider      *renamer_provider,
+                                                                GList                            *files);
 
 
 
@@ -51,7 +57,9 @@ THUNARX_DEFINE_TYPE_WITH_CODE (TagRenamerProvider,
                                tag_renamer_provider,
                                G_TYPE_OBJECT,
                                THUNARX_IMPLEMENT_INTERFACE (THUNARX_TYPE_RENAMER_PROVIDER,
-                                                            tag_renamer_provider_renamer_provider_init));
+                                                            tag_renamer_provider_renamer_provider_init)
+                               THUNARX_IMPLEMENT_INTERFACE (THUNARX_TYPE_PROPERTY_PAGE_PROVIDER,
+                                                            tag_renamer_provider_property_page_provider_init));
 
 
 
@@ -89,6 +97,50 @@ tag_renamer_provider_get_renamers (ThunarxRenamerProvider *renamer_provider)
 
 
 
+static void
+tag_renamer_provider_property_page_provider_init (ThunarxPropertyPageProviderIface *iface)
+{
+  iface->get_pages = tag_renamer_provider_get_pages;
+}
 
 
 
+static GList*
+tag_renamer_provider_get_pages (ThunarxPropertyPageProvider *page_provider, GList *files)
+{
+  GList *pages = NULL;
+
+  if (g_list_length (files) != 1) 
+    return NULL;
+  
+  gboolean supported = TRUE;
+  
+  GList *file = NULL;
+  for (file = g_list_last (files); file != NULL; file = file->prev)
+    {
+      ThunarxFileInfo *info = THUNARX_FILE_INFO (file->data);
+      
+      gchar *uri = thunarx_file_info_get_uri (info);
+      gchar *filename = g_filename_from_uri (uri, NULL, NULL);
+
+      TagLib_File *taglib_file = taglib_file_new (filename);
+
+      if (G_LIKELY (taglib_file == NULL))
+        supported = FALSE;
+      else
+        taglib_file_free (taglib_file);
+
+      g_free (filename);
+      g_free (uri);
+
+      if (!supported)
+        break;
+    }
+
+  g_print ("%d\n", supported);
+
+  if (supported)
+    pages = g_list_prepend (pages, tag_renamer_property_page_new ());
+
+  return pages;
+}

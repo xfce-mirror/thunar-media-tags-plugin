@@ -1,4 +1,4 @@
-/* $Id: tag-renamer.c 1205 2006-03-23 12:43:58Z jpohlmann $ */
+/* $Id$ */
 /*-
  * Copyright (c) 2006 Jannis Pohlmann <jannis@xfce.org>
  *

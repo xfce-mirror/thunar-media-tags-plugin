@@ -1,4 +1,4 @@
-/* $Id: thunar-sbr-tag-renamer-provider.h 1205 2006-03-23 12:43:58Z jpohlmann $ */
+/* $Id$ */
 /*-
  * Copyright (c) 2006 Benedikt Meurer <benny@xfce.org>
  *                    Jannis Pohlmann <jannis@xfce.org>

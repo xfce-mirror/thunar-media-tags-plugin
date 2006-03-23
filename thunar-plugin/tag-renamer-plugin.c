@@ -1,4 +1,4 @@
-/* $Id: thunar-tag-renamer-plugin.c 1205 2006-03-23 12:43:58Z jpohlmann $ */
+/* $Id$ */
 /*-
  * Copyright (c) 2006 Jannis Pohlmann <jannis@xfce.org>
  *
@@ -26,6 +26,7 @@
 
 #include <tag-renamer-provider.h>
 #include <tag-renamer.h>
+#include <tag-renamer-property-page.h>
 
 
 
@@ -62,6 +63,7 @@ thunar_extension_initialize (ThunarxProviderPlugin *plugin)
   /* Register the types provided by this plugin */
   tag_renamer_provider_register_type (plugin);
   tag_renamer_register_type (plugin);
+  tag_renamer_property_page_register_type (plugin);
 
   /* Setup the plugin provider type list */
   type_list[0] = TYPE_TAG_RENAMER_PROVIDER;

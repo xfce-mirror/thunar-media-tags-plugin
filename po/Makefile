@@ -19,7 +19,7 @@
 
 GETTEXT_PACKAGE = thunar-tag-renamer-plugin
 PACKAGE = thunar-tag-renamer-plugin
-VERSION = 0.1.0svn-r01204
+VERSION = 0.1.0svn-r01211
 
 SHELL = /bin/sh
 
@@ -65,8 +65,8 @@ INCLUDES = -I.. -I$(top_srcdir)/intl
 COMPILE = $(CC) -c $(DEFS) $(INCLUDES) $(CPPFLAGS) $(CFLAGS) $(XCFLAGS)
 
 SOURCES = 
-POFILES =  de.po
-GMOFILES =  de.gmo
+POFILES =  de.po hu.po
+GMOFILES =  de.gmo hu.gmo
 DISTFILES = ChangeLog Makefile.in.in POTFILES.in \
 $(POFILES) $(SOURCES)
 EXTRA_DISTFILES = POTFILES.skip Makevars LINGUAS
@@ -76,7 +76,7 @@ POTFILES = \
 	../thunar-plugin/tag-renamer.c \
 	../thunar-plugin/tag-renamer-plugin.c
 
-CATALOGS =  de.gmo
+CATALOGS =  de.gmo hu.gmo
 CATOBJEXT = .gmo
 
 .SUFFIXES:
