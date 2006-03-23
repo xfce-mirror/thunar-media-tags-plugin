@@ -59,7 +59,7 @@ AC_PROG_LIBTOOL()
 dnl ******************************
 dnl *** Check for i18n support ***
 dnl ******************************
-XDT_I18N([de hu])
+XDT_I18N([de el hu])
 
 dnl ***********************************
 dnl *** Check for required packages ***

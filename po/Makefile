@@ -19,7 +19,7 @@
 
 GETTEXT_PACKAGE = thunar-tag-renamer-plugin
 PACKAGE = thunar-tag-renamer-plugin
-VERSION = 0.1.0svn-r01211
+VERSION = 0.1.0svn-r01213
 
 SHELL = /bin/sh
 
