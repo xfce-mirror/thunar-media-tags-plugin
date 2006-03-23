@@ -1,0 +1,31 @@
+What is it?
+===========
+
+The thunar-tag-renamer-plugin is a plugin for the Thunar File Manager, 
+which adds ID3/OGG tag support to the bulk rename dialog.
+
+
+Required packages
+=================
+
+thunar-tag-renamer-plugin depends on the following packages:
+
+ - Thunar 1.0 (or a recent revision from SVN)
+ - TagLib 1.4 or above
+
+
+Installation
+============
+
+The file 'INSTALL' contains generic installation instructions. For more
+detailed information, visit the Thunar website at http://thunar.xfce.org/, my 
+personal website at http://sten-net.de/ or the developer platform on
+http://developer.berlios.de/projects/xfce-goodies/.
+
+
+How to report bugs?
+===================
+
+Bugs should be reported to the goodies bugzilla on 
+http://developer.berlios.de/projects/xfce-goodies/.
+
