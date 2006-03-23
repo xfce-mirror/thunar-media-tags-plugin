@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: thunar-tag-renamer-plugin 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-03-23 13:20+0100\n"
-"PO-Revision-Date: 2006-03-23 13:21+0100\n"
+"POT-Creation-Date: 2006-03-23 16:51+0100\n"
+"PO-Revision-Date: 2006-03-23 16:52+0100\n"
 "Last-Translator: Jannis Pohlmann <jannis@xfce.org>\n"
 "Language-Team: German <de@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -16,79 +16,78 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: ../thunar-tag-renamer-plugin/thunar-sbr-tag-renamer.c:57
+#: ../thunar-plugin/tag-renamer.c:57
 msgid "Title"
 msgstr "Title"
 
-#: ../thunar-tag-renamer-plugin/thunar-sbr-tag-renamer.c:58
+#: ../thunar-plugin/tag-renamer.c:58
 msgid "Artist - Title"
 msgstr "Interpret - Titel"
 
-#: ../thunar-tag-renamer-plugin/thunar-sbr-tag-renamer.c:59
+#: ../thunar-plugin/tag-renamer.c:59
 msgid "Track - Title"
 msgstr "Titelnummer - Titel"
 
-#: ../thunar-tag-renamer-plugin/thunar-sbr-tag-renamer.c:60
+#: ../thunar-plugin/tag-renamer.c:60
 msgid "Track - Artist - Title"
 msgstr "Titelnummer - Interpret - Titel"
 
-#: ../thunar-tag-renamer-plugin/thunar-sbr-tag-renamer.c:61
+#: ../thunar-plugin/tag-renamer.c:61
 msgid "Track. Title"
 msgstr "Titelnummer. Titel"
 
-#: ../thunar-tag-renamer-plugin/thunar-sbr-tag-renamer.c:62
+#: ../thunar-plugin/tag-renamer.c:62
 msgid "Track. Artist - Title"
 msgstr "Titelnummer. Interpret - Titel"
 
-#: ../thunar-tag-renamer-plugin/thunar-sbr-tag-renamer.c:63
+#: ../thunar-plugin/tag-renamer.c:63
 msgid "Artist - Track - Title"
 msgstr "Interpret - Titelnummer - Titel"
 
-#: ../thunar-tag-renamer-plugin/thunar-sbr-tag-renamer.c:198
-#: ../thunar-tag-renamer-plugin/thunar-sbr-tag-renamer.c:306
-#: ../thunar-tag-renamer-plugin/thunar-sbr-tag-renamer.c:709
+#: ../thunar-plugin/tag-renamer.c:198 ../thunar-plugin/tag-renamer.c:302
+#: ../thunar-plugin/tag-renamer.c:722
 msgid "Unknown Artist"
 msgstr "Unbekannter Interpret"
 
-#: ../thunar-tag-renamer-plugin/thunar-sbr-tag-renamer.c:211
-#: ../thunar-tag-renamer-plugin/thunar-sbr-tag-renamer.c:307
-#: ../thunar-tag-renamer-plugin/thunar-sbr-tag-renamer.c:760
+#: ../thunar-plugin/tag-renamer.c:211 ../thunar-plugin/tag-renamer.c:303
+#: ../thunar-plugin/tag-renamer.c:773
 msgid "Unknown Title"
 msgstr "Unbekannter Titel"
 
-#: ../thunar-tag-renamer-plugin/thunar-sbr-tag-renamer.c:246
+#. Naming scheme label
+#: ../thunar-plugin/tag-renamer.c:242
 msgid "Naming _scheme:"
 msgstr "_Schema:"
 
-#: ../thunar-tag-renamer-plugin/thunar-sbr-tag-renamer.c:269
-msgid "_Replace spaces with underscores"
-msgstr "Leerzeichen durch Unterstriche e_rsetzen"
+#: ../thunar-plugin/tag-renamer.c:265
+msgid "Use _underscores"
+msgstr "_Unterstriche verwenden"
 
-#: ../thunar-tag-renamer-plugin/thunar-sbr-tag-renamer.c:271
+#: ../thunar-plugin/tag-renamer.c:267
 msgid ""
 "Activating this option will replace all spaces in the target filename with "
 "underscores."
 msgstr "Mit dieser Option werden alle Leerzeichen durch Unterstriche ersetzt."
 
-#: ../thunar-tag-renamer-plugin/thunar-sbr-tag-renamer.c:276
-msgid "Convert to _lowercase"
+#: ../thunar-plugin/tag-renamer.c:272
+msgid "Use _lowercase"
 msgstr "In K_leinbuchstaben umwandeln"
 
-#: ../thunar-tag-renamer-plugin/thunar-sbr-tag-renamer.c:278
+#: ../thunar-plugin/tag-renamer.c:274
 msgid ""
 "If you activate this, the resulting filename will not contain any uppercase "
 "letters."
 msgstr "Konvertiert alle Zeichen in Kleinbuchstaben."
 
-#: ../thunar-tag-renamer-plugin/thunar-sbr-tag-renamer.c:283
+#: ../thunar-plugin/tag-renamer.c:279
 msgid "Default Art_ist:"
 msgstr "Standard_interpret:"
 
-#: ../thunar-tag-renamer-plugin/thunar-sbr-tag-renamer.c:291
+#: ../thunar-plugin/tag-renamer.c:287
 msgid "Text entered in this field is going to replace missing artist tags."
 msgstr ""
 "Hier eingefügter Text ersetzt fehlende Informationen über den Interpret."
 
-#: ../thunar-tag-renamer-plugin/thunar-sbr-tag-renamer.c:552
+#: ../thunar-plugin/tag-renamer.c:565
 msgid "ID3 and Vorbis Tags"
 msgstr "ID3- und Vorbis-Tags"

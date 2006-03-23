@@ -13,11 +13,11 @@ extensions_LTLIBRARIES =						\
 	thunar-tag-renamer-plugin.la
 
 thunar_tag_renamer_plugin_la_SOURCES =					\
-	thunar-sbr-tag-renamer-provider.h				\
-	thunar-sbr-tag-renamer-provider.c				\
-	thunar-sbr-tag-renamer.h					\
-	thunar-sbr-tag-renamer.c					\
-	thunar-tag-renamer-plugin.c
+	tag-renamer-provider.h						\
+	tag-renamer-provider.c						\
+	tag-renamer.h							\
+	tag-renamer.c							\
+	tag-renamer-plugin.c
 
 thunar_tag_renamer_plugin_la_CFLAGS =					\
 	$(EXO_CFLAGS)							\

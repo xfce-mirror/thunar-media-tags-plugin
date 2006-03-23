@@ -1,5 +1,13 @@
 2006-03-23  Jannis Pohlmann <jannis@xfce.org>
 
+  * thunar-plugin/*.{c,h,am}: Renamed all classes, methods and 
+    macros so that they don't use a Thunar, THUNAR or thunar prefix 
+    anymore.
+  * thunar-plugin/tag-renamer.c: Applied Bennys patch, which fixes some
+    memory leaks and adds whitespace removal for tags.
+
+2006-03-23  Jannis Pohlmann <jannis@xfce.org>
+
   * Moved thunar-tag-renamer-plugin/ to thunar-plugin/
 
 2006-03-23  Jannis Pohlmann <jannis@xfce.org>

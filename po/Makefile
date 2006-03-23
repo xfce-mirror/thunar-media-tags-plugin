@@ -19,7 +19,7 @@
 
 GETTEXT_PACKAGE = thunar-tag-renamer-plugin
 PACKAGE = thunar-tag-renamer-plugin
-VERSION = 0.1.0svn-r01201
+VERSION = 0.1.0svn-r01204
 
 SHELL = /bin/sh
 
@@ -72,9 +72,9 @@ $(POFILES) $(SOURCES)
 EXTRA_DISTFILES = POTFILES.skip Makevars LINGUAS
 
 POTFILES = \
-	../thunar-tag-renamer-plugin/thunar-sbr-tag-renamer-provider.c \
-	../thunar-tag-renamer-plugin/thunar-sbr-tag-renamer.c \
-	../thunar-tag-renamer-plugin/thunar-tag-renamer-plugin.c
+	../thunar-plugin/tag-renamer-provider.c \
+	../thunar-plugin/tag-renamer.c \
+	../thunar-plugin/tag-renamer-plugin.c
 
 CATALOGS =  de.gmo
 CATOBJEXT = .gmo
