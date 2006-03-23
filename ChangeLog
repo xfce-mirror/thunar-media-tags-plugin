@@ -1,5 +1,9 @@
 2006-03-23  Jannis Pohlmann <jannis@xfce.org>
 
+  * Moved thunar-tag-renamer-plugin/ to thunar-plugin/
+
+2006-03-23  Jannis Pohlmann <jannis@xfce.org>
+
   * thunar-tag-renamer-plugin/thunar-sbr-tag-renamer.{c,h}: Added
     another naming scheme. Added "artist" and "title" properties to
     the renamer class. Use a GtkTable for the layout. Added an entry

@@ -155,6 +155,6 @@ AC_SUBST([PLATFORM_LDFLAGS])
 AC_OUTPUT([
 Makefile
 po/Makefile.in
-thunar-tag-renamer-plugin/Makefile
+thunar-plugin/Makefile
 ])
 
