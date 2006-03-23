@@ -2,7 +2,7 @@
 
 SUBDIRS =								\
 	po								\
-	thunar-tag-renamer-plugin
+	thunar-plugin
 
 AUTOMAKE_OPTIONS =							\
 	1.8								\
