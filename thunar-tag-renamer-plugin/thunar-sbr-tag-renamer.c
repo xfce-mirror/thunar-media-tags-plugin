@@ -55,7 +55,7 @@ thunar_sbr_register_tag_enum_types (ThunarxProviderPlugin *plugin)
   static const GEnumValue tag_renamer_scheme_values[] =
   {
     { THUNAR_SBR_TAG_RENAMER_SCHEME_TRACK_ARTIST_SONG, "THUNAR_SBR_TAG_RENAMER_SCHEME_TRACK_ARTIST_SONG", 
-      N_ ("Track, Artist, Title"), },
+      N_ ("Track - Artist - Title"), },
     { 0,                                               NULL,                                              
       NULL, },
   };
@@ -164,7 +164,7 @@ thunar_sbr_tag_renamer_init (ThunarSbrTagRenamer *tag_renamer)
   gtk_widget_show (hbox);
 
   /* Naming scheme label */
-  label = gtk_label_new_with_mnemonic (_("_Naming scheme:"));
+  label = gtk_label_new_with_mnemonic (_("Naming _scheme:"));
   gtk_box_pack_start (GTK_BOX (hbox), label, FALSE, FALSE, 0);
   gtk_widget_show (label);
 
@@ -344,7 +344,7 @@ ThunarSbrTagRenamer*
 thunar_sbr_tag_renamer_new (void)
 {
   return g_object_new (THUNAR_SBR_TYPE_TAG_RENAMER,
-                       "name", _("ID3/Meta Tags"),
+                       "name", _("ID3 and Vorbis Tags"),
                        NULL);
 }
 

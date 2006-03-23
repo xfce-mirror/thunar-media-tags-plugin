@@ -1,3 +1,10 @@
 2006-03-23  Jannis Pohlmann <jannis@xfce.org>
 
+  * configure.in.in, Makefile.am: Added intltool support.
+  * po/de.po, po/POTFILES, po/thunar-tag-renamer-plugin.pot: Updated 
+    translation files as well as the German translations.
+  * thunar-tag-renamer-plugin/thunar-sbr-tag-renamer.c: Fix strings.
+
+2006-03-23  Jannis Pohlmann <jannis@xfce.org>
+
   * Initial import
