@@ -35,12 +35,13 @@ G_BEGIN_DECLS;
  **/
 typedef enum
 {
-  THUNAR_SBR_TAG_RENAMER_SCHEME_TRACK_TITLE,
-  THUNAR_SBR_TAG_RENAMER_SCHEME_TRACK_ARTIST_TITLE,
   THUNAR_SBR_TAG_RENAMER_SCHEME_TITLE,
   THUNAR_SBR_TAG_RENAMER_SCHEME_ARTIST_TITLE,
+  THUNAR_SBR_TAG_RENAMER_SCHEME_TRACK_TITLE,
+  THUNAR_SBR_TAG_RENAMER_SCHEME_TRACK_ARTIST_TITLE,
   THUNAR_SBR_TAG_RENAMER_SCHEME_TRACK_DOT_TITLE,
   THUNAR_SBR_TAG_RENAMER_SCHEME_TRACK_DOT_ARTIST_TITLE,
+  THUNAR_SBR_TAG_RENAMER_SCHEME_ARTIST_TRACK_TITLE,
 } ThunarSbrTagRenamerScheme;
 
 GType thunar_sbr_tag_renamer_scheme_get_type (void) G_GNUC_CONST G_GNUC_INTERNAL;
@@ -72,6 +73,12 @@ void                      thunar_sbr_tag_renamer_set_replace_spaces (ThunarSbrTa
 gboolean                  thunar_sbr_tag_renamer_get_lowercase      (ThunarSbrTagRenamer      *tag_renamer) G_GNUC_INTERNAL;
 void                      thunar_sbr_tag_renamer_set_lowercase      (ThunarSbrTagRenamer      *tag_renamer,
                                                                      gboolean                  lowercase) G_GNUC_INTERNAL;
+const gchar              *thunar_sbr_tag_renamer_get_artist         (ThunarSbrTagRenamer      *tag_renamer) G_GNUC_INTERNAL;
+void                      thunar_sbr_tag_renamer_set_artist         (ThunarSbrTagRenamer      *tag_renamer,
+                                                                     const gchar              *artist) G_GNUC_INTERNAL;
+const gchar              *thunar_sbr_tag_renamer_get_title          (ThunarSbrTagRenamer      *tag_renamer) G_GNUC_INTERNAL;
+void                      thunar_sbr_tag_renamer_set_title          (ThunarSbrTagRenamer      *tag_renamer,
+                                                                     const gchar              *title) G_GNUC_INTERNAL;
 
 G_END_DECLS;
 

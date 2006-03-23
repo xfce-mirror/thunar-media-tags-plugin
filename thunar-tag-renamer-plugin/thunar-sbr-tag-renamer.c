@@ -54,12 +54,13 @@ thunar_sbr_register_tag_enum_types (ThunarxProviderPlugin *plugin)
 {
   static const GEnumValue tag_renamer_scheme_values[] =
   {
-    { THUNAR_SBR_TAG_RENAMER_SCHEME_TRACK_TITLE,            "THUNAR_SBR_TAG_RENAMER_SCHEME_TRACK_TITLE",            N_ ("Track - Title"), },
-    { THUNAR_SBR_TAG_RENAMER_SCHEME_TRACK_ARTIST_TITLE,     "THUNAR_SBR_TAG_RENAMER_SCHEME_TRACK_ARTIST_TITLE",     N_ ("Track - Artist - Title"), },
     { THUNAR_SBR_TAG_RENAMER_SCHEME_TITLE,                  "THUNAR_SBR_TAG_RENAMER_SCHEME_TITLE",                  N_ ("Title"),  },
     { THUNAR_SBR_TAG_RENAMER_SCHEME_ARTIST_TITLE,           "THUNAR_SBR_TAG_RENAMER_SCHEME_ARTIST_TITLE",           N_ ("Artist - Title"), },
+    { THUNAR_SBR_TAG_RENAMER_SCHEME_TRACK_TITLE,            "THUNAR_SBR_TAG_RENAMER_SCHEME_TRACK_TITLE",            N_ ("Track - Title"), },
+    { THUNAR_SBR_TAG_RENAMER_SCHEME_TRACK_ARTIST_TITLE,     "THUNAR_SBR_TAG_RENAMER_SCHEME_TRACK_ARTIST_TITLE",     N_ ("Track - Artist - Title"), },
     { THUNAR_SBR_TAG_RENAMER_SCHEME_TRACK_DOT_TITLE,        "THUNAR_SBR_TAG_RENAMER_SCHEME_TRACK_DOT_TITLE",        N_ ("Track. Title"), },
     { THUNAR_SBR_TAG_RENAMER_SCHEME_TRACK_DOT_ARTIST_TITLE, "THUNAR_SBR_TAG_RENAMER_SCHEME_TRACK_DOT_ARTIST_TITLE", N_ ("Track. Artist - Title"), },
+    { THUNAR_SBR_TAG_RENAMER_SCHEME_ARTIST_TRACK_TITLE,     "THUNAR_SBR_TAG_RENAMER_SCHEME_ARTIST_TRACK_TITLE",     N_ ("Artist - Track - Title"), },
     { 0,                                                    NULL,                                                   NULL, },
   };
 
@@ -75,6 +76,8 @@ enum
   PROP_NAMING_SCHEME,
   PROP_REPLACE_SPACES,
   PROP_LOWERCASE,
+  PROP_ARTIST,
+  PROP_TITLE,
 };
 
 
@@ -114,6 +117,8 @@ struct _ThunarSbrTagRenamer
   ThunarSbrTagRenamerScheme scheme;
   gboolean                  replace_spaces;
   gboolean                  lowercase;
+  gchar                    *artist;
+  gchar                    *title;
 };
 
 
@@ -179,6 +184,32 @@ thunar_sbr_tag_renamer_class_init (ThunarSbrTagRenamerClass *klass)
                                                          "lowercase",
                                                          FALSE,
                                                          G_PARAM_READWRITE));
+
+  /**
+   * ThunarSbrTagRenamer:artist:
+   *
+   * The artist name to use if a file is missing an artist tag.
+   **/
+  g_object_class_install_property (gobject_class,
+                                   PROP_ARTIST,
+                                   g_param_spec_string ("artist",
+                                                        "artist",
+                                                        "artist",
+                                                        _("Unknown Artist"),
+                                                        G_PARAM_READWRITE));
+
+  /**
+   * ThunarSbrTagRenamer:title:
+   *
+   * The song title to use if a file is missing a proper title tag.
+   **/
+  g_object_class_install_property (gobject_class,
+                                   PROP_TITLE,
+                                   g_param_spec_string ("title",
+                                                        "title",
+                                                        "title",
+                                                        _("Unknown Title"),
+                                                        G_PARAM_READWRITE));
 }
 
 
@@ -189,10 +220,10 @@ thunar_sbr_tag_renamer_init (ThunarSbrTagRenamer *tag_renamer)
   AtkRelationSet *relations;
   AtkRelation    *relation;
   AtkObject      *object;
-  GtkWidget      *vbox;
-  GtkWidget      *hbox;
+  GtkWidget      *table;
   GtkWidget      *label;
   GtkWidget      *combo;
+  GtkWidget      *entry;
   GtkWidget      *button;
   GEnumClass     *klass;
   gint            n;
@@ -201,17 +232,16 @@ thunar_sbr_tag_renamer_init (ThunarSbrTagRenamer *tag_renamer)
   tag_renamer->tooltips = gtk_tooltips_new ();
   exo_gtk_object_ref_sink (GTK_OBJECT (tag_renamer->tooltips));
 
-  vbox = gtk_vbox_new (FALSE, 12);
-  gtk_box_pack_start (GTK_BOX (tag_renamer), vbox, FALSE, FALSE, 0);
-  gtk_widget_show (vbox);
-  
-  hbox = gtk_hbox_new (FALSE, 12);
-  gtk_box_pack_start (GTK_BOX (vbox), hbox, FALSE, FALSE, 0);
-  gtk_widget_show (hbox);
+  table = gtk_table_new (4, 3, FALSE);
+  gtk_table_set_row_spacings (GTK_TABLE (table), 6);
+  gtk_table_set_col_spacings (GTK_TABLE (table), 12);
+  gtk_box_pack_start (GTK_BOX (tag_renamer), table, FALSE, FALSE, 0);
+  gtk_widget_show (table);
 
   /* Naming scheme label */
   label = gtk_label_new_with_mnemonic (_("Naming _scheme:"));
-  gtk_box_pack_start (GTK_BOX (hbox), label, FALSE, FALSE, 0);
+  gtk_misc_set_alignment (GTK_MISC (label), 0.05f,  0.5f);
+  gtk_table_attach (GTK_TABLE (table), label, 0, 1, 0, 1, GTK_FILL, 0, 0, 0);
   gtk_widget_show (label);
 
   /* Naming scheme combo box */
@@ -220,35 +250,57 @@ thunar_sbr_tag_renamer_init (ThunarSbrTagRenamer *tag_renamer)
   for (n = 0; n < klass->n_values; ++n)
     gtk_combo_box_append_text (GTK_COMBO_BOX (combo), _(klass->values[n].value_nick));
   exo_mutual_binding_new (G_OBJECT (tag_renamer), "naming-scheme", G_OBJECT (combo), "active");
-  gtk_box_pack_start (GTK_BOX (hbox), combo, FALSE, FALSE, 0);
+  gtk_table_attach (GTK_TABLE (table), combo, 1, 2, 0, 1, GTK_EXPAND | GTK_FILL, 0, 0, 0);
   gtk_label_set_mnemonic_widget (GTK_LABEL (label), combo);
   g_type_class_unref (klass);
   gtk_widget_show (combo);
 
-  /* Set Atk label relation for the artist entry */
+  /* Set Atk label relation for the combo box */
   object = gtk_widget_get_accessible (combo);
   relations = atk_object_ref_relation_set (gtk_widget_get_accessible (label));
   relation = atk_relation_new (&object, 1, ATK_RELATION_LABEL_FOR);
   atk_relation_set_add (relations, relation);
   g_object_unref (G_OBJECT (relation));
 
-  hbox = gtk_hbox_new (FALSE, 12);
-  gtk_box_pack_start (GTK_BOX (vbox), hbox, FALSE, FALSE, 0);
-  gtk_widget_show (hbox);
-
   button = gtk_check_button_new_with_mnemonic (_("_Replace spaces with underscores"));
   exo_mutual_binding_new (G_OBJECT (button), "active", G_OBJECT (tag_renamer), "replace-spaces");
   gtk_tooltips_set_tip (tag_renamer->tooltips, button, _("Activating this option will replace all spaces in the target filename "
         "with underscores."), NULL);
-  gtk_box_pack_start (GTK_BOX (hbox), button, FALSE, FALSE, 0);
+  gtk_table_attach (GTK_TABLE (table), button, 2, 3, 0, 1, GTK_FILL, 0, 0, 0);
   gtk_widget_show (button);
 
   button = gtk_check_button_new_with_mnemonic (_("Convert to _lowercase"));
   exo_mutual_binding_new (G_OBJECT (button), "active", G_OBJECT (tag_renamer), "lowercase");
   gtk_tooltips_set_tip (tag_renamer->tooltips, button, _("If you activate this, the resulting filename will not contain any "
         "uppercase letters."), NULL);
-  gtk_box_pack_start (GTK_BOX (hbox), button, FALSE, FALSE, 0);
+  gtk_table_attach (GTK_TABLE (table), button, 2, 3, 1, 2, GTK_FILL, 0, 0, 0);
   gtk_widget_show (button);
+
+  label = gtk_label_new_with_mnemonic (_("Default Art_ist:"));
+  gtk_misc_set_alignment (GTK_MISC (label), 0.0f, 0.5f);
+  gtk_table_attach (GTK_TABLE (table), label, 0, 1, 1, 2, GTK_FILL, 0, 0, 0);
+  gtk_widget_show (label);
+
+  entry = gtk_entry_new ();
+  gtk_entry_set_activates_default (GTK_ENTRY (entry), TRUE);
+  exo_mutual_binding_new (G_OBJECT (entry), "text", G_OBJECT (tag_renamer), "artist");
+  gtk_tooltips_set_tip (tag_renamer->tooltips, entry, _("Text entered in this field is going to replace missing artist tags."), NULL);
+  gtk_table_attach (GTK_TABLE (table), entry, 1, 2, 1, 2, GTK_EXPAND | GTK_FILL, 0, 0, 0);
+  gtk_label_set_mnemonic_widget (GTK_LABEL (label), entry);
+  gtk_widget_show (entry);
+
+  /* Set Atk label relation for this entry */
+  object = gtk_widget_get_accessible (entry);
+  relations = atk_object_ref_relation_set (gtk_widget_get_accessible (label));
+  relation = atk_relation_new (&object, 1, ATK_RELATION_LABEL_FOR);
+  atk_relation_set_add (relations, relation);
+  g_object_unref (G_OBJECT (relation));
+
+  /* Set initial values */
+  tag_renamer->artist = g_strdup ("");
+  tag_renamer->title = g_strdup ("");
+  thunar_sbr_tag_renamer_set_artist (tag_renamer, _("Unknown Artist"));
+  thunar_sbr_tag_renamer_set_title (tag_renamer, _("Unknown Title"));
 }
 
 
@@ -256,7 +308,11 @@ thunar_sbr_tag_renamer_init (ThunarSbrTagRenamer *tag_renamer)
 static void
 thunar_sbr_tag_renamer_finalize (GObject *object)
 {
-  /* ThunarSbrTagRenamer *tag_renamer = THUNAR_SBR_TAG_RENAMER (object); */
+  ThunarSbrTagRenamer *tag_renamer = THUNAR_SBR_TAG_RENAMER (object);
+
+  /* Free strings */
+  g_free (tag_renamer->artist);
+  g_free (tag_renamer->title);
 
   (*G_OBJECT_CLASS (thunar_sbr_tag_renamer_parent_class)->finalize) (object);
 }
@@ -283,6 +339,14 @@ thunar_sbr_tag_renamer_get_property (GObject    *object,
 
     case PROP_LOWERCASE:
       g_value_set_boolean (value, thunar_sbr_tag_renamer_get_lowercase (tag_renamer));
+      break;
+
+    case PROP_ARTIST:
+      g_value_set_string (value, thunar_sbr_tag_renamer_get_artist (tag_renamer));
+      break;
+
+    case PROP_TITLE:
+      g_value_set_string (value, thunar_sbr_tag_renamer_get_title (tag_renamer));
       break;
       
     default:
@@ -313,6 +377,14 @@ thunar_sbr_tag_renamer_set_property (GObject      *object,
 
     case PROP_LOWERCASE:
       thunar_sbr_tag_renamer_set_lowercase (tag_renamer, g_value_get_boolean (value));
+      break;
+
+    case PROP_ARTIST:
+      thunar_sbr_tag_renamer_set_artist (tag_renamer, g_value_get_string (value));
+      break;
+
+    case PROP_TITLE:
+      thunar_sbr_tag_renamer_set_title (tag_renamer, g_value_get_string (value));
       break;
       
     default:
@@ -376,17 +448,38 @@ thunar_sbr_tag_renamer_process (ThunarxRenamer  *renamer,
   taglib_properties = taglib_file_audioproperties (taglib_file);
 
   /* Get tag values */
-  artist = taglib_tag_artist (taglib_tag);
-  title = taglib_tag_title (taglib_tag);
+  artist = g_strdup (taglib_tag_artist (taglib_tag));
+  title = g_strdup (taglib_tag_title (taglib_tag));
   track_num = taglib_tag_track (taglib_tag);
+
+  /* Replace missing artist tag */
+  if (G_UNLIKELY (g_utf8_strlen (artist, -1) == 0))
+    artist = g_strdup (thunar_sbr_tag_renamer_get_artist (tag_renamer));
+
+  /* Replace missing song title tag */
+  if (G_UNLIKELY (g_utf8_strlen (title, -1) == 0))
+    title = g_strdup (thunar_sbr_tag_renamer_get_title (tag_renamer));
 
   if (track_num == 0)
     track = g_strdup ("00");
   else
     track = g_strdup_printf ("%02d", taglib_tag_track (taglib_tag));
 
+  /* Replace special chars with underscores */
+  artist = g_strdelimit (artist, "/", '_');
+  title = g_strdelimit (title, "/", '_');
+  track = g_strdelimit (track, "/", '_');
+
   switch (thunar_sbr_tag_renamer_get_scheme (tag_renamer))
     {
+    case THUNAR_SBR_TAG_RENAMER_SCHEME_TRACK_DOT_TITLE:
+      result = g_strconcat (track, ". ", title, NULL);
+      break;
+
+    case THUNAR_SBR_TAG_RENAMER_SCHEME_TRACK_DOT_ARTIST_TITLE:
+      result = g_strconcat (track, ". ", artist, " - ", title, NULL);
+      break;
+
     case THUNAR_SBR_TAG_RENAMER_SCHEME_TRACK_TITLE:
       result = g_strconcat (track, " - ", title, NULL);
       break;
@@ -403,12 +496,8 @@ thunar_sbr_tag_renamer_process (ThunarxRenamer  *renamer,
       result = g_strconcat (artist, " - ", title, NULL);
       break;
 
-    case THUNAR_SBR_TAG_RENAMER_SCHEME_TRACK_DOT_TITLE:
-      result = g_strconcat (track, ". ", title, NULL);
-      break;
-
-    case THUNAR_SBR_TAG_RENAMER_SCHEME_TRACK_DOT_ARTIST_TITLE:
-      result = g_strconcat (track, ". ", artist, " - ", title, NULL);
+    case THUNAR_SBR_TAG_RENAMER_SCHEME_ARTIST_TRACK_TITLE:
+      result = g_strconcat (artist, " - ", track, " - ", title, NULL);
       break;
     
     default:
@@ -430,6 +519,8 @@ thunar_sbr_tag_renamer_process (ThunarxRenamer  *renamer,
   
   /* Free strings */
   g_free (filename);
+  g_free (artist);
+  g_free (title);
   g_free (track);
 
   /* Free tag info strings */
@@ -593,6 +684,108 @@ thunar_sbr_tag_renamer_set_lowercase (ThunarSbrTagRenamer *tag_renamer,
 
   /* Notify listeners */
   g_object_notify (G_OBJECT (tag_renamer), "lowercase");
+
+  /* Emit the "changed" signal */
+  thunarx_renamer_changed (THUNARX_RENAMER (tag_renamer));
+}
+
+
+
+/**
+ * thunar_sbr_tag_renamer_get_artist:
+ * @tag_renamer : a #ThunarSbrTagRenamer.
+ *
+ * Returns the artist name to use if the artist tag is missing.
+ *
+ * Return value: default artist name to use if a file lacks of an artist tag.
+ **/
+const gchar*
+thunar_sbr_tag_renamer_get_artist (ThunarSbrTagRenamer *tag_renamer)
+{
+  g_return_val_if_fail (THUNAR_SBR_IS_TAG_RENAMER (tag_renamer), _("Unknown Artist"));
+  return tag_renamer->artist;
+}
+
+
+
+/**
+ * thunar_sbr_tag_renamer_set_artist:
+ * @tag_renamer : a #ThunarSbrTagRenamer.
+ * @artist      : a nul-terminated string.
+ *
+ * Sets the artist name to use if a file is missing an artist tag.
+ **/
+void
+thunar_sbr_tag_renamer_set_artist (ThunarSbrTagRenamer *tag_renamer,
+                                   const gchar         *artist)
+{
+  g_return_if_fail (THUNAR_SBR_IS_TAG_RENAMER (tag_renamer));
+
+  /* Abort if flag is already set */
+  if (G_UNLIKELY (tag_renamer->artist != NULL))
+    if (G_UNLIKELY (g_utf8_collate (tag_renamer->artist, artist) == 0))
+      return;
+
+  /* Free old name */
+  if (G_LIKELY (tag_renamer->artist != NULL))
+    g_free (tag_renamer->artist);
+
+  /* Apply the new setting */
+  tag_renamer->artist = g_strdup (artist);
+
+  /* Notify listeners */
+  g_object_notify (G_OBJECT (tag_renamer), "artist");
+
+  /* Emit the "changed" signal */
+  thunarx_renamer_changed (THUNARX_RENAMER (tag_renamer));
+}
+
+
+
+/**
+ * thunar_sbr_tag_renamer_get_title:
+ * @tag_renamer : a #ThunarSbrTagRenamer.
+ *
+ * Returns the song title to use if the title tag is missing.
+ *
+ * Return value: song title to use if a file lacks of a title tag.
+ **/
+const gchar*
+thunar_sbr_tag_renamer_get_title (ThunarSbrTagRenamer *tag_renamer)
+{
+  g_return_val_if_fail (THUNAR_SBR_IS_TAG_RENAMER (tag_renamer), _("Unknown Title"));
+  return tag_renamer->title;
+}
+
+
+
+/**
+ * thunar_sbr_tag_renamer_set_title:
+ * @tag_renamer : a #ThunarSbrTagRenamer.
+ * @title      : a nul-terminated string.
+ *
+ * Sets the song title to use if a file is missing a title tag.
+ **/
+void
+thunar_sbr_tag_renamer_set_title (ThunarSbrTagRenamer *tag_renamer,
+                                  const gchar         *title)
+{
+  g_return_if_fail (THUNAR_SBR_IS_TAG_RENAMER (tag_renamer));
+
+  /* Abort if flag is already set */
+  if (G_UNLIKELY (g_utf8_collate (tag_renamer->title, title) == 0))
+    return;
+
+  /* Free old value */
+  if (G_UNLIKELY (tag_renamer->title != NULL))
+    if (G_LIKELY (tag_renamer->title != NULL))
+      g_free (tag_renamer->title);
+
+  /* Apply the new setting */
+  tag_renamer->title = g_strdup (title);
+
+  /* Notify listeners */
+  g_object_notify (G_OBJECT (tag_renamer), "title");
 
   /* Emit the "changed" signal */
   thunarx_renamer_changed (THUNARX_RENAMER (tag_renamer));

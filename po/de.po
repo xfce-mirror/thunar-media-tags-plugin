@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: thunar-tag-renamer-plugin 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-03-23 10:48+0100\n"
-"PO-Revision-Date: 2006-03-23 10:49+0100\n"
+"POT-Creation-Date: 2006-03-23 13:20+0100\n"
+"PO-Revision-Date: 2006-03-23 13:21+0100\n"
 "Last-Translator: Jannis Pohlmann <jannis@xfce.org>\n"
 "Language-Team: German <de@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -17,20 +17,20 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: ../thunar-tag-renamer-plugin/thunar-sbr-tag-renamer.c:57
-msgid "Track - Title"
-msgstr "Titelnummer - Titel"
-
-#: ../thunar-tag-renamer-plugin/thunar-sbr-tag-renamer.c:58
-msgid "Track - Artist - Title"
-msgstr "Titelnummer - Interpret - Titel"
-
-#: ../thunar-tag-renamer-plugin/thunar-sbr-tag-renamer.c:59
 msgid "Title"
 msgstr "Title"
 
-#: ../thunar-tag-renamer-plugin/thunar-sbr-tag-renamer.c:60
+#: ../thunar-tag-renamer-plugin/thunar-sbr-tag-renamer.c:58
 msgid "Artist - Title"
 msgstr "Interpret - Titel"
+
+#: ../thunar-tag-renamer-plugin/thunar-sbr-tag-renamer.c:59
+msgid "Track - Title"
+msgstr "Titelnummer - Titel"
+
+#: ../thunar-tag-renamer-plugin/thunar-sbr-tag-renamer.c:60
+msgid "Track - Artist - Title"
+msgstr "Titelnummer - Interpret - Titel"
 
 #: ../thunar-tag-renamer-plugin/thunar-sbr-tag-renamer.c:61
 msgid "Track. Title"
@@ -40,31 +40,55 @@ msgstr "Titelnummer. Titel"
 msgid "Track. Artist - Title"
 msgstr "Titelnummer. Interpret - Titel"
 
-#. Naming scheme label
-#: ../thunar-tag-renamer-plugin/thunar-sbr-tag-renamer.c:213
+#: ../thunar-tag-renamer-plugin/thunar-sbr-tag-renamer.c:63
+msgid "Artist - Track - Title"
+msgstr "Interpret - Titelnummer - Titel"
+
+#: ../thunar-tag-renamer-plugin/thunar-sbr-tag-renamer.c:198
+#: ../thunar-tag-renamer-plugin/thunar-sbr-tag-renamer.c:306
+#: ../thunar-tag-renamer-plugin/thunar-sbr-tag-renamer.c:709
+msgid "Unknown Artist"
+msgstr "Unbekannter Interpret"
+
+#: ../thunar-tag-renamer-plugin/thunar-sbr-tag-renamer.c:211
+#: ../thunar-tag-renamer-plugin/thunar-sbr-tag-renamer.c:307
+#: ../thunar-tag-renamer-plugin/thunar-sbr-tag-renamer.c:760
+msgid "Unknown Title"
+msgstr "Unbekannter Titel"
+
+#: ../thunar-tag-renamer-plugin/thunar-sbr-tag-renamer.c:246
 msgid "Naming _scheme:"
 msgstr "_Schema:"
 
-#: ../thunar-tag-renamer-plugin/thunar-sbr-tag-renamer.c:239
+#: ../thunar-tag-renamer-plugin/thunar-sbr-tag-renamer.c:269
 msgid "_Replace spaces with underscores"
 msgstr "Leerzeichen durch Unterstriche e_rsetzen"
 
-#: ../thunar-tag-renamer-plugin/thunar-sbr-tag-renamer.c:241
+#: ../thunar-tag-renamer-plugin/thunar-sbr-tag-renamer.c:271
 msgid ""
 "Activating this option will replace all spaces in the target filename with "
 "underscores."
 msgstr "Mit dieser Option werden alle Leerzeichen durch Unterstriche ersetzt."
 
-#: ../thunar-tag-renamer-plugin/thunar-sbr-tag-renamer.c:246
+#: ../thunar-tag-renamer-plugin/thunar-sbr-tag-renamer.c:276
 msgid "Convert to _lowercase"
 msgstr "In K_leinbuchstaben umwandeln"
 
-#: ../thunar-tag-renamer-plugin/thunar-sbr-tag-renamer.c:248
+#: ../thunar-tag-renamer-plugin/thunar-sbr-tag-renamer.c:278
 msgid ""
 "If you activate this, the resulting filename will not contain any uppercase "
 "letters."
 msgstr "Konvertiert alle Zeichen in Kleinbuchstaben."
 
-#: ../thunar-tag-renamer-plugin/thunar-sbr-tag-renamer.c:457
+#: ../thunar-tag-renamer-plugin/thunar-sbr-tag-renamer.c:283
+msgid "Default Art_ist:"
+msgstr "Standard_interpret:"
+
+#: ../thunar-tag-renamer-plugin/thunar-sbr-tag-renamer.c:291
+msgid "Text entered in this field is going to replace missing artist tags."
+msgstr ""
+"Hier eingefügter Text ersetzt fehlende Informationen über den Interpret."
+
+#: ../thunar-tag-renamer-plugin/thunar-sbr-tag-renamer.c:552
 msgid "ID3 and Vorbis Tags"
 msgstr "ID3- und Vorbis-Tags"

@@ -17,10 +17,10 @@ rpm: dist
 
 EXTRA_DIST =								\
 	README								\
-	THANKS								\
 	AUTHORS								\
 	COPYING								\
 	NEWS								\
+	ChangeLog							\
 	intltool-extract.in						\
 	intltool-merge.in						\
 	intltool-update.in
