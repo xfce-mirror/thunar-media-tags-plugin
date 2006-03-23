@@ -1,5 +1,9 @@
 2006-03-23  Jannis Pohlmann <jannis@xfce.org>
 
+  * configure.in.in: Hungarian translations added.
+
+2006-03-23  Jannis Pohlmann <jannis@xfce.org>
+
   * thunar-plugin/*.{c,h,am}: Renamed all classes, methods and 
     macros so that they don't use a Thunar, THUNAR or thunar prefix 
     anymore.

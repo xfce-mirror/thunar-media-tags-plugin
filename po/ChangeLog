@@ -1,5 +1,9 @@
 2006-03-23  Jannis Pohlmann <jannis@xfce.org>
 
+  * hu.po: Hungarian translation by SZERVÑC Attila added.
+
+2006-03-23  Jannis Pohlmann <jannis@xfce.org>
+
   * POTFILES.in, de.po, thunar-tag-renamer-plugin.pot: Updated 
     translation files.
 
