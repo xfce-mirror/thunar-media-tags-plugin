@@ -1,16 +1,10 @@
 TODO for thunar-tag-renamer-plugin
 =======================================================================
 
-  * Implement ThunarxPropertyPageProvider and a class derived from
-    ThunarxPropertyPage in order to add a page for editing ID3/Vorbis 
-    tags to the file properties.
-
-	ThunarxPropertyProvider has to implement get_pages(). In
-	get_pages(), check if all selected files are supported and
-	if so, return a property page instance.
-
-	Handle ThunarxFileInfo::changed signal in the property page
-	class.
+  * strstrip() tags before displaying them on the property page.
+ 
+  * Compare new values with old ones before writing the file 
+    (race-conditions!).
 
   * Check if we can rename files to folders, like 
     ARTIST/ALBUM/TITLE.EXT

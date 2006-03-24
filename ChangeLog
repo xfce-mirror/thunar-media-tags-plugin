@@ -1,5 +1,12 @@
 2006-03-24  Jannis Pohlmann <jannis@xfce.org>
 
+  * thunar-plugin/audio-tags-page.c: Strip leading and trailing 
+    whitespaces from all tags before displaying them. Compare old
+    to new values before saving. Make page insensitive when saving
+    until the ::changed signal is emitted again.
+
+2006-03-24  Jannis Pohlmann <jannis@xfce.org>
+
   * thunar-plugin/audio-tags-page.c: Fix timeout id problem.
 
 2006-03-24  Jannis Pohlmann <jannis@xfce.org>

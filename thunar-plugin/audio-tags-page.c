@@ -587,31 +587,31 @@ audio_tags_page_set_property (GObject      *object,
     case PROP_ARTIST:
       if (G_LIKELY (page->artist != NULL))
         g_free (page->artist);
-      page->artist = g_strdup (g_value_get_string (value));
+      page->artist = g_strstrip (g_strdup (g_value_get_string (value)));
       break;
 
     case PROP_TITLE:
       if (G_LIKELY (page->title != NULL))
         g_free (page->title);
-      page->title = g_strdup (g_value_get_string (value));
+      page->title = g_strstrip (g_strdup (g_value_get_string (value)));
       break;
       
     case PROP_ALBUM:
       if (G_LIKELY (page->album != NULL))
         g_free (page->album);
-      page->album = g_strdup (g_value_get_string (value));
+      page->album = g_strstrip (g_strdup (g_value_get_string (value)));
       break;
       
     case PROP_COMMENT:
       if (G_LIKELY (page->comment != NULL))
         g_free (page->comment);
-      page->comment = g_strdup (g_value_get_string (value));
+      page->comment = g_strstrip (g_strdup (g_value_get_string (value)));
       break;
       
     case PROP_GENRE:
       if (G_LIKELY (page->genre != NULL))
         g_free (page->genre);
-      page->genre = g_strdup (g_value_get_string (value));
+      page->genre = g_strstrip (g_strdup (g_value_get_string (value)));
       break;
       
     case PROP_YEAR:
@@ -746,6 +746,9 @@ audio_tags_page_file_changed (ThunarxFileInfo *file,
   /* Temporarily reset the file attribute */
   page->file = NULL;
 
+  /* Make page sensitive again */
+  gtk_widget_set_sensitive (GTK_WIDGET (page), TRUE);
+
   /* Load tag information after 250 ms */
   if (page->changed_timeout <= 0)
       page->changed_timeout = g_timeout_add_full (G_PRIORITY_DEFAULT_IDLE, 250, (GSourceFunc)audio_tags_page_load_tags, page, NULL);
@@ -828,19 +831,32 @@ audio_tags_page_activate (AudioTagsPage *page)
 
   if (G_LIKELY (tag != NULL))
     {
-      /* Store values */
-      taglib_tag_set_track (tag, page->track);
-      taglib_tag_set_year (tag, page->year);
-      taglib_tag_set_title (tag, page->title);
-      taglib_tag_set_artist (tag, page->artist);
-      taglib_tag_set_album (tag, page->album);
-      taglib_tag_set_comment (tag, page->comment);
-      taglib_tag_set_genre (tag, page->genre);
+      /* Compare old to new values */
+      if (taglib_tag_track (tag) != page->track ||
+          taglib_tag_year (tag) != page->year ||
+          g_utf8_collate (taglib_tag_artist (tag), page->artist) ||
+          g_utf8_collate (taglib_tag_title (tag), page->title) ||
+          g_utf8_collate (taglib_tag_album (tag), page->album) ||
+          g_utf8_collate (taglib_tag_comment (tag), page->comment) ||
+          g_utf8_collate (taglib_tag_genre (tag), page->genre))
+        {
+          /* Make page insensitive */
+          gtk_widget_set_sensitive (GTK_WIDGET (page), FALSE);
+          
+          /* Store values */
+          taglib_tag_set_track (tag, page->track);
+          taglib_tag_set_year (tag, page->year);
+          taglib_tag_set_title (tag, page->title);
+          taglib_tag_set_artist (tag, page->artist);
+          taglib_tag_set_album (tag, page->album);
+          taglib_tag_set_comment (tag, page->comment);
+          taglib_tag_set_genre (tag, page->genre);
 
-      /* Save file */
-      taglib_file_save (page->taglib_file);
+          /* Save file */
+          taglib_file_save (page->taglib_file);
+        }
 
-      /* Free strings if necessary */
+      /* Free tag strings */
       taglib_tag_free_strings ();
     }
   
