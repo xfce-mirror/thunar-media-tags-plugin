@@ -35,11 +35,14 @@ typedef struct _TagRenamerPropertyPage      TagRenamerPropertyPage;
 #define IS_TAG_RENAMER_PROPERTY_PAGE_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), TYPE_TAG_RENAMER_PROPERTY_PAGE))
 #define TAG_RENAMER_PROPERTY_PAGE_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), TYPE_TAG_RENAMER_PROPERTY_PAGE, TagRenamerPropertyPageClass))
 
-GType                        tag_renamer_property_page_get_type      (void) G_GNUC_CONST G_GNUC_INTERNAL;
-void                         tag_renamer_property_page_register_type (ThunarxProviderPlugin *plugin) G_GNUC_INTERNAL;
+GType                   tag_renamer_property_page_get_type      (void) G_GNUC_CONST G_GNUC_INTERNAL;
+void                    tag_renamer_property_page_register_type (ThunarxProviderPlugin  *plugin) G_GNUC_INTERNAL;
 
-TagRenamerPropertyPage      *tag_renamer_property_page_new           (void) G_GNUC_CONST G_GNUC_INTERNAL G_GNUC_MALLOC;
+TagRenamerPropertyPage *tag_renamer_property_page_new           (void) G_GNUC_CONST G_GNUC_INTERNAL G_GNUC_MALLOC;
 
+ThunarxFileInfo        *tag_renamer_property_page_get_file      (TagRenamerPropertyPage *page) G_GNUC_INTERNAL;
+void                    tag_renamer_property_page_set_file      (TagRenamerPropertyPage *page,
+                                                                 ThunarxFileInfo        *file) G_GNUC_INTERNAL;
 
 G_END_DECLS;
 

@@ -1,5 +1,14 @@
 2006-03-23  Jannis Pohlmann <jannis@xfce.org>
 
+  * configure.in.in: Depend on more recent version (0.2.3svn-r20522) of 
+    Thunarx.
+  * thunar-plugin/tag-renamer-property-page.{c,h}: Implement 
+    TagRenamerPropertyPage. Add "file" property and some widgets.
+  * thunar-plugin/tag-renamer-provider.c: Implement _get_pages() method
+    of ThunarxPropertiesPageProvider.
+
+2006-03-23  Jannis Pohlmann <jannis@xfce.org>
+
   * thunar-plugin/Makefile.am, 
     thunar-plugin/tag-renamer-property-page.h,
     thunar-plugin/tag-renamer-property-page.c,
