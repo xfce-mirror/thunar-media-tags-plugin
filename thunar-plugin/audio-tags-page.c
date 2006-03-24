@@ -90,6 +90,7 @@ struct _AudioTagsPage
   GtkTooltips     *tooltips;
   GtkWidget       *table;
   GtkWidget       *save_button;
+  GtkWidget       *info_button;
 
   /* Timeouts */
   guint            changed_timeout;
@@ -267,7 +268,6 @@ audio_tags_page_init (AudioTagsPage *page)
 {
   GtkObject *adjustment;
   GtkWidget *vbox;
-  GtkWidget *frame;
   GtkWidget *alignment;
   GtkWidget *label;
   GtkWidget *entry;
@@ -287,21 +287,11 @@ audio_tags_page_init (AudioTagsPage *page)
   gtk_container_add (GTK_CONTAINER (page), vbox);
   gtk_widget_show (vbox);
 
-  /* File info frame */
-  frame = gtk_frame_new (_("Info"));
-  gtk_box_pack_start (GTK_BOX (vbox), frame, FALSE, TRUE, 0);
-  gtk_widget_show (frame);
-
-  /* Tag editor frame */
-  frame = gtk_frame_new (_("Tags"));
-  gtk_box_pack_start (GTK_BOX (vbox), frame, FALSE, TRUE, 0);
-  gtk_widget_show (frame);
-
   /* Tag editor layout table */
   page->table = gtk_table_new (7, 4, FALSE);
   gtk_table_set_row_spacings (GTK_TABLE (page->table), 6);
   gtk_table_set_col_spacings (GTK_TABLE (page->table), 12);
-  gtk_container_add (GTK_CONTAINER (frame), page->table);
+  gtk_container_add (GTK_CONTAINER (vbox), page->table);
   gtk_container_set_border_width (GTK_CONTAINER (page->table), 12);
   gtk_widget_show (page->table);
 
@@ -561,15 +551,15 @@ audio_tags_page_dialog_new (GtkWindow *window,
   audio_tags_page_set_file (page, file);
   
   /* Set up the dialog */
-  dialog = gtk_dialog_new_with_buttons (_("Edit Audio Tags"),
+  dialog = gtk_dialog_new_with_buttons (_("Edit Tags"),
                                         window,
                                         GTK_DIALOG_MODAL | GTK_DIALOG_DESTROY_WITH_PARENT,
                                         GTK_STOCK_CANCEL, 
                                         GTK_RESPONSE_CANCEL,
                                         NULL);
 
-  /* Make OK the default response */
   gtk_dialog_set_default_response (GTK_DIALOG (dialog), GTK_RESPONSE_OK);
+  gtk_dialog_set_has_separator (GTK_DIALOG (dialog), FALSE);
 
   /* Add page to the dialog */
   gtk_container_add (GTK_CONTAINER (GTK_DIALOG (dialog)->vbox), GTK_WIDGET (page));
@@ -1031,6 +1021,11 @@ audio_tags_page_set_show_save_button (AudioTagsPage   *page,
       if (G_UNLIKELY (page->save_button != NULL))
         return;
 
+      /* Info button */
+      page->info_button = gtk_button_new_from_stock (GTK_STOCK_INFO);
+      gtk_table_attach (GTK_TABLE (page->table), page->info_button, 2, 3, 6, 7, GTK_FILL, 0, 0, 0);
+      gtk_widget_show (page->info_button);
+
       /* Create a new button */
       page->save_button = gtk_button_new_from_stock (GTK_STOCK_SAVE);
       gtk_table_attach (GTK_TABLE (page->table), page->save_button, 3, 4, 6, 7, GTK_FILL, 0, 0, 0);
@@ -1044,9 +1039,13 @@ audio_tags_page_set_show_save_button (AudioTagsPage   *page,
     {
       /* Check if we already display the button */
       if (G_LIKELY (page->save_button != NULL))
-        gtk_widget_destroy (page->save_button);
+        {
+          gtk_widget_destroy (page->info_button);
+          gtk_widget_destroy (page->save_button);
+        }
 
       /* Reset the pointer */
+      page->info_button = NULL;
       page->save_button = NULL;
     }
 }

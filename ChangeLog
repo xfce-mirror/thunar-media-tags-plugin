@@ -1,5 +1,11 @@
 2006-03-24  Jannis Pohlmann <jannis@xfce.org>
 
+  * thunar-plugin/audio-tags-page.c: Add GTK_STOCK_INFO button on 
+    pages with save button. Remove dialog separator in order to be
+    consistent with other Xfce dialogs.
+
+2006-03-24  Jannis Pohlmann <jannis@xfce.org>
+
   * thunar-plugin/media-tags-provider.{c,h}: Add 
     media_tags_get_audio_file_supported() method for checking if a file
     is supported by the audio part of the media-tags plugin. Alter
