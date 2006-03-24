@@ -430,7 +430,6 @@ tag_renamer_process (ThunarxRenamer  *renamer,
   /* Strip of the file:// from the URI */
   uri = thunarx_file_info_get_uri (file);
   filename = g_filename_from_uri (uri, NULL, NULL);
-  g_free (uri);
 
   /* Return if URI could not be resolved */
   if (G_UNLIKELY (filename == NULL))
@@ -535,10 +534,11 @@ tag_renamer_process (ThunarxRenamer  *renamer,
   }
   
   /* Free strings */
-  g_free (filename);
-  g_free (artist);
-  g_free (title);
   g_free (track);
+  g_free (title);
+  g_free (artist);
+  g_free (filename);
+  g_free (uri);
 
   /* Free tag info strings */
   taglib_tag_free_strings ();

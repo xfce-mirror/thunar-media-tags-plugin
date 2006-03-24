@@ -1,5 +1,10 @@
 2006-03-24  Jannis Pohlmann <jannis@xfce.org>
 
+  * thunar-plugin/audio-tags-page.{c,h}: Implement tag editor 
+    completely. 
+
+2006-03-24  Jannis Pohlmann <jannis@xfce.org>
+
   * configure.in.in: Rename the plugin, use more recent version of
     Thunarx.
   * thunar-plugin/tag-renamer.{c,h}: Rename the enum register 

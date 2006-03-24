@@ -1,4 +1,4 @@
-/* $Id: tag-renamer-provider.h 1218 2006-03-24 11:06:17Z jpohlmann $ */
+/* $Id$ */
 /*-
  * Copyright (c) 2006 Benedikt Meurer <benny@xfce.org>
  *                    Jannis Pohlmann <jannis@xfce.org>
