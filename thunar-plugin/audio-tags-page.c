@@ -789,6 +789,9 @@ audio_tags_page_taglib_file_changed (TagLib_File   *taglib_file,
       if (track == 0)
         track = 1;
 
+      if (year == 0)
+        year = 2006;
+
       /* Set page properties in order to sync with display */
       g_object_set (G_OBJECT (page), 
                     "track", (gdouble)track, 
