@@ -50,7 +50,7 @@ tag_renamer_scheme_get_type (void)
 
 
 void
-register_tag_enum_types (ThunarxProviderPlugin *plugin)
+tag_renamer_register_enum_types (ThunarxProviderPlugin *plugin)
 {
   static const GEnumValue tag_renamer_scheme_values[] =
   {

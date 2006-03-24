@@ -3,7 +3,7 @@
 INCLUDES =								\
 	-I$(top_builddir)						\
 	-I$(top_srcdir)							\
-	-DG_LOG_DOMAIN=\"thunar-tag-renamer-plugin\"			\
+	-DG_LOG_DOMAIN=\"thunar-media-tags-plugin\"			\
 	-DEXO_API_SUBJECT_TO_CHANGE					\
 	-DPACKAGE_LOCALE_DIR=\"$(localedir)\"				\
 	$(PLATFORM_CPPFLAGS)
@@ -13,13 +13,13 @@ extensions_LTLIBRARIES =						\
 	thunar-tag-renamer-plugin.la
 
 thunar_tag_renamer_plugin_la_SOURCES =					\
-	tag-renamer-provider.h						\
-	tag-renamer-provider.c						\
+	media-tags-provider.h						\
+	media-tags-provider.c						\
 	tag-renamer.h							\
 	tag-renamer.c							\
-	tag-renamer-property-page.h					\
-	tag-renamer-property-page.c					\
-	tag-renamer-plugin.c
+	audio-tags-page.h						\
+	audio-tags-page.c						\
+	media-tags-plugin.c
 
 thunar_tag_renamer_plugin_la_CFLAGS =					\
 	$(EXO_CFLAGS)							\

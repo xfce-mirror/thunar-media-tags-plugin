@@ -1,4 +1,4 @@
-/* $Id$ */
+/* $Id: tag-renamer-provider.c 1218 2006-03-24 11:06:17Z jpohlmann $ */
 /*-
  * Copyright (c) 2006 Benedikt Meurer <benny@xfce.org>
  *                    Jannis Pohlmann <jannis@xfce.org>
@@ -25,68 +25,68 @@
 
 #include <taglib/tag_c.h>
 
-#include <tag-renamer-provider.h>
+#include <media-tags-provider.h>
 #include <tag-renamer.h>
-#include <tag-renamer-property-page.h>
+#include <audio-tags-page.h>
 
 
 
-static void   tag_renamer_provider_class_init                  (TagRenamerProviderClass          *klass);
-static void   tag_renamer_provider_renamer_provider_init       (ThunarxRenamerProviderIface      *iface);
-static void   tag_renamer_provider_init                        (TagRenamerProvider               *sbr_provider);
-static GList *tag_renamer_provider_get_renamers                (ThunarxRenamerProvider           *renamer_provider);
-static void   tag_renamer_provider_property_page_provider_init (ThunarxPropertyPageProviderIface *iface);
-static GList *tag_renamer_provider_get_pages                   (ThunarxPropertyPageProvider      *renamer_provider,
-                                                                GList                            *files);
+static void   media_tags_provider_class_init                    (MediaTagsProviderClass           *klass);
+static void   media_tags_provider_tag_renamer_provider_init     (ThunarxRenamerProviderIface      *iface);
+static void   media_tags_provider_init                          (MediaTagsProvider                *sbr_provider);
+static GList *media_tags_provider_get_renamers                  (ThunarxRenamerProvider           *renamer_provider);
+static void   media_tags_provider_audio_tags_page_provider_init (ThunarxPropertyPageProviderIface *iface);
+static GList *media_tags_provider_get_pages                     (ThunarxPropertyPageProvider      *renamer_provider,
+                                                                 GList                            *files);
 
 
 
-struct _TagRenamerProviderClass
+struct _MediaTagsProviderClass
 {
   GObjectClass __parent__;
 };
 
-struct _TagRenamerProvider
+struct _MediaTagsProvider
 {
   GObject __parent__;
 };
 
 
 
-THUNARX_DEFINE_TYPE_WITH_CODE (TagRenamerProvider,
-                               tag_renamer_provider,
+THUNARX_DEFINE_TYPE_WITH_CODE (MediaTagsProvider,
+                               media_tags_provider,
                                G_TYPE_OBJECT,
                                THUNARX_IMPLEMENT_INTERFACE (THUNARX_TYPE_RENAMER_PROVIDER,
-                                                            tag_renamer_provider_renamer_provider_init)
+                                                            media_tags_provider_tag_renamer_provider_init)
                                THUNARX_IMPLEMENT_INTERFACE (THUNARX_TYPE_PROPERTY_PAGE_PROVIDER,
-                                                            tag_renamer_provider_property_page_provider_init));
+                                                            media_tags_provider_audio_tags_page_provider_init));
 
 
 
 static void
-tag_renamer_provider_class_init (TagRenamerProviderClass *klass)
+media_tags_provider_class_init (MediaTagsProviderClass *klass)
 {
 }
 
 
 
 static void
-tag_renamer_provider_renamer_provider_init (ThunarxRenamerProviderIface *iface)
+media_tags_provider_tag_renamer_provider_init (ThunarxRenamerProviderIface *iface)
 {
-  iface->get_renamers = tag_renamer_provider_get_renamers;
+  iface->get_renamers = media_tags_provider_get_renamers;
 }
 
 
 
 static void
-tag_renamer_provider_init (TagRenamerProvider *sbr_provider)
+media_tags_provider_init (MediaTagsProvider *sbr_provider)
 {
 }
 
 
 
 static GList*
-tag_renamer_provider_get_renamers (ThunarxRenamerProvider *renamer_provider)
+media_tags_provider_get_renamers (ThunarxRenamerProvider *renamer_provider)
 {
   GList *renamers = NULL;
 
@@ -98,24 +98,24 @@ tag_renamer_provider_get_renamers (ThunarxRenamerProvider *renamer_provider)
 
 
 static void
-tag_renamer_provider_property_page_provider_init (ThunarxPropertyPageProviderIface *iface)
+media_tags_provider_audio_tags_page_provider_init (ThunarxPropertyPageProviderIface *iface)
 {
-  iface->get_pages = tag_renamer_provider_get_pages;
+  iface->get_pages = media_tags_provider_get_pages;
 }
 
 
 
 static GList*
-tag_renamer_provider_get_pages (ThunarxPropertyPageProvider *page_provider, GList *files)
+media_tags_provider_get_pages (ThunarxPropertyPageProvider *page_provider, GList *files)
 {
   GList *pages = NULL;
 
   if (g_list_length (files) != 1) 
     return NULL;
   
-  gboolean supported = TRUE;
-  
 #if 0
+  gboolean supported = TRUE;
+
   GList *file = NULL;
   GList *supported_files = NULL;
   
@@ -164,23 +164,18 @@ tag_renamer_provider_get_pages (ThunarxPropertyPageProvider *page_provider, GLis
       /* Free the taglib file instance */
       taglib_file_free (taglib_file);
 
-      supported = TRUE;
-    }
-
-  g_free (filename);
-  g_free (uri);
-
-  if (supported)
-    {
       /* Create the tag editor page */
-      TagRenamerPropertyPage *page = tag_renamer_property_page_new ();
+      AudioTagsPage *page = audio_tags_page_new ();
 
       /* Assign supported file info to the page */
-      tag_renamer_property_page_set_file (page, info);
+      audio_tags_page_set_file (page, info);
       
       /* Add the tag editor page to the pages provided by this plugin */
       pages = g_list_prepend (pages, page);
     }
+
+  g_free (filename);
+  g_free (uri);
 
   return pages;
 }

@@ -1,4 +1,4 @@
-/* $Id$ */
+/* $Id: tag-renamer-plugin.c 1218 2006-03-24 11:06:17Z jpohlmann $ */
 /*-
  * Copyright (c) 2006 Jannis Pohlmann <jannis@xfce.org>
  *
@@ -24,9 +24,9 @@
 
 #include <exo/exo.h>
 
-#include <tag-renamer-provider.h>
+#include <media-tags-provider.h>
 #include <tag-renamer.h>
-#include <tag-renamer-property-page.h>
+#include <audio-tags-page.h>
 
 
 
@@ -54,19 +54,19 @@ thunar_extension_initialize (ThunarxProviderPlugin *plugin)
 #endif
 
 #ifdef G_ENABLE_DEBUG
-  g_message ("Initializing thunar-tag-renamer-plugin extension");
+  g_message ("Initializing thunar-media-tags-plugin extension");
 #endif
 
   /* Register the enum types for this plugin */
-  register_tag_enum_types (plugin);
+  tag_renamer_register_enum_types (plugin);
 
   /* Register the types provided by this plugin */
-  tag_renamer_provider_register_type (plugin);
+  media_tags_provider_register_type (plugin);
   tag_renamer_register_type (plugin);
-  tag_renamer_property_page_register_type (plugin);
+  audio_tags_page_register_type (plugin);
 
   /* Setup the plugin provider type list */
-  type_list[0] = TYPE_TAG_RENAMER_PROVIDER;
+  type_list[0] = TYPE_MEDIA_TAGS_PROVIDER;
 }
 
 

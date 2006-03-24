@@ -44,8 +44,8 @@ typedef enum
   TAG_RENAMER_SCHEME_ARTIST_TRACK_TITLE,
 } TagRenamerScheme;
 
-GType tag_renamer_scheme_get_type (void) G_GNUC_CONST G_GNUC_INTERNAL;
-void register_tag_enum_types      (ThunarxProviderPlugin *plugin) G_GNUC_INTERNAL;
+GType tag_renamer_scheme_get_type     (void) G_GNUC_CONST G_GNUC_INTERNAL;
+void  tag_renamer_register_enum_types (ThunarxProviderPlugin *plugin) G_GNUC_INTERNAL;
 
 
 
