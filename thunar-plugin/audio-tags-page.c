@@ -746,9 +746,6 @@ audio_tags_page_file_changed (ThunarxFileInfo *file,
   /* Temporarily reset the file attribute */
   page->file = NULL;
 
-  /* Make page sensitive again */
-  gtk_widget_set_sensitive (GTK_WIDGET (page), TRUE);
-
   /* Load tag information after 250 ms */
   if (page->changed_timeout <= 0)
       page->changed_timeout = g_timeout_add_full (G_PRIORITY_DEFAULT_IDLE, 250, (GSourceFunc)audio_tags_page_load_tags, page, NULL);
@@ -813,6 +810,9 @@ audio_tags_page_taglib_file_changed (TagLib_File   *taglib_file,
       /* Free allocated strings */
       taglib_tag_free_strings ();
     }
+  
+  /* Make page sensitive again */
+  gtk_widget_set_sensitive (GTK_WIDGET (page), TRUE);
 }
 
 
