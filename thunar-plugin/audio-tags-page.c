@@ -274,6 +274,7 @@ audio_tags_page_init (AudioTagsPage *page)
   GtkWidget *combo;
   GtkWidget *spin;
   GtkAction *action;
+  int i;
 
   gtk_container_set_border_width (GTK_CONTAINER (page), 8);
 
@@ -455,7 +456,6 @@ audio_tags_page_init (AudioTagsPage *page)
     "Techno", "Techno-Industrial", "Terror", "Thrash Metal", "Top 40", "Trailer",
   };
 
-  int i;
   for (i=0; i<G_N_ELEMENTS (genres); i++) 
     gtk_combo_box_append_text (GTK_COMBO_BOX (combo), genres[i]);
 
@@ -525,7 +525,7 @@ audio_tags_page_new (void)
 {
   AudioTagsPage *page = g_object_new (TYPE_AUDIO_TAGS_PAGE, NULL);
 
-  thunarx_property_page_set_label (THUNARX_PROPERTY_PAGE (page), _("Audio Meta Tags"));
+  thunarx_property_page_set_label (THUNARX_PROPERTY_PAGE (page), _("Audio"));
 
   return page;
 }
@@ -535,12 +535,57 @@ audio_tags_page_new (void)
 AudioTagsPage*
 audio_tags_page_new_with_save_button (void)
 {
-  AudioTagsPage *page = g_object_new (TYPE_AUDIO_TAGS_PAGE, NULL);
-
+  AudioTagsPage *page = audio_tags_page_new ();
+  
   /* Add save button */
   audio_tags_page_set_show_save_button (page, TRUE);
 
   return page;
+}
+
+
+
+GtkWidget*
+audio_tags_page_dialog_new (GtkWindow *window, 
+                            ThunarxFileInfo *file)
+{
+  GtkWidget     *dialog;
+  GtkWidget     *button;
+  AudioTagsPage *page;
+  GtkAction     *action;
+
+  /* Create the audio tags page */
+  page = audio_tags_page_new ();
+
+  /* Set audio file */
+  audio_tags_page_set_file (page, file);
+  
+  /* Set up the dialog */
+  dialog = gtk_dialog_new_with_buttons (_("Edit Audio Tags"),
+                                        window,
+                                        GTK_DIALOG_MODAL | GTK_DIALOG_DESTROY_WITH_PARENT,
+                                        GTK_STOCK_CANCEL, 
+                                        GTK_RESPONSE_CANCEL,
+                                        NULL);
+
+  /* Make OK the default response */
+  gtk_dialog_set_default_response (GTK_DIALOG (dialog), GTK_RESPONSE_OK);
+
+  /* Add page to the dialog */
+  gtk_container_add (GTK_CONTAINER (GTK_DIALOG (dialog)->vbox), GTK_WIDGET (page));
+  gtk_widget_show (GTK_WIDGET (page));
+  
+  /* Create save button */
+  button = gtk_button_new_from_stock (GTK_STOCK_SAVE);
+
+  /* Connect save button to the "save" action */
+  action = gtk_action_group_get_action (page->action_group, "save");
+  gtk_action_connect_proxy (action, button);
+
+  /* Add save button to the dialog */
+  gtk_dialog_add_action_widget (GTK_DIALOG (dialog), button, GTK_RESPONSE_OK);
+
+  return dialog;
 }
 
 

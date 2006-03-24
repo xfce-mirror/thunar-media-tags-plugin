@@ -34,6 +34,8 @@
 #include <exo/exo.h>
 
 #include <tag-renamer.h>
+#include <audio-tags-page.h>
+#include <media-tags-provider.h>
 
 
 
@@ -82,22 +84,27 @@ enum
 
 
 
-static void   tag_renamer_class_init   (TagRenamerClass *klass);
-static void   tag_renamer_init         (TagRenamer      *tag_renamer);
-static void   tag_renamer_finalize     (GObject         *object);
-static void   tag_renamer_get_property (GObject         *object,
-                                        guint            prop_id,
-                                        GValue          *value,
-                                        GParamSpec      *pspec);
-static void   tag_renamer_set_property (GObject         *object,
-                                        guint            prop_id,
-                                        const GValue    *value,
-                                        GParamSpec      *pspec);
-static void   tag_renamer_realize      (GtkWidget       *widget);
-static gchar *tag_renamer_process      (ThunarxRenamer  *renamer,
-                                        ThunarxFileInfo *file,
-                                        const gchar     *text,
-                                        guint            index);
+static void   tag_renamer_class_init          (TagRenamerClass *klass);
+static void   tag_renamer_init                (TagRenamer      *tag_renamer);
+static void   tag_renamer_finalize            (GObject         *object);
+static void   tag_renamer_get_property        (GObject         *object,
+                                               guint            prop_id,
+                                               GValue          *value,
+                                               GParamSpec      *pspec);
+static void   tag_renamer_set_property        (GObject         *object,
+                                               guint            prop_id,
+                                               const GValue    *value,
+                                               GParamSpec      *pspec);
+static void   tag_renamer_realize             (GtkWidget       *widget);
+static gchar *tag_renamer_process             (ThunarxRenamer  *renamer,
+                                               ThunarxFileInfo *file,
+                                               const gchar     *text,
+                                               guint            index);
+static GList *tag_renamer_get_actions         (ThunarxRenamer  *renamer,
+                                               GtkWindow       *window,
+                                               GList           *files);
+static void   tag_renamer_edit_tags_activated (GtkAction       *action,
+                                               ThunarxFileInfo *file);
 
 
 
@@ -144,6 +151,7 @@ tag_renamer_class_init (TagRenamerClass *klass)
 
   thunarxrenamer_class = THUNARX_RENAMER_CLASS (klass);
   thunarxrenamer_class->process = tag_renamer_process;
+  thunarxrenamer_class->get_actions = tag_renamer_get_actions;
 
   /**
    * TagRenamer:naming-scheme:
@@ -551,6 +559,40 @@ tag_renamer_process (ThunarxRenamer  *renamer,
 
 
 
+static GList*
+tag_renamer_get_actions (ThunarxRenamer *renamer,
+                         GtkWindow      *window,
+                         GList          *files)
+{
+  GtkAction       *action;
+  GList           *file;
+  GList           *actions = NULL;
+  ThunarxFileInfo *info;
+
+  if (g_list_length (files) != 1)
+    return NULL;
+
+  file = g_list_first (files);
+
+  if (G_UNLIKELY (file == NULL))
+    return NULL;
+
+  info = THUNARX_FILE_INFO (file->data);
+
+  if (G_LIKELY (media_tags_get_audio_file_supported (info)))
+    {
+      /* Edit tags action */
+      action = gtk_action_new ("edit-tags", _("Edit _Tags"), _("Edit ID3/OGG tags of this file."), GTK_STOCK_EDIT);
+      g_object_set_data_full (G_OBJECT (action), "window", g_object_ref (G_OBJECT (window)), (GDestroyNotify)g_object_unref);
+      g_signal_connect (G_OBJECT (action), "activate", G_CALLBACK (tag_renamer_edit_tags_activated), info);
+      actions = g_list_prepend (actions, action);
+    }
+
+  return actions;
+}
+
+
+
 /**
  * tag_renamer_new:
  *
@@ -806,4 +848,24 @@ tag_renamer_set_title (TagRenamer  *tag_renamer,
 
   /* Emit the "changed" signal */
   thunarx_renamer_changed (THUNARX_RENAMER (tag_renamer));
+}
+
+
+
+static void
+tag_renamer_edit_tags_activated (GtkAction *action, 
+                                 ThunarxFileInfo *file)
+{
+  GtkWindow *window;
+  GtkWidget *dialog;
+
+  /* Determine the parent window */
+  window = g_object_get_data (G_OBJECT (action), "window");
+  if (G_UNLIKELY (window == NULL))
+    return;
+
+  dialog = audio_tags_page_dialog_new (window, file);
+
+  gtk_dialog_run (GTK_DIALOG (dialog));
+  gtk_widget_destroy (dialog);
 }

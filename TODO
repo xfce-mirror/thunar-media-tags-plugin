@@ -1,10 +1,7 @@
 TODO for thunar-tag-renamer-plugin
 =======================================================================
 
-  * strstrip() tags before displaying them on the property page.
- 
-  * Compare new values with old ones before writing the file 
-    (race-conditions!).
+  * Add an embedded player to the AudioTagsPage.
 
   * Check if we can rename files to folders, like 
     ARTIST/ALBUM/TITLE.EXT

@@ -36,8 +36,10 @@ typedef struct _MediaTagsProvider      MediaTagsProvider;
 #define IS_MEDIA_TAGS_PROVIDER_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass),  TYPE_MEDIA_TAGS_PROVIDER))
 #define MEDIA_TAGS_PROVIDER_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj),  TYPE_MEDIA_TAGS_PROVIDER, MediaTagsProviderClass))
 
-GType media_tags_provider_get_type      (void) G_GNUC_CONST G_GNUC_INTERNAL;
-void  media_tags_provider_register_type (ThunarxProviderPlugin *plugin) G_GNUC_INTERNAL;
+GType    media_tags_provider_get_type        (void) G_GNUC_CONST G_GNUC_INTERNAL;
+void     media_tags_provider_register_type   (ThunarxProviderPlugin *plugin) G_GNUC_INTERNAL;
+
+gboolean media_tags_get_audio_file_supported (ThunarxFileInfo *info) G_GNUC_INTERNAL;
 
 G_END_DECLS;
 

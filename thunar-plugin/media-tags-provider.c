@@ -108,64 +108,26 @@ media_tags_provider_audio_tags_page_provider_init (ThunarxPropertyPageProviderIf
 static GList*
 media_tags_provider_get_pages (ThunarxPropertyPageProvider *page_provider, GList *files)
 {
-  GList *pages = NULL;
+  GList           *pages = NULL;
+  GList           *file;
+  ThunarxFileInfo *info;
 
   if (g_list_length (files) != 1) 
     return NULL;
   
-#if 0
-  gboolean supported = TRUE;
-
-  GList *file = NULL;
-  GList *supported_files = NULL;
-  
-  for (file = g_list_last (files); file != NULL; file = file->prev)
-    {
-      ThunarxFileInfo *info = THUNARX_FILE_INFO (file->data);
-      
-      gchar *uri = thunarx_file_info_get_uri (info);
-      gchar *filename = g_filename_from_uri (uri, NULL, NULL);
-
-      /* Try loading tag information */
-      TagLib_File *taglib_file = taglib_file_new (filename);
-
-      if (G_LIKELY (taglib_file != NULL))
-        {
-          /* Free the TagLib file instance */
-          taglib_file_free (taglib_file);
-          
-          /* Add the file info to the supported list */
-          supported_files = g_list_prepend (supported_files, info);
-        }
-
-      g_free (filename);
-      g_free (uri);
-
-      if (!supported)
-        break;
-    }
-#endif
-
-  GList* file = g_list_first (files);
+  file = g_list_first (files);
 
   if (G_UNLIKELY (file == NULL))
     return NULL;
 
-  ThunarxFileInfo *info = THUNARX_FILE_INFO (file->data);
+  info = THUNARX_FILE_INFO (file->data);
 
-  gchar *uri = thunarx_file_info_get_uri (info);
-  gchar *filename = g_filename_from_uri (uri, NULL, NULL);
-
-  /* Try loading the tag information */
-  TagLib_File *taglib_file = taglib_file_new (filename);
-
-  if (G_LIKELY (taglib_file != NULL))
+  if (G_LIKELY (media_tags_get_audio_file_supported (info)))
     {
-      /* Free the taglib file instance */
-      taglib_file_free (taglib_file);
-
+      AudioTagsPage *page;
+      
       /* Create the tag editor page */
-      AudioTagsPage *page = audio_tags_page_new_with_save_button ();
+      page = audio_tags_page_new_with_save_button ();
 
       /* Assign supported file info to the page */
       audio_tags_page_set_file (page, info);
@@ -174,8 +136,38 @@ media_tags_provider_get_pages (ThunarxPropertyPageProvider *page_provider, GList
       pages = g_list_prepend (pages, page);
     }
 
+  return pages;
+}
+
+
+
+gboolean
+media_tags_get_audio_file_supported (ThunarxFileInfo *info)
+{
+  gchar       *uri;
+  gchar       *filename;
+  TagLib_File *taglib_file;
+  gboolean     supported = FALSE;
+
+  g_return_val_if_fail (info != NULL || THUNARX_IS_FILE_INFO (info), FALSE);
+  
+  uri = thunarx_file_info_get_uri (info);
+  filename = g_filename_from_uri (uri, NULL, NULL);
+
+  /* Try loading the tag information */
+  taglib_file = taglib_file_new (filename);
+
+  if (G_LIKELY (taglib_file != NULL))
+    {
+      /* Free the taglib file */
+      taglib_file_free (taglib_file);
+
+      supported = TRUE;
+    }
+      
+
   g_free (filename);
   g_free (uri);
 
-  return pages;
+  return supported;
 }

@@ -1,5 +1,18 @@
 2006-03-24  Jannis Pohlmann <jannis@xfce.org>
 
+  * thunar-plugin/media-tags-provider.{c,h}: Add 
+    media_tags_get_audio_file_supported() method for checking if a file
+    is supported by the audio part of the media-tags plugin. Alter
+    media_tags_provider_get_pages() to use the new method.
+  * thunar-plugin/audio-tags-page.{c,h}: Add 
+    audio_tags_page_dialog_new() for creating a page embedded in a 
+    dialog. This makes it possible to edit tags from the bulk renamer.
+  * thunar-plugin/tag-renamer.c: Implement thunarx_renamer_get_actions()
+    in tag_renamer_get_actions() in order to return an "Edit Tags"
+    entry for audio files in the bulk renamer.
+
+2006-03-24  Jannis Pohlmann <jannis@xfce.org>
+
   * thunar-plugin/audio-tags-page.{c,h}: Add "show-save-button" 
     property and "save" action to AudioTagsPage.
     Add convenience method audio_tags_page_new_with_save_button().
