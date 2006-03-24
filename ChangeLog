@@ -1,5 +1,10 @@
 2006-03-24  Jannis Pohlmann <jannis@xfce.org>
 
+  * thunar-plugin/audio-tags-page.c: Reset timeout and unregister it
+    in _finalize(). Fix C++ variable declarations.
+    
+2006-03-24  Jannis Pohlmann <jannis@xfce.org>
+
   * thunar-plugin/audio-tags-page.c: Rearrange tag editor layout in
     order to fit into the property dialog size.
 

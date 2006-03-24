@@ -461,6 +461,10 @@ static void
 audio_tags_page_finalize (GObject *object)
 {
   AudioTagsPage *page = AUDIO_TAGS_PAGE (object);
+
+  /* Unregister the changed_timeout */
+  if (G_UNLIKELY (page->changed_timeout != 0))
+    g_source_remove (page->changed_timeout);
   
   /* Free file reference */
   audio_tags_page_set_file (page, NULL);
@@ -756,10 +760,6 @@ static void
 audio_tags_page_taglib_file_changed (TagLib_File   *taglib_file,
                                      AudioTagsPage *page)
 {
-  g_return_if_fail (IS_AUDIO_TAGS_PAGE (page));
-  g_return_if_fail (page->taglib_file == taglib_file);
-  g_return_if_fail (taglib_file != NULL);
-
   TagLib_Tag *taglib_tag;
 
   /* Strings to be freed by taglib_tag_free_strings */
@@ -771,6 +771,10 @@ audio_tags_page_taglib_file_changed (TagLib_File   *taglib_file,
 
   guint       track;
   guint       year;
+
+  g_return_if_fail (IS_AUDIO_TAGS_PAGE (page));
+  g_return_if_fail (page->taglib_file == taglib_file);
+  g_return_if_fail (taglib_file != NULL);
 
   /* Load tag information */
   taglib_tag = taglib_file_tag (taglib_file);
@@ -813,12 +817,12 @@ audio_tags_page_taglib_file_changed (TagLib_File   *taglib_file,
 static gboolean
 audio_tags_page_activate (AudioTagsPage *page)
 {
+  TagLib_Tag *tag;
+    
   g_return_val_if_fail (page != NULL || IS_AUDIO_TAGS_PAGE (page), FALSE);
   g_return_val_if_fail (page->file != NULL || THUNARX_IS_FILE_INFO (page->file), FALSE);
   g_return_val_if_fail (page->taglib_file != NULL, FALSE);
 
-  TagLib_Tag *tag;
-    
   /* Get tag information */
   tag = taglib_file_tag (page->taglib_file);
 
@@ -848,12 +852,12 @@ audio_tags_page_activate (AudioTagsPage *page)
 static gboolean
 audio_tags_page_load_tags (AudioTagsPage *page)
 {
-  g_return_val_if_fail (page != NULL || IS_AUDIO_TAGS_PAGE (page), FALSE);
-  g_return_val_if_fail (page->file != NULL || THUNARX_IS_FILE_INFO (page->file), FALSE);
-
   TagLib_File *taglib_file;
   gchar       *uri;
   gchar       *filename;
+
+  g_return_val_if_fail (page != NULL || IS_AUDIO_TAGS_PAGE (page), FALSE);
+  g_return_val_if_fail (page->file != NULL || THUNARX_IS_FILE_INFO (page->file), FALSE);
 
   /* Determine filename */
   uri = thunarx_file_info_get_uri (page->file);
@@ -869,6 +873,9 @@ audio_tags_page_load_tags (AudioTagsPage *page)
   /* Free strings */
   g_free (filename);
   g_free (uri);
+
+  /* Reset timeout */
+  page->changed_timeout = 0;
 
   return FALSE;
 }
