@@ -748,7 +748,7 @@ audio_tags_page_file_changed (ThunarxFileInfo *file,
 
   /* Load tag information after 250 ms */
   if (page->changed_timeout <= 0)
-      g_timeout_add_full (G_PRIORITY_DEFAULT_IDLE, 250, (GSourceFunc)audio_tags_page_load_tags, page, NULL);
+      page->changed_timeout = g_timeout_add_full (G_PRIORITY_DEFAULT_IDLE, 250, (GSourceFunc)audio_tags_page_load_tags, page, NULL);
 
   /* Reset the file attribute */
   page->file = file;

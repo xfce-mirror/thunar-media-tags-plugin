@@ -1,5 +1,9 @@
 2006-03-24  Jannis Pohlmann <jannis@xfce.org>
 
+  * thunar-plugin/audio-tags-page.c: Fix timeout id problem.
+
+2006-03-24  Jannis Pohlmann <jannis@xfce.org>
+
   * thunar-plugin/audio-tags-page.c: Reset timeout and unregister it
     in _finalize(). Fix C++ variable declarations.
     
