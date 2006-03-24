@@ -1,5 +1,11 @@
 2006-03-24  Jannis Pohlmann <jannis@xfce.org>
 
+  * thunar-plugin/audio-tags-page.{c,h}: Add "show-save-button" 
+    property and "save" action to AudioTagsPage.
+    Add convenience method audio_tags_page_new_with_save_button().
+
+2006-03-24  Jannis Pohlmann <jannis@xfce.org>
+
   * thunar-plugin/audio-tags-page.c: Strip leading and trailing 
     whitespaces from all tags before displaying them. Compare old
     to new values before saving. Make page insensitive when saving

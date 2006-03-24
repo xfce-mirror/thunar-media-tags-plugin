@@ -165,7 +165,7 @@ media_tags_provider_get_pages (ThunarxPropertyPageProvider *page_provider, GList
       taglib_file_free (taglib_file);
 
       /* Create the tag editor page */
-      AudioTagsPage *page = audio_tags_page_new ();
+      AudioTagsPage *page = audio_tags_page_new_with_save_button ();
 
       /* Assign supported file info to the page */
       audio_tags_page_set_file (page, info);

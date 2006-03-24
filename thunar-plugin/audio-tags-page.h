@@ -36,17 +36,21 @@ typedef struct _AudioTagsPage      AudioTagsPage;
 #define IS_AUDIO_TAGS_PAGE_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass),  TYPE_AUDIO_TAGS_PAGE))
 #define AUDIO_TAGS_PAGE_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj),  TYPE_AUDIO_TAGS_PAGE, AudioTagsPageClass))
 
-GType            audio_tags_page_get_type        (void) G_GNUC_CONST G_GNUC_INTERNAL;
-void             audio_tags_page_register_type   (ThunarxProviderPlugin *plugin) G_GNUC_INTERNAL;
+GType            audio_tags_page_get_type             (void) G_GNUC_CONST G_GNUC_INTERNAL;
+void             audio_tags_page_register_type        (ThunarxProviderPlugin *plugin) G_GNUC_INTERNAL;
 
-AudioTagsPage   *audio_tags_page_new             (void) G_GNUC_CONST G_GNUC_INTERNAL G_GNUC_MALLOC;
+AudioTagsPage   *audio_tags_page_new                  (void) G_GNUC_CONST G_GNUC_INTERNAL G_GNUC_MALLOC;
+AudioTagsPage   *audio_tags_page_new_with_save_button (void) G_GNUC_CONST G_GNUC_INTERNAL G_GNUC_MALLOC;
 
-ThunarxFileInfo *audio_tags_page_get_file        (AudioTagsPage         *page) G_GNUC_INTERNAL;
-void             audio_tags_page_set_file        (AudioTagsPage         *page,
-                                                  ThunarxFileInfo       *file) G_GNUC_INTERNAL;
-TagLib_File     *audio_tags_page_get_taglib_file (AudioTagsPage         *page) G_GNUC_INTERNAL;
-void             audio_tags_page_set_taglib_file (AudioTagsPage         *page,
-                                                  TagLib_File           *file) G_GNUC_INTERNAL;
+ThunarxFileInfo *audio_tags_page_get_file             (AudioTagsPage         *page) G_GNUC_INTERNAL;
+void             audio_tags_page_set_file             (AudioTagsPage         *page,
+                                                       ThunarxFileInfo       *file) G_GNUC_INTERNAL;
+TagLib_File     *audio_tags_page_get_taglib_file      (AudioTagsPage         *page) G_GNUC_INTERNAL;
+void             audio_tags_page_set_taglib_file      (AudioTagsPage         *page,
+                                                       TagLib_File           *file) G_GNUC_INTERNAL;
+gboolean         audio_tags_page_get_show_save_button (AudioTagsPage         *page) G_GNUC_INTERNAL;
+void             audio_tags_page_set_show_save_button (AudioTagsPage         *page,
+                                                       gboolean               show) G_GNUC_INTERNAL;
 
 G_END_DECLS;
 
