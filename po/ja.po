@@ -1,0 +1,240 @@
+# Japanese translations for thunar-media-tags-plugin package.
+# Copyright (C) 2006 Jannis Pohlmann.
+# This file is distributed under the same license as
+#   the thunar-media-tags-plugin package.
+# Daichi Kawahata <daichi@xfce.org>, 2006.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: thunar-media-tags-plugin 0.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-03-25 22:59+0900\n"
+"PO-Revision-Date: 2006-03-25 23:40+0900\n"
+"Last-Translator: Daichi Kawahata <daichi@xfce.org>\n"
+"Language-Team: Japanese <xfce-users-jp@ml.fdiary.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../thunar-plugin/tag-renamer.c:59
+msgid "Title"
+msgstr "タイトル"
+
+#: ../thunar-plugin/tag-renamer.c:60
+msgid "Artist - Title"
+msgstr "アーティスト - タイトル"
+
+#: ../thunar-plugin/tag-renamer.c:61
+msgid "Track - Title"
+msgstr "曲 - タイトル"
+
+#: ../thunar-plugin/tag-renamer.c:62
+msgid "Track - Artist - Title"
+msgstr "曲 - アーティスト - タイトル"
+
+#: ../thunar-plugin/tag-renamer.c:63
+msgid "Track. Title"
+msgstr "曲. タイトル"
+
+#: ../thunar-plugin/tag-renamer.c:64
+msgid "Track. Artist - Title"
+msgstr "曲. アーティスト - タイトル"
+
+#: ../thunar-plugin/tag-renamer.c:65
+msgid "Artist - Track - Title"
+msgstr "アーティスト - 曲 - タイトル"
+
+#: ../thunar-plugin/tag-renamer.c:206 ../thunar-plugin/tag-renamer.c:310
+#: ../thunar-plugin/tag-renamer.c:764 ../thunar-plugin/audio-tags-page.c:183
+msgid "Unknown Artist"
+msgstr "アーティスト不明"
+
+#: ../thunar-plugin/tag-renamer.c:219 ../thunar-plugin/tag-renamer.c:311
+#: ../thunar-plugin/tag-renamer.c:815 ../thunar-plugin/audio-tags-page.c:209
+msgid "Unknown Title"
+msgstr "タイトル不明"
+
+#. Naming scheme label
+#: ../thunar-plugin/tag-renamer.c:250
+msgid "Naming _scheme:"
+msgstr "命名規則(_S):"
+
+#: ../thunar-plugin/tag-renamer.c:273
+msgid "Use _underscores"
+msgstr "アンダースコアを使う(_U)"
+
+#: ../thunar-plugin/tag-renamer.c:275
+msgid ""
+"Activating this option will replace all spaces in the target filename with "
+"underscores."
+msgstr ""
+"このオプションを有効にすると、ファイル名の全てのスペースをアンダースコアで置"
+"き換えます。"
+
+#: ../thunar-plugin/tag-renamer.c:280
+msgid "Use _lowercase"
+msgstr "小文字を使う(_L)"
+
+#: ../thunar-plugin/tag-renamer.c:282
+msgid ""
+"If you activate this, the resulting filename will not contain any uppercase "
+"letters."
+msgstr ""
+"このオプションを有効にすると、ファイル名の大文字を小文字で置き換えます。"
+
+#: ../thunar-plugin/tag-renamer.c:287
+msgid "Default Art_ist:"
+msgstr "標準アーティスト(_I):"
+
+#: ../thunar-plugin/tag-renamer.c:295
+msgid "Text entered in this field is going to replace missing artist tags."
+msgstr "アーティストタグが空白の場合、ここで入力されたテキストが入ります。"
+
+#. Edit tags action
+#: ../thunar-plugin/tag-renamer.c:585
+msgid "Edit _Tags"
+msgstr "タグを編集(_T)"
+
+#: ../thunar-plugin/tag-renamer.c:585
+msgid "Edit ID3/OGG tags of this file."
+msgstr "このファイルの ID3/OGG タグを編集します。"
+
+#: ../thunar-plugin/tag-renamer.c:607
+msgid "ID3 and Vorbis Tags"
+msgstr "ID3 と Vorbis タグ"
+
+#: ../thunar-plugin/audio-tags-page.c:196
+msgid "Unknown Album"
+msgstr "アルバム不明"
+
+#: ../thunar-plugin/audio-tags-page.c:305
+msgid "<b>Track:</b>"
+msgstr "<b>曲番:</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:320
+msgid "Enter the track number here."
+msgstr "ここに曲番を入力してください。"
+
+#: ../thunar-plugin/audio-tags-page.c:328
+msgid "<b>Year:</b>"
+msgstr "<b>リリース年:</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:343
+msgid "Enter the release year here."
+msgstr "ここにリリース年を入力してください。"
+
+#: ../thunar-plugin/audio-tags-page.c:351
+msgid "<b>Artist:</b>"
+msgstr "<b>アーティスト:</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:358
+msgid "Enter the name of the artist or author of this file here."
+msgstr "ここにアーティストか著作者の名前を入力してください。"
+
+#: ../thunar-plugin/audio-tags-page.c:366
+msgid "<b>Title:</b>"
+msgstr "<b>タイトル:</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:373
+msgid "Enter the song title here."
+msgstr "ここに曲のタイトルを入力してください。"
+
+#: ../thunar-plugin/audio-tags-page.c:380
+msgid "<b>Album:</b>"
+msgstr "<b>アルバム:</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:387
+msgid "Enter the album/record title here."
+msgstr "ここにアルバム/レコードタイトルを入力してください。"
+
+#: ../thunar-plugin/audio-tags-page.c:394
+msgid "<b>Comment:</b>"
+msgstr "<b>コメント:</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:401
+msgid "Enter your comments here."
+msgstr "ここにコメントを入力して下さい。"
+
+#: ../thunar-plugin/audio-tags-page.c:408
+msgid "<b>Genre:</b>"
+msgstr "<b>ジャンル:</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:415
+msgid "Select or enter the genre of this song here."
+msgstr "ここに曲のジャンルを選択するか入力してください。"
+
+#. Create and add the save action
+#: ../thunar-plugin/audio-tags-page.c:454
+msgid "_Save"
+msgstr "保存(_S)"
+
+#: ../thunar-plugin/audio-tags-page.c:454
+msgid "Save audio tags."
+msgstr "オーディオタグを保存します。"
+
+#. Create and add the info action
+#: ../thunar-plugin/audio-tags-page.c:461
+msgid "_Information"
+msgstr "情報(_I)"
+
+#: ../thunar-plugin/audio-tags-page.c:461
+msgid "Display more detailed information about this audio file."
+msgstr "このオーディオファイルの詳細情報を表示します。"
+
+#: ../thunar-plugin/audio-tags-page.c:528
+msgid "Audio"
+msgstr "オーディオ"
+
+#. Set up the dialog
+#: ../thunar-plugin/audio-tags-page.c:564
+msgid "Edit Tags"
+msgstr "タグを編集"
+
+#. Create dialog
+#: ../thunar-plugin/audio-tags-page.c:992
+msgid "Audio Information"
+msgstr "オーディオ情報"
+
+#: ../thunar-plugin/audio-tags-page.c:1003
+#, c-format
+msgid "%d:%d Minutes"
+msgstr "%d:%d 分"
+
+#: ../thunar-plugin/audio-tags-page.c:1004
+#, c-format
+msgid "%d KBit/s"
+msgstr "%d KBit/秒"
+
+#: ../thunar-plugin/audio-tags-page.c:1005
+#, c-format
+msgid "%d Hz"
+msgstr "%d Hz"
+
+#: ../thunar-plugin/audio-tags-page.c:1025
+msgid "<b>Filename:</b>"
+msgstr "<b>ファイル名:</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:1038
+msgid "<b>Filesize:</b>"
+msgstr "<b>ファイルサイズ:</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:1051
+msgid "<b>MIME Type:</b>"
+msgstr "<b>MIMEタイプ:</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:1064
+msgid "<b>Bitrate:</b>"
+msgstr "<b>ビット速度:</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:1077
+msgid "<b>Samplerate:</b>"
+msgstr "<b>サンプル速度:</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:1090
+msgid "<b>Channels:</b>"
+msgstr "<b>チャンネル数:</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:1103
+msgid "<b>Length:</b>"
+msgstr "<b>長さ:</b>"
