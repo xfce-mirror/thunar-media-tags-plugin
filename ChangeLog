@@ -1,5 +1,9 @@
 2006-03-25  Jannis Pohlmann <jannis@xfce.org>
 
+  * configure.in.in: Japanese translation added.
+
+2006-03-25  Jannis Pohlmann <jannis@xfce.org>
+
   * thunar-plugin/audio-tags-page.c: Implement "info" action, which
     displays a dialog with more detailed audio information (bitrate,
     samplerate, length etc.).

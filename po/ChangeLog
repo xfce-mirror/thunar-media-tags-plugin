@@ -1,5 +1,9 @@
 2006-03-25  Jannis Pohlmann <jannis@xfce.org>
 
+  * ja.po: Japanese translations by Daichi Kawahata added.
+
+2006-03-25  Jannis Pohlmann <jannis@xfce.org>
+
   * thunar-media-tags-plugin.pot: Merge new strings.
   * de.po: Updated German translations.
 
