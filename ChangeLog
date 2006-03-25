@@ -1,3 +1,9 @@
+2006-03-25  Jannis Pohlmann <jannis@xfce.org>
+
+  * thunar-plugin/audio-tags-page.c: Implement "info" action, which
+    displays a dialog with more detailed audio information (bitrate,
+    samplerate, length etc.).
+
 2006-03-24  Jannis Pohlmann <jannis@xfce.org>
 
   * thunar-plugin/audio-tags-page.c: Add GTK_STOCK_INFO button on 

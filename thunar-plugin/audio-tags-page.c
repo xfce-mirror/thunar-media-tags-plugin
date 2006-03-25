@@ -32,6 +32,7 @@
 #include <taglib/tag_c.h>
 
 #include <exo/exo.h>
+#include <thunar-vfs/thunar-vfs.h>
 
 #include <audio-tags-page.h>
 
@@ -71,6 +72,8 @@ static void     audio_tags_page_file_changed        (ThunarxFileInfo    *file,
 static void     audio_tags_page_taglib_file_changed (TagLib_File        *taglib_file,
                                                      AudioTagsPage      *page);
 static gboolean audio_tags_page_activate            (AudioTagsPage      *page);
+static gboolean audio_tags_page_info_activate       (GtkAction          *action,
+                                                     AudioTagsPage      *page);
 static gboolean audio_tags_page_load_tags           (AudioTagsPage      *page);
 
 
@@ -273,6 +276,7 @@ audio_tags_page_init (AudioTagsPage *page)
   GtkWidget *entry;
   GtkWidget *combo;
   GtkWidget *spin;
+  GtkWidget *toplevel;
   GtkAction *action;
   int i;
 
@@ -296,7 +300,7 @@ audio_tags_page_init (AudioTagsPage *page)
   gtk_widget_show (page->table);
 
   /* Track label */
-  label = gtk_label_new (_("Track:"));
+  label = gtk_label_new ("");
   gtk_misc_set_alignment (GTK_MISC (label), 1.0f, 0.5f);
   gtk_label_set_markup (GTK_LABEL (label), _("<b>Track:</b>"));
   gtk_table_attach (GTK_TABLE (page->table), label, 0, 1, 0, 1, GTK_FILL, 0, 0, 0);
@@ -312,7 +316,6 @@ audio_tags_page_init (AudioTagsPage *page)
 
   /* Track spin button */
   spin = gtk_spin_button_new (GTK_ADJUSTMENT (adjustment), 1, 0);
-  gtk_entry_set_activates_default (GTK_ENTRY (spin), TRUE);
   exo_mutual_binding_new (G_OBJECT (adjustment), "value", G_OBJECT (page), "track");
   gtk_tooltips_set_tip (page->tooltips, spin, _("Enter the track number here."), NULL);
   gtk_container_add (GTK_CONTAINER (alignment), spin);
@@ -320,7 +323,7 @@ audio_tags_page_init (AudioTagsPage *page)
   gtk_widget_show (spin);
   
   /* Year label */
-  label = gtk_label_new (_("Year:"));
+  label = gtk_label_new ("");
   gtk_misc_set_alignment (GTK_MISC (label), 1.0f, 0.5f);
   gtk_label_set_markup (GTK_LABEL (label), _("<b>Year:</b>"));
   gtk_table_attach (GTK_TABLE (page->table), label, 2, 3, 0, 1, GTK_FILL, 0, 0, 0);
@@ -336,7 +339,6 @@ audio_tags_page_init (AudioTagsPage *page)
 
   /* Year spin button */
   spin = gtk_spin_button_new (GTK_ADJUSTMENT (adjustment), 1, 0);
-  gtk_entry_set_activates_default (GTK_ENTRY (spin), TRUE);
   exo_mutual_binding_new (G_OBJECT (adjustment), "value", G_OBJECT (page), "year");
   gtk_tooltips_set_tip (page->tooltips, spin, _("Enter the release year here."), NULL);
   gtk_container_add (GTK_CONTAINER (alignment), spin);
@@ -344,7 +346,7 @@ audio_tags_page_init (AudioTagsPage *page)
   gtk_widget_show (spin);
   
   /* Artist label */
-  label = gtk_label_new (_("Artist:"));
+  label = gtk_label_new ("");
   gtk_misc_set_alignment (GTK_MISC (label), 1.0f, 0.5f);
   gtk_label_set_markup (GTK_LABEL (label), _("<b>Artist:</b>"));
   gtk_table_attach (GTK_TABLE (page->table), label, 0, 1, 1, 2, GTK_FILL, 0, 0, 0);
@@ -352,7 +354,6 @@ audio_tags_page_init (AudioTagsPage *page)
 
   /* Artist entry */
   entry = gtk_entry_new ();
-  gtk_entry_set_activates_default (GTK_ENTRY (entry), TRUE);
   exo_mutual_binding_new (G_OBJECT (entry), "text", G_OBJECT (page), "artist");
   gtk_tooltips_set_tip (page->tooltips, entry, _("Enter the name of the artist or author of this file here."), NULL);
   gtk_table_attach (GTK_TABLE (page->table), entry, 1, 4, 1, 2, GTK_EXPAND | GTK_FILL, 0, 0, 0);
@@ -360,7 +361,7 @@ audio_tags_page_init (AudioTagsPage *page)
   gtk_widget_show (entry);
   
   /* Title label */
-  label = gtk_label_new (_("Title:"));
+  label = gtk_label_new ("");
   gtk_misc_set_alignment (GTK_MISC (label), 1.0f, 0.5f);
   gtk_label_set_markup (GTK_LABEL (label), _("<b>Title:</b>"));
   gtk_table_attach (GTK_TABLE (page->table), label, 0, 1, 2, 3, GTK_FILL, 0, 0, 0);
@@ -368,14 +369,13 @@ audio_tags_page_init (AudioTagsPage *page)
 
   /* Title entry */
   entry = gtk_entry_new ();
-  gtk_entry_set_activates_default (GTK_ENTRY (entry), TRUE);
   exo_mutual_binding_new (G_OBJECT (entry), "text", G_OBJECT (page), "title");
   gtk_tooltips_set_tip (page->tooltips, entry, _("Enter the song title here."), NULL);
   gtk_table_attach (GTK_TABLE (page->table), entry, 1, 4, 2, 3, GTK_EXPAND | GTK_FILL, 0, 0, 0);
   gtk_widget_show (entry);
 
   /* Album label */
-  label = gtk_label_new (_("Album:"));
+  label = gtk_label_new ("");
   gtk_misc_set_alignment (GTK_MISC (label), 1.0f, 0.5f);
   gtk_label_set_markup (GTK_LABEL (label), _("<b>Album:</b>"));
   gtk_table_attach (GTK_TABLE (page->table), label, 0, 1, 3, 4, GTK_FILL, 0, 0, 0);
@@ -383,14 +383,13 @@ audio_tags_page_init (AudioTagsPage *page)
 
   /* Album entry */
   entry = gtk_entry_new ();
-  gtk_entry_set_activates_default (GTK_ENTRY (entry), TRUE);
   exo_mutual_binding_new (G_OBJECT (entry), "text", G_OBJECT (page), "album");
   gtk_tooltips_set_tip (page->tooltips, entry, _("Enter the album/record title here."), NULL);
   gtk_table_attach (GTK_TABLE (page->table), entry, 1, 4, 3, 4, GTK_EXPAND | GTK_FILL, 0, 0, 0);
   gtk_widget_show (entry);
   
   /* Comment label */
-  label = gtk_label_new (_("Comment:"));
+  label = gtk_label_new ("");
   gtk_misc_set_alignment (GTK_MISC (label), 1.0f, 0.5f);
   gtk_label_set_markup (GTK_LABEL (label), _("<b>Comment:</b>"));
   gtk_table_attach (GTK_TABLE (page->table), label, 0, 1, 4, 5, GTK_FILL, 0, 0, 0);
@@ -398,14 +397,13 @@ audio_tags_page_init (AudioTagsPage *page)
 
   /* Comment entry */
   entry = gtk_entry_new ();
-  gtk_entry_set_activates_default (GTK_ENTRY (entry), TRUE);
   exo_mutual_binding_new (G_OBJECT (entry), "text", G_OBJECT (page), "comment");
   gtk_tooltips_set_tip (page->tooltips, entry, _("Enter your comments here."), NULL);
   gtk_table_attach (GTK_TABLE (page->table), entry, 1, 4, 4, 5, GTK_EXPAND | GTK_FILL, 0, 0, 0);
   gtk_widget_show (entry);
 
   /* Genre label */
-  label = gtk_label_new (_("Genre:"));
+  label = gtk_label_new ("");
   gtk_misc_set_alignment (GTK_MISC (label), 1.0f, 0.5f);
   gtk_label_set_markup (GTK_LABEL (label), _("<b>Genre:</b>"));
   gtk_table_attach (GTK_TABLE (page->table), label, 0, 1, 5, 6, GTK_FILL, 0, 0, 0);
@@ -455,10 +453,22 @@ audio_tags_page_init (AudioTagsPage *page)
   /* Create and add the save action */
   action = gtk_action_new ("save", _("_Save"), _("Save audio tags."), GTK_STOCK_SAVE);
   gtk_action_group_add_action (page->action_group, action);
-
+  
   /* Connect to save action */
   g_signal_connect_swapped (G_OBJECT (action), "activate", G_CALLBACK (audio_tags_page_activate), page);
 
+  /* Create and add the info action */
+  action = gtk_action_new ("info", _("_Information"), _("Display more detailed information about this audio file."), GTK_STOCK_INFO);
+  gtk_action_group_add_action (page->action_group, action);
+
+  /* Determine parent window and assign it to the action */
+  toplevel = gtk_widget_get_toplevel (GTK_WIDGET (page));
+  if (GTK_WIDGET_TOPLEVEL (toplevel))
+    g_object_set_data_full (G_OBJECT (action), "window", g_object_ref (G_OBJECT (toplevel)), (GDestroyNotify)g_object_unref);
+
+  /* Connect to the info action */
+  g_signal_connect (G_OBJECT (action), "activate", G_CALLBACK (audio_tags_page_info_activate), page);
+  
   /* Reset the save button */
   audio_tags_page_set_show_save_button (page, FALSE);
 }
@@ -949,6 +959,176 @@ audio_tags_page_activate (AudioTagsPage *page)
 
 
 static gboolean
+audio_tags_page_info_activate (GtkAction *action, 
+                               AudioTagsPage *page)
+{
+  const TagLib_AudioProperties *properties;
+
+  GtkWindow *window;
+  GtkWidget *dialog;
+  GtkWidget *table;
+  GtkWidget *label;
+
+  /* Audio information */
+  gchar         *length;
+  gchar         *bitrate;
+  gchar         *samplerate;
+  gchar         *channels;
+
+  gchar         *mimetype;
+
+  ThunarVfsInfo *vfs_info;
+  gchar         *filename;
+  gchar         *filesize;
+  
+  g_return_val_if_fail (page != NULL || IS_AUDIO_TAGS_PAGE (page), FALSE);
+  g_return_val_if_fail (page->file != NULL || THUNARX_IS_FILE_INFO (page->file), FALSE);
+  g_return_val_if_fail (page->taglib_file != NULL, FALSE);
+
+  /* Determine parent window */
+  window = g_object_get_data (G_OBJECT (action), "window");
+
+  /* Create dialog */
+  dialog = gtk_dialog_new_with_buttons (_("Audio Information"),
+                                        window,
+                                        GTK_DIALOG_MODAL | GTK_DIALOG_DESTROY_WITH_PARENT,
+                                        GTK_STOCK_CLOSE,
+                                        GTK_RESPONSE_CLOSE,
+                                        NULL);
+
+  gtk_dialog_set_has_separator (GTK_DIALOG (dialog), FALSE);
+
+  /* Retrieve audio information */
+  properties = taglib_file_audioproperties (page->taglib_file);
+  length = g_strdup_printf (_("%d:%d Minutes"), taglib_audioproperties_length (properties) / 60, taglib_audioproperties_length (properties) % 60);
+  bitrate = g_strdup_printf (_("%d KBit/s"), taglib_audioproperties_bitrate (properties));
+  samplerate = g_strdup_printf (_("%d Hz"), taglib_audioproperties_samplerate (properties));
+  channels = g_strdup_printf ("%d", taglib_audioproperties_channels (properties));
+  
+  /* Additional information */
+  mimetype = thunarx_file_info_get_mime_type (page->file);
+  vfs_info = thunarx_file_info_get_vfs_info (page->file);
+  filename = vfs_info->display_name;
+  filesize = thunar_vfs_humanize_size (vfs_info->size, NULL, 0);
+
+  /* Create layout table */
+  table = gtk_table_new (7, 2, FALSE);
+  gtk_table_set_row_spacings (GTK_TABLE (table), 6);
+  gtk_table_set_col_spacings (GTK_TABLE (table), 12);
+  gtk_container_add (GTK_CONTAINER (GTK_DIALOG (dialog)->vbox), table);
+  gtk_container_set_border_width (GTK_CONTAINER (table), 12);
+  gtk_widget_show (table);
+
+  /* Filename label */
+  label = gtk_label_new ("");
+  gtk_misc_set_alignment (GTK_MISC (label), 1.0f, 0.5f);
+  gtk_label_set_markup (GTK_LABEL (label), _("<b>Filename:</b>"));
+  gtk_table_attach (GTK_TABLE (table), label, 0, 1, 0, 1, GTK_FILL, 0, 0, 0);
+  gtk_widget_show (label);
+
+  /* Filename display */
+  label = gtk_label_new (filename);
+  gtk_misc_set_alignment (GTK_MISC (label), 0.0f, 0.5f);
+  gtk_table_attach (GTK_TABLE (table), label, 1, 2, 0, 1, GTK_FILL, 0, 0, 0);
+  gtk_widget_show (label);
+
+  /* Filesize label */
+  label = gtk_label_new ("");
+  gtk_misc_set_alignment (GTK_MISC (label), 1.0f, 0.5f);
+  gtk_label_set_markup (GTK_LABEL (label), _("<b>Filesize:</b>"));
+  gtk_table_attach (GTK_TABLE (table), label, 0, 1, 1, 2, GTK_FILL, 0, 0, 0);
+  gtk_widget_show (label);
+
+  /* Filesize display */
+  label = gtk_label_new (filesize);
+  gtk_misc_set_alignment (GTK_MISC (label), 0.0f, 0.5f);
+  gtk_table_attach (GTK_TABLE (table), label, 1, 2, 1, 2, GTK_FILL, 0, 0, 0);
+  gtk_widget_show (label);
+
+  /* Mimetype label */
+  label = gtk_label_new ("");
+  gtk_misc_set_alignment (GTK_MISC (label), 1.0f, 0.5f);
+  gtk_label_set_markup (GTK_LABEL (label), _("<b>MIME Type:</b>"));
+  gtk_table_attach (GTK_TABLE (table), label, 0, 1, 2, 3, GTK_FILL, 0, 0, 0);
+  gtk_widget_show (label);
+
+  /* Mimetype display */
+  label = gtk_label_new (mimetype);
+  gtk_misc_set_alignment (GTK_MISC (label), 0.0f, 0.5f);
+  gtk_table_attach (GTK_TABLE (table), label, 1, 2, 2, 3, GTK_FILL, 0, 0, 0);
+  gtk_widget_show (label);
+
+  /* Bitrate label */
+  label = gtk_label_new ("");
+  gtk_misc_set_alignment (GTK_MISC (label), 1.0f, 0.5f);
+  gtk_label_set_markup (GTK_LABEL (label), _("<b>Bitrate:</b>"));
+  gtk_table_attach (GTK_TABLE (table), label, 0, 1, 3, 4, GTK_FILL, 0, 0, 0);
+  gtk_widget_show (label);
+
+  /* Bitrate display */
+  label = gtk_label_new (bitrate);
+  gtk_misc_set_alignment (GTK_MISC (label), 0.0f, 0.5f);
+  gtk_table_attach (GTK_TABLE (table), label, 1, 2, 3, 4, GTK_FILL, 0, 0, 0);
+  gtk_widget_show (label);
+
+  /* Samplerate label */
+  label = gtk_label_new ("");
+  gtk_misc_set_alignment (GTK_MISC (label), 1.0f, 0.5f);
+  gtk_label_set_markup (GTK_LABEL (label), _("<b>Samplerate:</b>"));
+  gtk_table_attach (GTK_TABLE (table), label, 0, 1, 4, 5, GTK_FILL, 0, 0, 0);
+  gtk_widget_show (label);
+
+  /* Samplerate display */
+  label = gtk_label_new (samplerate);
+  gtk_misc_set_alignment (GTK_MISC (label), 0.0f, 0.5f);
+  gtk_table_attach (GTK_TABLE (table), label, 1, 2, 4, 5, GTK_FILL, 0, 0, 0);
+  gtk_widget_show (label);
+
+  /* Channels label */
+  label = gtk_label_new ("");
+  gtk_misc_set_alignment (GTK_MISC (label), 1.0f, 0.5f);
+  gtk_label_set_markup (GTK_LABEL (label), _("<b>Channels:</b>"));
+  gtk_table_attach (GTK_TABLE (table), label, 0, 1, 5, 6, GTK_FILL, 0, 0, 0);
+  gtk_widget_show (label);
+
+  /* Channels display */
+  label = gtk_label_new (channels);
+  gtk_misc_set_alignment (GTK_MISC (label), 0.0f, 0.5f);
+  gtk_table_attach (GTK_TABLE (table), label, 1, 2, 5, 6, GTK_FILL, 0, 0, 0);
+  gtk_widget_show (label);
+
+  /* Length label */
+  label = gtk_label_new ("");
+  gtk_misc_set_alignment (GTK_MISC (label), 1.0f, 0.5f);
+  gtk_label_set_markup (GTK_LABEL (label), _("<b>Length:</b>"));
+  gtk_table_attach (GTK_TABLE (table), label, 0, 1, 6, 7, GTK_FILL, 0, 0, 0);
+  gtk_widget_show (label);
+
+  /* Length display */
+  label = gtk_label_new (length);
+  gtk_misc_set_alignment (GTK_MISC (label), 0.0f, 0.5f);
+  gtk_table_attach (GTK_TABLE (table), label, 1, 2, 6, 7, GTK_FILL, 0, 0, 0);
+  gtk_widget_show (label);
+
+  /* Run dialog */
+  gtk_dialog_run (GTK_DIALOG (dialog));
+  gtk_widget_destroy (dialog);
+
+  g_free (bitrate);
+  g_free (samplerate);
+  g_free (channels);
+  g_free (length);
+  g_free (filesize);
+  g_free (mimetype);
+
+  thunar_vfs_info_unref (vfs_info);
+  
+  return TRUE;
+}
+
+
+
+static gboolean
 audio_tags_page_load_tags (AudioTagsPage *page)
 {
   TagLib_File *taglib_file;
@@ -1026,7 +1206,11 @@ audio_tags_page_set_show_save_button (AudioTagsPage   *page,
       gtk_table_attach (GTK_TABLE (page->table), page->info_button, 2, 3, 6, 7, GTK_FILL, 0, 0, 0);
       gtk_widget_show (page->info_button);
 
-      /* Create a new button */
+      /* Connect to info action */
+      action = gtk_action_group_get_action (page->action_group, "info");
+      gtk_action_connect_proxy (action, page->info_button);
+
+      /* Save button */
       page->save_button = gtk_button_new_from_stock (GTK_STOCK_SAVE);
       gtk_table_attach (GTK_TABLE (page->table), page->save_button, 3, 4, 6, 7, GTK_FILL, 0, 0, 0);
       gtk_widget_show (page->save_button);
@@ -1037,12 +1221,13 @@ audio_tags_page_set_show_save_button (AudioTagsPage   *page,
     }
   else
     {
+      /* Check if we already display the info button */
+      if (G_LIKELY (page->info_button != NULL))
+        gtk_widget_destroy (page->info_button);
+
       /* Check if we already display the button */
       if (G_LIKELY (page->save_button != NULL))
-        {
-          gtk_widget_destroy (page->info_button);
-          gtk_widget_destroy (page->save_button);
-        }
+        gtk_widget_destroy (page->save_button);
 
       /* Reset the pointer */
       page->info_button = NULL;

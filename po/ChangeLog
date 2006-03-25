@@ -1,3 +1,8 @@
+2006-03-25  Jannis Pohlmann <jannis@xfce.org>
+
+  * thunar-media-tags-plugin.pot: Merge new strings.
+  * de.po: Updated German translations.
+
 2006-03-23  Jannis Pohlmann <jannis@xfce.org>
 
   * el.po: Greek translations by Stavros Giannouris added.

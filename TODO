@@ -1,7 +1,9 @@
 TODO for thunar-tag-renamer-plugin
 =======================================================================
 
-  * Add an embedded player to the AudioTagsPage.
+  * Add AtkRelations to the tag editor form.
+
+  * Add an embedded player to the AudioTagsPage (perhaps).
 
   * Check if we can rename files to folders, like 
     ARTIST/ALBUM/TITLE.EXT

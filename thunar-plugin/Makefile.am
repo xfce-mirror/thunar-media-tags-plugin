@@ -10,7 +10,7 @@ INCLUDES =								\
 
 extensionsdir = $(libdir)/thunarx-1
 extensions_LTLIBRARIES =						\
-	thunar-tag-renamer-plugin.la
+	thunar-media-tags-plugin.la
 
 thunar_tag_renamer_plugin_la_SOURCES =					\
 	media-tags-provider.h						\
@@ -25,6 +25,7 @@ thunar_tag_renamer_plugin_la_CFLAGS =					\
 	$(EXO_CFLAGS)							\
 	$(PLATFORM_CFLAGS)						\
 	$(THUNARX_CFLAGS)						\
+	$(THUNARVFS_CFLAGS)						\
 	$(TAGLIB_CFLAGS)						\
 	$(TAGLIBC_CFLAGS)
 
@@ -33,6 +34,7 @@ thunar_tag_renamer_plugin_la_LDFLAGS =					\
 	-export-dynamic							\
 	-module								\
 	$(THUNARX_LIBS)							\
+	$(THUNARVFS_LIBS)						\
 	$(TAGLIB_LIBS)							\
 	$(TAGLIBC_LIBS)							\
 	$(PLATFORM_LDFLAGS)
