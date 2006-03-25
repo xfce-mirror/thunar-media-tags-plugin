@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: thunar-media-tags-plugin 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-03-25 23:21+0100\n"
-"PO-Revision-Date: 2006-03-25 23:22+0100\n"
+"POT-Creation-Date: 2006-03-25 23:55+0100\n"
+"PO-Revision-Date: 2006-03-25 23:56+0100\n"
 "Last-Translator: Jannis Pohlmann <jannis@xfce.org>\n"
 "Language-Team: German <de@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -18,7 +18,7 @@ msgstr ""
 
 #: ../thunar-plugin/tag-renamer.c:59
 msgid "Title"
-msgstr "Title"
+msgstr "Titel"
 
 #: ../thunar-plugin/tag-renamer.c:60
 msgid "Artist - Title"
@@ -26,28 +26,28 @@ msgstr "Interpret - Titel"
 
 #: ../thunar-plugin/tag-renamer.c:61
 msgid "Track - Title"
-msgstr "Titelnummer - Titel"
+msgstr "Stück - Titel"
 
 #: ../thunar-plugin/tag-renamer.c:62
 msgid "Track - Artist - Title"
-msgstr "Titelnummer - Interpret - Titel"
+msgstr "Stück - Interpret - Titel"
 
 #: ../thunar-plugin/tag-renamer.c:63
 msgid "Track. Title"
-msgstr "Titelnummer. Titel"
+msgstr "Stück. Titel"
 
 #: ../thunar-plugin/tag-renamer.c:64
 msgid "Track. Artist - Title"
-msgstr "Titelnummer. Interpret - Titel"
+msgstr "Stück. Interpret - Titel"
 
 #: ../thunar-plugin/tag-renamer.c:65
 msgid "Artist - Track - Title"
-msgstr "Interpret - Titelnummer - Titel"
+msgstr "Interpret - Stück - Titel"
 
-#. Naming scheme label
+#. Format label
 #: ../thunar-plugin/tag-renamer.c:223
-msgid "Naming _scheme:"
-msgstr "_Schema:"
+msgid "_Format:"
+msgstr "_Format:"
 
 #: ../thunar-plugin/tag-renamer.c:246
 msgid "_Underscores"
@@ -96,11 +96,11 @@ msgstr "Unbekanntes Album"
 
 #: ../thunar-plugin/audio-tags-page.c:305
 msgid "<b>Track:</b>"
-msgstr "<b>Titelnummer:</b>"
+msgstr "<b>Stück:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:320
 msgid "Enter the track number here."
-msgstr "Hier die Titelnummer eingeben."
+msgstr "Hier die Stück eingeben."
 
 #: ../thunar-plugin/audio-tags-page.c:328
 msgid "<b>Year:</b>"
@@ -224,24 +224,3 @@ msgstr "<b>Kanäle:</b>"
 #: ../thunar-plugin/audio-tags-page.c:1103
 msgid "<b>Length:</b>"
 msgstr "<b>Länge:</b>"
-
-#~ msgid "ID3 and Vorbis Tags"
-#~ msgstr "ID3- und Vorbis-Tags"
-#~ msgid "Default Art_ist:"
-#~ msgstr "Standard_interpret:"
-#~ msgid "Text entered in this field is going to replace missing artist tags."
-#~ msgstr ""
-#~ "Hier eingefügter Text ersetzt fehlende Informationen über den Interpret."
-#~ msgid "Track:"
-#~ msgstr "Titelnummer:"
-#~ msgid "Year:"
-#~ msgstr "Jahr:"
-
-#, fuzzy
-#~ msgid "Artist:"
-#~ msgstr "Standard_interpret:"
-
-#, fuzzy
-#~ msgid "Title:"
-#~ msgstr "Title"
-

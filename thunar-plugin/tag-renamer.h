@@ -25,26 +25,26 @@
 
 G_BEGIN_DECLS;
 
-#define TYPE_TAG_RENAMER_SCHEME (tag_renamer_scheme_get_type ())
+#define TYPE_TAG_RENAMER_FORMAT (tag_renamer_format_get_type ())
 
 /**
- * TagRenamerScheme:
- * @TAG_RENAMER_SCHEME_TRACK_ARTIST_SONG : <track-number>_-_<artist-name>_-_<song-name>.<extension>
+ * TagRenamerFormat:
+ * @TAG_RENAMER_FORMAT_TRACK_ARTIST_SONG : <track-number>_-_<artist-name>_-_<song-name>.<extension>
  * 
- * The naming scheme for the #TagRenamer.
+ * The naming format for the #TagRenamer.
  **/
 typedef enum
 {
-  TAG_RENAMER_SCHEME_TITLE,
-  TAG_RENAMER_SCHEME_ARTIST_TITLE,
-  TAG_RENAMER_SCHEME_TRACK_TITLE,
-  TAG_RENAMER_SCHEME_TRACK_ARTIST_TITLE,
-  TAG_RENAMER_SCHEME_TRACK_DOT_TITLE,
-  TAG_RENAMER_SCHEME_TRACK_DOT_ARTIST_TITLE,
-  TAG_RENAMER_SCHEME_ARTIST_TRACK_TITLE,
-} TagRenamerScheme;
+  TAG_RENAMER_FORMAT_TITLE,
+  TAG_RENAMER_FORMAT_ARTIST_TITLE,
+  TAG_RENAMER_FORMAT_TRACK_TITLE,
+  TAG_RENAMER_FORMAT_TRACK_ARTIST_TITLE,
+  TAG_RENAMER_FORMAT_TRACK_DOT_TITLE,
+  TAG_RENAMER_FORMAT_TRACK_DOT_ARTIST_TITLE,
+  TAG_RENAMER_FORMAT_ARTIST_TRACK_TITLE,
+} TagRenamerFormat;
 
-GType tag_renamer_scheme_get_type     (void) G_GNUC_CONST G_GNUC_INTERNAL;
+GType tag_renamer_format_get_type     (void) G_GNUC_CONST G_GNUC_INTERNAL;
 void  tag_renamer_register_enum_types (ThunarxProviderPlugin *plugin) G_GNUC_INTERNAL;
 
 
@@ -64,9 +64,9 @@ void             tag_renamer_register_type      (ThunarxProviderPlugin *plugin) 
 
 TagRenamer      *tag_renamer_new                (void) G_GNUC_CONST G_GNUC_INTERNAL G_GNUC_MALLOC;
 
-TagRenamerScheme tag_renamer_get_scheme         (TagRenamer            *tag_renamer) G_GNUC_INTERNAL;
-void             tag_renamer_set_scheme         (TagRenamer            *tag_renamer,
-                                                 TagRenamerScheme       scheme) G_GNUC_INTERNAL;
+TagRenamerFormat tag_renamer_get_format         (TagRenamer            *tag_renamer) G_GNUC_INTERNAL;
+void             tag_renamer_set_format         (TagRenamer            *tag_renamer,
+                                                 TagRenamerFormat       format) G_GNUC_INTERNAL;
 gboolean         tag_renamer_get_replace_spaces (TagRenamer            *tag_renamer) G_GNUC_INTERNAL;
 void             tag_renamer_set_replace_spaces (TagRenamer            *tag_renamer,
                                                  gboolean               replace) G_GNUC_INTERNAL;

@@ -39,14 +39,14 @@
 
 
 
-static GType tag_renamer_scheme_type;
+static GType tag_renamer_format_type;
 
 
 
 GType
-tag_renamer_scheme_get_type (void)
+tag_renamer_format_get_type (void)
 {
-  return tag_renamer_scheme_type;
+  return tag_renamer_format_type;
 }
 
 
@@ -54,19 +54,19 @@ tag_renamer_scheme_get_type (void)
 void
 tag_renamer_register_enum_types (ThunarxProviderPlugin *plugin)
 {
-  static const GEnumValue tag_renamer_scheme_values[] =
+  static const GEnumValue tag_renamer_format_values[] =
   {
-    { TAG_RENAMER_SCHEME_TITLE,                  "TAG_RENAMER_SCHEME_TITLE",                  N_ ("Title"),  },
-    { TAG_RENAMER_SCHEME_ARTIST_TITLE,           "TAG_RENAMER_SCHEME_ARTIST_TITLE",           N_ ("Artist - Title"), },
-    { TAG_RENAMER_SCHEME_TRACK_TITLE,            "TAG_RENAMER_SCHEME_TRACK_TITLE",            N_ ("Track - Title"), },
-    { TAG_RENAMER_SCHEME_TRACK_ARTIST_TITLE,     "TAG_RENAMER_SCHEME_TRACK_ARTIST_TITLE",     N_ ("Track - Artist - Title"), },
-    { TAG_RENAMER_SCHEME_TRACK_DOT_TITLE,        "TAG_RENAMER_SCHEME_TRACK_DOT_TITLE",        N_ ("Track. Title"), },
-    { TAG_RENAMER_SCHEME_TRACK_DOT_ARTIST_TITLE, "TAG_RENAMER_SCHEME_TRACK_DOT_ARTIST_TITLE", N_ ("Track. Artist - Title"), },
-    { TAG_RENAMER_SCHEME_ARTIST_TRACK_TITLE,     "TAG_RENAMER_SCHEME_ARTIST_TRACK_TITLE",     N_ ("Artist - Track - Title"), },
+    { TAG_RENAMER_FORMAT_TITLE,                  "TAG_RENAMER_FORMAT_TITLE",                  N_ ("Title"),  },
+    { TAG_RENAMER_FORMAT_ARTIST_TITLE,           "TAG_RENAMER_FORMAT_ARTIST_TITLE",           N_ ("Artist - Title"), },
+    { TAG_RENAMER_FORMAT_TRACK_TITLE,            "TAG_RENAMER_FORMAT_TRACK_TITLE",            N_ ("Track - Title"), },
+    { TAG_RENAMER_FORMAT_TRACK_ARTIST_TITLE,     "TAG_RENAMER_FORMAT_TRACK_ARTIST_TITLE",     N_ ("Track - Artist - Title"), },
+    { TAG_RENAMER_FORMAT_TRACK_DOT_TITLE,        "TAG_RENAMER_FORMAT_TRACK_DOT_TITLE",        N_ ("Track. Title"), },
+    { TAG_RENAMER_FORMAT_TRACK_DOT_ARTIST_TITLE, "TAG_RENAMER_FORMAT_TRACK_DOT_ARTIST_TITLE", N_ ("Track. Artist - Title"), },
+    { TAG_RENAMER_FORMAT_ARTIST_TRACK_TITLE,     "TAG_RENAMER_FORMAT_ARTIST_TRACK_TITLE",     N_ ("Artist - Track - Title"), },
     { 0,                                         NULL,                                        NULL, },
   };
 
-  tag_renamer_scheme_type = thunarx_provider_plugin_register_enum (plugin, "TagRenamerScheme", tag_renamer_scheme_values);
+  tag_renamer_format_type = thunarx_provider_plugin_register_enum (plugin, "TagRenamerFormat", tag_renamer_format_values);
 }
 
 
@@ -75,7 +75,7 @@ tag_renamer_register_enum_types (ThunarxProviderPlugin *plugin)
 enum
 {
   PROP_0,
-  PROP_NAMING_SCHEME,
+  PROP_FORMAT,
   PROP_REPLACE_SPACES,
   PROP_LOWERCASE,
   PROP_TITLE,
@@ -120,7 +120,7 @@ struct _TagRenamer
   GtkTooltips     *tooltips;
 
   /* Properties */
-  TagRenamerScheme scheme;
+  TagRenamerFormat format;
   gboolean         replace_spaces;
   gboolean         lowercase;
   gchar           *artist;
@@ -153,17 +153,17 @@ tag_renamer_class_init (TagRenamerClass *klass)
   thunarxrenamer_class->get_actions = tag_renamer_get_actions;
 
   /**
-   * TagRenamer:naming-scheme:
+   * TagRenamer:format:
    *
-   * Naming scheme used for renaming the selected files.
+   * Naming format used for renaming the selected files.
    **/
   g_object_class_install_property (gobject_class,
-                                   PROP_NAMING_SCHEME,
-                                   g_param_spec_enum ("naming-scheme",
-                                                      "naming-scheme",
-                                                      "naming-scheme",
-                                                      TYPE_TAG_RENAMER_SCHEME,
-                                                      TAG_RENAMER_SCHEME_TRACK_TITLE,
+                                   PROP_FORMAT,
+                                   g_param_spec_enum ("format",
+                                                      "format",
+                                                      "format",
+                                                      TYPE_TAG_RENAMER_FORMAT,
+                                                      TAG_RENAMER_FORMAT_TRACK_TITLE,
                                                       G_PARAM_READWRITE));
 
   /**
@@ -219,18 +219,18 @@ tag_renamer_init (TagRenamer *tag_renamer)
   gtk_box_pack_start (GTK_BOX (tag_renamer), table, FALSE, FALSE, 0);
   gtk_widget_show (table);
 
-  /* Naming scheme label */
-  label = gtk_label_new_with_mnemonic (_("Naming _scheme:"));
+  /* Format label */
+  label = gtk_label_new_with_mnemonic (_("_Format:"));
   gtk_misc_set_alignment (GTK_MISC (label), 0.05f,  0.5f);
   gtk_table_attach (GTK_TABLE (table), label, 0, 1, 0, 1, GTK_FILL, 0, 0, 0);
   gtk_widget_show (label);
 
-  /* Naming scheme combo box */
+  /* Format combo box */
   combo = gtk_combo_box_new_text ();
-  klass = g_type_class_ref (TYPE_TAG_RENAMER_SCHEME);
+  klass = g_type_class_ref (TYPE_TAG_RENAMER_FORMAT);
   for (n = 0; n < klass->n_values; ++n)
     gtk_combo_box_append_text (GTK_COMBO_BOX (combo), _(klass->values[n].value_nick));
-  exo_mutual_binding_new (G_OBJECT (tag_renamer), "naming-scheme", G_OBJECT (combo), "active");
+  exo_mutual_binding_new (G_OBJECT (tag_renamer), "format", G_OBJECT (combo), "active");
   gtk_table_attach (GTK_TABLE (table), combo, 1, 2, 0, 1, GTK_EXPAND | GTK_FILL, 0, 0, 0);
   gtk_label_set_mnemonic_widget (GTK_LABEL (label), combo);
   g_type_class_unref (klass);
@@ -294,8 +294,8 @@ tag_renamer_get_property (GObject    *object,
 
   switch (prop_id)
     {
-    case PROP_NAMING_SCHEME:
-      g_value_set_enum (value, tag_renamer_get_scheme (tag_renamer));
+    case PROP_FORMAT:
+      g_value_set_enum (value, tag_renamer_get_format (tag_renamer));
       break;
 
     case PROP_REPLACE_SPACES:
@@ -324,8 +324,8 @@ tag_renamer_set_property (GObject      *object,
 
   switch (prop_id)
     {
-    case PROP_NAMING_SCHEME:
-      tag_renamer_set_scheme (tag_renamer, g_value_get_enum (value));
+    case PROP_FORMAT:
+      tag_renamer_set_format (tag_renamer, g_value_get_enum (value));
       break;
 
     case PROP_REPLACE_SPACES:
@@ -432,33 +432,33 @@ tag_renamer_process (ThunarxRenamer  *renamer,
   title = g_strdelimit (title, G_DIR_SEPARATOR_S, '_');
   track = g_strdelimit (track, G_DIR_SEPARATOR_S, '_');
 
-  switch (tag_renamer_get_scheme (tag_renamer))
+  switch (tag_renamer_get_format (tag_renamer))
     {
-    case TAG_RENAMER_SCHEME_TRACK_DOT_TITLE:
+    case TAG_RENAMER_FORMAT_TRACK_DOT_TITLE:
       result = g_strconcat (track, ". ", title, NULL);
       break;
 
-    case TAG_RENAMER_SCHEME_TRACK_DOT_ARTIST_TITLE:
+    case TAG_RENAMER_FORMAT_TRACK_DOT_ARTIST_TITLE:
       result = g_strconcat (track, ". ", artist, " - ", title, NULL);
       break;
 
-    case TAG_RENAMER_SCHEME_TRACK_TITLE:
+    case TAG_RENAMER_FORMAT_TRACK_TITLE:
       result = g_strconcat (track, " - ", title, NULL);
       break;
 
-    case TAG_RENAMER_SCHEME_TRACK_ARTIST_TITLE:
+    case TAG_RENAMER_FORMAT_TRACK_ARTIST_TITLE:
       result = g_strconcat (track, " - ", artist, " - ", title, NULL);
       break;
 
-    case TAG_RENAMER_SCHEME_TITLE:
+    case TAG_RENAMER_FORMAT_TITLE:
       result = g_strconcat (title, NULL);
       break;
 
-    case TAG_RENAMER_SCHEME_ARTIST_TITLE:
+    case TAG_RENAMER_FORMAT_ARTIST_TITLE:
       result = g_strconcat (artist, " - ", title, NULL);
       break;
 
-    case TAG_RENAMER_SCHEME_ARTIST_TRACK_TITLE:
+    case TAG_RENAMER_FORMAT_ARTIST_TRACK_TITLE:
       result = g_strconcat (artist, " - ", track, " - ", title, NULL);
       break;
     
@@ -549,46 +549,46 @@ tag_renamer_new (void)
 
 
 /**
- * tag_renamer_get_scheme:
+ * tag_renamer_get_format:
  * @tag_renamer : a #TagRenamer.
  *
- * Returns the current #TagRenamerScheme
+ * Returns the current #TagRenamerFormat
  * for the @tag_renamer.
  *
- * Return value: the current naming scheme of @tag_renamer.
+ * Return value: the current naming format of @tag_renamer.
  **/
-TagRenamerScheme
-tag_renamer_get_scheme (TagRenamer *tag_renamer)
+TagRenamerFormat
+tag_renamer_get_format (TagRenamer *tag_renamer)
 {
-  g_return_val_if_fail (IS_TAG_RENAMER (tag_renamer), TAG_RENAMER_SCHEME_TRACK_TITLE);
-  return tag_renamer->scheme;
+  g_return_val_if_fail (IS_TAG_RENAMER (tag_renamer), TAG_RENAMER_FORMAT_TRACK_TITLE);
+  return tag_renamer->format;
 }
 
 
 
 /**
- * tag_renamer_set_scheme:
+ * tag_renamer_set_format:
  * @tag_renamer : a #TagRenamer.
- * @scheme      : the new #TagRenamerScheme.
+ * @format      : the new #TagRenamerFormat.
  *
- * Sets the #TagRenamerScheme of the @tag_renamer
- * to the specified @scheme.
+ * Sets the #TagRenamerFormat of the @tag_renamer
+ * to the specified @format.
  **/
 void
-tag_renamer_set_scheme (TagRenamer      *tag_renamer,
-                        TagRenamerScheme scheme)
+tag_renamer_set_format (TagRenamer      *tag_renamer,
+                        TagRenamerFormat format)
 {
   g_return_if_fail (IS_TAG_RENAMER (tag_renamer));
 
-  /* Check if we already use that scheme */
-  if (G_UNLIKELY (tag_renamer->scheme == scheme))
+  /* Check if we already use that format */
+  if (G_UNLIKELY (tag_renamer->format == format))
     return;
 
-  /* Apply the new scheme */
-  tag_renamer->scheme = scheme;
+  /* Apply the new format */
+  tag_renamer->format = format;
 
   /* Notify listeners */
-  g_object_notify (G_OBJECT (tag_renamer), "naming-scheme");
+  g_object_notify (G_OBJECT (tag_renamer), "format");
 
   /* Emit the "changed" signal */
   thunarx_renamer_changed (THUNARX_RENAMER (tag_renamer));

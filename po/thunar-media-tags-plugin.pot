@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-03-25 23:21+0100\n"
+"POT-Creation-Date: 2006-03-25 23:55+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -44,9 +44,9 @@ msgstr ""
 msgid "Artist - Track - Title"
 msgstr ""
 
-#. Naming scheme label
+#. Format label
 #: ../thunar-plugin/tag-renamer.c:223
-msgid "Naming _scheme:"
+msgid "_Format:"
 msgstr ""
 
 #: ../thunar-plugin/tag-renamer.c:246

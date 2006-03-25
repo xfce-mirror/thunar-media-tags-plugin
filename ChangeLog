@@ -1,5 +1,10 @@
 2006-03-25  Jannis Pohlmann <jannis@xfce.org>
 
+  * thunar-plugin/tag-renamer.{c,h}: Rename everyhing that has to do
+    with "scheme" to "format", including types, strings and properties.
+
+2006-03-25  Jannis Pohlmann <jannis@xfce.org>
+
   * thunar-plugin/tag-renamer.c: Remove "artist" and "title" 
     properties. Remove "default artist" entry as tags can be easily
     edited now using the renamer context menu. Anyway, missing artist
