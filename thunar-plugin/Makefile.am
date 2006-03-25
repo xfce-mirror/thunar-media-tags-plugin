@@ -12,7 +12,7 @@ extensionsdir = $(libdir)/thunarx-1
 extensions_LTLIBRARIES =						\
 	thunar-media-tags-plugin.la
 
-thunar_tag_renamer_plugin_la_SOURCES =					\
+thunar_media_tags_plugin_la_SOURCES =					\
 	media-tags-provider.h						\
 	media-tags-provider.c						\
 	tag-renamer.h							\
@@ -21,7 +21,7 @@ thunar_tag_renamer_plugin_la_SOURCES =					\
 	audio-tags-page.c						\
 	media-tags-plugin.c
 
-thunar_tag_renamer_plugin_la_CFLAGS =					\
+thunar_media_tags_plugin_la_CFLAGS =					\
 	$(EXO_CFLAGS)							\
 	$(PLATFORM_CFLAGS)						\
 	$(THUNARX_CFLAGS)						\
@@ -29,7 +29,7 @@ thunar_tag_renamer_plugin_la_CFLAGS =					\
 	$(TAGLIB_CFLAGS)						\
 	$(TAGLIBC_CFLAGS)
 
-thunar_tag_renamer_plugin_la_LDFLAGS =					\
+thunar_media_tags_plugin_la_LDFLAGS =					\
 	-avoid-version							\
 	-export-dynamic							\
 	-module								\
