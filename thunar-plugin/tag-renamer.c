@@ -78,7 +78,6 @@ enum
   PROP_NAMING_SCHEME,
   PROP_REPLACE_SPACES,
   PROP_LOWERCASE,
-  PROP_ARTIST,
   PROP_TITLE,
 };
 
@@ -193,31 +192,6 @@ tag_renamer_class_init (TagRenamerClass *klass)
                                                          FALSE,
                                                          G_PARAM_READWRITE));
 
-  /**
-   * TagRenamer:artist:
-   *
-   * The artist name to use if a file is missing an artist tag.
-   **/
-  g_object_class_install_property (gobject_class,
-                                   PROP_ARTIST,
-                                   g_param_spec_string ("artist",
-                                                        "artist",
-                                                        "artist",
-                                                        _("Unknown Artist"),
-                                                        G_PARAM_READWRITE));
-
-  /**
-   * TagRenamer:title:
-   *
-   * The song title to use if a file is missing a proper title tag.
-   **/
-  g_object_class_install_property (gobject_class,
-                                   PROP_TITLE,
-                                   g_param_spec_string ("title",
-                                                        "title",
-                                                        "title",
-                                                        _("Unknown Title"),
-                                                        G_PARAM_READWRITE));
 }
 
 
@@ -231,7 +205,6 @@ tag_renamer_init (TagRenamer *tag_renamer)
   GtkWidget      *table;
   GtkWidget      *label;
   GtkWidget      *combo;
-  GtkWidget      *entry;
   GtkWidget      *button;
   GEnumClass     *klass;
   gint            n;
@@ -270,39 +243,20 @@ tag_renamer_init (TagRenamer *tag_renamer)
   atk_relation_set_add (relations, relation);
   g_object_unref (G_OBJECT (relation));
 
-  button = gtk_check_button_new_with_mnemonic (_("Use _underscores"));
+  button = gtk_check_button_new_with_mnemonic (_("_Underscores"));
   exo_mutual_binding_new (G_OBJECT (button), "active", G_OBJECT (tag_renamer), "replace-spaces");
   gtk_tooltips_set_tip (tag_renamer->tooltips, button, _("Activating this option will replace all spaces in the target filename "
         "with underscores."), NULL);
   gtk_table_attach (GTK_TABLE (table), button, 2, 3, 0, 1, GTK_FILL, 0, 0, 0);
   gtk_widget_show (button);
 
-  button = gtk_check_button_new_with_mnemonic (_("Use _lowercase"));
+  button = gtk_check_button_new_with_mnemonic (_("_Lowercase"));
   exo_mutual_binding_new (G_OBJECT (button), "active", G_OBJECT (tag_renamer), "lowercase");
-  gtk_tooltips_set_tip (tag_renamer->tooltips, button, _("If you activate this, the resulting filename will not contain any "
-        "uppercase letters."), NULL);
+  gtk_tooltips_set_tip (tag_renamer->tooltips, button, _("If you activate this, the resulting filename will only contain lowercase letters."), NULL);
   gtk_table_attach (GTK_TABLE (table), button, 2, 3, 1, 2, GTK_FILL, 0, 0, 0);
   gtk_widget_show (button);
 
-  label = gtk_label_new_with_mnemonic (_("Default Art_ist:"));
-  gtk_misc_set_alignment (GTK_MISC (label), 0.0f, 0.5f);
-  gtk_table_attach (GTK_TABLE (table), label, 0, 1, 1, 2, GTK_FILL, 0, 0, 0);
-  gtk_widget_show (label);
-
-  entry = gtk_entry_new ();
-  gtk_entry_set_activates_default (GTK_ENTRY (entry), TRUE);
-  exo_mutual_binding_new (G_OBJECT (entry), "text", G_OBJECT (tag_renamer), "artist");
-  gtk_tooltips_set_tip (tag_renamer->tooltips, entry, _("Text entered in this field is going to replace missing artist tags."), NULL);
-  gtk_table_attach (GTK_TABLE (table), entry, 1, 2, 1, 2, GTK_EXPAND | GTK_FILL, 0, 0, 0);
-  gtk_label_set_mnemonic_widget (GTK_LABEL (label), entry);
-  gtk_widget_show (entry);
-
-  /* Set Atk label relation for this entry */
-  object = gtk_widget_get_accessible (entry);
-  relations = atk_object_ref_relation_set (gtk_widget_get_accessible (label));
-  relation = atk_relation_new (&object, 1, ATK_RELATION_LABEL_FOR);
-  atk_relation_set_add (relations, relation);
-  g_object_unref (G_OBJECT (relation));
+  /* TODO add entry for custom format here */
 
   /* Set initial values */
   tag_renamer->artist = g_strdup ("");
@@ -352,14 +306,6 @@ tag_renamer_get_property (GObject    *object,
       g_value_set_boolean (value, tag_renamer_get_lowercase (tag_renamer));
       break;
 
-    case PROP_ARTIST:
-      g_value_set_string (value, tag_renamer_get_artist (tag_renamer));
-      break;
-
-    case PROP_TITLE:
-      g_value_set_string (value, tag_renamer_get_title (tag_renamer));
-      break;
-      
     default:
       G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
       break;
@@ -390,14 +336,6 @@ tag_renamer_set_property (GObject      *object,
       tag_renamer_set_lowercase (tag_renamer, g_value_get_boolean (value));
       break;
 
-    case PROP_ARTIST:
-      tag_renamer_set_artist (tag_renamer, g_value_get_string (value));
-      break;
-
-    case PROP_TITLE:
-      tag_renamer_set_title (tag_renamer, g_value_get_string (value));
-      break;
-      
     default:
       G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
       break;
@@ -604,7 +542,7 @@ TagRenamer*
 tag_renamer_new (void)
 {
   return g_object_new (TYPE_TAG_RENAMER,
-                       "name", _("ID3 and Vorbis Tags"),
+                       "name", _("Audio Tags"),
                        NULL);
 }
 
@@ -792,9 +730,6 @@ tag_renamer_set_artist (TagRenamer  *tag_renamer,
   /* Apply the new setting */
   tag_renamer->artist = g_strdup (artist);
 
-  /* Notify listeners */
-  g_object_notify (G_OBJECT (tag_renamer), "artist");
-
   /* Emit the "changed" signal */
   thunarx_renamer_changed (THUNARX_RENAMER (tag_renamer));
 }
@@ -842,9 +777,6 @@ tag_renamer_set_title (TagRenamer  *tag_renamer,
 
   /* Apply the new setting */
   tag_renamer->title = g_strdup (title);
-
-  /* Notify listeners */
-  g_object_notify (G_OBJECT (tag_renamer), "title");
 
   /* Emit the "changed" signal */
   thunarx_renamer_changed (THUNARX_RENAMER (tag_renamer));

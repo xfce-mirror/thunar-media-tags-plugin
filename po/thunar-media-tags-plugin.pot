@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-03-25 11:58+0100\n"
+"POT-Creation-Date: 2006-03-25 23:21+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -44,60 +44,52 @@ msgstr ""
 msgid "Artist - Track - Title"
 msgstr ""
 
-#: ../thunar-plugin/tag-renamer.c:206 ../thunar-plugin/tag-renamer.c:310
-#: ../thunar-plugin/tag-renamer.c:764 ../thunar-plugin/audio-tags-page.c:183
-msgid "Unknown Artist"
-msgstr ""
-
-#: ../thunar-plugin/tag-renamer.c:219 ../thunar-plugin/tag-renamer.c:311
-#: ../thunar-plugin/tag-renamer.c:815 ../thunar-plugin/audio-tags-page.c:209
-msgid "Unknown Title"
-msgstr ""
-
 #. Naming scheme label
-#: ../thunar-plugin/tag-renamer.c:250
+#: ../thunar-plugin/tag-renamer.c:223
 msgid "Naming _scheme:"
 msgstr ""
 
-#: ../thunar-plugin/tag-renamer.c:273
-msgid "Use _underscores"
+#: ../thunar-plugin/tag-renamer.c:246
+msgid "_Underscores"
 msgstr ""
 
-#: ../thunar-plugin/tag-renamer.c:275
+#: ../thunar-plugin/tag-renamer.c:248
 msgid ""
 "Activating this option will replace all spaces in the target filename with "
 "underscores."
 msgstr ""
 
-#: ../thunar-plugin/tag-renamer.c:280
-msgid "Use _lowercase"
+#: ../thunar-plugin/tag-renamer.c:253
+msgid "_Lowercase"
 msgstr ""
 
-#: ../thunar-plugin/tag-renamer.c:282
+#: ../thunar-plugin/tag-renamer.c:255
 msgid ""
-"If you activate this, the resulting filename will not contain any uppercase "
+"If you activate this, the resulting filename will only contain lowercase "
 "letters."
 msgstr ""
 
-#: ../thunar-plugin/tag-renamer.c:287
-msgid "Default Art_ist:"
+#: ../thunar-plugin/tag-renamer.c:264 ../thunar-plugin/tag-renamer.c:702
+#: ../thunar-plugin/audio-tags-page.c:183
+msgid "Unknown Artist"
 msgstr ""
 
-#: ../thunar-plugin/tag-renamer.c:295
-msgid "Text entered in this field is going to replace missing artist tags."
+#: ../thunar-plugin/tag-renamer.c:265 ../thunar-plugin/tag-renamer.c:750
+#: ../thunar-plugin/audio-tags-page.c:209
+msgid "Unknown Title"
 msgstr ""
 
 #. Edit tags action
-#: ../thunar-plugin/tag-renamer.c:585
+#: ../thunar-plugin/tag-renamer.c:523
 msgid "Edit _Tags"
 msgstr ""
 
-#: ../thunar-plugin/tag-renamer.c:585
+#: ../thunar-plugin/tag-renamer.c:523
 msgid "Edit ID3/OGG tags of this file."
 msgstr ""
 
-#: ../thunar-plugin/tag-renamer.c:607
-msgid "ID3 and Vorbis Tags"
+#: ../thunar-plugin/tag-renamer.c:545
+msgid "Audio Tags"
 msgstr ""
 
 #: ../thunar-plugin/audio-tags-page.c:196

@@ -1,5 +1,13 @@
 2006-03-25  Jannis Pohlmann <jannis@xfce.org>
 
+  * thunar-plugin/tag-renamer.c: Remove "artist" and "title" 
+    properties. Remove "default artist" entry as tags can be easily
+    edited now using the renamer context menu. Anyway, missing artist
+    and title tags are still replaced with "Unknown Artist" and 
+    "Unknown Title". Make check button labels shorter.
+
+2006-03-25  Jannis Pohlmann <jannis@xfce.org>
+
   * configure.in.in: Japanese translation added.
 
 2006-03-25  Jannis Pohlmann <jannis@xfce.org>
