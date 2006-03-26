@@ -5,9 +5,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: thunar-tag-renamer-plugin 0.1.0svn-r01212\n"
+"Project-Id-Version: thunar-media-tags-plugin 0.1.0svn\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-03-23 21:28+0200\n"
+"POT-Creation-Date: 2006-03-25 23:55+0100\n"
 "PO-Revision-Date: 2006-03-23 21:29+0200\n"
 "Last-Translator: Stavros Giannouris <stavrosg2002@freemail.gr>\n"
 "Language-Team: Greek <nls@tux.hellug.gr>\n"
@@ -16,83 +16,218 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../thunar-plugin/tag-renamer.c:57
+#: ../thunar-plugin/tag-renamer.c:59
 msgid "Title"
 msgstr "Τίτλος"
 
-#: ../thunar-plugin/tag-renamer.c:58
+#: ../thunar-plugin/tag-renamer.c:60
 msgid "Artist - Title"
 msgstr "Καλλιτέχνης - Τίτλος"
 
-#: ../thunar-plugin/tag-renamer.c:59
+#: ../thunar-plugin/tag-renamer.c:61
 msgid "Track - Title"
 msgstr "Αριθμός - Τίτλος"
 
-#: ../thunar-plugin/tag-renamer.c:60
+#: ../thunar-plugin/tag-renamer.c:62
 msgid "Track - Artist - Title"
 msgstr "Αριθμός - Καλλιτέχνης - Τίτλος"
 
-#: ../thunar-plugin/tag-renamer.c:61
+#: ../thunar-plugin/tag-renamer.c:63
 msgid "Track. Title"
 msgstr "Αριθμός. Τίτλος"
 
-#: ../thunar-plugin/tag-renamer.c:62
+#: ../thunar-plugin/tag-renamer.c:64
 msgid "Track. Artist - Title"
 msgstr "Αριθμός. Καλλιτέχνης  - Τίτλος"
 
-#: ../thunar-plugin/tag-renamer.c:63
+#: ../thunar-plugin/tag-renamer.c:65
 msgid "Artist - Track - Title"
 msgstr "Καλλιτέχνης - Αριθμός - Τίτλος"
 
-#: ../thunar-plugin/tag-renamer.c:198 ../thunar-plugin/tag-renamer.c:302
-#: ../thunar-plugin/tag-renamer.c:722
-msgid "Unknown Artist"
-msgstr "Άγνωστος Καλλιτέχνης"
+#. Format label
+#: ../thunar-plugin/tag-renamer.c:223
+msgid "_Format:"
+msgstr ""
 
-#: ../thunar-plugin/tag-renamer.c:211 ../thunar-plugin/tag-renamer.c:303
-#: ../thunar-plugin/tag-renamer.c:773
-msgid "Unknown Title"
-msgstr "Άγνωστος Τίτλος"
-
-#. Naming scheme label
-#: ../thunar-plugin/tag-renamer.c:242
-msgid "Naming _scheme:"
-msgstr "_Μορφή Ονόματος:"
-
-#: ../thunar-plugin/tag-renamer.c:265
-msgid "Use _underscores"
+#: ../thunar-plugin/tag-renamer.c:246
+#, fuzzy
+msgid "_Underscores"
 msgstr "_Κάτω παύλες αντί κενά"
 
-#: ../thunar-plugin/tag-renamer.c:267
+#: ../thunar-plugin/tag-renamer.c:248
 msgid ""
 "Activating this option will replace all spaces in the target filename with "
 "underscores."
 msgstr ""
 "Μετατρέπει όλα τα κενά διαστήματα σε κάτω παύλες στα νέα ονόματα αρχείων."
 
-#: ../thunar-plugin/tag-renamer.c:272
-msgid "Use _lowercase"
+#: ../thunar-plugin/tag-renamer.c:253
+#, fuzzy
+msgid "_Lowercase"
 msgstr "Μετατροπή σε _πεζά"
 
-#: ../thunar-plugin/tag-renamer.c:274
+#: ../thunar-plugin/tag-renamer.c:255
+#, fuzzy
 msgid ""
-"If you activate this, the resulting filename will not contain any uppercase "
+"If you activate this, the resulting filename will only contain lowercase "
 "letters."
 msgstr "Μετατρέπει όλους τους χαρακτήρες στα ονόματα αρχείων σε πεζούς."
 
-#: ../thunar-plugin/tag-renamer.c:279
-msgid "Default Art_ist:"
-msgstr "Εξ ορισμού Καλλ_ιτέχνης:"
+#: ../thunar-plugin/tag-renamer.c:264 ../thunar-plugin/tag-renamer.c:702
+#: ../thunar-plugin/audio-tags-page.c:183
+msgid "Unknown Artist"
+msgstr "Άγνωστος Καλλιτέχνης"
 
-#: ../thunar-plugin/tag-renamer.c:287
-msgid "Text entered in this field is going to replace missing artist tags."
+#: ../thunar-plugin/tag-renamer.c:265 ../thunar-plugin/tag-renamer.c:750
+#: ../thunar-plugin/audio-tags-page.c:209
+msgid "Unknown Title"
+msgstr "Άγνωστος Τίτλος"
+
+#. Edit tags action
+#: ../thunar-plugin/tag-renamer.c:523
+msgid "Edit _Tags"
 msgstr ""
-"Όσες ετικέτες καλλιτέχνη λείπουν, θα συμπληρωθούν με την καταχώρηση σε αυτό "
-"το πεδίο/"
 
-#: ../thunar-plugin/tag-renamer.c:565
-msgid "ID3 and Vorbis Tags"
-msgstr "Ετικέτες ID3 και Vorbis"
+#: ../thunar-plugin/tag-renamer.c:523
+msgid "Edit ID3/OGG tags of this file."
+msgstr ""
 
-#~ msgid "_Replace spaces with underscores"
-#~ msgstr "_Αντικατάσταση διαστημάτων με κάτω παύλες"
+#: ../thunar-plugin/tag-renamer.c:545
+msgid "Audio Tags"
+msgstr ""
+
+#: ../thunar-plugin/audio-tags-page.c:196
+#, fuzzy
+msgid "Unknown Album"
+msgstr "Άγνωστος Τίτλος"
+
+#: ../thunar-plugin/audio-tags-page.c:305
+msgid "<b>Track:</b>"
+msgstr ""
+
+#: ../thunar-plugin/audio-tags-page.c:320
+msgid "Enter the track number here."
+msgstr ""
+
+#: ../thunar-plugin/audio-tags-page.c:328
+msgid "<b>Year:</b>"
+msgstr ""
+
+#: ../thunar-plugin/audio-tags-page.c:343
+msgid "Enter the release year here."
+msgstr ""
+
+#: ../thunar-plugin/audio-tags-page.c:351
+msgid "<b>Artist:</b>"
+msgstr ""
+
+#: ../thunar-plugin/audio-tags-page.c:358
+msgid "Enter the name of the artist or author of this file here."
+msgstr ""
+
+#: ../thunar-plugin/audio-tags-page.c:366
+msgid "<b>Title:</b>"
+msgstr ""
+
+#: ../thunar-plugin/audio-tags-page.c:373
+msgid "Enter the song title here."
+msgstr ""
+
+#: ../thunar-plugin/audio-tags-page.c:380
+msgid "<b>Album:</b>"
+msgstr ""
+
+#: ../thunar-plugin/audio-tags-page.c:387
+msgid "Enter the album/record title here."
+msgstr ""
+
+#: ../thunar-plugin/audio-tags-page.c:394
+msgid "<b>Comment:</b>"
+msgstr ""
+
+#: ../thunar-plugin/audio-tags-page.c:401
+msgid "Enter your comments here."
+msgstr ""
+
+#: ../thunar-plugin/audio-tags-page.c:408
+msgid "<b>Genre:</b>"
+msgstr ""
+
+#: ../thunar-plugin/audio-tags-page.c:415
+msgid "Select or enter the genre of this song here."
+msgstr ""
+
+#. Create and add the save action
+#: ../thunar-plugin/audio-tags-page.c:454
+msgid "_Save"
+msgstr ""
+
+#: ../thunar-plugin/audio-tags-page.c:454
+msgid "Save audio tags."
+msgstr ""
+
+#. Create and add the info action
+#: ../thunar-plugin/audio-tags-page.c:461
+msgid "_Information"
+msgstr ""
+
+#: ../thunar-plugin/audio-tags-page.c:461
+msgid "Display more detailed information about this audio file."
+msgstr ""
+
+#: ../thunar-plugin/audio-tags-page.c:528
+msgid "Audio"
+msgstr ""
+
+#. Set up the dialog
+#: ../thunar-plugin/audio-tags-page.c:564
+msgid "Edit Tags"
+msgstr ""
+
+#. Create dialog
+#: ../thunar-plugin/audio-tags-page.c:992
+msgid "Audio Information"
+msgstr ""
+
+#: ../thunar-plugin/audio-tags-page.c:1003
+#, c-format
+msgid "%d:%d Minutes"
+msgstr ""
+
+#: ../thunar-plugin/audio-tags-page.c:1004
+#, c-format
+msgid "%d KBit/s"
+msgstr ""
+
+#: ../thunar-plugin/audio-tags-page.c:1005
+#, c-format
+msgid "%d Hz"
+msgstr ""
+
+#: ../thunar-plugin/audio-tags-page.c:1025
+msgid "<b>Filename:</b>"
+msgstr ""
+
+#: ../thunar-plugin/audio-tags-page.c:1038
+msgid "<b>Filesize:</b>"
+msgstr ""
+
+#: ../thunar-plugin/audio-tags-page.c:1051
+msgid "<b>MIME Type:</b>"
+msgstr ""
+
+#: ../thunar-plugin/audio-tags-page.c:1064
+msgid "<b>Bitrate:</b>"
+msgstr ""
+
+#: ../thunar-plugin/audio-tags-page.c:1077
+msgid "<b>Samplerate:</b>"
+msgstr ""
+
+#: ../thunar-plugin/audio-tags-page.c:1090
+msgid "<b>Channels:</b>"
+msgstr ""
+
+#: ../thunar-plugin/audio-tags-page.c:1103
+msgid "<b>Length:</b>"
+msgstr ""

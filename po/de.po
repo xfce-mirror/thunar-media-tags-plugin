@@ -5,7 +5,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: thunar-media-tags-plugin 0.1.0\n"
+"Project-Id-Version: thunar-media-tags-plugin 0.1.0svn\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-03-25 23:55+0100\n"
 "PO-Revision-Date: 2006-03-25 23:56+0100\n"
@@ -54,7 +54,9 @@ msgid "_Underscores"
 msgstr "_Unterstriche"
 
 #: ../thunar-plugin/tag-renamer.c:248
-msgid "Activating this option will replace all spaces in the target filename with underscores."
+msgid ""
+"Activating this option will replace all spaces in the target filename with "
+"underscores."
 msgstr "Mit dieser Option werden alle Leerzeichen durch Unterstriche ersetzt."
 
 #: ../thunar-plugin/tag-renamer.c:253
@@ -62,17 +64,17 @@ msgid "_Lowercase"
 msgstr "K_leinbuchstaben"
 
 #: ../thunar-plugin/tag-renamer.c:255
-msgid "If you activate this, the resulting filename will only contain lowercase letters."
+msgid ""
+"If you activate this, the resulting filename will only contain lowercase "
+"letters."
 msgstr "Wandelt alle Zeichen in Kleinbuchstaben um."
 
-#: ../thunar-plugin/tag-renamer.c:264
-#: ../thunar-plugin/tag-renamer.c:702
+#: ../thunar-plugin/tag-renamer.c:264 ../thunar-plugin/tag-renamer.c:702
 #: ../thunar-plugin/audio-tags-page.c:183
 msgid "Unknown Artist"
 msgstr "Unbekannter Interpret"
 
-#: ../thunar-plugin/tag-renamer.c:265
-#: ../thunar-plugin/tag-renamer.c:750
+#: ../thunar-plugin/tag-renamer.c:265 ../thunar-plugin/tag-renamer.c:750
 #: ../thunar-plugin/audio-tags-page.c:209
 msgid "Unknown Title"
 msgstr "Unbekannter Titel"
