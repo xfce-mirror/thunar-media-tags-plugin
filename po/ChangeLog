@@ -1,47 +1,52 @@
-2006-04-02  Daichi Kawahata <daichi@xfce.org>
+2006-04-08	Daichi Kawahata <daichi@xfce.org>
 
-  * fr.po: Added French translations by Stephane Roy
-    <sroy@j2n.net>.
+	* pl.po: Added Polish translations by Piotr Malinski
+	  <admin@rk.edu.pl>.
 
-2006-03-26  Daichi Kawahata <daichi@xfce.org>
+2006-04-02	Daichi Kawahata <daichi@xfce.org>
 
-  * ja.po: Updated Japanese translations.
-  * de.po, el.po, hu.po, ja.po: Updated. Discarded obsolete
-    translations.
+	* fr.po: Added French translations by Stephane Roy
+	  <sroy@j2n.net>.
 
-2006-03-25  Jannis Pohlmann <jannis@xfce.org>
+2006-03-26	Daichi Kawahata <daichi@xfce.org>
 
-  * thunar-media-tags-plugin.pot: New strings merged.
-  * de.po: German translations updated.
+	* ja.po: Updated Japanese translations.
+	* de.po, el.po, hu.po, ja.po: Updated. Discarded obsolete
+	  translations.
 
-2006-03-25  Jannis Pohlmann <jannis@xfce.org>
+2006-03-25	Jannis Pohlmann <jannis@xfce.org>
 
-  * thunar-media-tags-plugin.pot: New strings merged.
-  * de.po: German translations updated.
+	* thunar-media-tags-plugin.pot: New strings merged.
+	* de.po: German translations updated.
 
-2006-03-25  Jannis Pohlmann <jannis@xfce.org>
+2006-03-25	Jannis Pohlmann <jannis@xfce.org>
 
-  * ja.po: Japanese translations by Daichi Kawahata added.
+	* thunar-media-tags-plugin.pot: New strings merged.
+	* de.po: German translations updated.
 
-2006-03-25  Jannis Pohlmann <jannis@xfce.org>
+2006-03-25	Jannis Pohlmann <jannis@xfce.org>
 
-  * thunar-media-tags-plugin.pot: Merge new strings.
-  * de.po: Updated German translations.
+	* ja.po: Japanese translations by Daichi Kawahata added.
 
-2006-03-23  Jannis Pohlmann <jannis@xfce.org>
+2006-03-25	Jannis Pohlmann <jannis@xfce.org>
 
-  * el.po: Greek translations by Stavros Giannouris added.
+	* thunar-media-tags-plugin.pot: Merge new strings.
+	* de.po: Updated German translations.
 
-2006-03-23  Jannis Pohlmann <jannis@xfce.org>
+2006-03-23	Jannis Pohlmann <jannis@xfce.org>
 
-  * hu.po: Hungarian translation by SZERVÑC Attila added.
+	* el.po: Greek translations by Stavros Giannouris added.
 
-2006-03-23  Jannis Pohlmann <jannis@xfce.org>
+2006-03-23	Jannis Pohlmann <jannis@xfce.org>
 
-  * POTFILES.in, de.po, thunar-tag-renamer-plugin.pot: Updated 
-    translation files.
+	* hu.po: Hungarian translation by SZERVÑC Attila added.
 
-2006-03-23  Jannis Pohlmann <jannis@xfce.org>
+2006-03-23	Jannis Pohlmann <jannis@xfce.org>
 
-  * thunar-tag-renamer-plugin.pot: POT-file updated.
-  * de.po: German translations updated.
+	* POTFILES.in, de.po, thunar-tag-renamer-plugin.pot: Updated 
+	  translation files.
+
+2006-03-23	Jannis Pohlmann <jannis@xfce.org>
+
+	* thunar-tag-renamer-plugin.pot: POT-file updated.
+	* de.po: German translations updated.
