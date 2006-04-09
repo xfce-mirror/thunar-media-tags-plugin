@@ -1,5 +1,10 @@
 2006-04-08	Jannis Pohlmann <jannis@xfce.org>
 
+	* configure.in.in: Added zh_TW (traditional Chinese) to the 
+	  list of translations.
+
+2006-04-08	Jannis Pohlmann <jannis@xfce.org>
+
 	* configure.in.in: Added pl to the list of translations.
 
 2006-03-25	Jannis Pohlmann <jannis@xfce.org>
