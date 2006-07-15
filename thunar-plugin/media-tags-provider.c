@@ -153,6 +153,10 @@ media_tags_get_audio_file_supported (ThunarxFileInfo *info)
   
   uri = thunarx_file_info_get_uri (info);
   filename = g_filename_from_uri (uri, NULL, NULL);
+  g_free (uri);
+
+  if (G_UNLIKELY (filename == NULL))
+    return FALSE;
 
   /* Try loading the tag information */
   taglib_file = taglib_file_new (filename);
@@ -164,10 +168,8 @@ media_tags_get_audio_file_supported (ThunarxFileInfo *info)
 
       supported = TRUE;
     }
-      
 
   g_free (filename);
-  g_free (uri);
 
   return supported;
 }

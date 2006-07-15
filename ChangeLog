@@ -1,3 +1,9 @@
+2006-07-15	Benedikt Meurer <benny@xfce.org>
+
+	* thunar-plugin/media-tags-provider.c
+	  (media_tags_get_audio_file_supported): Handle URIs other than
+	  file:-URIs properly.
+
 2006-06-17	Jannis Pohlmann <jannis@xfce.org>
 
 	* thunar-plugin/*.{c,h}: Fix license headers.
