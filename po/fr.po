@@ -8,9 +8,9 @@ msgstr ""
 "Project-Id-Version: thunar-media-tags-plugin 0.1.0svn\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-03-25 23:55+0100\n"
-"PO-Revision-Date: 2006-04-02 14:44+0100\n"
-"Last-Translator: Stephane Roy <sroy@j2n.net>\n"
-"Language-Team: French <traduc@traduc.org>\n"
+"PO-Revision-Date: 2006-07-16 11:10+0100\n"
+"Last-Translator: Maximilian Schleiss <maxschleiss@bluewin.ch>\n"
+"Language-Team: French <xfce-i18n@xfce.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -46,41 +46,32 @@ msgstr "Artiste - piste - titre"
 #. Format label
 #: ../thunar-plugin/tag-renamer.c:223
 msgid "_Format:"
-msgstr ""
+msgstr "_Formattage"
 
 #: ../thunar-plugin/tag-renamer.c:246
-#, fuzzy
 msgid "_Underscores"
-msgstr "Utiliser des _underscores"
+msgstr "So_ulignement"
 
 #: ../thunar-plugin/tag-renamer.c:248
-msgid ""
-"Activating this option will replace all spaces in the target filename with "
-"underscores."
-msgstr ""
-"Activer cette option remplacera tous les espaces dans le nom de fichier "
-"cible par des underscores."
+msgid "Activating this option will replace all spaces in the target filename with underscores."
+msgstr "Activer cette option remplacera tous les espaces dans le nom de fichier cible par des underscores."
 
 #: ../thunar-plugin/tag-renamer.c:253
-#, fuzzy
 msgid "_Lowercase"
-msgstr "Utiliser les _minuscules"
+msgstr "Minuscu_les"
 
 #: ../thunar-plugin/tag-renamer.c:255
-#, fuzzy
-msgid ""
-"If you activate this, the resulting filename will only contain lowercase "
-"letters."
-msgstr ""
-"Si vous activez cette option, le nom de fichier final ne contiendra aucune "
-"lettre majuscule."
+msgid "If you activate this, the resulting filename will only contain lowercase letters."
+msgstr "De l'activation de cette option résultera un nom de fichier ne contenant que des lettres minuscules."
 
-#: ../thunar-plugin/tag-renamer.c:264 ../thunar-plugin/tag-renamer.c:702
+#: ../thunar-plugin/tag-renamer.c:264
+#: ../thunar-plugin/tag-renamer.c:702
 #: ../thunar-plugin/audio-tags-page.c:183
 msgid "Unknown Artist"
 msgstr "Artiste inconnu"
 
-#: ../thunar-plugin/tag-renamer.c:265 ../thunar-plugin/tag-renamer.c:750
+#: ../thunar-plugin/tag-renamer.c:265
+#: ../thunar-plugin/tag-renamer.c:750
 #: ../thunar-plugin/audio-tags-page.c:209
 msgid "Unknown Title"
 msgstr "Titre inconnu"
@@ -95,9 +86,8 @@ msgid "Edit ID3/OGG tags of this file."
 msgstr "Éditer les balises ID3/OGG de ce fichier."
 
 #: ../thunar-plugin/tag-renamer.c:545
-#, fuzzy
 msgid "Audio Tags"
-msgstr "Éditer les balises"
+msgstr "Balises audio"
 
 #: ../thunar-plugin/audio-tags-page.c:196
 msgid "Unknown Album"
@@ -175,8 +165,7 @@ msgstr "_Information"
 
 #: ../thunar-plugin/audio-tags-page.c:461
 msgid "Display more detailed information about this audio file."
-msgstr ""
-"Afficher des informations plus détaillées à propos de ce fichier audio."
+msgstr "Afficher des informations plus détaillées à propos de ce fichier audio."
 
 #: ../thunar-plugin/audio-tags-page.c:528
 msgid "Audio"
@@ -237,12 +226,10 @@ msgstr "<b>Durée :</b>"
 
 #~ msgid "Naming _scheme:"
 #~ msgstr "_Schéma de nom :"
-
 #~ msgid "Default Art_ist:"
 #~ msgstr "Art_iste par défaut :"
-
 #~ msgid "Text entered in this field is going to replace missing artist tags."
 #~ msgstr "Le texte de ce champ remplira les balises artiste vides."
-
 #~ msgid "ID3 and Vorbis Tags"
 #~ msgstr "Balises Vorbis et ID3"
+
