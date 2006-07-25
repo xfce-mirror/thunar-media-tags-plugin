@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: thunar-media-tags-plugin 0.1.0svn\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-03-25 23:55+0100\n"
-"PO-Revision-Date: 2006-03-27 03:05+0100\n"
+"PO-Revision-Date: 2006-07-25 10:51+0100\n"
 "Last-Translator: SZERVÑC Attila <sas@321.hu>\n"
 "Language-Team: Hungarian\n"
 "MIME-Version: 1.0\n"
@@ -177,7 +177,7 @@ msgstr "Hang"
 #. Set up the dialog
 #: ../thunar-plugin/audio-tags-page.c:564
 msgid "Edit Tags"
-msgstr ""
+msgstr "Tagok szerkesztése"
 
 #. Create dialog
 #: ../thunar-plugin/audio-tags-page.c:992
