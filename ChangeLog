@@ -1,3 +1,9 @@
+2006-07-27	Jannis Pohlmann <jannis@xfce.org>
+
+	* Released 0.1.1
+	* configure.in.in: Bump version.
+	* po/*.po: Update project version.
+
 2006-07-15	Benedikt Meurer <benny@xfce.org>
 
 	* thunar-plugin/media-tags-provider.c
