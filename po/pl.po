@@ -150,7 +150,7 @@ msgstr "<b>Typ:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:415
 msgid "Select or enter the genre of this song here."
-msgstr ""
+msgstr "Wybierz lub podaj typ tego utworu tutaj."
 
 #. Create and add the save action
 #: ../thunar-plugin/audio-tags-page.c:454
