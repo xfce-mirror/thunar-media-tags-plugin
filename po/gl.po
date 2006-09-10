@@ -7,8 +7,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: thunar-media-tags-plugin\n"
-"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2006-05-22 23:32+0000\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-09-10 21:29+0200\n"
 "PO-Revision-Date: 2006-08-17 20:07+0000\n"
 "Last-Translator: Leandro Regueiro <leandro.regueiro@gmail.com>\n"
 "Language-Team: Galician <gl@li.org>\n"
@@ -44,6 +44,7 @@ msgstr ""
 msgid "Artist - Track - Title"
 msgstr ""
 
+#. Format label
 #: ../thunar-plugin/tag-renamer.c:223
 msgid "_Format:"
 msgstr ""
@@ -78,6 +79,7 @@ msgstr "Artista Descoñecido"
 msgid "Unknown Title"
 msgstr "Título Descoñecido"
 
+#. Edit tags action
 #: ../thunar-plugin/tag-renamer.c:523
 msgid "Edit _Tags"
 msgstr ""
@@ -150,6 +152,7 @@ msgstr ""
 msgid "Select or enter the genre of this song here."
 msgstr ""
 
+#. Create and add the save action
 #: ../thunar-plugin/audio-tags-page.c:454
 msgid "_Save"
 msgstr ""
@@ -158,6 +161,7 @@ msgstr ""
 msgid "Save audio tags."
 msgstr ""
 
+#. Create and add the info action
 #: ../thunar-plugin/audio-tags-page.c:461
 msgid "_Information"
 msgstr "_Información"
@@ -170,10 +174,12 @@ msgstr ""
 msgid "Audio"
 msgstr "Audio"
 
+#. Set up the dialog
 #: ../thunar-plugin/audio-tags-page.c:564
 msgid "Edit Tags"
 msgstr ""
 
+#. Create dialog
 #: ../thunar-plugin/audio-tags-page.c:992
 msgid "Audio Information"
 msgstr ""

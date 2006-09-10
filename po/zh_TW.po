@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: thunar-media-tags-plugin 0.1.1svn\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-03-25 23:55+0100\n"
+"POT-Creation-Date: 2006-09-10 21:29+0200\n"
 "PO-Revision-Date: 2006-04-06 01:06+0800\n"
 "Last-Translator: Hydonsingore Cia <hydonsingore@mail.educities.edu.tw>\n"
 "Language-Team: Chinese (traditional) <zh-l10n@linux.org.tw>\n"
@@ -58,8 +58,7 @@ msgstr "底線(_U)"
 msgid ""
 "Activating this option will replace all spaces in the target filename with "
 "underscores."
-msgstr ""
-"啟動本選項會以底線取代檔名中所有的空白。"
+msgstr "啟動本選項會以底線取代檔名中所有的空白。"
 
 #: ../thunar-plugin/tag-renamer.c:253
 msgid "_Lowercase"
@@ -69,8 +68,7 @@ msgstr "小寫(_L)"
 msgid ""
 "If you activate this, the resulting filename will only contain lowercase "
 "letters."
-msgstr ""
-"如果您啟動本項，檔名將只會包含小寫字母。"
+msgstr "如果您啟動本項，檔名將只會包含小寫字母。"
 
 #: ../thunar-plugin/tag-renamer.c:264 ../thunar-plugin/tag-renamer.c:702
 #: ../thunar-plugin/audio-tags-page.c:183
