@@ -1,3 +1,10 @@
+2006-09-11	Jannis Pohlmann <jannis@xfce.org>
+
+	* thunar-plugin/audio-tags-page.c: Use GTK_STOCK_PROPERTIES
+	  instead of GTK_STOCK_INFO, which is only available with
+	  GTK >= 2.8.
+	* po/thunar-media-tags-plugin.pot, po/*.po: Merge strings.
+
 2006-07-27	Jannis Pohlmann <jannis@xfce.org>
 
 	* Released 0.1.1

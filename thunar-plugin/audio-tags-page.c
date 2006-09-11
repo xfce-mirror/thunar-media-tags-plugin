@@ -458,7 +458,7 @@ audio_tags_page_init (AudioTagsPage *page)
   g_signal_connect_swapped (G_OBJECT (action), "activate", G_CALLBACK (audio_tags_page_activate), page);
 
   /* Create and add the info action */
-  action = gtk_action_new ("info", _("_Information"), _("Display more detailed information about this audio file."), GTK_STOCK_INFO);
+  action = gtk_action_new ("info", _("_Information"), _("Display more detailed information about this audio file."), GTK_STOCK_PROPERTIES);
   gtk_action_group_add_action (page->action_group, action);
 
   /* Determine parent window and assign it to the action */
@@ -1202,7 +1202,7 @@ audio_tags_page_set_show_save_button (AudioTagsPage   *page,
         return;
 
       /* Info button */
-      page->info_button = gtk_button_new_from_stock (GTK_STOCK_INFO);
+      page->info_button = gtk_button_new_from_stock (GTK_STOCK_PROPERTIES);
       gtk_table_attach (GTK_TABLE (page->table), page->info_button, 2, 3, 6, 7, GTK_FILL, 0, 0, 0);
       gtk_widget_show (page->info_button);
 
