@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: thunar-media-tags-plugin 0.1.1svn-r01924\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-09-10 21:29+0200\n"
-"PO-Revision-Date: 2006-08-26 20:44+0100\n"
+"POT-Creation-Date: 2006-09-11 11:38+0200\n"
+"PO-Revision-Date: 2006-09-17 09:31+0100\n"
 "Last-Translator: Michal Várady <miko.vaji@gmail.com>\n"
 "Language-Team: Czech <translation-team-cs@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -54,30 +54,25 @@ msgid "_Underscores"
 msgstr "_Podtržítka"
 
 #: ../thunar-plugin/tag-renamer.c:248
-msgid ""
-"Activating this option will replace all spaces in the target filename with "
-"underscores."
-msgstr ""
-"Aktivace této položky způsobí nahrazení všech mezer v cílovém názvu "
-"podtržítky."
+msgid "Activating this option will replace all spaces in the target filename with underscores."
+msgstr "Aktivace této položky způsobí nahrazení všech mezer v cílovém názvu podtržítky."
 
 #: ../thunar-plugin/tag-renamer.c:253
 msgid "_Lowercase"
 msgstr "_Malá písmena"
 
 #: ../thunar-plugin/tag-renamer.c:255
-msgid ""
-"If you activate this, the resulting filename will only contain lowercase "
-"letters."
-msgstr ""
-"Použijete-li tuto volbu, výsledné názvy budou obsahovat pouze malá písmena."
+msgid "If you activate this, the resulting filename will only contain lowercase letters."
+msgstr "Použijete-li tuto volbu, výsledné názvy budou obsahovat pouze malá písmena."
 
-#: ../thunar-plugin/tag-renamer.c:264 ../thunar-plugin/tag-renamer.c:702
+#: ../thunar-plugin/tag-renamer.c:264
+#: ../thunar-plugin/tag-renamer.c:702
 #: ../thunar-plugin/audio-tags-page.c:183
 msgid "Unknown Artist"
 msgstr "Neznámý umělec"
 
-#: ../thunar-plugin/tag-renamer.c:265 ../thunar-plugin/tag-renamer.c:750
+#: ../thunar-plugin/tag-renamer.c:265
+#: ../thunar-plugin/tag-renamer.c:750
 #: ../thunar-plugin/audio-tags-page.c:209
 msgid "Unknown Title"
 msgstr "Neznámý název"
@@ -105,7 +100,7 @@ msgstr "<b>Stopa:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:320
 msgid "Enter the track number here."
-msgstr "Vložte název stopy."
+msgstr "Sem zadejte název stopy."
 
 #: ../thunar-plugin/audio-tags-page.c:328
 msgid "<b>Year:</b>"
@@ -113,7 +108,7 @@ msgstr "<b>Rok:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:343
 msgid "Enter the release year here."
-msgstr "Vložte rok vydáví."
+msgstr "Sem zadejte rok vydání."
 
 #: ../thunar-plugin/audio-tags-page.c:351
 msgid "<b>Artist:</b>"
@@ -121,7 +116,7 @@ msgstr "<b>Umělec:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:358
 msgid "Enter the name of the artist or author of this file here."
-msgstr "Vložte jméno umělce nebo autora tohoto souboru."
+msgstr "Sem zadejte jméno umělce nebo autora tohoto souboru."
 
 #: ../thunar-plugin/audio-tags-page.c:366
 msgid "<b>Title:</b>"
@@ -129,7 +124,7 @@ msgstr "<b>Název:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:373
 msgid "Enter the song title here."
-msgstr "Vložte název skladby."
+msgstr "Sem zadejte název skladby."
 
 #: ../thunar-plugin/audio-tags-page.c:380
 msgid "<b>Album:</b>"
@@ -137,7 +132,7 @@ msgstr "<b>Album:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:387
 msgid "Enter the album/record title here."
-msgstr "Vložte název alba nebo nahrávky."
+msgstr "Sem zadejte název alba nebo nahrávky."
 
 #: ../thunar-plugin/audio-tags-page.c:394
 msgid "<b>Comment:</b>"
@@ -145,7 +140,7 @@ msgstr "<b>Komentář:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:401
 msgid "Enter your comments here."
-msgstr "Vložte Váš komentář."
+msgstr "Sem zadejte Váš komentář."
 
 #: ../thunar-plugin/audio-tags-page.c:408
 msgid "<b>Genre:</b>"
@@ -153,7 +148,7 @@ msgstr "<b>Žánr:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:415
 msgid "Select or enter the genre of this song here."
-msgstr "Zvolte nebo zadejte žánr této skladby."
+msgstr "Sem zadejte nebo zvolte žánr této skladby."
 
 #. Create and add the save action
 #: ../thunar-plugin/audio-tags-page.c:454
@@ -229,3 +224,4 @@ msgstr "<b>Počet kanálů:</b>"
 #: ../thunar-plugin/audio-tags-page.c:1103
 msgid "<b>Length:</b>"
 msgstr "<b>Délka:</b>"
+
