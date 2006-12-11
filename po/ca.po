@@ -9,13 +9,14 @@ msgstr ""
 "Project-Id-Version: thunar-media-tags-plugin 0.1.1svn\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-09-11 11:38+0200\n"
-"PO-Revision-Date: 2006-04-17 18:30+0100\n"
+"PO-Revision-Date: 2006-12-03 15:17+0100\n"
 "Last-Translator: Carles Muñoz Gorriz <carlesmu@internautas.org>\n"
-"Language-Team: catalan\n"
+"Language-Team: Catalan <catalanxfce-i18n@xfce.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Poedit-SourceCharset: utf-8\n"
 
 #: ../thunar-plugin/tag-renamer.c:59
 msgid "Title"
@@ -141,7 +142,7 @@ msgstr "Introduïu el títol de l'àlbum/gravació."
 
 #: ../thunar-plugin/audio-tags-page.c:394
 msgid "<b>Comment:</b>"
-msgstr "<b>Comentari:</b> "
+msgstr "<b>Comentari:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:401
 msgid "Enter your comments here."
@@ -193,9 +194,9 @@ msgid "%d:%d Minutes"
 msgstr "%d:%d minuts"
 
 #: ../thunar-plugin/audio-tags-page.c:1004
-#, fuzzy, c-format
+#, c-format
 msgid "%d KBit/s"
-msgstr "%d KBit/s"
+msgstr "%d kbps"
 
 #: ../thunar-plugin/audio-tags-page.c:1005
 #, c-format
@@ -212,20 +213,18 @@ msgstr "<b>Tamany:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:1051
 msgid "<b>MIME Type:</b>"
-msgstr "<b>Tipus MIME</b>"
+msgstr "<b>Tipus MIME:</b>"
 
 # Coeficient/Velocitat/Ritme/Ràtio/Taxa?
 # Ràtio no hi és al diec.
 # El termcat recomana taxa
 #: ../thunar-plugin/audio-tags-page.c:1064
-#, fuzzy
 msgid "<b>Bitrate:</b>"
-msgstr "<b>Taxa de bits:</b>"
+msgstr "<b>Taxa de bits «bitrate»:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:1077
-#, fuzzy
 msgid "<b>Samplerate:</b>"
-msgstr "<b>Taxa de mostra:</b>"
+msgstr "<b>Taxa de la mostra «samplerate»:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:1090
 msgid "<b>Channels:</b>"
@@ -233,4 +232,4 @@ msgstr "<b>Canals:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:1103
 msgid "<b>Length:</b>"
-msgstr "<b>Durada</b>"
+msgstr "<b>Durada:</b>"
