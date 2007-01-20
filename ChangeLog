@@ -1,5 +1,9 @@
 2007-01-20	Jannis Pohlmann <jannis@xfce.org>
 
+	* configure.in.in: Post-release version bump.
+
+2007-01-20	Jannis Pohlmann <jannis@xfce.org>
+
 	* 0.1.2 released!
 	* configure.in.in: Bump version.
 	* po/*.po: Update version.
