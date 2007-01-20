@@ -6,7 +6,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: thunar-media-tags-plugin 0.1.1svn\n"
+"Project-Id-Version: thunar-media-tags-plugin 0.1.2svn\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-09-11 11:38+0200\n"
 "PO-Revision-Date: 2006-07-25 10:51+0100\n"

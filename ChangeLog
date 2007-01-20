@@ -1,3 +1,9 @@
+2007-01-20	Jannis Pohlmann <jannis@xfce.org>
+
+	* 0.1.2 released!
+	* configure.in.in: Bump version.
+	* po/*.po: Update version.
+
 2006-09-11	Jannis Pohlmann <jannis@xfce.org>
 
 	* thunar-plugin/audio-tags-page.c: Use GTK_STOCK_PROPERTIES
