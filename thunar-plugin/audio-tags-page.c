@@ -315,7 +315,7 @@ audio_tags_page_init (AudioTagsPage *page)
   adjustment = gtk_adjustment_new (0, 0, 999, 1, 5, 10);
 
   /* Track spin button */
-  spin = gtk_spin_button_new (GTK_ADJUSTMENT (adjustment), 1, 0);
+  spin = gtk_spin_button_new (GTK_ADJUSTMENT (adjustment), 0.0, 0);
   exo_mutual_binding_new (G_OBJECT (adjustment), "value", G_OBJECT (page), "track");
   gtk_tooltips_set_tip (page->tooltips, spin, _("Enter the track number here."), NULL);
   gtk_container_add (GTK_CONTAINER (alignment), spin);
