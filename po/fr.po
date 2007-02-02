@@ -2,13 +2,14 @@
 # Copyright (C) 2006 Jannis Pohlmann.
 # This file is distributed under the same license as the media-tags-plugin package.
 # Stephane Roy <sroy@j2n.net>, 2006.
+# Maximilian Schleiss <maxschleiss@bluewin.ch>, 2007.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: thunar-media-tags-plugin 0.1.2svn\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-09-11 11:38+0200\n"
-"PO-Revision-Date: 2006-07-16 11:10+0100\n"
+"PO-Revision-Date: 2007-01-29 00:41+0100\n"
 "Last-Translator: Maximilian Schleiss <maxschleiss@bluewin.ch>\n"
 "Language-Team: French <xfce-i18n@xfce.org>\n"
 "MIME-Version: 1.0\n"
@@ -29,55 +30,49 @@ msgstr "Piste - titre"
 
 #: ../thunar-plugin/tag-renamer.c:62
 msgid "Track - Artist - Title"
-msgstr "Piste - artiste - titre"
+msgstr "Piste - Artiste - Titre"
 
 #: ../thunar-plugin/tag-renamer.c:63
 msgid "Track. Title"
-msgstr "Piste. titre"
+msgstr "Piste. Titre"
 
 #: ../thunar-plugin/tag-renamer.c:64
 msgid "Track. Artist - Title"
-msgstr "Piste. artiste - titre"
+msgstr "Piste. Artiste - Titre"
 
 #: ../thunar-plugin/tag-renamer.c:65
 msgid "Artist - Track - Title"
-msgstr "Artiste - piste - titre"
+msgstr "Artiste - Piste - Titre"
 
 #. Format label
 #: ../thunar-plugin/tag-renamer.c:223
 msgid "_Format:"
-msgstr "_Formattage"
+msgstr "_Format :"
 
 #: ../thunar-plugin/tag-renamer.c:246
 msgid "_Underscores"
 msgstr "So_ulignement"
 
 #: ../thunar-plugin/tag-renamer.c:248
-msgid ""
-"Activating this option will replace all spaces in the target filename with "
-"underscores."
-msgstr ""
-"Activer cette option remplacera tous les espaces dans le nom de fichier "
-"cible par des underscores."
+msgid "Activating this option will replace all spaces in the target filename with underscores."
+msgstr "Activer cette option remplacera toutes les espaces dans le nom de fichier cible par des soulignements."
 
 #: ../thunar-plugin/tag-renamer.c:253
 msgid "_Lowercase"
-msgstr "Minuscu_les"
+msgstr "_Minuscules"
 
 #: ../thunar-plugin/tag-renamer.c:255
-msgid ""
-"If you activate this, the resulting filename will only contain lowercase "
-"letters."
-msgstr ""
-"De l'activation de cette option résultera un nom de fichier ne contenant que "
-"des lettres minuscules."
+msgid "If you activate this, the resulting filename will only contain lowercase letters."
+msgstr "De l'activation de cette option résultera un nom de fichier ne contenant que des lettres minuscules."
 
-#: ../thunar-plugin/tag-renamer.c:264 ../thunar-plugin/tag-renamer.c:702
+#: ../thunar-plugin/tag-renamer.c:264
+#: ../thunar-plugin/tag-renamer.c:702
 #: ../thunar-plugin/audio-tags-page.c:183
 msgid "Unknown Artist"
 msgstr "Artiste inconnu"
 
-#: ../thunar-plugin/tag-renamer.c:265 ../thunar-plugin/tag-renamer.c:750
+#: ../thunar-plugin/tag-renamer.c:265
+#: ../thunar-plugin/tag-renamer.c:750
 #: ../thunar-plugin/audio-tags-page.c:209
 msgid "Unknown Title"
 msgstr "Titre inconnu"
@@ -85,7 +80,7 @@ msgstr "Titre inconnu"
 #. Edit tags action
 #: ../thunar-plugin/tag-renamer.c:523
 msgid "Edit _Tags"
-msgstr "Éditer les balises"
+msgstr "Éditer les _balises"
 
 #: ../thunar-plugin/tag-renamer.c:523
 msgid "Edit ID3/OGG tags of this file."
@@ -105,7 +100,7 @@ msgstr "<b>Piste :</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:320
 msgid "Enter the track number here."
-msgstr "Entrer ici le numéro de la piste."
+msgstr "Entrez ici le numéro de la piste."
 
 #: ../thunar-plugin/audio-tags-page.c:328
 msgid "<b>Year:</b>"
@@ -113,7 +108,7 @@ msgstr "<b>Année :</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:343
 msgid "Enter the release year here."
-msgstr "Entrer ici la date de sortie."
+msgstr "Entrez ici la date de sortie."
 
 #: ../thunar-plugin/audio-tags-page.c:351
 msgid "<b>Artist:</b>"
@@ -121,7 +116,7 @@ msgstr "<b>Artiste :</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:358
 msgid "Enter the name of the artist or author of this file here."
-msgstr "Entrer ici le nom de l'artiste ou l'auteur de ce fichier."
+msgstr "Entrez ici le nom de l'artiste ou de l'auteur de ce fichier."
 
 #: ../thunar-plugin/audio-tags-page.c:366
 msgid "<b>Title:</b>"
@@ -129,7 +124,7 @@ msgstr "<b>Titre :</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:373
 msgid "Enter the song title here."
-msgstr "Entrer ici le titre du morceau."
+msgstr "Entrez ici le titre du morceau."
 
 #: ../thunar-plugin/audio-tags-page.c:380
 msgid "<b>Album:</b>"
@@ -137,7 +132,7 @@ msgstr "<b>Album :</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:387
 msgid "Enter the album/record title here."
-msgstr "Entrer ici le titre de l'album / enregistrement."
+msgstr "Entrez ici le titre de l'album/enregistrement."
 
 #: ../thunar-plugin/audio-tags-page.c:394
 msgid "<b>Comment:</b>"
@@ -145,7 +140,7 @@ msgstr "<b>Commentaire :</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:401
 msgid "Enter your comments here."
-msgstr "Entrer ici vos commentaires."
+msgstr "Entrez ici vos commentaires."
 
 #: ../thunar-plugin/audio-tags-page.c:408
 msgid "<b>Genre:</b>"
@@ -153,7 +148,7 @@ msgstr "<b>Genre :</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:415
 msgid "Select or enter the genre of this song here."
-msgstr "Sélectionner ou entrer ici le genre de ce morceau."
+msgstr "Sélectionnez ou entrez ici le genre de ce morceau."
 
 #. Create and add the save action
 #: ../thunar-plugin/audio-tags-page.c:454
@@ -162,7 +157,7 @@ msgstr "_Enregistrer"
 
 #: ../thunar-plugin/audio-tags-page.c:454
 msgid "Save audio tags."
-msgstr "Sauver les balises audio."
+msgstr "Enregistrer les balises audio."
 
 #. Create and add the info action
 #: ../thunar-plugin/audio-tags-page.c:461
@@ -171,8 +166,7 @@ msgstr "_Information"
 
 #: ../thunar-plugin/audio-tags-page.c:461
 msgid "Display more detailed information about this audio file."
-msgstr ""
-"Afficher des informations plus détaillées à propos de ce fichier audio."
+msgstr "Afficher des informations plus détaillées à propos de ce fichier audio."
 
 #: ../thunar-plugin/audio-tags-page.c:528
 msgid "Audio"
@@ -233,12 +227,10 @@ msgstr "<b>Durée :</b>"
 
 #~ msgid "Naming _scheme:"
 #~ msgstr "_Schéma de nom :"
-
 #~ msgid "Default Art_ist:"
 #~ msgstr "Art_iste par défaut :"
-
 #~ msgid "Text entered in this field is going to replace missing artist tags."
 #~ msgstr "Le texte de ce champ remplira les balises artiste vides."
-
 #~ msgid "ID3 and Vorbis Tags"
 #~ msgstr "Balises Vorbis et ID3"
+
