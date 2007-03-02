@@ -1,0 +1,232 @@
+# Ukrainian translation of thunar-media-tags-plugin.
+# Copyright (C) 2007 Dmitry Nikitin.
+# This file is distributed under the same license as the thunar-media-tags-plugin package.
+#
+# Dmitry Nikitin <luckas_fb@mail.ru>, 2007.
+msgid ""
+msgstr ""
+"Project-Id-Version: thunar-media-tags-plugin\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-09-11 11:38+0200\n"
+"PO-Revision-Date: 2007-03-02 15:51+0200\n"
+"Last-Translator: Dmitry Nikitin <luckas_fb@mail.ru>\n"
+"Language-Team: Ukrainian <xfce-i18n@xfce.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: ../thunar-plugin/tag-renamer.c:59
+msgid "Title"
+msgstr "Назва"
+
+#: ../thunar-plugin/tag-renamer.c:60
+msgid "Artist - Title"
+msgstr "Артист - Назва"
+
+#: ../thunar-plugin/tag-renamer.c:61
+msgid "Track - Title"
+msgstr "Трек - Назва"
+
+#: ../thunar-plugin/tag-renamer.c:62
+msgid "Track - Artist - Title"
+msgstr "Трек - Артист - Назва"
+
+#: ../thunar-plugin/tag-renamer.c:63
+msgid "Track. Title"
+msgstr "Трек. Назва"
+
+#: ../thunar-plugin/tag-renamer.c:64
+msgid "Track. Artist - Title"
+msgstr "Трек. Артист - Назва"
+
+#: ../thunar-plugin/tag-renamer.c:65
+msgid "Artist - Track - Title"
+msgstr "Артист - Трек - Назва"
+
+#. Format label
+#: ../thunar-plugin/tag-renamer.c:223
+msgid "_Format:"
+msgstr "_Формат:"
+
+#: ../thunar-plugin/tag-renamer.c:246
+msgid "_Underscores"
+msgstr "_Підкреслення"
+
+#: ../thunar-plugin/tag-renamer.c:248
+msgid ""
+"Activating this option will replace all spaces in the target filename with "
+"underscores."
+msgstr "Активуйте цю опцію для заміни всіх пробілів в назві файлу символами нижнього підкреслення."
+
+#: ../thunar-plugin/tag-renamer.c:253
+msgid "_Lowercase"
+msgstr "_Нижній регістр"
+
+#: ../thunar-plugin/tag-renamer.c:255
+msgid ""
+"If you activate this, the resulting filename will only contain lowercase "
+"letters."
+msgstr ""
+"Якщо Ви активуєте це, то в результаті ім'я файлу буде приведене до нижнього регістру "
+"букв."
+
+#: ../thunar-plugin/tag-renamer.c:264 ../thunar-plugin/tag-renamer.c:702
+#: ../thunar-plugin/audio-tags-page.c:183
+msgid "Unknown Artist"
+msgstr "Невідомий Артист"
+
+#: ../thunar-plugin/tag-renamer.c:265 ../thunar-plugin/tag-renamer.c:750
+#: ../thunar-plugin/audio-tags-page.c:209
+msgid "Unknown Title"
+msgstr "Невідома Назва"
+
+#. Edit tags action
+#: ../thunar-plugin/tag-renamer.c:523
+msgid "Edit _Tags"
+msgstr "Редагувати _теги"
+
+#: ../thunar-plugin/tag-renamer.c:523
+msgid "Edit ID3/OGG tags of this file."
+msgstr "Редагувати ID3/OGG теги цього файлу."
+
+#: ../thunar-plugin/tag-renamer.c:545
+msgid "Audio Tags"
+msgstr "Аудіо Теги"
+
+#: ../thunar-plugin/audio-tags-page.c:196
+msgid "Unknown Album"
+msgstr "Невідомий Альбом"
+
+#: ../thunar-plugin/audio-tags-page.c:305
+msgid "<b>Track:</b>"
+msgstr "<b>Трек:</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:320
+msgid "Enter the track number here."
+msgstr "Введіть тут номер треку."
+
+#: ../thunar-plugin/audio-tags-page.c:328
+msgid "<b>Year:</b>"
+msgstr "<b>Рік:</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:343
+msgid "Enter the release year here."
+msgstr "Введіть тут Рік випуску."
+
+#: ../thunar-plugin/audio-tags-page.c:351
+msgid "<b>Artist:</b>"
+msgstr "<b>Артист:</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:358
+msgid "Enter the name of the artist or author of this file here."
+msgstr "Введіть тут ім'я Артиста чи автора цього файлу."
+
+#: ../thunar-plugin/audio-tags-page.c:366
+msgid "<b>Title:</b>"
+msgstr "<b>Назва:</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:373
+msgid "Enter the song title here."
+msgstr "Введіть тут Назву пісні."
+
+#: ../thunar-plugin/audio-tags-page.c:380
+msgid "<b>Album:</b>"
+msgstr "<b>Альбом:</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:387
+msgid "Enter the album/record title here."
+msgstr "Введіть тут назву Альбому/запису."
+
+#: ../thunar-plugin/audio-tags-page.c:394
+msgid "<b>Comment:</b>"
+msgstr "<b>Коментарі:</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:401
+msgid "Enter your comments here."
+msgstr "Введіть тут ваші Коментарі."
+
+#: ../thunar-plugin/audio-tags-page.c:408
+msgid "<b>Genre:</b>"
+msgstr "<b>Напрямок музики:</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:415
+msgid "Select or enter the genre of this song here."
+msgstr "Виберіть чи введіть тут Напрямок музики цієї пісні."
+
+#. Create and add the save action
+#: ../thunar-plugin/audio-tags-page.c:454
+msgid "_Save"
+msgstr "_Зберегти"
+
+#: ../thunar-plugin/audio-tags-page.c:454
+msgid "Save audio tags."
+msgstr "Зберегти аудіо-теги."
+
+#. Create and add the info action
+#: ../thunar-plugin/audio-tags-page.c:461
+msgid "_Information"
+msgstr "_Інформація"
+
+#: ../thunar-plugin/audio-tags-page.c:461
+msgid "Display more detailed information about this audio file."
+msgstr "Показати більш детальну інформацію про цей аудіо-файл."
+
+#: ../thunar-plugin/audio-tags-page.c:528
+msgid "Audio"
+msgstr "Аудіо"
+
+#. Set up the dialog
+#: ../thunar-plugin/audio-tags-page.c:564
+msgid "Edit Tags"
+msgstr "Редагувати теги"
+
+#. Create dialog
+#: ../thunar-plugin/audio-tags-page.c:992
+msgid "Audio Information"
+msgstr "Інформація про Аудіо"
+
+#: ../thunar-plugin/audio-tags-page.c:1003
+#, c-format
+msgid "%d:%d Minutes"
+msgstr "%d:%d хвилин"
+
+#: ../thunar-plugin/audio-tags-page.c:1004
+#, c-format
+msgid "%d KBit/s"
+msgstr "%d кбіт/с"
+
+#: ../thunar-plugin/audio-tags-page.c:1005
+#, c-format
+msgid "%d Hz"
+msgstr "%d Гц"
+
+#: ../thunar-plugin/audio-tags-page.c:1025
+msgid "<b>Filename:</b>"
+msgstr "<b>Ім'я Файлу:</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:1038
+msgid "<b>Filesize:</b>"
+msgstr "<b>Розмір:</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:1051
+msgid "<b>MIME Type:</b>"
+msgstr "<b>Тип MIME:</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:1064
+msgid "<b>Bitrate:</b>"
+msgstr "<b>Бітрейт:</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:1077
+msgid "<b>Samplerate:</b>"
+msgstr "<b>Кількість семплів:</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:1090
+msgid "<b>Channels:</b>"
+msgstr "<b>Каналів:</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:1103
+msgid "<b>Length:</b>"
+msgstr "<b>Тривалість:</b>"
+
