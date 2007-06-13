@@ -1,18 +1,18 @@
-# Dutch translations for thunar-archive-plugin package.
-# Copyright (C) 2007 THE thunar-archive-plugin'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the thunar-archive-plugin package.
+# Dutch translation of the thunar-media-tags-plugin.
+# Copyright (C) 2006-2007 Jannis Pohlmann <jannis@xfce.org>
+# This file is distributed under the same license as the thunar-media-tags-plugin package.
 # Stephan Arts <stephan@localhost>, 2007.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: thunar-archive-plugin 0.2.2\n"
+"Project-Id-Version: thunar-archive-plugin 0.1.2svn\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-09-11 11:38+0200\n"
 "PO-Revision-Date: 2007-01-07 13:55+0100\n"
 "Last-Translator: Stephan Arts <stephan@xfce.org>\n"
-"Language-Team: Dutch <vertaling@vrijschrift.org>\n"
+"Language-Team: Dutch <xfce-i18n@xfce.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 

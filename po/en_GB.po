@@ -1,9 +1,7 @@
-# English/GB translation of thunar-media-tags-plugin.
-# Copyright (C) 2007 THE thunar-media-tags-plugin'S COPYRIGHT HOLDER
+# British English translation of the thunar-media-tags-plugin.
+# Copyright (C) 2006-2007 Jannis Pohlmann <jannis@xfce.org>
 # This file is distributed under the same license as the thunar-media-tags-plugin package.
 # Jeff Bailes <thepizzaking@gmail.com>, 2007.
-# , fuzzy
-# 
 # 
 msgid ""
 msgstr ""
@@ -12,9 +10,9 @@ msgstr ""
 "POT-Creation-Date: 2006-09-11 11:38+0200\n"
 "PO-Revision-Date: 2007-03-29 19:12+1000\n"
 "Last-Translator: Jeff Bailes <thepizzaking@gmail.com>\n"
-"Language-Team: English/GB\n"
+"Language-Team: British English <xfce-i18n@xfce.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit"
 
 #: ../thunar-plugin/tag-renamer.c:59
