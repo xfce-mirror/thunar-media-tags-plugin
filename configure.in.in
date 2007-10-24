@@ -23,7 +23,7 @@ dnl ***************************
 dnl *** Initialize autoconf ***
 dnl ***************************
 AC_COPYRIGHT([Copyright (c) 2006-2007 Jannis Pohlmann <jannis@xfce.org>.])
-AC_INIT([thunar-media-tags-plugin], [tap_version()], [thunar-dev@xfce.org])
+AC_INIT([thunar-media-tags-plugin], [tap_version], [thunar-dev@xfce.org])
 AC_PREREQ([2.50])
 AC_CANONICAL_TARGET()
 AC_REVISION([$Id$])
