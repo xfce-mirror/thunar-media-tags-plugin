@@ -2,19 +2,19 @@
 /*-
  * Copyright (c) 2006 Jannis Pohlmann <jannis@xfce.org>
  *
- * This program is free software; you can redistribute it and/or 
- * modify it under the terms of the GNU General Public License as 
- * published by the Free Software Foundation; either version 2 of the 
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License as
+ * published by the Free Software Foundation; either version 2 of the
  * License, or (at your option) any later version.
  *
- * This program is distributed in the hope that it will be useful, but 
- * WITHOUT ANY WARRANTY; without even the implied warranty of 
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU 
+ * This program is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
  * General Public License for more details.
  *
- * You should have received a copy of the GNU General Public License 
- * along with this program; if not, write to the Free Software 
- * Foundation, Inc., 59 Temple Place, Suite 330, Boston, 
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 59 Temple Place, Suite 330, Boston,
  * MA 02111-1307 USA.
  */
 
@@ -63,6 +63,8 @@ tag_renamer_register_enum_types (ThunarxProviderPlugin *plugin)
     { TAG_RENAMER_FORMAT_TRACK_DOT_TITLE,        "TAG_RENAMER_FORMAT_TRACK_DOT_TITLE",        N_ ("Track. Title"), },
     { TAG_RENAMER_FORMAT_TRACK_DOT_ARTIST_TITLE, "TAG_RENAMER_FORMAT_TRACK_DOT_ARTIST_TITLE", N_ ("Track. Artist - Title"), },
     { TAG_RENAMER_FORMAT_ARTIST_TRACK_TITLE,     "TAG_RENAMER_FORMAT_ARTIST_TRACK_TITLE",     N_ ("Artist - Track - Title"), },
+    { TAG_RENAMER_FORMAT_SEPARATOR,              "TAG_RENAMER_FORMAT_SEPARATOR",              "", },
+    { TAG_RENAMER_FORMAT_CUSTOM,                 "TAG_RENAMER_FORMAT_CUSTOM",                 N_ ("Custom"), },
     { 0,                                         NULL,                                        NULL, },
   };
 
@@ -71,39 +73,53 @@ tag_renamer_register_enum_types (ThunarxProviderPlugin *plugin)
 
 
 
+enum
+{
+  COLUMN_TEXT,
+  COLUMN_NUMBER,
+  N_COLUMNS
+};
+
+
+
 /* Property identifiers */
 enum
 {
   PROP_0,
   PROP_FORMAT,
+  PROP_TEXT,
   PROP_REPLACE_SPACES,
   PROP_LOWERCASE,
-  PROP_TITLE,
 };
 
 
 
-static void   tag_renamer_class_init          (TagRenamerClass *klass);
-static void   tag_renamer_init                (TagRenamer      *tag_renamer);
-static void   tag_renamer_finalize            (GObject         *object);
-static void   tag_renamer_get_property        (GObject         *object,
-                                               guint            prop_id,
-                                               GValue          *value,
-                                               GParamSpec      *pspec);
-static void   tag_renamer_set_property        (GObject         *object,
-                                               guint            prop_id,
-                                               const GValue    *value,
-                                               GParamSpec      *pspec);
-static void   tag_renamer_realize             (GtkWidget       *widget);
-static gchar *tag_renamer_process             (ThunarxRenamer  *renamer,
-                                               ThunarxFileInfo *file,
-                                               const gchar     *text,
-                                               guint            index);
-static GList *tag_renamer_get_actions         (ThunarxRenamer  *renamer,
-                                               GtkWindow       *window,
-                                               GList           *files);
-static void   tag_renamer_edit_tags_activated (GtkAction       *action,
-                                               ThunarxFileInfo *file);
+static void      tag_renamer_class_init            (TagRenamerClass *klass);
+static void      tag_renamer_init                  (TagRenamer      *tag_renamer);
+static void      tag_renamer_finalize              (GObject         *object);
+static void      tag_renamer_get_property          (GObject         *object,
+                                                    guint            prop_id,
+                                                    GValue          *value,
+                                                    GParamSpec      *pspec);
+static void      tag_renamer_set_property          (GObject         *object,
+                                                    guint            prop_id,
+                                                    const GValue    *value,
+                                                    GParamSpec      *pspec);
+static gchar    *tag_renamer_process               (ThunarxRenamer  *renamer,
+                                                    ThunarxFileInfo *file,
+                                                    const gchar     *text,
+                                                    guint            index);
+static GList    *tag_renamer_get_actions           (ThunarxRenamer  *renamer,
+                                                    GtkWindow       *window,
+                                                    GList           *files);
+static void      tag_renamer_help_clicked          (GtkWidget       *button);
+static gboolean  tag_renamer_combo_separator_func  (GtkTreeModel    *model,
+                                                    GtkTreeIter     *iter,
+                                                    gpointer         user_data);
+static void      tag_renamer_combo_changed         (GtkComboBox     *combo_box,
+                                                    GtkWidget       *entry);
+static void      tag_renamer_edit_tags_activated   (GtkAction       *action,
+                                                    ThunarxFileInfo *file);
 
 
 
@@ -120,11 +136,10 @@ struct _TagRenamer
   GtkTooltips     *tooltips;
 
   /* Properties */
-  TagRenamerFormat format;
-  gboolean         replace_spaces;
-  gboolean         lowercase;
-  gchar           *artist;
-  gchar           *title;
+  TagRenamerFormat  format;
+  gchar            *text;
+  gboolean          replace_spaces;
+  gboolean          lowercase;
 };
 
 
@@ -137,16 +152,12 @@ static void
 tag_renamer_class_init (TagRenamerClass *klass)
 {
   ThunarxRenamerClass *thunarxrenamer_class;
-  GtkWidgetClass      *gtkwidget_class;
   GObjectClass        *gobject_class;
 
   gobject_class = G_OBJECT_CLASS (klass);
   gobject_class->finalize = tag_renamer_finalize;
   gobject_class->get_property = tag_renamer_get_property;
   gobject_class->set_property = tag_renamer_set_property;
-  
-  gtkwidget_class = GTK_WIDGET_CLASS (klass);
-  gtkwidget_class->realize = tag_renamer_realize;
 
   thunarxrenamer_class = THUNARX_RENAMER_CLASS (klass);
   thunarxrenamer_class->process = tag_renamer_process;
@@ -165,6 +176,19 @@ tag_renamer_class_init (TagRenamerClass *klass)
                                                       TYPE_TAG_RENAMER_FORMAT,
                                                       TAG_RENAMER_FORMAT_TRACK_TITLE,
                                                       G_PARAM_READWRITE));
+
+  /**
+   * TagRenamer:text:
+   *
+   * Custom format from the user.
+   **/
+  g_object_class_install_property (gobject_class,
+                                   PROP_TEXT,
+                                   g_param_spec_string ("text",
+                                                        "text",
+                                                        "text",
+                                                        NULL,
+                                                        G_PARAM_READWRITE));
 
   /**
    * TagRenamer:replace-spaces:
@@ -196,45 +220,96 @@ tag_renamer_class_init (TagRenamerClass *klass)
 
 
 
-static void 
+static void
 tag_renamer_init (TagRenamer *tag_renamer)
 {
-  AtkRelationSet *relations;
-  AtkRelation    *relation;
-  AtkObject      *object;
-  GtkWidget      *table;
-  GtkWidget      *label;
-  GtkWidget      *combo;
-  GtkWidget      *button;
-  GEnumClass     *klass;
-  gint            n;
+  AtkRelationSet  *relations;
+  AtkRelation     *relation;
+  AtkObject       *object;
+  GtkWidget       *table;
+  GtkWidget       *label;
+  GtkWidget       *combo;
+  GtkWidget       *image;
+  GtkWidget       *button;
+  GtkWidget       *entry;
+  GEnumClass      *klass;
+  GtkListStore    *store;
+  GtkCellRenderer *cell;
+  GtkTreeIter      iter;
+  gint             n;
 
   /* Allocate shared tooltips */
   tag_renamer->tooltips = gtk_tooltips_new ();
   exo_gtk_object_ref_sink (GTK_OBJECT (tag_renamer->tooltips));
 
-  table = gtk_table_new (2, 3, FALSE);
+  table = gtk_table_new (2, 4, FALSE);
   gtk_table_set_row_spacings (GTK_TABLE (table), 6);
   gtk_table_set_col_spacings (GTK_TABLE (table), 12);
   gtk_box_pack_start (GTK_BOX (tag_renamer), table, FALSE, FALSE, 0);
   gtk_widget_show (table);
 
+  /* Custom format */
+  label = gtk_label_new_with_mnemonic (_("Cust_om format:"));
+  gtk_misc_set_alignment (GTK_MISC (label), 1.00f,  0.5f);
+  gtk_table_attach (GTK_TABLE (table), label, 0, 1, 1, 2, GTK_FILL, 0, 0, 0);
+  gtk_widget_show (label);
+
+  entry = gtk_entry_new ();
+  gtk_table_attach (GTK_TABLE (table), entry, 1, 2, 1, 2, GTK_EXPAND | GTK_FILL, 0, 0, 0);
+  exo_mutual_binding_new (G_OBJECT (entry), "text", G_OBJECT (tag_renamer), "text");
+  gtk_label_set_mnemonic_widget (GTK_LABEL (label), entry);
+  gtk_widget_show (entry);
+
+  button = gtk_button_new ();
+  gtk_table_attach (GTK_TABLE (table), button, 2, 3, 1, 2, GTK_SHRINK, GTK_SHRINK, 0, 0);
+  g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (tag_renamer_help_clicked), NULL);
+  gtk_widget_show (button);
+
+  image = gtk_image_new_from_stock (GTK_STOCK_INFO, GTK_ICON_SIZE_MENU);
+  gtk_container_add (GTK_CONTAINER (button), image);
+  gtk_widget_show (image);
+
+  /* Set Atk label relation for the entry */
+  object = gtk_widget_get_accessible (entry);
+  relations = atk_object_ref_relation_set (gtk_widget_get_accessible (label));
+  relation = atk_relation_new (&object, 1, ATK_RELATION_LABEL_FOR);
+  atk_relation_set_add (relations, relation);
+  g_object_unref (G_OBJECT (relation));
+
   /* Format label */
   label = gtk_label_new_with_mnemonic (_("_Format:"));
-  gtk_misc_set_alignment (GTK_MISC (label), 0.05f,  0.5f);
+  gtk_misc_set_alignment (GTK_MISC (label), 1.00f,  0.5f);
   gtk_table_attach (GTK_TABLE (table), label, 0, 1, 0, 1, GTK_FILL, 0, 0, 0);
   gtk_widget_show (label);
 
+  /* Create combo box store */
+  store = gtk_list_store_new (N_COLUMNS, G_TYPE_STRING, G_TYPE_INT);
+
   /* Format combo box */
-  combo = gtk_combo_box_new_text ();
+  combo = gtk_combo_box_new_with_model (GTK_TREE_MODEL (store));
+  gtk_combo_box_set_row_separator_func (GTK_COMBO_BOX (combo), tag_renamer_combo_separator_func, NULL, NULL);
+  g_signal_connect (G_OBJECT (combo), "changed", G_CALLBACK (tag_renamer_combo_changed), entry);
+
+  /* Text renderer for the combo box */
+  cell = gtk_cell_renderer_text_new ();
+  gtk_cell_layout_pack_start (GTK_CELL_LAYOUT (combo), cell, TRUE);
+  gtk_cell_layout_set_attributes (GTK_CELL_LAYOUT (combo), cell, "text", COLUMN_TEXT, NULL);
+
+  /* Insert items */
   klass = g_type_class_ref (TYPE_TAG_RENAMER_FORMAT);
   for (n = 0; n < klass->n_values; ++n)
-    gtk_combo_box_append_text (GTK_COMBO_BOX (combo), _(klass->values[n].value_nick));
-  exo_mutual_binding_new (G_OBJECT (tag_renamer), "format", G_OBJECT (combo), "active");
-  gtk_table_attach (GTK_TABLE (table), combo, 1, 2, 0, 1, GTK_EXPAND | GTK_FILL, 0, 0, 0);
-  gtk_label_set_mnemonic_widget (GTK_LABEL (label), combo);
+    {
+      gtk_list_store_append (store, &iter);
+      gtk_list_store_set (store, &iter, COLUMN_TEXT, _(klass->values[n].value_nick), COLUMN_NUMBER, n, -1);
+    }
   g_type_class_unref (klass);
+  exo_mutual_binding_new (G_OBJECT (tag_renamer), "format", G_OBJECT (combo), "active");
+  gtk_table_attach (GTK_TABLE (table), combo, 1, 3, 0, 1, GTK_EXPAND | GTK_FILL, GTK_FILL, 0, 0);
+  gtk_label_set_mnemonic_widget (GTK_LABEL (label), combo);
   gtk_widget_show (combo);
+
+  /* Release the store */
+  g_object_unref (G_OBJECT (store));
 
   /* Set Atk label relation for the combo box */
   object = gtk_widget_get_accessible (combo);
@@ -247,23 +322,17 @@ tag_renamer_init (TagRenamer *tag_renamer)
   exo_mutual_binding_new (G_OBJECT (button), "active", G_OBJECT (tag_renamer), "replace-spaces");
   gtk_tooltips_set_tip (tag_renamer->tooltips, button, _("Activating this option will replace all spaces in the target filename "
         "with underscores."), NULL);
-  gtk_table_attach (GTK_TABLE (table), button, 2, 3, 0, 1, GTK_FILL, 0, 0, 0);
+  gtk_table_attach (GTK_TABLE (table), button, 3, 4, 0, 1, GTK_FILL, 0, 0, 0);
   gtk_widget_show (button);
 
   button = gtk_check_button_new_with_mnemonic (_("_Lowercase"));
   exo_mutual_binding_new (G_OBJECT (button), "active", G_OBJECT (tag_renamer), "lowercase");
   gtk_tooltips_set_tip (tag_renamer->tooltips, button, _("If you activate this, the resulting filename will only contain lowercase letters."), NULL);
-  gtk_table_attach (GTK_TABLE (table), button, 2, 3, 1, 2, GTK_FILL, 0, 0, 0);
+  gtk_table_attach (GTK_TABLE (table), button, 3, 4, 1, 2, GTK_FILL, 0, 0, 0);
   gtk_widget_show (button);
-
-  /* TODO add entry for custom format here */
-
-  /* Set initial values */
-  tag_renamer->artist = g_strdup ("");
-  tag_renamer->title = g_strdup ("");
-  tag_renamer_set_artist (tag_renamer, _("Unknown Artist"));
-  tag_renamer_set_title (tag_renamer, _("Unknown Title"));
 }
+
+
 
 
 
@@ -275,9 +344,8 @@ tag_renamer_finalize (GObject *object)
   /* release the tooltips */
   g_object_unref (G_OBJECT (tag_renamer->tooltips));
 
-  /* Free strings */
-  g_free (tag_renamer->artist);
-  g_free (tag_renamer->title);
+  /* Free string */
+  g_free (tag_renamer->text);
 
   (*G_OBJECT_CLASS (tag_renamer_parent_class)->finalize) (object);
 }
@@ -298,6 +366,10 @@ tag_renamer_get_property (GObject    *object,
       g_value_set_enum (value, tag_renamer_get_format (tag_renamer));
       break;
 
+    case PROP_TEXT:
+      g_value_set_string (value, tag_renamer_get_text (tag_renamer));
+      break;
+
     case PROP_REPLACE_SPACES:
       g_value_set_boolean (value, tag_renamer_get_replace_spaces (tag_renamer));
       break;
@@ -309,7 +381,7 @@ tag_renamer_get_property (GObject    *object,
     default:
       G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
       break;
-    }    
+    }
 }
 
 
@@ -328,6 +400,10 @@ tag_renamer_set_property (GObject      *object,
       tag_renamer_set_format (tag_renamer, g_value_get_enum (value));
       break;
 
+    case PROP_TEXT:
+      tag_renamer_set_text (tag_renamer, g_value_get_string (value));
+      break;
+
     case PROP_REPLACE_SPACES:
       tag_renamer_set_replace_spaces (tag_renamer, g_value_get_boolean (value));
       break;
@@ -344,11 +420,148 @@ tag_renamer_set_property (GObject      *object,
 
 
 
-static void
-tag_renamer_realize (GtkWidget *widget)
+static gchar *
+tag_renamer_process_format (TagRenamer      *tag_renamer,
+                            ThunarxFileInfo *file,
+                            const gchar     *format)
 {
-  /* Realize the widget */
-  (*GTK_WIDGET_CLASS (tag_renamer_parent_class)->realize) (widget);
+  TagLib_File                  *taglib_file;
+  TagLib_Tag                   *taglib_tag;
+  const TagLib_AudioProperties *taglib_properties;
+  const gchar                  *value;
+  guint                         integer;
+  gchar                        *uri, *filename;
+  gchar                        *string, *tmp;
+  GString                      *result;
+  const gchar                  *p;
+
+  /* Get the file uri, return on fail */
+  uri = thunarx_file_info_get_uri (file);
+  if (G_UNLIKELY (uri == NULL))
+    return NULL;
+
+  /* Conver the uri into a filename, return on fail */
+  filename = g_filename_from_uri (uri, NULL, NULL);
+  g_free (uri);
+  if (G_UNLIKELY (filename == NULL))
+    return NULL;
+
+  /* Load taglib file, return on fail */
+  taglib_file = taglib_file_new (filename);
+  g_free (filename);
+  if (G_UNLIKELY (taglib_file == NULL))
+    return NULL;
+
+  /* Load tag info, return on fail */
+  taglib_tag = taglib_file_tag (taglib_file);
+  if (G_UNLIKELY (taglib_tag == NULL))
+    {
+      taglib_file_free (taglib_file);
+      return NULL;
+    }
+
+  /* Load tag properties */
+  taglib_properties = taglib_file_audioproperties (taglib_file);
+
+  /* Create string with some size */
+  result = g_string_sized_new (512);
+
+  /* walk the string */
+  for (p = format; *p != '\0'; ++p)
+    {
+      if (p[0] == '%' && p[1] != '\0')
+        {
+          switch (*++p)
+            {
+            case 'a':
+              /* Arist */
+              value = taglib_tag_artist (taglib_tag);
+              if (G_UNLIKELY (g_utf8_strlen (value, -1) == 0))
+                value = _("Unknown Artist");
+              result = g_string_append (result, value);
+              break;
+
+            case 't':
+              /* Title */
+              value = taglib_tag_title (taglib_tag);
+              if (G_UNLIKELY (g_utf8_strlen (value, -1) == 0))
+                value = _("Unknown Title");
+              result = g_string_append (result, value);
+              break;
+
+            case 'b':
+              /* Album */
+              value = taglib_tag_album (taglib_tag);
+              if (G_LIKELY (g_utf8_strlen (value, -1) > 0))
+                result = g_string_append (result, value);
+              break;
+
+            case 'g':
+              /* Genre */
+              value = taglib_tag_genre (taglib_tag);
+              if (G_LIKELY (g_utf8_strlen (value, -1) > 0))
+                result = g_string_append (result, value);
+              break;
+
+            case 'n':
+              /* Track Number */
+              integer = taglib_tag_track (taglib_tag);
+              g_string_append_printf (result, "%02d", integer);
+              break;
+
+            case 'y':
+              /* Year */
+              integer = taglib_tag_year (taglib_tag);
+              if (G_LIKELY (integer > 0))
+                g_string_append_printf (result, "%d", integer);
+              break;
+
+            case 'c':
+              /* Comment */
+              value = taglib_tag_comment (taglib_tag);
+              if (G_LIKELY (g_utf8_strlen (value, -1) > 0))
+                result = g_string_append (result, value);
+              break;
+
+            case '%':
+              /* Percentage character */
+              result = g_string_append_c (result, '%');
+              break;
+            }
+        }
+      else
+        {
+          /* Append character */
+          result = g_string_append_c (result, *p);
+        }
+    }
+
+  /* Free tag info strings */
+  taglib_tag_free_strings ();
+
+  /* Cleanup */
+  taglib_file_free (taglib_file);
+
+  /* Get the resulting string */
+  string = g_string_free (result, FALSE);
+
+  /* Replace spaces if requested */
+  if (tag_renamer_get_replace_spaces (tag_renamer))
+    string = g_strdelimit (string, " ", '_');
+
+  /* Convert to lowercase if requested */
+  if (tag_renamer_get_lowercase (tag_renamer))
+  {
+    tmp = g_utf8_strdown (string, -1);
+    g_free (string);
+    string = tmp;
+  }
+
+  /* Replace slashes */
+  string = g_strdelimit (string, G_DIR_SEPARATOR_S, '_');
+
+  /* Return the result */
+  return string;
 }
 
 
@@ -359,140 +572,47 @@ tag_renamer_process (ThunarxRenamer  *renamer,
                      const gchar     *text,
                      guint            index)
 {
-  TagRenamer *tag_renamer = TAG_RENAMER (renamer);
-
-  TagLib_File                  *taglib_file;
-  TagLib_Tag                   *taglib_tag;
-  const TagLib_AudioProperties *taglib_properties;
-
-  gchar *result = NULL;
-  gchar *filename;
-  gchar *artist;
-  gchar *title;
-  guint  track_num;
-  gchar *track;
-  gchar *uri;
-  
-  /* Strip of the file:// from the URI */
-  uri = thunarx_file_info_get_uri (file);
-  filename = g_filename_from_uri (uri, NULL, NULL);
-
-  /* Return if URI could not be resolved */
-  if (G_UNLIKELY (filename == NULL))
-    return g_strdup (text);
-
-  /* Load taglib file */
-  taglib_file = taglib_file_new (filename);
-
-  /* Don't change anything if taglib file could not be allocated */
-  if (G_UNLIKELY (taglib_file == NULL))
-    {
-      g_free (filename);
-      return g_strdup (text);
-    }
-
-  /* Load tag info */
-  taglib_tag = taglib_file_tag (taglib_file);
-
-  /* Abort if tag info could not be loaded */
-  if (G_UNLIKELY (taglib_tag == NULL))
-    {
-      taglib_file_free (taglib_file);
-      g_free (filename);
-      return g_strdup (text);
-    }
-
-  /* Load tag properties */
-  taglib_properties = taglib_file_audioproperties (taglib_file);
-
-  /* Get tag values */
-  artist = g_strdup (taglib_tag_artist (taglib_tag));
-  title = g_strdup (taglib_tag_title (taglib_tag));
-  track_num = taglib_tag_track (taglib_tag);
-
-  /* Strip additional whitespace from the tags */
-  g_strstrip (artist);
-  g_strstrip (title);
-
-  /* Replace missing artist tag */
-  if (G_UNLIKELY (g_utf8_strlen (artist, -1) == 0))
-    artist = g_strdup (tag_renamer_get_artist (tag_renamer));
-
-  /* Replace missing song title tag */
-  if (G_UNLIKELY (g_utf8_strlen (title, -1) == 0))
-    title = g_strdup (tag_renamer_get_title (tag_renamer));
-
-  if (track_num == 0)
-    track = g_strdup ("00");
-  else
-    track = g_strdup_printf ("%02d", taglib_tag_track (taglib_tag));
-
-  /* Replace special chars with underscores */
-  artist = g_strdelimit (artist, G_DIR_SEPARATOR_S, '_');
-  title = g_strdelimit (title, G_DIR_SEPARATOR_S, '_');
-  track = g_strdelimit (track, G_DIR_SEPARATOR_S, '_');
+  TagRenamer  *tag_renamer = TAG_RENAMER (renamer);
+  const gchar *format;
 
   switch (tag_renamer_get_format (tag_renamer))
     {
     case TAG_RENAMER_FORMAT_TRACK_DOT_TITLE:
-      result = g_strconcat (track, ". ", title, NULL);
+      format = "%n. %t";
       break;
 
     case TAG_RENAMER_FORMAT_TRACK_DOT_ARTIST_TITLE:
-      result = g_strconcat (track, ". ", artist, " - ", title, NULL);
+      format = "%n. %a - %t";
       break;
 
     case TAG_RENAMER_FORMAT_TRACK_TITLE:
-      result = g_strconcat (track, " - ", title, NULL);
+      format = "%n - %t";
       break;
 
     case TAG_RENAMER_FORMAT_TRACK_ARTIST_TITLE:
-      result = g_strconcat (track, " - ", artist, " - ", title, NULL);
+      format = "%n - %a - %t";
       break;
 
     case TAG_RENAMER_FORMAT_TITLE:
-      result = g_strconcat (title, NULL);
+      format = "%t";
       break;
 
     case TAG_RENAMER_FORMAT_ARTIST_TITLE:
-      result = g_strconcat (artist, " - ", title, NULL);
+      format = "%a - %t";
       break;
 
     case TAG_RENAMER_FORMAT_ARTIST_TRACK_TITLE:
-      result = g_strconcat (artist, " - ", track, " - ", title, NULL);
+      format = "%a - %n - %t";
       break;
-    
-    default:
-      result = g_strdup (text);
+
+    default: /* Custom & separator */
+      format = tag_renamer_get_text (tag_renamer);
+      if (format == NULL || *format == '\0')
+        return g_strdup (text);
       break;
     }
 
-  /* Replace spaces if requested */
-  if (tag_renamer_get_replace_spaces (tag_renamer))
-    result = g_strdelimit (result, " ", '_');
-  
-  /* Convert to lowercase if requested */
-  if (tag_renamer_get_lowercase (tag_renamer))
-  {
-    gchar *tmp = result;
-    result = g_utf8_strdown (result, -1);
-    g_free (tmp);
-  }
-  
-  /* Free strings */
-  g_free (track);
-  g_free (title);
-  g_free (artist);
-  g_free (filename);
-  g_free (uri);
-
-  /* Free tag info strings */
-  taglib_tag_free_strings ();
-
-  /* Destroy the taglib file */
-  taglib_file_free (taglib_file);
-
-  return result;
+  return tag_renamer_process_format (tag_renamer, file, format);;
 }
 
 
@@ -527,6 +647,74 @@ tag_renamer_get_actions (ThunarxRenamer *renamer,
     }
 
   return actions;
+}
+
+
+
+static void
+tag_renamer_help_clicked (GtkWidget *button)
+{
+  GtkWidget *dialog;
+
+  /* Create dialog */
+  dialog = gtk_message_dialog_new (GTK_WINDOW (gtk_widget_get_toplevel (button)),
+                                   GTK_DIALOG_MODAL | GTK_DIALOG_DESTROY_WITH_PARENT,
+                                   GTK_MESSAGE_INFO, GTK_BUTTONS_CLOSE, _("Tag Help"));
+
+  /* Format help text */
+  gtk_message_dialog_format_secondary_markup (GTK_MESSAGE_DIALOG (dialog),
+                                              "<tt>%%a = </tt>%s\n"
+                                              "<tt>%%t = </tt>%s\n"
+                                              "<tt>%%b = </tt>%s\n"
+                                              "<tt>%%g = </tt>%s\n"
+                                              "<tt>%%n = </tt>%s\n"
+                                              "<tt>%%y = </tt>%s\n"
+                                              "<tt>%%c = </tt>%s",
+                                              _("Artist"), _("Title"),
+                                              _("Album"), _("Genre"),
+                                              _("Track number"), _("Year"),
+                                              _("Comment"));
+
+  /* Run and destroy */
+  gtk_dialog_run (GTK_DIALOG (dialog));
+  gtk_widget_destroy (dialog);
+}
+
+
+
+static gboolean
+tag_renamer_combo_separator_func (GtkTreeModel *model,
+                                  GtkTreeIter  *iter,
+                                  gpointer      user_data)
+{
+  gint n;
+
+  /* Get item number from model */
+  gtk_tree_model_get (model, iter, COLUMN_NUMBER, &n, -1);
+
+  /* Return true if this is the separator item */
+  return (n == TAG_RENAMER_FORMAT_SEPARATOR);
+}
+
+
+
+static void
+tag_renamer_combo_changed (GtkComboBox *combo_box,
+                           GtkWidget   *entry)
+{
+  GtkTreeModel *model;
+  GtkTreeIter   iter;
+  gint          n;
+
+  /* Get the combo model and active iter*/
+  model = gtk_combo_box_get_model (combo_box);
+  gtk_combo_box_get_active_iter (combo_box, &iter);
+
+  /* Get item number from model */
+  gtk_tree_model_get (model, &iter, COLUMN_NUMBER, &n, -1);
+
+  /* Whether the entry is sensitive */
+  gtk_widget_set_sensitive (entry, (n == TAG_RENAMER_FORMAT_CUSTOM));
 }
 
 
@@ -592,6 +780,38 @@ tag_renamer_set_format (TagRenamer      *tag_renamer,
 
   /* Emit the "changed" signal */
   thunarx_renamer_changed (THUNARX_RENAMER (tag_renamer));
+}
+
+
+
+const gchar *
+tag_renamer_get_text (TagRenamer *tag_renamer)
+{
+  g_return_val_if_fail (IS_TAG_RENAMER (tag_renamer), NULL);
+  return tag_renamer->text;
+}
+
+
+
+void
+tag_renamer_set_text (TagRenamer  *tag_renamer,
+                      const gchar *text)
+{
+  g_return_if_fail (IS_TAG_RENAMER (tag_renamer));
+
+  /* check if we have a new text */
+  if (G_LIKELY (!exo_str_is_equal (tag_renamer->text, text)))
+    {
+      /* apply the new text */
+      g_free (tag_renamer->text);
+      tag_renamer->text = g_strdup (text);
+
+      /* update the renamer */
+      thunarx_renamer_changed (THUNARX_RENAMER (tag_renamer));
+
+      /* notify listeners */
+      g_object_notify (G_OBJECT (tag_renamer), "text");
+    }
 }
 
 
@@ -688,104 +908,8 @@ tag_renamer_set_lowercase (TagRenamer *tag_renamer,
 
 
 
-/**
- * tag_renamer_get_artist:
- * @tag_renamer : a #TagRenamer.
- *
- * Returns the artist name to use if the artist tag is missing.
- *
- * Return value: default artist name to use if a file lacks of an artist tag.
- **/
-const gchar*
-tag_renamer_get_artist (TagRenamer *tag_renamer)
-{
-  g_return_val_if_fail (IS_TAG_RENAMER (tag_renamer), _("Unknown Artist"));
-  return tag_renamer->artist;
-}
-
-
-
-/**
- * tag_renamer_set_artist:
- * @tag_renamer : a #TagRenamer.
- * @artist      : a nul-terminated string.
- *
- * Sets the artist name to use if a file is missing an artist tag.
- **/
-void
-tag_renamer_set_artist (TagRenamer  *tag_renamer,
-                        const gchar *artist)
-{
-  g_return_if_fail (IS_TAG_RENAMER (tag_renamer));
-
-  /* Abort if flag is already set */
-  if (G_UNLIKELY (tag_renamer->artist != NULL))
-    if (G_UNLIKELY (g_utf8_collate (tag_renamer->artist, artist) == 0))
-      return;
-
-  /* Free old name */
-  if (G_LIKELY (tag_renamer->artist != NULL))
-    g_free (tag_renamer->artist);
-
-  /* Apply the new setting */
-  tag_renamer->artist = g_strdup (artist);
-
-  /* Emit the "changed" signal */
-  thunarx_renamer_changed (THUNARX_RENAMER (tag_renamer));
-}
-
-
-
-/**
- * tag_renamer_get_title:
- * @tag_renamer : a #TagRenamer.
- *
- * Returns the song title to use if the title tag is missing.
- *
- * Return value: song title to use if a file lacks of a title tag.
- **/
-const gchar*
-tag_renamer_get_title (TagRenamer *tag_renamer)
-{
-  g_return_val_if_fail (IS_TAG_RENAMER (tag_renamer), _("Unknown Title"));
-  return tag_renamer->title;
-}
-
-
-
-/**
- * tag_renamer_set_title:
- * @tag_renamer : a #TagRenamer.
- * @title      : a nul-terminated string.
- *
- * Sets the song title to use if a file is missing a title tag.
- **/
-void
-tag_renamer_set_title (TagRenamer  *tag_renamer,
-                       const gchar *title)
-{
-  g_return_if_fail (IS_TAG_RENAMER (tag_renamer));
-
-  /* Abort if flag is already set */
-  if (G_UNLIKELY (g_utf8_collate (tag_renamer->title, title) == 0))
-    return;
-
-  /* Free old value */
-  if (G_UNLIKELY (tag_renamer->title != NULL))
-    if (G_LIKELY (tag_renamer->title != NULL))
-      g_free (tag_renamer->title);
-
-  /* Apply the new setting */
-  tag_renamer->title = g_strdup (title);
-
-  /* Emit the "changed" signal */
-  thunarx_renamer_changed (THUNARX_RENAMER (tag_renamer));
-}
-
-
-
 static void
-tag_renamer_edit_tags_activated (GtkAction *action, 
+tag_renamer_edit_tags_activated (GtkAction *action,
                                  ThunarxFileInfo *file)
 {
   GtkWindow *window;

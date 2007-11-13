@@ -1,3 +1,10 @@
+2007-11-13	Jannis Pohlmann <jannis@xfce.org>
+
+	* thunar-plugin/tag-renamer.{c,h}, TODO: Apply custom format patch 
+	  written by Nick. Keep up the good work! Also changed the label
+		alignment so that the text appears on the right side next to the
+		input entries.
+
 2007-01-22	Jannis Pohlmann <jannis@xfce.org>
 
 	* thunar-plugin/audio-tags-page.c: Reduce year spin button 

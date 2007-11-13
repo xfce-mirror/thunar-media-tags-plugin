@@ -5,8 +5,5 @@ TODO for thunar-tag-renamer-plugin
 
   * Add an embedded player to the AudioTagsPage (perhaps).
 
-  * Check if we can rename files to folders, like 
+  * Check if we can rename files to folders, like
     ARTIST/ALBUM/TITLE.EXT
-
-  * Add a custom option to the combo box which activates a GtkEntry
-    for a custom naming scheme.

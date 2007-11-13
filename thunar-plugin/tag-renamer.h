@@ -2,19 +2,19 @@
 /*-
  * Copyright (c) 2006 Jannis Pohlmann <jannis@xfce.org>
  *
- * This program is free software; you can redistribute it and/or 
- * modify it under the terms of the GNU General Public License as 
- * published by the Free Software Foundation; either version 2 of the 
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License as
+ * published by the Free Software Foundation; either version 2 of the
  * License, or (at your option) any later version.
  *
- * This program is distributed in the hope that it will be useful, but 
- * WITHOUT ANY WARRANTY; without even the implied warranty of 
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU 
+ * This program is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
  * General Public License for more details.
  *
- * You should have received a copy of the GNU General Public License 
- * along with this program; if not, write to the Free Software 
- * Foundation, Inc., 59 Temple Place, Suite 330, Boston, 
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 59 Temple Place, Suite 330, Boston,
  * MA 02111-1307 USA
  */
 
@@ -30,7 +30,7 @@ G_BEGIN_DECLS;
 /**
  * TagRenamerFormat:
  * @TAG_RENAMER_FORMAT_TRACK_ARTIST_SONG : <track-number>_-_<artist-name>_-_<song-name>.<extension>
- * 
+ *
  * The naming format for the #TagRenamer.
  **/
 typedef enum
@@ -42,6 +42,8 @@ typedef enum
   TAG_RENAMER_FORMAT_TRACK_DOT_TITLE,
   TAG_RENAMER_FORMAT_TRACK_DOT_ARTIST_TITLE,
   TAG_RENAMER_FORMAT_ARTIST_TRACK_TITLE,
+  TAG_RENAMER_FORMAT_SEPARATOR,
+  TAG_RENAMER_FORMAT_CUSTOM,
 } TagRenamerFormat;
 
 GType tag_renamer_format_get_type     (void) G_GNUC_CONST G_GNUC_INTERNAL;
@@ -67,18 +69,15 @@ TagRenamer      *tag_renamer_new                (void) G_GNUC_CONST G_GNUC_INTER
 TagRenamerFormat tag_renamer_get_format         (TagRenamer            *tag_renamer) G_GNUC_INTERNAL;
 void             tag_renamer_set_format         (TagRenamer            *tag_renamer,
                                                  TagRenamerFormat       format) G_GNUC_INTERNAL;
+const gchar     *tag_renamer_get_text           (TagRenamer            *tag_renamer) G_GNUC_INTERNAL;
+void             tag_renamer_set_text           (TagRenamer            *tag_renamer,
+                                                 const gchar           *text) G_GNUC_INTERNAL;
 gboolean         tag_renamer_get_replace_spaces (TagRenamer            *tag_renamer) G_GNUC_INTERNAL;
 void             tag_renamer_set_replace_spaces (TagRenamer            *tag_renamer,
                                                  gboolean               replace) G_GNUC_INTERNAL;
 gboolean         tag_renamer_get_lowercase      (TagRenamer            *tag_renamer) G_GNUC_INTERNAL;
 void             tag_renamer_set_lowercase      (TagRenamer            *tag_renamer,
                                                  gboolean               lowercase) G_GNUC_INTERNAL;
-const gchar     *tag_renamer_get_artist         (TagRenamer            *tag_renamer) G_GNUC_INTERNAL;
-void             tag_renamer_set_artist         (TagRenamer            *tag_renamer,
-                                                 const gchar           *artist) G_GNUC_INTERNAL;
-const gchar     *tag_renamer_get_title          (TagRenamer            *tag_renamer) G_GNUC_INTERNAL;
-void             tag_renamer_set_title          (TagRenamer            *tag_renamer,
-                                                 const gchar           *title) G_GNUC_INTERNAL;
 
 G_END_DECLS;
 
