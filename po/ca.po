@@ -1,14 +1,14 @@
 # Catalan translation of the thunar-media-tags-plugin.
 # Copyright (C) 2006-2007 Jannis Pohlmann <jannis@xfce.org>
 # This file is distributed under the same license as the thunar-media-tags-plugin package.
-# Carles Muñoz Gorriz <carlesmu@internautas.org>, 2006.
+# Carles Muñoz Gorriz <carlesmu@internautas.org>, 2006, 2008.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: thunar-media-tags-plugin 0.1.2svn\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-09-11 11:38+0200\n"
-"PO-Revision-Date: 2006-04-17 18:30+0100\n"
+"PO-Revision-Date: 2008-03-21 20:29+0100\n"
 "Last-Translator: Carles Muñoz Gorriz <carlesmu@internautas.org>\n"
 "Language-Team: catalan <xfce-i18n@xfce.org>\n"
 "MIME-Version: 1.0\n"
@@ -192,7 +192,7 @@ msgid "%d:%d Minutes"
 msgstr "%d:%d minuts"
 
 #: ../thunar-plugin/audio-tags-page.c:1004
-#, fuzzy, c-format
+#, c-format
 msgid "%d KBit/s"
 msgstr "%d KBit/s"
 
@@ -217,14 +217,12 @@ msgstr "<b>Tipus MIME</b>"
 # Ràtio no hi és al diec.
 # El termcat recomana taxa
 #: ../thunar-plugin/audio-tags-page.c:1064
-#, fuzzy
 msgid "<b>Bitrate:</b>"
 msgstr "<b>Taxa de bits:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:1077
-#, fuzzy
 msgid "<b>Samplerate:</b>"
-msgstr "<b>Taxa de mostra:</b>"
+msgstr "<b>Taxa de la mostra:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:1090
 msgid "<b>Channels:</b>"
