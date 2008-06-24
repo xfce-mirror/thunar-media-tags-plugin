@@ -1,3 +1,8 @@
+2008-06-24  Jari Rahkonen <jari.rahkonen@pp1.inet.fi>
+
+	* fi.po, LINGUAS: Add Finnish translation (heavily modified)
+	from Launchpad
+
 2008-06-22  Mike Massonnet <mmassonnet@xfce.org>
 
 	* id.po, LINGUAS: Add Indonesian translation (Andhika Padmawan)
@@ -7,17 +12,17 @@
 	* ca.po: Update Catalan translation,
 	by Carles Muñoz Gorriz <carlesmu@ya.com>
 
-2007-12-03	Maximilian Schleiss <maximilian@xfce.org>
+2007-12-03  Maximilian Schleiss <maximilian@xfce.org>
 
 	* de.po: German translation update
 	by Fabian Nowak <timystery@arcor.de>
 
-2007-11-18	Maximilian Schleiss <maximilian@xfce.org>
+2007-11-18  Maximilian Schleiss <maximilian@xfce.org>
 
 	* lv.po: Latvian translation added
 	by Rihards Priedītis <rprieditis@inbox.lv>
 
-2007-11-15	Mike Massonnet <mmassonnet@xfce.org>
+2007-11-15  Mike Massonnet <mmassonnet@xfce.org>
 
 	* ur.po: Update translation by Muhammad Ali Makki <makki.ma@gmail.com>
 	* pk.po, ur.po: Rename pk.po to ur.po.
@@ -28,7 +33,7 @@
     by Fábio Nogueira <deb-user-ba@ubuntu.com>
     * LINGUAS: Added missing languages.
 
-2007-10-28	Mike Massonnet <mmassonnet@xfce.org>
+2007-10-28  Mike Massonnet <mmassonnet@xfce.org>
 
 	* pk.po: Add new translation by محمد علي المكي <makki.ma@gmail.com>
 
@@ -68,7 +73,7 @@
 	* fr.po: Added the Albanian translation by
 	Besnik Bleta <besnik@programeshqip.org>
 
-2007-02-02	Maximilian Schleiss <maximilian@xfce.org>
+2007-02-02  Maximilian Schleiss <maximilian@xfce.org>
 
 	* fr.po: Fixed some typos and Changed the letter case in some strings
 
@@ -77,33 +82,33 @@
 	* pa.po: Punjabi Translation added
 	* LINGUAS: pa is added
 
-2006-12-15	Pau Rul-lan Ferragut <paurullan@bulma.net>
+2006-12-15  Pau Rul-lan Ferragut <paurullan@bulma.net>
 
 	* ca.po: Updated Catalan translation
 	  by Carles Muñoz Gorriz <carlesmu@ya.com>
 
-2006-12-11	Maximilian Schleiss <maximilian@xfce.org>
+2006-12-11  Maximilian Schleiss <maximilian@xfce.org>
 
 	* ca.po: Updated the Catalan translation by
 	  Carles Muñoz Gorriz <carlesmu@internautas.org>
 
-2006-09-17	Jean-François Wauthy <pollux@xfce.org>
+2006-09-17  Jean-François Wauthy <pollux@xfce.org>
 
 	* cs.po: Update Czech translations
 
-2006-09-03	Jean-François Wauthy <pollux@xfce.org>
+2006-09-03  Jean-François Wauthy <pollux@xfce.org>
 
 	* pl.po: Updated Polish translations
 
-2006-08-27	Jean-François Wauthy <pollux@xfce.org>
+2006-08-27  Jean-François Wauthy <pollux@xfce.org>
 
 	* cs.po: Add Czech translations
 
-2006-08-20	Jean-François Wauthy <pollux@xfce.org>
+2006-08-20  Jean-François Wauthy <pollux@xfce.org>
 
 	* gl.po: Add Galician translations
 
-2006-07-20	Jean-François Wauthy <pollux@xfce.org>
+2006-07-20  Jean-François Wauthy <pollux@xfce.org>
 
 	* fr.po: Updated French translations by Maximilian Schleiss
 	  <maximilian@xfce.org>
@@ -113,74 +118,74 @@
 	* LINGUAS, eu.po: Added Basque translations by Piarres Beobide
 	  <pi@beobide.net>.
 
-2006-04-22	Daichi Kawahata <daichi@xfce.org>
+2006-04-22  Daichi Kawahata <daichi@xfce.org>
 
 	* ca.po: Added Catalan translations by Carles Munoz
 	  Gorriz <carlesmu@internautas.org>.
 
-2006-04-09	Daichi Kawahata <daichi@xfce.org>
+2006-04-09  Daichi Kawahata <daichi@xfce.org>
 
 	* ru.po: Added Russian translations by Andrey Fedoseev
 	  <andrey.fedoseev@gmail.com>.
 
-2006-04-09	Jannis Pohlmann <jannis@xfce.org>
+2006-04-09  Jannis Pohlmann <jannis@xfce.org>
 
 	* zh_TW.po: Traditional Chinese translations by Hydonsingore
 	  Cia <hydonsingore@mail.educities.edu.tw> added.
 
-2006-04-08	Jannis Pohlmann <jannis@xfce.org>
+2006-04-08  Jannis Pohlmann <jannis@xfce.org>
 
 	* el.po: Updated Greek translations.
 
-2006-04-08	Daichi Kawahata <daichi@xfce.org>
+2006-04-08  Daichi Kawahata <daichi@xfce.org>
 
 	* pl.po: Added Polish translations by Piotr Malinski
 	  <admin@rk.edu.pl>.
 
-2006-04-02	Daichi Kawahata <daichi@xfce.org>
+2006-04-02  Daichi Kawahata <daichi@xfce.org>
 
 	* fr.po: Added French translations by Stephane Roy
 	  <sroy@j2n.net>.
 
-2006-03-26	Daichi Kawahata <daichi@xfce.org>
+2006-03-26  Daichi Kawahata <daichi@xfce.org>
 
 	* ja.po: Updated Japanese translations.
 	* de.po, el.po, hu.po, ja.po: Updated. Discarded obsolete
 	  translations.
 
-2006-03-25	Jannis Pohlmann <jannis@xfce.org>
+2006-03-25  Jannis Pohlmann <jannis@xfce.org>
 
 	* thunar-media-tags-plugin.pot: New strings merged.
 	* de.po: German translations updated.
 
-2006-03-25	Jannis Pohlmann <jannis@xfce.org>
+2006-03-25  Jannis Pohlmann <jannis@xfce.org>
 
 	* thunar-media-tags-plugin.pot: New strings merged.
 	* de.po: German translations updated.
 
-2006-03-25	Jannis Pohlmann <jannis@xfce.org>
+2006-03-25  Jannis Pohlmann <jannis@xfce.org>
 
 	* ja.po: Japanese translations by Daichi Kawahata added.
 
-2006-03-25	Jannis Pohlmann <jannis@xfce.org>
+2006-03-25  Jannis Pohlmann <jannis@xfce.org>
 
 	* thunar-media-tags-plugin.pot: Merge new strings.
 	* de.po: Updated German translations.
 
-2006-03-23	Jannis Pohlmann <jannis@xfce.org>
+2006-03-23  Jannis Pohlmann <jannis@xfce.org>
 
 	* el.po: Greek translations by Stavros Giannouris added.
 
-2006-03-23	Jannis Pohlmann <jannis@xfce.org>
+2006-03-23  Jannis Pohlmann <jannis@xfce.org>
 
 	* hu.po: Hungarian translation by SZERVÑC Attila added.
 
-2006-03-23	Jannis Pohlmann <jannis@xfce.org>
+2006-03-23  Jannis Pohlmann <jannis@xfce.org>
 
 	* POTFILES.in, de.po, thunar-tag-renamer-plugin.pot: Updated 
 	  translation files.
 
-2006-03-23	Jannis Pohlmann <jannis@xfce.org>
+2006-03-23  Jannis Pohlmann <jannis@xfce.org>
 
 	* thunar-tag-renamer-plugin.pot: POT-file updated.
 	* de.po: German translations updated.
