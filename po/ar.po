@@ -49,7 +49,9 @@ msgid "_Underscores"
 msgstr ""
 
 #: ../thunar-plugin/tag-renamer.c:248
-msgid "Activating this option will replace all spaces in the target filename with underscores."
+msgid ""
+"Activating this option will replace all spaces in the target filename with "
+"underscores."
 msgstr ""
 
 #: ../thunar-plugin/tag-renamer.c:253
@@ -57,17 +59,17 @@ msgid "_Lowercase"
 msgstr ""
 
 #: ../thunar-plugin/tag-renamer.c:255
-msgid "If you activate this, the resulting filename will only contain lowercase letters."
+msgid ""
+"If you activate this, the resulting filename will only contain lowercase "
+"letters."
 msgstr ""
 
-#: ../thunar-plugin/tag-renamer.c:264
-#: ../thunar-plugin/tag-renamer.c:702
+#: ../thunar-plugin/tag-renamer.c:264 ../thunar-plugin/tag-renamer.c:702
 #: ../thunar-plugin/audio-tags-page.c:183
 msgid "Unknown Artist"
 msgstr ""
 
-#: ../thunar-plugin/tag-renamer.c:265
-#: ../thunar-plugin/tag-renamer.c:750
+#: ../thunar-plugin/tag-renamer.c:265 ../thunar-plugin/tag-renamer.c:750
 #: ../thunar-plugin/audio-tags-page.c:209
 msgid "Unknown Title"
 msgstr ""
@@ -219,4 +221,3 @@ msgstr ""
 #: ../thunar-plugin/audio-tags-page.c:1103
 msgid "<b>Length:</b>"
 msgstr ""
-
