@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: thunar-media-tags-plugin 0.1.2svn\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-09-11 11:38+0200\n"
-"PO-Revision-Date: 2008-12-04 00:36+0900\n"
+"POT-Creation-Date: 2008-12-14 15:52+0900\n"
+"PO-Revision-Date: 2008-12-14 15:57+0900\n"
 "Last-Translator: Masato Hashimoto <cabezon.hashimoto@gmail.com>\n"
 "Language-Team: Japanese <xfce-i18n@xfce.org>\n"
 "MIME-Version: 1.0\n"
@@ -17,6 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../thunar-plugin/tag-renamer.c:59
+#: ../thunar-plugin/tag-renamer.c:673
 msgid "Title"
 msgstr "タイトル"
 
@@ -44,49 +45,84 @@ msgstr "曲. アーティスト - タイトル"
 msgid "Artist - Track - Title"
 msgstr "アーティスト - 曲 - タイトル"
 
+#: ../thunar-plugin/tag-renamer.c:67
+msgid "Custom"
+msgstr "カスタム"
+
+#. Custom format
+#: ../thunar-plugin/tag-renamer.c:252
+msgid "Cust_om format:"
+msgstr "カスタム形式(_O):"
+
 #. Format label
-#: ../thunar-plugin/tag-renamer.c:223
+#: ../thunar-plugin/tag-renamer.c:280
 msgid "_Format:"
 msgstr "形式(_F):"
 
-#: ../thunar-plugin/tag-renamer.c:246
+#: ../thunar-plugin/tag-renamer.c:321
 msgid "_Underscores"
 msgstr "アンダースコア(_U)"
 
-#: ../thunar-plugin/tag-renamer.c:248
+#: ../thunar-plugin/tag-renamer.c:323
 msgid "Activating this option will replace all spaces in the target filename with underscores."
 msgstr "このオプションを有効にすると、ファイル名の全てのスペースをアンダースコアで置き換えます。"
 
-#: ../thunar-plugin/tag-renamer.c:253
+#: ../thunar-plugin/tag-renamer.c:328
 msgid "_Lowercase"
 msgstr "小文字(_L)"
 
-#: ../thunar-plugin/tag-renamer.c:255
+#: ../thunar-plugin/tag-renamer.c:330
 msgid "If you activate this, the resulting filename will only contain lowercase letters."
 msgstr "このオプションを有効にすると、ファイル名の大文字を小文字へ置き換えます。"
 
-#: ../thunar-plugin/tag-renamer.c:264
-#: ../thunar-plugin/tag-renamer.c:702
+#: ../thunar-plugin/tag-renamer.c:480
 #: ../thunar-plugin/audio-tags-page.c:183
 msgid "Unknown Artist"
 msgstr "アーティスト不明"
 
-#: ../thunar-plugin/tag-renamer.c:265
-#: ../thunar-plugin/tag-renamer.c:750
+#: ../thunar-plugin/tag-renamer.c:488
 #: ../thunar-plugin/audio-tags-page.c:209
 msgid "Unknown Title"
 msgstr "タイトル不明"
 
 #. Edit tags action
-#: ../thunar-plugin/tag-renamer.c:523
+#: ../thunar-plugin/tag-renamer.c:643
 msgid "Edit _Tags"
 msgstr "タグを編集(_T)"
 
-#: ../thunar-plugin/tag-renamer.c:523
+#: ../thunar-plugin/tag-renamer.c:643
 msgid "Edit ID3/OGG tags of this file."
 msgstr "このファイルの ID3/OGG タグを編集します。"
 
-#: ../thunar-plugin/tag-renamer.c:545
+#: ../thunar-plugin/tag-renamer.c:662
+msgid "Tag Help"
+msgstr "タグのヘルプ"
+
+#: ../thunar-plugin/tag-renamer.c:673
+msgid "Artist"
+msgstr "アーティスト"
+
+#: ../thunar-plugin/tag-renamer.c:674
+msgid "Album"
+msgstr "アルバム"
+
+#: ../thunar-plugin/tag-renamer.c:674
+msgid "Genre"
+msgstr "ジャンル"
+
+#: ../thunar-plugin/tag-renamer.c:675
+msgid "Track number"
+msgstr "トラック番号"
+
+#: ../thunar-plugin/tag-renamer.c:675
+msgid "Year"
+msgstr "年"
+
+#: ../thunar-plugin/tag-renamer.c:676
+msgid "Comment"
+msgstr "コメント"
+
+#: ../thunar-plugin/tag-renamer.c:733
 msgid "Audio Tags"
 msgstr "オーディオタグ"
 
@@ -175,7 +211,7 @@ msgstr "オーディオ"
 #. Set up the dialog
 #: ../thunar-plugin/audio-tags-page.c:564
 msgid "Edit Tags"
-msgstr "タグを編集"
+msgstr "タグの編集"
 
 #. Create dialog
 #: ../thunar-plugin/audio-tags-page.c:992
