@@ -1,9 +1,9 @@
 # Galician translation of thunar-media-tags-plugin
 # Copyright (C) 2006-2007 Jannis Pohlmann <jannis@xfce.org>
-# Copyright (C) 2008 Leandro Regueiro
+# Copyright (C) 2008-2009 Leandro Regueiro
 # This file is distributed under the same license as the thunar-media-tags-plugin package.
 #
-# Leandro Regueiro <leandro.regueiro@gmail.com>, 2006, 2008.
+# Leandro Regueiro <leandro.regueiro@gmail.com>, 2006, 2008, 2009.
 #
 # Proxecto Trasno - Adaptación do software libre á lingua galega:  Se desexas
 # colaborar connosco, podes atopar máis información en <http://trasno.net>
@@ -11,9 +11,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: thunar-media-tags-plugin 0.1.2svn\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: xfce-i18n@xfce.org\n"
 "POT-Creation-Date: 2006-09-11 11:38+0200\n"
-"PO-Revision-Date: 2009-02-11 13:21+0100\n"
+"PO-Revision-Date: 2009-03-07 11:37+0100\n"
 "Last-Translator: Leandro Regueiro <leandro DOT regueiro AT gmail DOT com>\n"
 "Language-Team: Galician <proxecto@trasno.net>\n"
 "MIME-Version: 1.0\n"
@@ -215,8 +215,9 @@ msgid "<b>MIME Type:</b>"
 msgstr "<b>Tipo MIME:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:1064
+#, fuzzy
 msgid "<b>Bitrate:</b>"
-msgstr ""
+msgstr "Taxa de bits:"
 
 #: ../thunar-plugin/audio-tags-page.c:1077
 msgid "<b>Samplerate:</b>"
