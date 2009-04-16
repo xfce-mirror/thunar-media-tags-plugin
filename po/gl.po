@@ -11,10 +11,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: thunar-media-tags-plugin 0.1.2svn\n"
-"Report-Msgid-Bugs-To: xfce-i18n@xfce.org\n"
+"Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-09-11 11:38+0200\n"
-"PO-Revision-Date: 2009-03-07 11:37+0100\n"
-"Last-Translator: Leandro Regueiro <leandro DOT regueiro AT gmail DOT com>\n"
+"PO-Revision-Date: 2009-04-14 22:02+0100\n"
+"Last-Translator: Leandro Regueiro <leandro.regueiro@gmail.com>\n"
 "Language-Team: Galician <proxecto@trasno.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,7 +23,7 @@ msgstr ""
 
 #: ../thunar-plugin/tag-renamer.c:59
 msgid "Title"
-msgstr "Título"
+msgstr "Título "
 
 #: ../thunar-plugin/tag-renamer.c:60
 msgid "Artist - Title"
@@ -56,11 +56,11 @@ msgstr "_Formato:"
 
 #: ../thunar-plugin/tag-renamer.c:246
 msgid "_Underscores"
-msgstr ""
+msgstr "_Guións baixos"
 
 #: ../thunar-plugin/tag-renamer.c:248
 msgid "Activating this option will replace all spaces in the target filename with underscores."
-msgstr ""
+msgstr "Activar esta opción fará que se substitúan tódolos espazos do nome de ficheiro con guións baixos."
 
 #: ../thunar-plugin/tag-renamer.c:253
 msgid "_Lowercase"
@@ -208,20 +208,19 @@ msgstr "<b>Nome de ficheiro:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:1038
 msgid "<b>Filesize:</b>"
-msgstr ""
+msgstr "<b>Tamaño do ficheiro:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:1051
 msgid "<b>MIME Type:</b>"
 msgstr "<b>Tipo MIME:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:1064
-#, fuzzy
 msgid "<b>Bitrate:</b>"
-msgstr "Taxa de bits:"
+msgstr "<b>Taxa de bits:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:1077
 msgid "<b>Samplerate:</b>"
-msgstr ""
+msgstr "<b>Frecuencia de mostraxe:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:1090
 msgid "<b>Channels:</b>"
