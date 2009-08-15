@@ -32,7 +32,6 @@
 #include <taglib/tag_c.h>
 
 #include <exo/exo.h>
-#include <thunar-vfs/thunar-vfs.h>
 
 #include <audio-tags-page.h>
 
@@ -977,8 +976,8 @@ audio_tags_page_info_activate (GtkAction *action,
 
   gchar         *mimetype;
 
-  ThunarVfsInfo *vfs_info;
-  gchar         *filename;
+  GFileInfo     *fileinfo;
+  const char    *filename;
   gchar         *filesize;
   
   g_return_val_if_fail (page != NULL || IS_AUDIO_TAGS_PAGE (page), FALSE);
@@ -1007,9 +1006,9 @@ audio_tags_page_info_activate (GtkAction *action,
   
   /* Additional information */
   mimetype = thunarx_file_info_get_mime_type (page->file);
-  vfs_info = thunarx_file_info_get_vfs_info (page->file);
-  filename = vfs_info->display_name;
-  filesize = thunar_vfs_humanize_size (vfs_info->size, NULL, 0);
+  fileinfo = thunarx_file_info_get_file_info (page->file);
+  filename = g_file_info_get_display_name (fileinfo);
+  filesize = g_format_size_for_display (g_file_info_get_size (fileinfo));
 
   /* Create layout table */
   table = gtk_table_new (7, 2, FALSE);
@@ -1121,7 +1120,7 @@ audio_tags_page_info_activate (GtkAction *action,
   g_free (filesize);
   g_free (mimetype);
 
-  thunar_vfs_info_unref (vfs_info);
+  g_object_unref (fileinfo);
   
   return TRUE;
 }
