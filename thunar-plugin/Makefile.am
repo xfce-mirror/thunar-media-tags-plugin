@@ -8,7 +8,7 @@ INCLUDES =								\
 	-DPACKAGE_LOCALE_DIR=\"$(localedir)\"				\
 	$(PLATFORM_CPPFLAGS)
 
-extensionsdir = $(libdir)/thunarx-1
+extensionsdir = $(libdir)/thunarx-2
 extensions_LTLIBRARIES =						\
 	thunar-media-tags-plugin.la
 
@@ -25,7 +25,6 @@ thunar_media_tags_plugin_la_CFLAGS =					\
 	$(EXO_CFLAGS)							\
 	$(PLATFORM_CFLAGS)						\
 	$(THUNARX_CFLAGS)						\
-	$(THUNARVFS_CFLAGS)						\
 	$(TAGLIB_CFLAGS)						\
 	$(TAGLIBC_CFLAGS)
 
@@ -34,7 +33,6 @@ thunar_media_tags_plugin_la_LDFLAGS =					\
 	-export-dynamic							\
 	-module								\
 	$(THUNARX_LIBS)							\
-	$(THUNARVFS_LIBS)						\
 	$(TAGLIB_LIBS)							\
 	$(TAGLIBC_LIBS)							\
 	$(PLATFORM_LDFLAGS)
