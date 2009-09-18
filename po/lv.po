@@ -1,19 +1,23 @@
 # Latvian translation of the thunar-media-tags-plugin..
 #  Copyright (C) 2006-2007 Jannis Pohlmann <jannis@xfce.org>
 # This file is distributed under the same license as the thunar-media-tags package.
-# Rihards Prieditis <rprieditis@inbox.lv>, 2007.
 #
+# Rihards Prieditis <rprieditis@inbox.lv>, 2007.
+# Rihards Prieditis <rprieditis@gmail.com>, 2009.
 msgid ""
 msgstr ""
 "Project-Id-Version: thunar-media-tags-plugin 0.1.2svn\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-09-11 11:38+0200\n"
-"PO-Revision-Date: 2007-11-15 21:09+0300\n"
-"Last-Translator: Rihards Priedītis <rprieditis@inbox.lv>\n"
-"Language-Team: Latvian <RPrieditis@inbox.lv>\n"
+"PO-Revision-Date: 2009-09-18 20:35+0100\n"
+"Last-Translator: Rihards Prieditis <rprieditis@gmail.com>\n"
+"Language-Team: Latvian <translation-team-lv@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.0\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
+"2);\n"
 
 #: ../thunar-plugin/tag-renamer.c:59
 msgid "Title"
@@ -50,48 +54,53 @@ msgstr "_Formāts:"
 
 #: ../thunar-plugin/tag-renamer.c:246
 msgid "_Underscores"
-msgstr "_Pasvītras"
+msgstr "_Pasvītrojumi"
 
 #: ../thunar-plugin/tag-renamer.c:248
-msgid "Activating this option will replace all spaces in the target filename with underscores."
-msgstr "Aktivizējot šo opciju, visas atstarpes faila nosaukumā tiks aizvietotas ar pasvītru."
+msgid ""
+"Activating this option will replace all spaces in the target filename with "
+"underscores."
+msgstr ""
+"Aktivizējot šo opciju, visas atstarpes faila nosaukumā tiks aizvietotas ar "
+"pasvītrojumu."
 
 #: ../thunar-plugin/tag-renamer.c:253
 msgid "_Lowercase"
-msgstr "Apakš_raksts"
+msgstr "_Apakšējā reģistrā"
 
 #: ../thunar-plugin/tag-renamer.c:255
-msgid "If you activate this, the resulting filename will only contain lowercase letters."
-msgstr "Aktivizējot šo, faila nosaukums saturēs tikai burtus apakšrakstā."
+msgid ""
+"If you activate this, the resulting filename will only contain lowercase "
+"letters."
+msgstr ""
+"Aktivizējot šo, faila nosaukums saturēs tikai burtus apakšējā reģistrā."
 
-#: ../thunar-plugin/tag-renamer.c:264
-#: ../thunar-plugin/tag-renamer.c:702
+#: ../thunar-plugin/tag-renamer.c:264 ../thunar-plugin/tag-renamer.c:702
 #: ../thunar-plugin/audio-tags-page.c:183
 msgid "Unknown Artist"
-msgstr "Nezināms Izpildītājs"
+msgstr "Nezināms izpildītājs"
 
-#: ../thunar-plugin/tag-renamer.c:265
-#: ../thunar-plugin/tag-renamer.c:750
+#: ../thunar-plugin/tag-renamer.c:265 ../thunar-plugin/tag-renamer.c:750
 #: ../thunar-plugin/audio-tags-page.c:209
 msgid "Unknown Title"
-msgstr "Nezināms Virsraksts"
+msgstr "Nezināms virsraksts"
 
 #. Edit tags action
 #: ../thunar-plugin/tag-renamer.c:523
 msgid "Edit _Tags"
-msgstr "Rediģēt  _Birkas"
+msgstr "Rediģēt  _atzīmes"
 
 #: ../thunar-plugin/tag-renamer.c:523
 msgid "Edit ID3/OGG tags of this file."
-msgstr "Rediģēt faila ID3/OGG birkas."
+msgstr "Rediģēt faila ID3/OGG atzīmes."
 
 #: ../thunar-plugin/tag-renamer.c:545
 msgid "Audio Tags"
-msgstr "Audio Birkas"
+msgstr "Audio atzīmes"
 
 #: ../thunar-plugin/audio-tags-page.c:196
 msgid "Unknown Album"
-msgstr "Nezināms Albums"
+msgstr "Nezināms albums"
 
 #: ../thunar-plugin/audio-tags-page.c:305
 msgid "<b>Track:</b>"
@@ -119,7 +128,7 @@ msgstr "Ievadiet izpildītāju vai faila autoru."
 
 #: ../thunar-plugin/audio-tags-page.c:366
 msgid "<b>Title:</b>"
-msgstr "<b>Virsrksts:</b>"
+msgstr "<b>Virsraksts:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:373
 msgid "Enter the song title here."
@@ -156,7 +165,7 @@ msgstr "_Saglabāt"
 
 #: ../thunar-plugin/audio-tags-page.c:454
 msgid "Save audio tags."
-msgstr "Saglabāt audio birkas."
+msgstr "Saglabāt audio atzīmes."
 
 #. Create and add the info action
 #: ../thunar-plugin/audio-tags-page.c:461
@@ -174,17 +183,17 @@ msgstr "Audio"
 #. Set up the dialog
 #: ../thunar-plugin/audio-tags-page.c:564
 msgid "Edit Tags"
-msgstr "Rediģēt Birku"
+msgstr "Rediģēt atzīmes"
 
 #. Create dialog
 #: ../thunar-plugin/audio-tags-page.c:992
 msgid "Audio Information"
-msgstr "Audio Informācija"
+msgstr "Audio informācija"
 
 #: ../thunar-plugin/audio-tags-page.c:1003
 #, c-format
 msgid "%d:%d Minutes"
-msgstr "%d:%d Minūtes"
+msgstr "%d:%d minūtes"
 
 #: ../thunar-plugin/audio-tags-page.c:1004
 #, c-format
@@ -206,11 +215,11 @@ msgstr "<b>Faila izmērs:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:1051
 msgid "<b>MIME Type:</b>"
-msgstr "<b>MIME Tips:</b>"
+msgstr "<b>MIME tips:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:1064
 msgid "<b>Bitrate:</b>"
-msgstr "<b>Bitu pāraides ātrums:</b>"
+msgstr "<b>Bitu pārraides ātrums:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:1077
 msgid "<b>Samplerate:</b>"
@@ -222,5 +231,5 @@ msgstr "<b>Kanāli:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:1103
 msgid "<b>Length:</b>"
-msgstr "<b>Garums:</b>"
+msgstr "<b>Ilgums:</b>"
 
