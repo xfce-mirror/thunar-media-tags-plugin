@@ -208,7 +208,6 @@ msgid "<b>MIME Type:</b>"
 msgstr "<b>Tipo MIME:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:1064
-#, fuzzy
 msgid "<b>Bitrate:</b>"
 msgstr "<b>Bitrate:</b>"
 
