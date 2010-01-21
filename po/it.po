@@ -2,7 +2,7 @@
 # Copyright (C) 2006-2007 Jannis Pohlmann <jannis@xfce.org>
 # This file is distributed under the same license as the thunar-media-tags-plugin package.
 # Fabio Riga <usul@aruba.it>, 2007.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: thunar-media-tags-plugin 0.1.2svn\n"
@@ -54,24 +54,16 @@ msgid "_Underscores"
 msgstr "_Trattino basso"
 
 #: ../thunar-plugin/tag-renamer.c:248
-msgid ""
-"Activating this option will replace all spaces in the target filename with "
-"underscores."
-msgstr ""
-"Attivando questa opzione tutti gli spazi nei nomi dei file selezionati saranno"
-" sostituiti con un trattino basso."
+msgid "Activating this option will replace all spaces in the target filename with underscores."
+msgstr "Attivando questa opzione tutti gli spazi nei nomi dei file selezionati saranno sostituiti con un trattino basso."
 
 #: ../thunar-plugin/tag-renamer.c:253
 msgid "_Lowercase"
 msgstr "Rendi _minuscolo"
 
 #: ../thunar-plugin/tag-renamer.c:255
-msgid ""
-"If you activate this, the resulting filename will only contain lowercase "
-"letters."
-msgstr ""
-"Con questa opzione attivata, il nome del file risultante conterrà solo "
-"lettere minuscole."
+msgid "If you activate this, the resulting filename will only contain lowercase letters."
+msgstr "Con questa opzione attivata, il nome del file risultante conterrà solo lettere minuscole."
 
 #: ../thunar-plugin/tag-renamer.c:264 ../thunar-plugin/tag-renamer.c:702
 #: ../thunar-plugin/audio-tags-page.c:183
@@ -191,7 +183,7 @@ msgstr "Informazioni audio"
 #: ../thunar-plugin/audio-tags-page.c:1003
 #, c-format
 msgid "%d:%d Minutes"
-msgstr "%d:%d minutii"
+msgstr "%d:%d minuti"
 
 #: ../thunar-plugin/audio-tags-page.c:1004
 #, c-format
@@ -216,12 +208,13 @@ msgid "<b>MIME Type:</b>"
 msgstr "<b>Tipo MIME:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:1064
+#, fuzzy
 msgid "<b>Bitrate:</b>"
-msgstr ""
+msgstr "<b>Bitrate:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:1077
 msgid "<b>Samplerate:</b>"
-msgstr ""
+msgstr "<b>Samplerate:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:1090
 msgid "<b>Channels:</b>"
