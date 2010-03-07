@@ -163,10 +163,11 @@ media_tags_get_audio_file_supported (ThunarxFileInfo *info)
 
   if (G_LIKELY (taglib_file != NULL))
     {
+      /* Check that the file contains valid audio info */
+      supported = taglib_file_is_valid (taglib_file);
+
       /* Free the taglib file */
       taglib_file_free (taglib_file);
-
-      supported = TRUE;
     }
 
   g_free (filename);
