@@ -32,6 +32,7 @@ thunar_media_tags_plugin_la_LDFLAGS =					\
 	-avoid-version							\
 	-export-dynamic							\
 	-module								\
+	$(EXO_LIBS)							\
 	$(THUNARX_LIBS)							\
 	$(TAGLIB_LIBS)							\
 	$(TAGLIBC_LIBS)							\

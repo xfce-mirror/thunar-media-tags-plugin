@@ -132,9 +132,6 @@ struct _TagRenamer
 {
   ThunarxRenamer __parent__;
 
-  /* Widgets */
-  GtkTooltips     *tooltips;
-
   /* Properties */
   TagRenamerFormat  format;
   gchar            *text;
@@ -238,10 +235,6 @@ tag_renamer_init (TagRenamer *tag_renamer)
   GtkTreeIter      iter;
   gint             n;
 
-  /* Allocate shared tooltips */
-  tag_renamer->tooltips = gtk_tooltips_new ();
-  exo_gtk_object_ref_sink (GTK_OBJECT (tag_renamer->tooltips));
-
   table = gtk_table_new (2, 4, FALSE);
   gtk_table_set_row_spacings (GTK_TABLE (table), 6);
   gtk_table_set_col_spacings (GTK_TABLE (table), 12);
@@ -320,14 +313,14 @@ tag_renamer_init (TagRenamer *tag_renamer)
 
   button = gtk_check_button_new_with_mnemonic (_("_Underscores"));
   exo_mutual_binding_new (G_OBJECT (button), "active", G_OBJECT (tag_renamer), "replace-spaces");
-  gtk_tooltips_set_tip (tag_renamer->tooltips, button, _("Activating this option will replace all spaces in the target filename "
-        "with underscores."), NULL);
+  gtk_widget_set_tooltip_text (GTK_WIDGET (button), _("Activating this option will replace all spaces in the target filename "
+        "with underscores."));
   gtk_table_attach (GTK_TABLE (table), button, 3, 4, 0, 1, GTK_FILL, 0, 0, 0);
   gtk_widget_show (button);
 
   button = gtk_check_button_new_with_mnemonic (_("_Lowercase"));
   exo_mutual_binding_new (G_OBJECT (button), "active", G_OBJECT (tag_renamer), "lowercase");
-  gtk_tooltips_set_tip (tag_renamer->tooltips, button, _("If you activate this, the resulting filename will only contain lowercase letters."), NULL);
+  gtk_widget_set_tooltip_text (GTK_WIDGET (button), _("If you activate this, the resulting filename will only contain lowercase letters."));
   gtk_table_attach (GTK_TABLE (table), button, 3, 4, 1, 2, GTK_FILL, 0, 0, 0);
   gtk_widget_show (button);
 }
@@ -340,9 +333,6 @@ static void
 tag_renamer_finalize (GObject *object)
 {
   TagRenamer *tag_renamer = TAG_RENAMER (object);
-
-  /* release the tooltips */
-  g_object_unref (G_OBJECT (tag_renamer->tooltips));
 
   /* Free string */
   g_free (tag_renamer->text);
