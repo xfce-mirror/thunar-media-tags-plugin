@@ -2,7 +2,7 @@
 # Copyright (C) 2006-2007 Jannis Pohlmann <jannis@xfce.org>
 # This file is distributed under the same license as the thunar-media-tags-plugin package.
 # Stavros Giannouris <stavrosg@serverhive.com>, 2006.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: thunar-media-tags-plugin 0.1.2svn\n"
@@ -54,36 +54,31 @@ msgid "_Underscores"
 msgstr "Κάτω παύ_λες"
 
 #: ../thunar-plugin/tag-renamer.c:248
-msgid ""
-"Activating this option will replace all spaces in the target filename with "
-"underscores."
-msgstr ""
-"Μετατρέπει όλα τα κενά διαστήματα σε κάτω παύλες στα νέα ονόματα αρχείων."
+msgid "Activating this option will replace all spaces in the target filename with underscores."
+msgstr "Μετατρέπει όλα τα κενά διαστήματα σε κάτω παύλες στα νέα ονόματα αρχείων."
 
 #: ../thunar-plugin/tag-renamer.c:253
 msgid "_Lowercase"
 msgstr "Πε_ζά"
 
 #: ../thunar-plugin/tag-renamer.c:255
-msgid ""
-"If you activate this, the resulting filename will only contain lowercase "
-"letters."
+msgid "If you activate this, the resulting filename will only contain lowercase letters."
 msgstr "Μετατρέπει όλους τους χαρακτήρες στα ονόματα αρχείων σε πεζούς."
 
 #: ../thunar-plugin/tag-renamer.c:264 ../thunar-plugin/tag-renamer.c:702
 #: ../thunar-plugin/audio-tags-page.c:183
 msgid "Unknown Artist"
-msgstr "Άγνωστος Καλλιτέχνης"
+msgstr "Άγνωστος καλλιτέχνης"
 
 #: ../thunar-plugin/tag-renamer.c:265 ../thunar-plugin/tag-renamer.c:750
 #: ../thunar-plugin/audio-tags-page.c:209
 msgid "Unknown Title"
-msgstr "Άγνωστος Τίτλος"
+msgstr "Άγνωστος τίτλος"
 
 #. Edit tags action
 #: ../thunar-plugin/tag-renamer.c:523
 msgid "Edit _Tags"
-msgstr "Επεξεργασία Ε_τικετών"
+msgstr "Επεξεργασία ε_τικετών"
 
 #: ../thunar-plugin/tag-renamer.c:523
 msgid "Edit ID3/OGG tags of this file."
@@ -91,7 +86,7 @@ msgstr "Επεξεργασία των ID3/OGG tags του αρχείου."
 
 #: ../thunar-plugin/tag-renamer.c:545
 msgid "Audio Tags"
-msgstr "Ετικέττες Ήχου"
+msgstr "Ετικέτες ήχου"
 
 #: ../thunar-plugin/audio-tags-page.c:196
 msgid "Unknown Album"
@@ -151,7 +146,7 @@ msgstr "<b>Είδος:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:415
 msgid "Select or enter the genre of this song here."
-msgstr "Επιλέξτε ή εισάγετε το γένος."
+msgstr "Επιλέξτε ή εισάγετε το είδος."
 
 #. Create and add the save action
 #: ../thunar-plugin/audio-tags-page.c:454
@@ -160,7 +155,7 @@ msgstr "Απο_θήκευση"
 
 #: ../thunar-plugin/audio-tags-page.c:454
 msgid "Save audio tags."
-msgstr "Αποθήκευση Ετικετών."
+msgstr "Αποθήκευση ετικετών."
 
 #. Create and add the info action
 #: ../thunar-plugin/audio-tags-page.c:461
@@ -178,12 +173,12 @@ msgstr "Ήχος"
 #. Set up the dialog
 #: ../thunar-plugin/audio-tags-page.c:564
 msgid "Edit Tags"
-msgstr "Επεξεργασία Ετικετών"
+msgstr "Επεξεργασία ετικετών"
 
 #. Create dialog
 #: ../thunar-plugin/audio-tags-page.c:992
 msgid "Audio Information"
-msgstr "Πληροφορίες Ήχου"
+msgstr "Πληροφορίες ήχου"
 
 #: ../thunar-plugin/audio-tags-page.c:1003
 #, c-format
