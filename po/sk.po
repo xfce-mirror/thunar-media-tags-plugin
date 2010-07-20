@@ -2,7 +2,6 @@
 # Copyright (C) 2006-2007 Jannis Pohlmann <jannis@xfce.org>
 # This file is distributed under the same license as the thunar-media-tags-plugin package.
 # Robert Hartl <hartl.robert@gmail.com>, 2009.
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: 0.1.2\n"
@@ -53,20 +52,16 @@ msgid "_Underscores"
 msgstr "_Podtržníky"
 
 #: ../thunar-plugin/tag-renamer.c:248
-msgid ""
-"Activating this option will replace all spaces in the target filename with "
-"underscores."
-msgstr ""
+msgid "Activating this option will replace all spaces in the target filename with underscores."
+msgstr "Aktiváciou tejto voľby budú nahradené všetky medzery v cieľovom názve podčiarkovníkmi."
 
 #: ../thunar-plugin/tag-renamer.c:253
 msgid "_Lowercase"
 msgstr "_Malé písmená"
 
 #: ../thunar-plugin/tag-renamer.c:255
-msgid ""
-"If you activate this, the resulting filename will only contain lowercase "
-"letters."
-msgstr ""
+msgid "If you activate this, the resulting filename will only contain lowercase letters."
+msgstr "Ak použijete túto voľbu, výsledné názvy budú obsahovať len malé písmená."
 
 #: ../thunar-plugin/tag-renamer.c:264 ../thunar-plugin/tag-renamer.c:702
 #: ../thunar-plugin/audio-tags-page.c:183
@@ -167,7 +162,7 @@ msgstr "_Informácie"
 
 #: ../thunar-plugin/audio-tags-page.c:461
 msgid "Display more detailed information about this audio file."
-msgstr ""
+msgstr "Zobrazí podrobné informácie o tomto zvukovom súbore."
 
 #: ../thunar-plugin/audio-tags-page.c:528
 msgid "Audio"
