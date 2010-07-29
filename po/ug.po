@@ -1,0 +1,262 @@
+# Uyghur translation of the thunar-media-tags-plugin.
+# Copyright (C) 2006-2007 Jannis Pohlmann <jannis@xfce.org>
+# This file is distributed under the same license as the thunar-media-tags-plugin package.
+# Gheyret T.Kenji <gheyret@gmail.com>, 2010
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: thunar-media-tags-plugin 0.1.2svn\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-12-14 15:52+0900\n"
+"PO-Revision-Date: 2008-12-14 15:57+0900\n"
+"Last-Translator: Gheyret T.Kenji <gheyret@gmail.com>\n"
+"Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../thunar-plugin/tag-renamer.c:59
+#: ../thunar-plugin/tag-renamer.c:673
+msgid "Title"
+msgstr "ماۋزۇ"
+
+#: ../thunar-plugin/tag-renamer.c:60
+msgid "Artist - Title"
+msgstr "سەنئەتكار - ماۋزۇ"
+
+#: ../thunar-plugin/tag-renamer.c:61
+msgid "Track - Title"
+msgstr "Track - ماۋزۇ"
+
+#: ../thunar-plugin/tag-renamer.c:62
+msgid "Track - Artist - Title"
+msgstr "Track - سەنئەتكار - ماۋزۇ"
+
+#: ../thunar-plugin/tag-renamer.c:63
+msgid "Track. Title"
+msgstr "Track. ماۋزۇ"
+
+#: ../thunar-plugin/tag-renamer.c:64
+msgid "Track. Artist - Title"
+msgstr "Track. سەنئەتكار - ماۋزۇ"
+
+#: ../thunar-plugin/tag-renamer.c:65
+msgid "Artist - Track - Title"
+msgstr "سەنئەتكار - Track - ماۋزۇ"
+
+#: ../thunar-plugin/tag-renamer.c:67
+msgid "Custom"
+msgstr "Custom"
+
+#. Custom format
+#: ../thunar-plugin/tag-renamer.c:252
+msgid "Cust_om format:"
+msgstr "Custom format(_O):"
+
+#. Format label
+#: ../thunar-plugin/tag-renamer.c:280
+msgid "_Format:"
+msgstr "فورمات(_F):"
+
+#: ../thunar-plugin/tag-renamer.c:321
+msgid "_Underscores"
+msgstr "پەس سىزىق(_U)"
+
+#: ../thunar-plugin/tag-renamer.c:323
+msgid "Activating this option will replace all spaces in the target filename with underscores."
+msgstr "بۇ تاللانما تاللانسا، ھۆججەت نامىدىكى بارلىق بوشلۇقلار پەس سىزىققا ئالماشتۇرۇلىدۇ."
+
+#: ../thunar-plugin/tag-renamer.c:328
+msgid "_Lowercase"
+msgstr "كىچىك يېزىلىشى(_L)"
+
+#: ../thunar-plugin/tag-renamer.c:330
+msgid "If you activate this, the resulting filename will only contain lowercase letters."
+msgstr "بۇ تاللانما تاللانسا، ھۆججەت نامىدىكى بارلىق ھەرپلەر كىچىك يېزىلىشتا بولىدۇ."
+
+#: ../thunar-plugin/tag-renamer.c:480
+#: ../thunar-plugin/audio-tags-page.c:183
+msgid "Unknown Artist"
+msgstr "نامەلۇم سەنئەتكار"
+
+#: ../thunar-plugin/tag-renamer.c:488
+#: ../thunar-plugin/audio-tags-page.c:209
+msgid "Unknown Title"
+msgstr "نامەلۇم ماۋزۇ"
+
+#. Edit tags action
+#: ../thunar-plugin/tag-renamer.c:643
+msgid "Edit _Tags"
+msgstr "Tag تەھرىرلە(_T)"
+
+#: ../thunar-plugin/tag-renamer.c:643
+msgid "Edit ID3/OGG tags of this file."
+msgstr "بۇ ھۆججەتتىكى  ID3/OGG tag لارنى تەھرىرلەيدۇ"
+
+#: ../thunar-plugin/tag-renamer.c:662
+msgid "Tag Help"
+msgstr "Tag ياردىمى"
+
+#: ../thunar-plugin/tag-renamer.c:673
+msgid "Artist"
+msgstr "سەنئەتكار"
+
+#: ../thunar-plugin/tag-renamer.c:674
+msgid "Album"
+msgstr "ئالبوم"
+
+#: ../thunar-plugin/tag-renamer.c:674
+msgid "Genre"
+msgstr "ئېقىم"
+
+#: ../thunar-plugin/tag-renamer.c:675
+msgid "Track number"
+msgstr "ناخشا نومۇرى"
+
+#: ../thunar-plugin/tag-renamer.c:675
+msgid "Year"
+msgstr "يىل"
+
+#: ../thunar-plugin/tag-renamer.c:676
+msgid "Comment"
+msgstr "ئىزاھات"
+
+#: ../thunar-plugin/tag-renamer.c:733
+msgid "Audio Tags"
+msgstr "ئۈن Tag لىرى"
+
+#: ../thunar-plugin/audio-tags-page.c:196
+msgid "Unknown Album"
+msgstr "نامەلۇم ئالبوم"
+
+#: ../thunar-plugin/audio-tags-page.c:305
+msgid "<b>Track:</b>"
+msgstr "<b>Track:</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:320
+msgid "Enter the track number here."
+msgstr "Track نومۇرىنى بۇ يەرگە كىرگۈزۈڭ."
+
+#: ../thunar-plugin/audio-tags-page.c:328
+msgid "<b>Year:</b>"
+msgstr "<b>تارقىتىلغان يىل:</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:343
+msgid "Enter the release year here."
+msgstr "تارقىتىلغان يىلىنى بۇ يەرگە كىرگۈزۈڭ:"
+
+#: ../thunar-plugin/audio-tags-page.c:351
+msgid "<b>Artist:</b>"
+msgstr "<b>سەنئەتكار:</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:358
+msgid "Enter the name of the artist or author of this file here."
+msgstr "سەنئەتكار ئاتىنى ياكى بۇ ھۆججەتنىڭ ئاپتورىنى بۇ يەرگە كىرگۈزۈڭ."
+
+#: ../thunar-plugin/audio-tags-page.c:366
+msgid "<b>Title:</b>"
+msgstr "<b>ماۋزۇ:</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:373
+msgid "Enter the song title here."
+msgstr "ناخشا ماۋزۇسىنى بۇ يەرگە كىرگۈزۈڭ."
+
+#: ../thunar-plugin/audio-tags-page.c:380
+msgid "<b>Album:</b>"
+msgstr "<b>ئالبوم:</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:387
+msgid "Enter the album/record title here."
+msgstr "ئالبوم/پلاستىنكا ئاتىنى بۇ يەرگە كىرگۈزۈڭ."
+
+#: ../thunar-plugin/audio-tags-page.c:394
+msgid "<b>Comment:</b>"
+msgstr "<b>ئىزاھات:</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:401
+msgid "Enter your comments here."
+msgstr "ئىزاھاتىڭىزنى بۇ يەرگە كىرگۈزۈڭ."
+
+#: ../thunar-plugin/audio-tags-page.c:408
+msgid "<b>Genre:</b>"
+msgstr "<b>ئېقىم:</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:415
+msgid "Select or enter the genre of this song here."
+msgstr "ناخشىنىڭ ئېقىمىنى(بىر قانچە) بۇ يەرگە كىرگۈزۈڭ."
+
+#. Create and add the save action
+#: ../thunar-plugin/audio-tags-page.c:454
+msgid "_Save"
+msgstr "ساقلا(_S)"
+
+#: ../thunar-plugin/audio-tags-page.c:454
+msgid "Save audio tags."
+msgstr "ئۈن  tag لىرىنى ساقلايدۇ."
+
+#. Create and add the info action
+#: ../thunar-plugin/audio-tags-page.c:461
+msgid "_Information"
+msgstr "ئۇچۇر(_I)"
+
+#: ../thunar-plugin/audio-tags-page.c:461
+msgid "Display more detailed information about this audio file."
+msgstr "بۇ ئۈن ھۆججىتى ھەققىدىكى تېخىمۇ كوپ ئۇچۇرلارنى كۆرسىتىدۇ."
+
+#: ../thunar-plugin/audio-tags-page.c:528
+msgid "Audio"
+msgstr "ئۈن"
+
+#. Set up the dialog
+#: ../thunar-plugin/audio-tags-page.c:564
+msgid "Edit Tags"
+msgstr "tag تەھرىرلە"
+
+#. Create dialog
+#: ../thunar-plugin/audio-tags-page.c:992
+msgid "Audio Information"
+msgstr "ئۈن ئۇچۇرلىرى"
+
+#: ../thunar-plugin/audio-tags-page.c:1003
+#, c-format
+msgid "%d:%d Minutes"
+msgstr "%d:%d مىنۇت"
+
+#: ../thunar-plugin/audio-tags-page.c:1004
+#, c-format
+msgid "%d KBit/s"
+msgstr "%d Kbit/سېكۇنت"
+
+#: ../thunar-plugin/audio-tags-page.c:1005
+#, c-format
+msgid "%d Hz"
+msgstr "%d Hz"
+
+#: ../thunar-plugin/audio-tags-page.c:1025
+msgid "<b>Filename:</b>"
+msgstr "<b>ھۆججەت ئاتى:</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:1038
+msgid "<b>Filesize:</b>"
+msgstr "<b>ھۆججەت ئۇزۇنلۇقى:</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:1051
+msgid "<b>MIME Type:</b>"
+msgstr "<b>MIME تىپى:</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:1064
+msgid "<b>Bitrate:</b>"
+msgstr "<b>Bitrate:</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:1077
+msgid "<b>Samplerate:</b>"
+msgstr "<b>Samplerate:</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:1090
+msgid "<b>Channels:</b>"
+msgstr "<b>قانال سانى:</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:1103
+msgid "<b>Length:</b>"
+msgstr "<b>ئۇزۇنلۇقى:</b>"
