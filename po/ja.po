@@ -65,7 +65,7 @@ msgstr "アンダースコア(_U)"
 
 #: ../thunar-plugin/tag-renamer.c:323
 msgid "Activating this option will replace all spaces in the target filename with underscores."
-msgstr "このオプションを有効にすると、ファイル名の全てのスペースをアンダースコアで置き換えます。"
+msgstr "このオプションを有効にすると、ファイル名のすべてのスペースをアンダースコアで置き換えます。"
 
 #: ../thunar-plugin/tag-renamer.c:328
 msgid "_Lowercase"
