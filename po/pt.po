@@ -2,7 +2,7 @@
 # Copyright (C) 2009, THE  thunar-mediatags-plugin COPYRIGHT HOLDER
 # This file is distributed under the same license as the thunar-mediatags-plugin package.
 # Nuno Miguel, <nunis@netcabo.pt>, 2007.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: thunar-mediatags-plugin 0.1.2\n"
@@ -14,9 +14,9 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-Language: Portuguese\n"
 "X-Poedit-Country: PORTUGAL\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Poedit-Language: Portuguese\n"
 
 #: ../thunar-plugin/tag-renamer.c:59
 msgid "Title"
@@ -53,7 +53,7 @@ msgstr "_Formato:"
 
 #: ../thunar-plugin/tag-renamer.c:246
 msgid "_Underscores"
-msgstr "_Sublinhado"
+msgstr "S_ublinhado"
 
 #: ../thunar-plugin/tag-renamer.c:248
 msgid "Activating this option will replace all spaces in the target filename with underscores."
@@ -67,34 +67,32 @@ msgstr "_Minúsculas"
 msgid "If you activate this, the resulting filename will only contain lowercase letters."
 msgstr "Se você activar isto, o nome do ficheiro apenas irá ter letras minúsculas."
 
-#: ../thunar-plugin/tag-renamer.c:264
-#: ../thunar-plugin/tag-renamer.c:702
+#: ../thunar-plugin/tag-renamer.c:264 ../thunar-plugin/tag-renamer.c:702
 #: ../thunar-plugin/audio-tags-page.c:183
 msgid "Unknown Artist"
-msgstr "Artista Desconhecido"
+msgstr "Artista desconhecido"
 
-#: ../thunar-plugin/tag-renamer.c:265
-#: ../thunar-plugin/tag-renamer.c:750
+#: ../thunar-plugin/tag-renamer.c:265 ../thunar-plugin/tag-renamer.c:750
 #: ../thunar-plugin/audio-tags-page.c:209
 msgid "Unknown Title"
-msgstr "Título Desconhecido"
+msgstr "Título desconhecido"
 
 #. Edit tags action
 #: ../thunar-plugin/tag-renamer.c:523
 msgid "Edit _Tags"
-msgstr "Editar _Etiquetas"
+msgstr "Editar de_talhes"
 
 #: ../thunar-plugin/tag-renamer.c:523
 msgid "Edit ID3/OGG tags of this file."
-msgstr "Editar etiquetas ID3/OGG deste ficheiro."
+msgstr "Editar os detalhes ID3/OGG deste ficheiro."
 
 #: ../thunar-plugin/tag-renamer.c:545
 msgid "Audio Tags"
-msgstr "Etiquetas Áudio"
+msgstr "Detalhes áudio"
 
 #: ../thunar-plugin/audio-tags-page.c:196
 msgid "Unknown Album"
-msgstr "Álbum Desconhecido"
+msgstr "Álbum desconhecido"
 
 #: ../thunar-plugin/audio-tags-page.c:305
 msgid "<b>Track:</b>"
@@ -159,16 +157,16 @@ msgstr "_Gravar"
 
 #: ../thunar-plugin/audio-tags-page.c:454
 msgid "Save audio tags."
-msgstr "Gravar etiquetas áudio."
+msgstr "Gravar detalhes áudio."
 
 #. Create and add the info action
 #: ../thunar-plugin/audio-tags-page.c:461
 msgid "_Information"
-msgstr "_Informação"
+msgstr "_Informações"
 
 #: ../thunar-plugin/audio-tags-page.c:461
 msgid "Display more detailed information about this audio file."
-msgstr "Apresentar informação detalhada sobre este ficheiro áudio."
+msgstr "Apresentar informações detalhadas sobre este ficheiro áudio."
 
 #: ../thunar-plugin/audio-tags-page.c:528
 msgid "Audio"
@@ -177,12 +175,12 @@ msgstr "Áudio"
 #. Set up the dialog
 #: ../thunar-plugin/audio-tags-page.c:564
 msgid "Edit Tags"
-msgstr "Editar Etiquetas"
+msgstr "Editar detalhes"
 
 #. Create dialog
 #: ../thunar-plugin/audio-tags-page.c:992
 msgid "Audio Information"
-msgstr "Informação Áudio"
+msgstr "Informações áudio"
 
 #: ../thunar-plugin/audio-tags-page.c:1003
 #, c-format
@@ -226,4 +224,3 @@ msgstr "<b>Canais:</b>"
 #: ../thunar-plugin/audio-tags-page.c:1103
 msgid "<b>Length:</b>"
 msgstr "<b>Duração:</b>"
-
