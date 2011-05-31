@@ -21,27 +21,27 @@ msgstr "标题"
 
 #: ../thunar-plugin/tag-renamer.c:60
 msgid "Artist - Title"
-msgstr "艺术家 - 标题"
+msgstr "艺术家-标题"
 
 #: ../thunar-plugin/tag-renamer.c:61
 msgid "Track - Title"
-msgstr "音轨 - 标题"
+msgstr "音轨-标题"
 
 #: ../thunar-plugin/tag-renamer.c:62
 msgid "Track - Artist - Title"
-msgstr "音轨 - 艺术家 - 标题"
+msgstr "音轨-艺术家-标题"
 
 #: ../thunar-plugin/tag-renamer.c:63
 msgid "Track. Title"
-msgstr "音轨. 标题"
+msgstr "音轨.标题"
 
 #: ../thunar-plugin/tag-renamer.c:64
 msgid "Track. Artist - Title"
-msgstr "音轨. 艺术家 - 标题"
+msgstr "音轨.艺术家-标题"
 
 #: ../thunar-plugin/tag-renamer.c:65
 msgid "Artist - Track - Title"
-msgstr "艺术家 - 音轨 - 标题"
+msgstr "艺术家-音轨-标题"
 
 #. Format label
 #: ../thunar-plugin/tag-renamer.c:223
@@ -53,25 +53,27 @@ msgid "_Underscores"
 msgstr "下划线(_U)"
 
 #: ../thunar-plugin/tag-renamer.c:248
-msgid "Activating this option will replace all spaces in the target filename with underscores."
-msgstr "选中此选项将会用下划线代替目标文件名中的所有空格"
+msgid ""
+"Activating this option will replace all spaces in the target filename with "
+"underscores."
+msgstr "激活此选项将会用下划线代替目标文件名中的所有空格"
 
 #: ../thunar-plugin/tag-renamer.c:253
 msgid "_Lowercase"
 msgstr "小写字母(_L)"
 
 #: ../thunar-plugin/tag-renamer.c:255
-msgid "If you activate this, the resulting filename will only contain lowercase letters."
-msgstr "选中此选项将使文件名中只包含小写字母"
+msgid ""
+"If you activate this, the resulting filename will only contain lowercase "
+"letters."
+msgstr "激活此选项将使文件名中只包含小写字母"
 
-#: ../thunar-plugin/tag-renamer.c:264
-#: ../thunar-plugin/tag-renamer.c:702
+#: ../thunar-plugin/tag-renamer.c:264 ../thunar-plugin/tag-renamer.c:702
 #: ../thunar-plugin/audio-tags-page.c:183
 msgid "Unknown Artist"
 msgstr "未知艺术家"
 
-#: ../thunar-plugin/tag-renamer.c:265
-#: ../thunar-plugin/tag-renamer.c:750
+#: ../thunar-plugin/tag-renamer.c:265 ../thunar-plugin/tag-renamer.c:750
 #: ../thunar-plugin/audio-tags-page.c:209
 msgid "Unknown Title"
 msgstr "未知标题"
@@ -79,15 +81,15 @@ msgstr "未知标题"
 #. Edit tags action
 #: ../thunar-plugin/tag-renamer.c:523
 msgid "Edit _Tags"
-msgstr "修改 _Tags"
+msgstr "编辑标签(_T)"
 
 #: ../thunar-plugin/tag-renamer.c:523
 msgid "Edit ID3/OGG tags of this file."
-msgstr "修改此文件的 ID3/OGG tags"
+msgstr "修改此文件的 ID3/OGG 标签"
 
 #: ../thunar-plugin/tag-renamer.c:545
 msgid "Audio Tags"
-msgstr "音频 Tags"
+msgstr "音频标签"
 
 #: ../thunar-plugin/audio-tags-page.c:196
 msgid "Unknown Album"
@@ -143,11 +145,11 @@ msgstr "在这里输入您的注释"
 
 #: ../thunar-plugin/audio-tags-page.c:408
 msgid "<b>Genre:</b>"
-msgstr "<b>类型:</b>"
+msgstr "<b>流派:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:415
 msgid "Select or enter the genre of this song here."
-msgstr "在这里输入歌曲类别"
+msgstr "在这里输入歌曲流派"
 
 #. Create and add the save action
 #: ../thunar-plugin/audio-tags-page.c:454
@@ -156,7 +158,7 @@ msgstr "保存(_S)"
 
 #: ../thunar-plugin/audio-tags-page.c:454
 msgid "Save audio tags."
-msgstr "保存音频 tags"
+msgstr "保存音频标签"
 
 #. Create and add the info action
 #: ../thunar-plugin/audio-tags-page.c:461
@@ -165,7 +167,7 @@ msgstr "信息(_I)"
 
 #: ../thunar-plugin/audio-tags-page.c:461
 msgid "Display more detailed information about this audio file."
-msgstr "显示关于这个音频文件的详细信息"
+msgstr "显示这个音频文件的详细信息"
 
 #: ../thunar-plugin/audio-tags-page.c:528
 msgid "Audio"
@@ -174,7 +176,7 @@ msgstr "音频"
 #. Set up the dialog
 #: ../thunar-plugin/audio-tags-page.c:564
 msgid "Edit Tags"
-msgstr "修改 Tags"
+msgstr "修改标签"
 
 #. Create dialog
 #: ../thunar-plugin/audio-tags-page.c:992
@@ -189,7 +191,7 @@ msgstr "%d:%d 分钟"
 #: ../thunar-plugin/audio-tags-page.c:1004
 #, c-format
 msgid "%d KBit/s"
-msgstr "%d KBit/s"
+msgstr "%d K/s"
 
 #: ../thunar-plugin/audio-tags-page.c:1005
 #, c-format
@@ -223,4 +225,3 @@ msgstr "<b>声道:</b>"
 #: ../thunar-plugin/audio-tags-page.c:1103
 msgid "<b>Length:</b>"
 msgstr "<b>长度:</b>"
-
