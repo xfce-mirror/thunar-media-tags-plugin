@@ -1,3 +1,4 @@
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce\n"
@@ -13,111 +14,113 @@ msgstr ""
 
 #: ../thunar-plugin/tag-renamer.c:59
 msgid "Title"
-msgstr ""
+msgstr "عنوان"
 
 #: ../thunar-plugin/tag-renamer.c:60
 msgid "Artist - Title"
-msgstr ""
+msgstr "الفنان -- العنوان"
 
 #: ../thunar-plugin/tag-renamer.c:61
 msgid "Track - Title"
-msgstr ""
+msgstr "المسار -- العنوان"
 
 #: ../thunar-plugin/tag-renamer.c:62
 msgid "Track - Artist - Title"
-msgstr ""
+msgstr "المسار -- الفنان -- العنوان"
 
 #: ../thunar-plugin/tag-renamer.c:63
 msgid "Track. Title"
-msgstr ""
+msgstr "المسار. العنوان"
 
 #: ../thunar-plugin/tag-renamer.c:64
 msgid "Track. Artist - Title"
-msgstr ""
+msgstr "المسار. الفنان -- العنوان"
 
 #: ../thunar-plugin/tag-renamer.c:65
 msgid "Artist - Track - Title"
-msgstr ""
+msgstr "الفنان -- المسار -- العنوان"
 
 #. Format label
 #: ../thunar-plugin/tag-renamer.c:223
 msgid "_Format:"
-msgstr ""
+msgstr "_صيغة :"
 
 #: ../thunar-plugin/tag-renamer.c:246
+#, fuzzy
 msgid "_Underscores"
-msgstr ""
+msgstr "_يؤكد"
 
 #: ../thunar-plugin/tag-renamer.c:248
-msgid ""
-"Activating this option will replace all spaces in the target filename with "
-"underscores."
-msgstr ""
+#, fuzzy
+msgid "Activating this option will replace all spaces in the target filename with underscores."
+msgstr "بتفعيل هذا الخيار سيستبدل كافة المسافات في اسم الملف مع الهدف. المؤكد"
 
 #: ../thunar-plugin/tag-renamer.c:253
+#, fuzzy
 msgid "_Lowercase"
-msgstr ""
+msgstr "_صغيرة"
 
 #: ../thunar-plugin/tag-renamer.c:255
-msgid ""
-"If you activate this, the resulting filename will only contain lowercase "
-"letters."
-msgstr ""
+msgid "If you activate this, the resulting filename will only contain lowercase letters."
+msgstr "إذا قمت بتفعيل هذا ، اسم الملف يحتوي على أحرف صغيرة فقط."
 
 #: ../thunar-plugin/tag-renamer.c:264 ../thunar-plugin/tag-renamer.c:702
 #: ../thunar-plugin/audio-tags-page.c:183
 msgid "Unknown Artist"
-msgstr ""
+msgstr "الفنان مجهول"
 
 #: ../thunar-plugin/tag-renamer.c:265 ../thunar-plugin/tag-renamer.c:750
 #: ../thunar-plugin/audio-tags-page.c:209
 msgid "Unknown Title"
-msgstr ""
+msgstr "عنوان مجهول"
 
 #. Edit tags action
 #: ../thunar-plugin/tag-renamer.c:523
 msgid "Edit _Tags"
-msgstr ""
+msgstr "تحرير _العلامات"
 
 #: ../thunar-plugin/tag-renamer.c:523
 msgid "Edit ID3/OGG tags of this file."
-msgstr ""
+msgstr "تحرير علامات ID3/OGG ​​لهذا الملف."
 
 #: ../thunar-plugin/tag-renamer.c:545
 msgid "Audio Tags"
-msgstr ""
+msgstr "العلامات الصوتية"
 
 #: ../thunar-plugin/audio-tags-page.c:196
+#, fuzzy
 msgid "Unknown Album"
-msgstr ""
+msgstr "ألبوم مجهول"
 
 #: ../thunar-plugin/audio-tags-page.c:305
+#, fuzzy
 msgid "<b>Track:</b>"
-msgstr ""
+msgstr "<b>المسار :</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:320
+#, fuzzy
 msgid "Enter the track number here."
-msgstr ""
+msgstr "أدخل رقم المسار هنا."
 
 #: ../thunar-plugin/audio-tags-page.c:328
 msgid "<b>Year:</b>"
-msgstr ""
+msgstr "<b>السنة :</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:343
 msgid "Enter the release year here."
-msgstr ""
+msgstr "ادخل سنة الإصدار هنا."
 
 #: ../thunar-plugin/audio-tags-page.c:351
 msgid "<b>Artist:</b>"
-msgstr ""
+msgstr "<b>الفنان :</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:358
 msgid "Enter the name of the artist or author of this file here."
-msgstr ""
+msgstr "أدخل اسم الفنان أو الكاتب لهذا الملف هنا."
 
 #: ../thunar-plugin/audio-tags-page.c:366
 msgid "<b>Title:</b>"
-msgstr ""
+msgstr "<b>العنوان :</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:373
 msgid "Enter the song title here."
