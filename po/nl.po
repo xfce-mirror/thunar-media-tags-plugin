@@ -1,4 +1,4 @@
-# Dutch translation for the thunar-media-tags-plugin.
+# Dutch translation of the thunar-media-tags-plugin.
 # Copyright (C) The Xfce development team.
 # This file is distributed under the same license as the thunar-media-tags-plugin package.
 # Stephan Arts <stephan@localhost>, 2007.
@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: thunar-media-tags-plugin\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-09-11 11:38+0200\n"
-"PO-Revision-Date: 2011-06-16 13:55+0200\n"
+"PO-Revision-Date: 2011-09-09 13:55+0200\n"
 "Last-Translator: Pjotr\n"
 "Language-Team: Dutch (Flemish)\n"
 "MIME-Version: 1.0\n"
@@ -78,12 +78,12 @@ msgstr ""
 #: ../thunar-plugin/tag-renamer.c:264 ../thunar-plugin/tag-renamer.c:702
 #: ../thunar-plugin/audio-tags-page.c:183
 msgid "Unknown Artist"
-msgstr "Onbekende Artiest"
+msgstr "Onbekende artiest"
 
 #: ../thunar-plugin/tag-renamer.c:265 ../thunar-plugin/tag-renamer.c:750
 #: ../thunar-plugin/audio-tags-page.c:209
 msgid "Unknown Title"
-msgstr "Onbekende Titel"
+msgstr "Onbekende titel"
 
 #. Edit tags action
 #: ../thunar-plugin/tag-renamer.c:523
@@ -100,7 +100,7 @@ msgstr "Audio-etiketten"
 
 #: ../thunar-plugin/audio-tags-page.c:196
 msgid "Unknown Album"
-msgstr "Onbekend Album"
+msgstr "Onbekend album"
 
 #: ../thunar-plugin/audio-tags-page.c:305
 msgid "<b>Track:</b>"
@@ -140,7 +140,7 @@ msgstr "<b>Album:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:387
 msgid "Enter the album/record title here."
-msgstr "Voer hier de album/plaat-titel in."
+msgstr "Voer hier de album-/plaat-titel in."
 
 #: ../thunar-plugin/audio-tags-page.c:394
 msgid "<b>Comment:</b>"
@@ -193,7 +193,7 @@ msgstr "Audio-informatie"
 #: ../thunar-plugin/audio-tags-page.c:1003
 #, c-format
 msgid "%d:%d Minutes"
-msgstr "%d:%d Minuten"
+msgstr "%d:%d minuten"
 
 #: ../thunar-plugin/audio-tags-page.c:1004
 #, c-format
