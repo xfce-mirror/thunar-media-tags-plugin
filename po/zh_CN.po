@@ -1,16 +1,18 @@
 # Chinese translations for PACKAGE package.
 # Copyright (C) 2008 THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# This file is distributed under the same license as 
+# the thunar-media-tags-plugin.
 # Hunt Xu <huntxu@live.cn>, 2008.
-#
+# Chipong Luo <chipong_l@yahoo.com>, 2011.
 msgid ""
 msgstr ""
 "Project-Id-Version: thunar-media-tags-plugin\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-09-11 11:38+0200\n"
 "PO-Revision-Date: 2008-12-04 16:51+0800\n"
-"Last-Translator: Hunt Xu <huntxu@live.cn>\n"
-"Language-Team: Chinese (simplified)\n"
+"Last-Translator: Chipong Luo <chipong_l@yahoo.com>\n"
+"Language-Team: Chinese (simplified) <xfce-i18n@xfce.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -46,7 +48,7 @@ msgstr "艺术家-音轨-标题"
 #. Format label
 #: ../thunar-plugin/tag-renamer.c:223
 msgid "_Format:"
-msgstr "格式(_F):"
+msgstr "格式(_F)："
 
 #: ../thunar-plugin/tag-renamer.c:246
 msgid "_Underscores"
@@ -66,7 +68,7 @@ msgstr "小写字母(_L)"
 msgid ""
 "If you activate this, the resulting filename will only contain lowercase "
 "letters."
-msgstr "激活此选项将使文件名中只包含小写字母"
+msgstr "激活此项将使文件名中只包含小写字母"
 
 #: ../thunar-plugin/tag-renamer.c:264 ../thunar-plugin/tag-renamer.c:702
 #: ../thunar-plugin/audio-tags-page.c:183
@@ -85,7 +87,7 @@ msgstr "编辑标签(_T)"
 
 #: ../thunar-plugin/tag-renamer.c:523
 msgid "Edit ID3/OGG tags of this file."
-msgstr "修改此文件的 ID3/OGG 标签"
+msgstr "编辑此文件的 ID3/OGG 标签"
 
 #: ../thunar-plugin/tag-renamer.c:545
 msgid "Audio Tags"
@@ -97,59 +99,59 @@ msgstr "未知专辑"
 
 #: ../thunar-plugin/audio-tags-page.c:305
 msgid "<b>Track:</b>"
-msgstr "<b>音轨:</b>"
+msgstr "<b>音轨：</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:320
 msgid "Enter the track number here."
-msgstr "在这里输入音轨编号"
+msgstr "在这里输入音轨编号。"
 
 #: ../thunar-plugin/audio-tags-page.c:328
 msgid "<b>Year:</b>"
-msgstr "<b>年份:</b>"
+msgstr "<b>年份：</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:343
 msgid "Enter the release year here."
-msgstr "在这里输入发行年份"
+msgstr "在这里输入发行年份。"
 
 #: ../thunar-plugin/audio-tags-page.c:351
 msgid "<b>Artist:</b>"
-msgstr "<b>艺术家:</b>"
+msgstr "<b>艺术家：</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:358
 msgid "Enter the name of the artist or author of this file here."
-msgstr "在这里输入艺术家或作者姓名"
+msgstr "在这里输入艺术家或此文件作者姓名。"
 
 #: ../thunar-plugin/audio-tags-page.c:366
 msgid "<b>Title:</b>"
-msgstr "<b>标题:</b>"
+msgstr "<b>标题：</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:373
 msgid "Enter the song title here."
-msgstr "在这里输入歌曲名称"
+msgstr "在这里输入歌曲标题。"
 
 #: ../thunar-plugin/audio-tags-page.c:380
 msgid "<b>Album:</b>"
-msgstr "<b>专辑名:</b>"
+msgstr "<b>专辑名：</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:387
 msgid "Enter the album/record title here."
-msgstr "在这里输入专辑/唱片标题"
+msgstr "在这里输入专辑/唱片标题。"
 
 #: ../thunar-plugin/audio-tags-page.c:394
 msgid "<b>Comment:</b>"
-msgstr "<b>注释:</b>"
+msgstr "<b>注释：</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:401
 msgid "Enter your comments here."
-msgstr "在这里输入您的注释"
+msgstr "在此输入您的注释。"
 
 #: ../thunar-plugin/audio-tags-page.c:408
 msgid "<b>Genre:</b>"
-msgstr "<b>流派:</b>"
+msgstr "<b>流派：</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:415
 msgid "Select or enter the genre of this song here."
-msgstr "在这里输入歌曲流派"
+msgstr "在此选择或输入歌曲流派。"
 
 #. Create and add the save action
 #: ../thunar-plugin/audio-tags-page.c:454
@@ -167,7 +169,7 @@ msgstr "信息(_I)"
 
 #: ../thunar-plugin/audio-tags-page.c:461
 msgid "Display more detailed information about this audio file."
-msgstr "显示这个音频文件的详细信息"
+msgstr "显示此音频文件的相关详细信息。"
 
 #: ../thunar-plugin/audio-tags-page.c:528
 msgid "Audio"
@@ -176,7 +178,7 @@ msgstr "音频"
 #. Set up the dialog
 #: ../thunar-plugin/audio-tags-page.c:564
 msgid "Edit Tags"
-msgstr "修改标签"
+msgstr "编辑标签"
 
 #. Create dialog
 #: ../thunar-plugin/audio-tags-page.c:992
@@ -200,28 +202,28 @@ msgstr "%d Hz"
 
 #: ../thunar-plugin/audio-tags-page.c:1025
 msgid "<b>Filename:</b>"
-msgstr "<b>文件名:</b>"
+msgstr "<b>文件名：</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:1038
 msgid "<b>Filesize:</b>"
-msgstr "<b>文件大小:</b>"
+msgstr "<b>文件大小：</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:1051
 msgid "<b>MIME Type:</b>"
-msgstr "<b>MIME 类型:</b>"
+msgstr "<b>MIME 类型：</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:1064
 msgid "<b>Bitrate:</b>"
-msgstr "<b>比特率:</b>"
+msgstr "<b>比特率：</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:1077
 msgid "<b>Samplerate:</b>"
-msgstr "<b>采样率:</b>"
+msgstr "<b>采样率：</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:1090
 msgid "<b>Channels:</b>"
-msgstr "<b>声道:</b>"
+msgstr "<b>声道：</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:1103
 msgid "<b>Length:</b>"
-msgstr "<b>长度:</b>"
+msgstr "<b>长度：</b>"
