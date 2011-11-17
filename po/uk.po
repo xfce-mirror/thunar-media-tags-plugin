@@ -2,7 +2,7 @@
 # Copyright (C) 2006-2007 Jannis Pohlmann <jannis@xfce.org>
 # This file is distributed under the same license as the thunar-media-tags-plugin package.
 # Dmitry Nikitin <luckas_fb@mail.ru>, 2007.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: thunar-media-tags-plugin 0.1.2svn\n"
@@ -14,8 +14,9 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: uk\n"
 "X-Generator: KBabel 1.11.4\n"
-"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #: ../thunar-plugin/tag-renamer.c:59
 msgid "Title"
@@ -58,7 +59,9 @@ msgstr "_Підкреслення"
 msgid ""
 "Activating this option will replace all spaces in the target filename with "
 "underscores."
-msgstr "Активуйте цю опцію для заміни всіх пробілів в назві файлу символами нижнього підкреслення."
+msgstr ""
+"Активуйте цю опцію для заміни всіх пробілів в назві файлу символами нижнього "
+"підкреслення."
 
 #: ../thunar-plugin/tag-renamer.c:253
 msgid "_Lowercase"
@@ -69,8 +72,8 @@ msgid ""
 "If you activate this, the resulting filename will only contain lowercase "
 "letters."
 msgstr ""
-"Якщо Ви активуєте це, то в результаті ім'я файлу буде приведене до нижнього регістру "
-"букв."
+"Якщо Ви активуєте це, то в результаті ім'я файлу буде приведене до нижнього "
+"регістру букв."
 
 #: ../thunar-plugin/tag-renamer.c:264 ../thunar-plugin/tag-renamer.c:702
 #: ../thunar-plugin/audio-tags-page.c:183
@@ -113,7 +116,7 @@ msgstr "<b>Рік:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:343
 msgid "Enter the release year here."
-msgstr "Введіть тут Рік випуску."
+msgstr "Введіть тут рік випуску."
 
 #: ../thunar-plugin/audio-tags-page.c:351
 msgid "<b>Artist:</b>"
@@ -121,7 +124,7 @@ msgstr "<b>Артист:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:358
 msgid "Enter the name of the artist or author of this file here."
-msgstr "Введіть тут ім'я Артиста чи автора цього файлу."
+msgstr "Введіть тут ім'я артиста чи автора цього файлу."
 
 #: ../thunar-plugin/audio-tags-page.c:366
 msgid "<b>Title:</b>"
@@ -129,7 +132,7 @@ msgstr "<b>Назва:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:373
 msgid "Enter the song title here."
-msgstr "Введіть тут Назву пісні."
+msgstr "Введіть тут назву пісні."
 
 #: ../thunar-plugin/audio-tags-page.c:380
 msgid "<b>Album:</b>"
@@ -137,15 +140,15 @@ msgstr "<b>Альбом:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:387
 msgid "Enter the album/record title here."
-msgstr "Введіть тут назву Альбому/запису."
+msgstr "Введіть тут назву альбому/запису."
 
 #: ../thunar-plugin/audio-tags-page.c:394
 msgid "<b>Comment:</b>"
-msgstr "<b>Коментарі:</b>"
+msgstr "<b>Коментар:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:401
 msgid "Enter your comments here."
-msgstr "Введіть тут ваші Коментарі."
+msgstr "Введіть тут Ваші коментарі."
 
 #: ../thunar-plugin/audio-tags-page.c:408
 msgid "<b>Genre:</b>"
@@ -153,7 +156,7 @@ msgstr "<b>Напрямок музики:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:415
 msgid "Select or enter the genre of this song here."
-msgstr "Виберіть чи введіть тут Напрямок музики цієї пісні."
+msgstr "Виберіть чи введіть тут напрямок музики цієї пісні."
 
 #. Create and add the save action
 #: ../thunar-plugin/audio-tags-page.c:454
@@ -204,11 +207,11 @@ msgstr "%d Гц"
 
 #: ../thunar-plugin/audio-tags-page.c:1025
 msgid "<b>Filename:</b>"
-msgstr "<b>Ім'я Файлу:</b>"
+msgstr "<b>Ім'я файлу:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:1038
 msgid "<b>Filesize:</b>"
-msgstr "<b>Розмір:</b>"
+msgstr "<b>Розмір файлу:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:1051
 msgid "<b>MIME Type:</b>"
@@ -220,7 +223,7 @@ msgstr "<b>Бітрейт:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:1077
 msgid "<b>Samplerate:</b>"
-msgstr "<b>Кількість семплів:</b>"
+msgstr "<b>Частота дискретизації:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:1090
 msgid "<b>Channels:</b>"
@@ -229,4 +232,3 @@ msgstr "<b>Каналів:</b>"
 #: ../thunar-plugin/audio-tags-page.c:1103
 msgid "<b>Length:</b>"
 msgstr "<b>Тривалість:</b>"
-
