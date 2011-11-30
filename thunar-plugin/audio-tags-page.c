@@ -2,19 +2,19 @@
 /*-
  * Copyright (c) 2006 Jannis Pohlmann <jannis@xfce.org>
  *
- * This program is free software; you can redistribute it and/or 
- * modify it under the terms of the GNU General Public License as 
- * published by the Free Software Foundation; either version 2 of the 
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License as
+ * published by the Free Software Foundation; either version 2 of the
  * License, or (at your option) any later version.
  *
- * This program is distributed in the hope that it will be useful, but 
- * WITHOUT ANY WARRANTY; without even the implied warranty of 
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU 
+ * This program is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
  * General Public License for more details.
  *
- * You should have received a copy of the GNU General Public License 
- * along with this program; if not, write to the Free Software 
- * Foundation, Inc., 59 Temple Place, Suite 330, Boston, 
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 59 Temple Place, Suite 330, Boston,
  * MA 02111-1307 USA.
  */
 
@@ -38,7 +38,7 @@
 
 
 /* Property identifiers */
-enum 
+enum
 {
   PROP_0,
   PROP_FILE,
@@ -73,7 +73,7 @@ static void     audio_tags_page_taglib_file_changed (TagLib_File        *taglib_
 static gboolean audio_tags_page_activate            (AudioTagsPage      *page);
 static gboolean audio_tags_page_info_activate       (GtkAction          *action,
                                                      AudioTagsPage      *page);
-static gboolean audio_tags_page_load_tags           (AudioTagsPage      *page);
+static gboolean audio_tags_page_load_tags           (gpointer            data);
 
 
 
@@ -94,7 +94,7 @@ struct _AudioTagsPage
   GtkWidget       *info_button;
 
   /* Timeouts */
-  guint            changed_timeout;
+  guint            changed_idle;
 
   /* Properties */
   ThunarxFileInfo *file;
@@ -109,6 +109,9 @@ struct _AudioTagsPage
 
   /* <private> */
   GtkActionGroup  *action_group;
+
+  /* garbage collector of files */
+  GSList           *files_gc;
 };
 
 
@@ -167,7 +170,7 @@ audio_tags_page_class_init (AudioTagsPageClass *klass)
                                                         999,
                                                         1,
                                                         G_PARAM_READWRITE));
-  
+
   /**
    * TagRenamerPropertiesPage:artist:
    *
@@ -247,7 +250,7 @@ audio_tags_page_class_init (AudioTagsPageClass *klass)
                                                         9999,
                                                         2006,
                                                         G_PARAM_READWRITE));
-  
+
   /**
    * TagRenamerPropertiesPage:show-save-button:
    *
@@ -315,7 +318,7 @@ audio_tags_page_init (AudioTagsPage *page)
   gtk_container_add (GTK_CONTAINER (alignment), spin);
   gtk_label_set_mnemonic_widget (GTK_LABEL (label), spin);
   gtk_widget_show (spin);
-  
+
   /* Year label */
   label = gtk_label_new ("");
   gtk_misc_set_alignment (GTK_MISC (label), 1.0f, 0.5f);
@@ -338,7 +341,7 @@ audio_tags_page_init (AudioTagsPage *page)
   gtk_container_add (GTK_CONTAINER (alignment), spin);
   gtk_label_set_mnemonic_widget (GTK_LABEL (label), spin);
   gtk_widget_show (spin);
-  
+
   /* Artist label */
   label = gtk_label_new ("");
   gtk_misc_set_alignment (GTK_MISC (label), 1.0f, 0.5f);
@@ -353,7 +356,7 @@ audio_tags_page_init (AudioTagsPage *page)
   gtk_table_attach (GTK_TABLE (page->table), entry, 1, 4, 1, 2, GTK_EXPAND | GTK_FILL, 0, 0, 0);
   gtk_label_set_mnemonic_widget (GTK_LABEL (label), entry);
   gtk_widget_show (entry);
-  
+
   /* Title label */
   label = gtk_label_new ("");
   gtk_misc_set_alignment (GTK_MISC (label), 1.0f, 0.5f);
@@ -381,7 +384,7 @@ audio_tags_page_init (AudioTagsPage *page)
   gtk_widget_set_tooltip_text (GTK_WIDGET (entry), _("Enter the album/record title here."));
   gtk_table_attach (GTK_TABLE (page->table), entry, 1, 4, 3, 4, GTK_EXPAND | GTK_FILL, 0, 0, 0);
   gtk_widget_show (entry);
-  
+
   /* Comment label */
   label = gtk_label_new ("");
   gtk_misc_set_alignment (GTK_MISC (label), 1.0f, 0.5f);
@@ -438,7 +441,7 @@ audio_tags_page_init (AudioTagsPage *page)
     "Techno", "Techno-Industrial", "Terror", "Thrash Metal", "Top 40", "Trailer",
   };
 
-  for (i=0; i<G_N_ELEMENTS (genres); i++) 
+  for (i=0; i<G_N_ELEMENTS (genres); i++)
     gtk_combo_box_append_text (GTK_COMBO_BOX (combo), genres[i]);
 
   /* Create action group for the page */
@@ -447,7 +450,7 @@ audio_tags_page_init (AudioTagsPage *page)
   /* Create and add the save action */
   action = gtk_action_new ("save", _("_Save"), _("Save audio tags."), GTK_STOCK_SAVE);
   gtk_action_group_add_action (page->action_group, action);
-  
+
   /* Connect to save action */
   g_signal_connect_swapped (G_OBJECT (action), "activate", G_CALLBACK (audio_tags_page_activate), page);
 
@@ -462,7 +465,7 @@ audio_tags_page_init (AudioTagsPage *page)
 
   /* Connect to the info action */
   g_signal_connect (G_OBJECT (action), "activate", G_CALLBACK (audio_tags_page_info_activate), page);
-  
+
   /* Reset the save button */
   audio_tags_page_set_show_save_button (page, FALSE);
 }
@@ -475,20 +478,24 @@ audio_tags_page_finalize (GObject *object)
   AudioTagsPage *page = AUDIO_TAGS_PAGE (object);
 
   /* Destroy action group */
-  if (G_LIKELY (page->action_group != NULL)) 
+  if (G_LIKELY (page->action_group != NULL))
     g_object_unref (G_OBJECT (page->action_group));
 
   /* TODO Do I need to free the actions explicitely? */
 
-  /* Unregister the changed_timeout */
-  if (G_UNLIKELY (page->changed_timeout != 0))
-    g_source_remove (page->changed_timeout);
-  
+  /* Unregister the changed_idle */
+  if (G_UNLIKELY (page->changed_idle != 0))
+    g_source_remove (page->changed_idle);
+
   /* Free file reference */
   audio_tags_page_set_file (page, NULL);
 
   /* Free taglib file reference */
   audio_tags_page_set_taglib_file (page, NULL);
+
+  /* Cleanup garbage */
+  g_slist_foreach (page->files_gc, (GFunc) taglib_file_free, NULL);
+  g_slist_free (page->files_gc);
 
   /* Free strings */
   if (G_LIKELY (page->artist != NULL))
@@ -527,7 +534,7 @@ AudioTagsPage*
 audio_tags_page_new_with_save_button (void)
 {
   AudioTagsPage *page = audio_tags_page_new ();
-  
+
   /* Add save button */
   audio_tags_page_set_show_save_button (page, TRUE);
 
@@ -537,7 +544,7 @@ audio_tags_page_new_with_save_button (void)
 
 
 GtkWidget*
-audio_tags_page_dialog_new (GtkWindow *window, 
+audio_tags_page_dialog_new (GtkWindow *window,
                             ThunarxFileInfo *file)
 {
   GtkWidget     *dialog;
@@ -550,12 +557,12 @@ audio_tags_page_dialog_new (GtkWindow *window,
 
   /* Set audio file */
   audio_tags_page_set_file (page, file);
-  
+
   /* Set up the dialog */
   dialog = gtk_dialog_new_with_buttons (_("Edit Tags"),
                                         window,
                                         GTK_DIALOG_MODAL | GTK_DIALOG_DESTROY_WITH_PARENT,
-                                        GTK_STOCK_CANCEL, 
+                                        GTK_STOCK_CANCEL,
                                         GTK_RESPONSE_CANCEL,
                                         NULL);
 
@@ -565,7 +572,7 @@ audio_tags_page_dialog_new (GtkWindow *window,
   /* Add page to the dialog */
   gtk_container_add (GTK_CONTAINER (GTK_DIALOG (dialog)->vbox), GTK_WIDGET (page));
   gtk_widget_show (GTK_WIDGET (page));
-  
+
   /* Create save button */
   button = gtk_button_new_from_stock (GTK_STOCK_SAVE);
 
@@ -622,7 +629,7 @@ audio_tags_page_get_property (GObject    *object,
     case PROP_GENRE:
       g_value_set_string (value, page->genre);
       break;
-      
+
     case PROP_YEAR:
       g_value_set_double (value, page->year);
       break;
@@ -656,7 +663,7 @@ audio_tags_page_set_property (GObject      *object,
     case PROP_TAGLIB_FILE:
       audio_tags_page_set_taglib_file (page, g_value_get_pointer (value));
       break;
-      
+
     case PROP_TRACK:
       page->track = g_value_get_double (value);
       break;
@@ -672,25 +679,25 @@ audio_tags_page_set_property (GObject      *object,
         g_free (page->title);
       page->title = g_strstrip (g_strdup (g_value_get_string (value)));
       break;
-      
+
     case PROP_ALBUM:
       if (G_LIKELY (page->album != NULL))
         g_free (page->album);
       page->album = g_strstrip (g_strdup (g_value_get_string (value)));
       break;
-      
+
     case PROP_COMMENT:
       if (G_LIKELY (page->comment != NULL))
         g_free (page->comment);
       page->comment = g_strstrip (g_strdup (g_value_get_string (value)));
       break;
-      
+
     case PROP_GENRE:
       if (G_LIKELY (page->genre != NULL))
         g_free (page->genre);
       page->genre = g_strstrip (g_strdup (g_value_get_string (value)));
       break;
-      
+
     case PROP_YEAR:
       page->year = g_value_get_double (value);
       break;
@@ -711,7 +718,7 @@ audio_tags_page_set_property (GObject      *object,
  * audio_tags_page_get_file:
  * @page : a #AudioTagsPage.
  *
- * Returns the current #ThunarxFileInfo 
+ * Returns the current #ThunarxFileInfo
  * for the @page.
  *
  * Return value: the file associated with this property page.
@@ -729,7 +736,7 @@ audio_tags_page_get_file (AudioTagsPage *page)
  * audio_tags_page_set_file:
  * @page : a #AudioTagsPage.
  * @file : a #ThunarxFileInfo
- * 
+ *
  * Sets the #ThunarxFileInfo for this @page.
  **/
 void
@@ -758,9 +765,9 @@ audio_tags_page_set_file (AudioTagsPage   *page,
     {
       /* Take a reference on the info file */
       g_object_ref (G_OBJECT (page->file));
-      
+
       audio_tags_page_file_changed (file, page);
-      
+
       g_signal_connect (G_OBJECT (file), "changed", G_CALLBACK (audio_tags_page_file_changed), page);
     }
 }
@@ -771,7 +778,7 @@ audio_tags_page_set_file (AudioTagsPage   *page,
  * audio_tags_page_get_taglib_file:
  * @page : a #AudioTagsPage.
  *
- * Returns the current #TagLib_File 
+ * Returns the current #TagLib_File
  * for the @page.
  *
  * Return value: the taglib file associated with this property page.
@@ -789,7 +796,7 @@ audio_tags_page_get_taglib_file (AudioTagsPage *page)
  * audio_tags_page_set_taglib_file:
  * @page : a #AudioTagsPage.
  * @file : a #TagLib_File
- * 
+ *
  * Sets the #TagLib_File for this @page.
  **/
 void
@@ -802,9 +809,10 @@ audio_tags_page_set_taglib_file (AudioTagsPage   *page,
   if (G_UNLIKELY (page->taglib_file == taglib_file))
     return;
 
-  /* Destroy the current object */
+  /* Freeing a file triggers a reload (taglib does that),
+   * so put it in the garbage collector */
   if (G_LIKELY (page->taglib_file != NULL))
-      taglib_file_free (page->taglib_file);
+    page->files_gc = g_slist_prepend (page->files_gc, page->taglib_file);
 
   /* Assign the value */
   page->taglib_file = taglib_file;
@@ -824,15 +832,8 @@ audio_tags_page_file_changed (ThunarxFileInfo *file,
   g_return_if_fail (IS_AUDIO_TAGS_PAGE (page));
   g_return_if_fail (page->file == file);
 
-  /* Temporarily reset the file attribute */
-  page->file = NULL;
-
-  /* Load tag information after 250 ms */
-  if (page->changed_timeout <= 0)
-      page->changed_timeout = g_timeout_add_full (G_PRIORITY_DEFAULT_IDLE, 250, (GSourceFunc)audio_tags_page_load_tags, page, NULL);
-
-  /* Reset the file attribute */
-  page->file = file;
+  if (page->changed_idle == 0)
+      page->changed_idle = g_idle_add (audio_tags_page_load_tags, page);
 }
 
 
@@ -881,20 +882,20 @@ audio_tags_page_taglib_file_changed (TagLib_File   *taglib_file,
         year = 2006;
 
       /* Set page properties in order to sync with display */
-      g_object_set (G_OBJECT (page), 
-                    "track", (gdouble)track, 
-                    "year", (gdouble)year, 
-                    "artist", artist, 
+      g_object_set (G_OBJECT (page),
+                    "track", (gdouble)track,
+                    "year", (gdouble)year,
+                    "artist", artist,
                     "title", title,
                     "album", album,
                     "comment", comment,
                     "genre", genre,
                     NULL);
-      
+
       /* Free allocated strings */
       taglib_tag_free_strings ();
     }
-  
+
   /* Make page sensitive again */
   gtk_widget_set_sensitive (GTK_WIDGET (page), TRUE);
 }
@@ -905,7 +906,7 @@ static gboolean
 audio_tags_page_activate (AudioTagsPage *page)
 {
   TagLib_Tag *tag;
-    
+
   g_return_val_if_fail (page != NULL || IS_AUDIO_TAGS_PAGE (page), FALSE);
   g_return_val_if_fail (page->file != NULL || THUNARX_IS_FILE_INFO (page->file), FALSE);
   g_return_val_if_fail (page->taglib_file != NULL, FALSE);
@@ -926,7 +927,7 @@ audio_tags_page_activate (AudioTagsPage *page)
         {
           /* Make page insensitive */
           gtk_widget_set_sensitive (GTK_WIDGET (page), FALSE);
-          
+
           /* Store values */
           taglib_tag_set_track (tag, page->track);
           taglib_tag_set_year (tag, page->year);
@@ -943,14 +944,14 @@ audio_tags_page_activate (AudioTagsPage *page)
       /* Free tag strings */
       taglib_tag_free_strings ();
     }
-  
+
   return FALSE;
 }
 
 
 
 static gboolean
-audio_tags_page_info_activate (GtkAction *action, 
+audio_tags_page_info_activate (GtkAction *action,
                                AudioTagsPage *page)
 {
   const TagLib_AudioProperties *properties;
@@ -971,7 +972,7 @@ audio_tags_page_info_activate (GtkAction *action,
   GFileInfo     *fileinfo;
   const char    *filename;
   gchar         *filesize;
-  
+
   g_return_val_if_fail (page != NULL || IS_AUDIO_TAGS_PAGE (page), FALSE);
   g_return_val_if_fail (page->file != NULL || THUNARX_IS_FILE_INFO (page->file), FALSE);
   g_return_val_if_fail (page->taglib_file != NULL, FALSE);
@@ -995,7 +996,7 @@ audio_tags_page_info_activate (GtkAction *action,
   bitrate = g_strdup_printf (_("%d KBit/s"), taglib_audioproperties_bitrate (properties));
   samplerate = g_strdup_printf (_("%d Hz"), taglib_audioproperties_samplerate (properties));
   channels = g_strdup_printf ("%d", taglib_audioproperties_channels (properties));
-  
+
   /* Additional information */
   mimetype = thunarx_file_info_get_mime_type (page->file);
   fileinfo = thunarx_file_info_get_file_info (page->file);
@@ -1117,18 +1118,19 @@ audio_tags_page_info_activate (GtkAction *action,
   g_free (mimetype);
 
   g_object_unref (fileinfo);
-  
+
   return TRUE;
 }
 
 
 
 static gboolean
-audio_tags_page_load_tags (AudioTagsPage *page)
+audio_tags_page_load_tags (gpointer data)
 {
-  TagLib_File *taglib_file;
-  gchar       *uri;
-  gchar       *filename;
+  AudioTagsPage *page = AUDIO_TAGS_PAGE (data);
+  TagLib_File   *taglib_file;
+  gchar         *uri;
+  gchar         *filename;
 
   g_return_val_if_fail (page != NULL || IS_AUDIO_TAGS_PAGE (page), FALSE);
   g_return_val_if_fail (page->file != NULL || THUNARX_IS_FILE_INFO (page->file), FALSE);
@@ -1149,7 +1151,7 @@ audio_tags_page_load_tags (AudioTagsPage *page)
   g_free (uri);
 
   /* Reset timeout */
-  page->changed_timeout = 0;
+  page->changed_idle = 0;
 
   return FALSE;
 }
@@ -1177,7 +1179,7 @@ audio_tags_page_get_show_save_button (AudioTagsPage *page)
  * audio_tags_page_set_show_save_button:
  * @page : a #AudioTagsPage.
  * @show : a #gboolean flag.
- * 
+ *
  * Creates a save button on the page or removes it.
  **/
 void
@@ -1185,7 +1187,7 @@ audio_tags_page_set_show_save_button (AudioTagsPage   *page,
                                       gboolean         show)
 {
   GtkAction *action;
-  
+
   g_return_if_fail (IS_AUDIO_TAGS_PAGE (page));
   g_return_if_fail (page->table != NULL || GTK_IS_TABLE (page->table));
   g_return_if_fail (page->action_group != NULL || GTK_IS_ACTION_GROUP (page->action_group));
