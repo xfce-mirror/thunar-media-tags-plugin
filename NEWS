@@ -1,0 +1,8 @@
+0.2.0
+=====
+- Use thunarx-2 and exo-1 API.
+- Call taglib_file_is_valid() for input audio files.
+- Fix Gtk Warning of non-zero page size.
+- Fix 1 second reloading.
+- Fix a bunch of compiler warnings and build files.
+- Way too many translation updates.
