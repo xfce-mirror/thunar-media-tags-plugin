@@ -306,7 +306,7 @@ audio_tags_page_init (AudioTagsPage *page)
   gtk_widget_show (alignment);
 
   /* Track adjustment */
-  adjustment = gtk_adjustment_new (0, 0, 999, 1, 5, 10);
+  adjustment = gtk_adjustment_new (0, 0, 999, 1, 5, 0);
 
   /* Track spin button */
   spin = gtk_spin_button_new (GTK_ADJUSTMENT (adjustment), 0.0, 0);
@@ -329,7 +329,7 @@ audio_tags_page_init (AudioTagsPage *page)
   gtk_widget_show (alignment);
 
   /* Year spin button range description */
-  adjustment = gtk_adjustment_new (2006, 1700, 9999, 1, 10, 100);
+  adjustment = gtk_adjustment_new (2006, 1700, 9999, 1, 10, 0);
 
   /* Year spin button */
   spin = gtk_spin_button_new (GTK_ADJUSTMENT (adjustment), 1, 0);
