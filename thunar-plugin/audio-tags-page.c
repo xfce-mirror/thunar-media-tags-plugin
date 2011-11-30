@@ -55,8 +55,6 @@ enum
 
 
 
-static void     audio_tags_page_class_init          (AudioTagsPageClass *klass);
-static void     audio_tags_page_init                (AudioTagsPage      *page);
 static void     audio_tags_page_finalize            (GObject            *object);
 static void     audio_tags_page_get_property        (GObject            *object,
                                                      guint               prop_id,
@@ -279,7 +277,35 @@ audio_tags_page_init (AudioTagsPage *page)
   GtkWidget *spin;
   GtkWidget *toplevel;
   GtkAction *action;
-  int i;
+  guint      i;
+
+  /* Default genre list */
+  static const gchar *genres[] = {
+    "A Cappella", "Acid", "Acid Jazz", "Acid Punk", "Acoustic", "Alt. Rock",
+    "Alternative", "Ambient", "Anime", "Avantgarde", "Ballad", "Bass",
+    "Beat", "Bebob", "Big Band", "Black Metal", "Bluegrass", "Blues",
+    "Booty Bass", "BritPop", "Cabaret", "Celtic", "Chamber music", "Chanson",
+    "Chorus", "Christian Gangsta Rap", "Christian Rap", "Christian Rock", "Classic Rock", "Classical",
+    "Club", "Club-House", "Comedy", "Contemporary Christian", "Country", "Crossover",
+    "Cult", "Dance", "Dance Hall", "Darkwave", "Death Metal", "Disco",
+    "Dream", "Drum & Bass", "Drum Solo", "Duet", "Easy Listening", "Electronic",
+    "Ethnic", "Euro-House", "Euro-Techno", "Eurodance", "Fast Fusion", "Folk",
+    "Folk-Rock", "Folklore", "Freestyle", "Funk", "Fusion", "Game",
+    "Gangsta", "Goa", "Gospel", "Gothic", "Gothic Rock", "Grunge",
+    "Hard Rock", "Hardcore", "Heavy Metal", "Hip-Hop", "House", "Humour",
+    "Indie", "Industrial", "Instrumental", "Instrumental pop", "Instrumental rock", "JPop",
+    "Jazz", "Jazz+Funk", "Jungle", "Latin", "Lo-Fi", "Meditative",
+    "Merengue", "Metal", "Musical", "National Folk", "Native American", "Negerpunk",
+    "New Age", "New Wave", "Noise", "Oldies", "Opera", "Other",
+    "Polka", "Polsk Punk", "Pop", "Pop-Folk", "Pop/Funk", "Porn Groove",
+    "Power Ballad", "Pranks", "Primus", "Progressive Rock", "Psychedelic", "Psychedelic Rock",
+    "Punk", "Punk Rock", "R&B", "Rap", "Rave", "Reggae",
+    "Retro", "Revival", "Rhythmic soul", "Rock", "Rock & Roll", "Salsa",
+    "Samba", "Satire", "Showtunes", "Ska", "Slow Jam", "Slow Rock",
+    "Sonata", "Soul", "Sound Clip", "Soundtrack", "Southern Rock", "Space",
+    "Speech", "Swing", "Symphonic Rock", "Symphony", "Synthpop", "Tango",
+    "Techno", "Techno-Industrial", "Terror", "Thrash Metal", "Top 40", "Trailer",
+  };
 
   gtk_container_set_border_width (GTK_CONTAINER (page), 8);
 
@@ -412,34 +438,6 @@ audio_tags_page_init (AudioTagsPage *page)
   gtk_widget_set_tooltip_text (GTK_WIDGET (combo), _("Select or enter the genre of this song here."));
   gtk_table_attach (GTK_TABLE (page->table), combo, 1, 4, 5, 6, GTK_FILL, 0, 0, 0);
   gtk_widget_show (combo);
-
-  /* Default genre list */
-  static const gchar *genres[] = {
-    "A Cappella", "Acid", "Acid Jazz", "Acid Punk", "Acoustic", "Alt. Rock",
-    "Alternative", "Ambient", "Anime", "Avantgarde", "Ballad", "Bass",
-    "Beat", "Bebob", "Big Band", "Black Metal", "Bluegrass", "Blues",
-    "Booty Bass", "BritPop", "Cabaret", "Celtic", "Chamber music", "Chanson",
-    "Chorus", "Christian Gangsta Rap", "Christian Rap", "Christian Rock", "Classic Rock", "Classical",
-    "Club", "Club-House", "Comedy", "Contemporary Christian", "Country", "Crossover",
-    "Cult", "Dance", "Dance Hall", "Darkwave", "Death Metal", "Disco",
-    "Dream", "Drum & Bass", "Drum Solo", "Duet", "Easy Listening", "Electronic",
-    "Ethnic", "Euro-House", "Euro-Techno", "Eurodance", "Fast Fusion", "Folk",
-    "Folk-Rock", "Folklore", "Freestyle", "Funk", "Fusion", "Game",
-    "Gangsta", "Goa", "Gospel", "Gothic", "Gothic Rock", "Grunge",
-    "Hard Rock", "Hardcore", "Heavy Metal", "Hip-Hop", "House", "Humour",
-    "Indie", "Industrial", "Instrumental", "Instrumental pop", "Instrumental rock", "JPop",
-    "Jazz", "Jazz+Funk", "Jungle", "Latin", "Lo-Fi", "Meditative",
-    "Merengue", "Metal", "Musical", "National Folk", "Native American", "Negerpunk",
-    "New Age", "New Wave", "Noise", "Oldies", "Opera", "Other",
-    "Polka", "Polsk Punk", "Pop", "Pop-Folk", "Pop/Funk", "Porn Groove",
-    "Power Ballad", "Pranks", "Primus", "Progressive Rock", "Psychedelic", "Psychedelic Rock",
-    "Punk", "Punk Rock", "R&B", "Rap", "Rave", "Reggae",
-    "Retro", "Revival", "Rhythmic soul", "Rock", "Rock & Roll", "Salsa",
-    "Samba", "Satire", "Showtunes", "Ska", "Slow Jam", "Slow Rock",
-    "Sonata", "Soul", "Sound Clip", "Soundtrack", "Southern Rock", "Space",
-    "Speech", "Swing", "Symphonic Rock", "Symphony", "Synthpop", "Tango",
-    "Techno", "Techno-Industrial", "Terror", "Thrash Metal", "Top 40", "Trailer",
-  };
 
   for (i=0; i<G_N_ELEMENTS (genres); i++)
     gtk_combo_box_append_text (GTK_COMBO_BOX (combo), genres[i]);

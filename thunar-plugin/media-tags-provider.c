@@ -31,9 +31,7 @@
 
 
 
-static void   media_tags_provider_class_init                    (MediaTagsProviderClass           *klass);
 static void   media_tags_provider_tag_renamer_provider_init     (ThunarxRenamerProviderIface      *iface);
-static void   media_tags_provider_init                          (MediaTagsProvider                *sbr_provider);
 static GList *media_tags_provider_get_renamers                  (ThunarxRenamerProvider           *renamer_provider);
 static void   media_tags_provider_audio_tags_page_provider_init (ThunarxPropertyPageProviderIface *iface);
 static GList *media_tags_provider_get_pages                     (ThunarxPropertyPageProvider      *renamer_provider,

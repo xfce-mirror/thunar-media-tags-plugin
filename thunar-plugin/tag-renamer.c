@@ -94,8 +94,6 @@ enum
 
 
 
-static void      tag_renamer_class_init            (TagRenamerClass *klass);
-static void      tag_renamer_init                  (TagRenamer      *tag_renamer);
 static void      tag_renamer_finalize              (GObject         *object);
 static void      tag_renamer_get_property          (GObject         *object,
                                                     guint            prop_id,
@@ -233,7 +231,7 @@ tag_renamer_init (TagRenamer *tag_renamer)
   GtkListStore    *store;
   GtkCellRenderer *cell;
   GtkTreeIter      iter;
-  gint             n;
+  guint            n;
 
   table = gtk_table_new (2, 4, FALSE);
   gtk_table_set_row_spacings (GTK_TABLE (table), 6);
@@ -556,7 +554,7 @@ static gchar*
 tag_renamer_process (ThunarxRenamer  *renamer,
                      ThunarxFileInfo *file,
                      const gchar     *text,
-                     guint            index)
+                     guint            idx)
 {
   TagRenamer  *tag_renamer = TAG_RENAMER (renamer);
   const gchar *format;
