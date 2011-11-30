@@ -415,15 +415,14 @@ tag_renamer_process_format (TagRenamer      *tag_renamer,
                             ThunarxFileInfo *file,
                             const gchar     *format)
 {
-  TagLib_File                  *taglib_file;
-  TagLib_Tag                   *taglib_tag;
-  const TagLib_AudioProperties *taglib_properties;
-  const gchar                  *value;
-  guint                         integer;
-  gchar                        *uri, *filename;
-  gchar                        *string, *tmp;
-  GString                      *result;
-  const gchar                  *p;
+  TagLib_File *taglib_file;
+  TagLib_Tag  *taglib_tag;
+  const gchar *value;
+  guint        integer;
+  gchar       *uri, *filename;
+  gchar       *string, *tmp;
+  GString     *result;
+  const gchar *p;
 
   /* Get the file uri, return on fail */
   uri = thunarx_file_info_get_uri (file);
@@ -449,9 +448,6 @@ tag_renamer_process_format (TagRenamer      *tag_renamer,
       taglib_file_free (taglib_file);
       return NULL;
     }
-
-  /* Load tag properties */
-  taglib_properties = taglib_file_audioproperties (taglib_file);
 
   /* Create string with some size */
   result = g_string_sized_new (512);

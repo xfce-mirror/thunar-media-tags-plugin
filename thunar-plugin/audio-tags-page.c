@@ -1000,7 +1000,11 @@ audio_tags_page_info_activate (GtkAction *action,
   mimetype = thunarx_file_info_get_mime_type (page->file);
   fileinfo = thunarx_file_info_get_file_info (page->file);
   filename = g_file_info_get_display_name (fileinfo);
+#if GLIB_CHECK_VERSION (2, 30, 0)
+  filesize = g_format_size (g_file_info_get_size (fileinfo));
+#else
   filesize = g_format_size_for_display (g_file_info_get_size (fileinfo));
+#endif
 
   /* Create layout table */
   table = gtk_table_new (7, 2, FALSE);
