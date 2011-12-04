@@ -32,7 +32,7 @@ msgstr "Трек - Назва"
 
 #: ../thunar-plugin/tag-renamer.c:62
 msgid "Track - Artist - Title"
-msgstr "Трек - Артист - Назва"
+msgstr "Трек - Виконавець - Назва"
 
 #: ../thunar-plugin/tag-renamer.c:63
 msgid "Track. Title"
@@ -40,11 +40,11 @@ msgstr "Трек. Назва"
 
 #: ../thunar-plugin/tag-renamer.c:64
 msgid "Track. Artist - Title"
-msgstr "Трек. Артист - Назва"
+msgstr "Трек. Виконавець - Назва"
 
 #: ../thunar-plugin/tag-renamer.c:65
 msgid "Artist - Track - Title"
-msgstr "Артист - Трек - Назва"
+msgstr "Виконавець - Трек - Назва"
 
 #: ../thunar-plugin/tag-renamer.c:67
 msgid "Custom"
@@ -86,7 +86,7 @@ msgstr ""
 
 #: ../thunar-plugin/tag-renamer.c:464 ../thunar-plugin/audio-tags-page.c:182
 msgid "Unknown Artist"
-msgstr "Невідомий Артист"
+msgstr "Невідомий Виконавець"
 
 #: ../thunar-plugin/tag-renamer.c:472 ../thunar-plugin/audio-tags-page.c:208
 msgid "Unknown Title"
@@ -159,7 +159,7 @@ msgstr "<b>Артист:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:381
 msgid "Enter the name of the artist or author of this file here."
-msgstr "Введіть тут ім'я артиста чи автора цього файлу."
+msgstr "Введіть тут ім'я виконавця чи автора цього файлу."
 
 #: ../thunar-plugin/audio-tags-page.c:389
 msgid "<b>Title:</b>"
