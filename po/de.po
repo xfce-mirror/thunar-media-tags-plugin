@@ -47,7 +47,6 @@ msgid "Artist - Track - Title"
 msgstr "Interpret - Stück - Titel"
 
 #: ../thunar-plugin/tag-renamer.c:67
-#, fuzzy
 msgid "Custom"
 msgstr "Benutzerdefiniert"
 
@@ -108,7 +107,6 @@ msgid "Artist"
 msgstr "Interpret"
 
 #: ../thunar-plugin/tag-renamer.c:658
-#, fuzzy
 msgid "Album"
 msgstr "Album"
 
@@ -123,12 +121,10 @@ msgid "Track number"
 msgstr "Titel Nummer"
 
 #: ../thunar-plugin/tag-renamer.c:659
-#, fuzzy
 msgid "Year"
 msgstr "Jahr"
 
 #: ../thunar-plugin/tag-renamer.c:660
-#, fuzzy
 msgid "Comment"
 msgstr "Kommentar"
 
