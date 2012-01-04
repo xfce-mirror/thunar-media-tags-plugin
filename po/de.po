@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: thunar-media-tags-plugin 0.1.2svn\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-01-04 09:18+0000\n"
+"POT-Creation-Date: 2012-01-04 15:24+0000\n"
 "PO-Revision-Date: 2007-12-01 18:38+0000\n"
 "Last-Translator: Fabian Nowak <timystery@arcor.de>\n"
 "Language-Team: German <xfce-i18n@xfce.org>\n"
@@ -104,9 +104,8 @@ msgid "Tag Help"
 msgstr "Tag Hilfe"
 
 #: ../thunar-plugin/tag-renamer.c:657
-#, fuzzy
 msgid "Artist"
-msgstr "Künstler"
+msgstr "Interpret"
 
 #: ../thunar-plugin/tag-renamer.c:658
 #, fuzzy
@@ -116,7 +115,7 @@ msgstr "Album"
 #: ../thunar-plugin/tag-renamer.c:658
 #, fuzzy
 msgid "Genre"
-msgstr "Musikrichtung"
+msgstr "Genre"
 
 #: ../thunar-plugin/tag-renamer.c:659
 #, fuzzy
