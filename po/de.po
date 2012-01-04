@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: thunar-media-tags-plugin 0.1.2svn\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-01-04 03:12+0000\n"
+"POT-Creation-Date: 2012-01-04 09:18+0000\n"
 "PO-Revision-Date: 2007-12-01 18:38+0000\n"
 "Last-Translator: Fabian Nowak <timystery@arcor.de>\n"
 "Language-Team: German <xfce-i18n@xfce.org>\n"
@@ -53,9 +53,8 @@ msgstr "Benutzerdefiniert"
 
 #. Custom format
 #: ../thunar-plugin/tag-renamer.c:243
-#, fuzzy
 msgid "Cust_om format:"
-msgstr "Benutzerdefiniertes _Format:"
+msgstr "Benutzerdefiniertes F_ormat:"
 
 #. Format label
 #: ../thunar-plugin/tag-renamer.c:271
@@ -188,7 +187,7 @@ msgstr "<b>Kommentar:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:424
 msgid "Enter your comments here."
-msgstr "Hier einen beliebigen Kommentar einfügen."
+msgstr "Hier beliebige Kommentare einfügen."
 
 #: ../thunar-plugin/audio-tags-page.c:431
 msgid "<b>Genre:</b>"
