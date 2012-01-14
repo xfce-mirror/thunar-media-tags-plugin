@@ -1,0 +1,268 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Algimantas Margevičius <margevicius.algimantas@gmail.com>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: media tags\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-01-14 16:18+0000\n"
+"PO-Revision-Date: 2012-01-14 19:01+0200\n"
+"Last-Translator: Algimantas Margevičius <margevicius.algimantas@gmail.com>\n"
+"Language-Team: Lietuvių <>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bits\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n"
+"%100<10 || n%100>=20) ? 1 : 2)\n"
+
+#: ../thunar-plugin/tag-renamer.c:59 ../thunar-plugin/tag-renamer.c:657
+msgid "Title"
+msgstr "Pavadinimas"
+
+#: ../thunar-plugin/tag-renamer.c:60
+msgid "Artist - Title"
+msgstr "Atlikėjas - Pavadinimas"
+
+#: ../thunar-plugin/tag-renamer.c:61
+msgid "Track - Title"
+msgstr "Takelis - Pavadinimas"
+
+#: ../thunar-plugin/tag-renamer.c:62
+msgid "Track - Artist - Title"
+msgstr "Takelis - Atlikėjas - Pavadinimas"
+
+#: ../thunar-plugin/tag-renamer.c:63
+msgid "Track. Title"
+msgstr "Takelis. Pavadinimas"
+
+#: ../thunar-plugin/tag-renamer.c:64
+msgid "Track. Artist - Title"
+msgstr "Takelis. Atlikėjas - Pavadinimas"
+
+#: ../thunar-plugin/tag-renamer.c:65
+msgid "Artist - Track - Title"
+msgstr "Atlikėjas - Takelis - Pavadinimas"
+
+#: ../thunar-plugin/tag-renamer.c:67
+msgid "Custom"
+msgstr "Pasirinkta"
+
+#. Custom format
+#: ../thunar-plugin/tag-renamer.c:243
+msgid "Cust_om format:"
+msgstr "_Pasirinktas formatas:"
+
+#. Format label
+#: ../thunar-plugin/tag-renamer.c:271
+msgid "_Format:"
+msgstr "_Formatas:"
+
+#: ../thunar-plugin/tag-renamer.c:312
+msgid "_Underscores"
+msgstr "_Brūkšniai apačioje"
+
+#: ../thunar-plugin/tag-renamer.c:314
+msgid ""
+"Activating this option will replace all spaces in the target filename with "
+"underscores."
+msgstr ""
+"Aktyvavus šią parinktį, paskirties failo varde visi tarpai bus pakeisti "
+"brūkšniu apačioje."
+
+#: ../thunar-plugin/tag-renamer.c:319
+msgid "_Lowercase"
+msgstr "_Mažosios raidės"
+
+#: ../thunar-plugin/tag-renamer.c:321
+msgid ""
+"If you activate this, the resulting filename will only contain lowercase "
+"letters."
+msgstr "Jei aktyvuosite, rezultate failo vardas turės tik mažąsias raides."
+
+#: ../thunar-plugin/tag-renamer.c:464 ../thunar-plugin/audio-tags-page.c:182
+msgid "Unknown Artist"
+msgstr "Nežinomas atlikėjas"
+
+#: ../thunar-plugin/tag-renamer.c:472 ../thunar-plugin/audio-tags-page.c:208
+msgid "Unknown Title"
+msgstr "Nežinomas pavadinimas"
+
+#. Edit tags action
+#: ../thunar-plugin/tag-renamer.c:627
+msgid "Edit _Tags"
+msgstr "Redaguoti ž_ymes"
+
+#: ../thunar-plugin/tag-renamer.c:627
+msgid "Edit ID3/OGG tags of this file."
+msgstr "Keisti šio failo ID3/OGG žymes."
+
+#: ../thunar-plugin/tag-renamer.c:646
+msgid "Tag Help"
+msgstr "Žymių žinynas"
+
+#: ../thunar-plugin/tag-renamer.c:657
+msgid "Artist"
+msgstr "Atlikėjas"
+
+#: ../thunar-plugin/tag-renamer.c:658
+msgid "Album"
+msgstr "Albumas"
+
+#: ../thunar-plugin/tag-renamer.c:658
+msgid "Genre"
+msgstr "Žanras"
+
+#: ../thunar-plugin/tag-renamer.c:659
+msgid "Track number"
+msgstr "Takelio numeris"
+
+#: ../thunar-plugin/tag-renamer.c:659
+msgid "Year"
+msgstr "Metai"
+
+#: ../thunar-plugin/tag-renamer.c:660
+msgid "Comment"
+msgstr "Komentaras"
+
+#: ../thunar-plugin/tag-renamer.c:717
+msgid "Audio Tags"
+msgstr "Audio žymės"
+
+#: ../thunar-plugin/audio-tags-page.c:195
+msgid "Unknown Album"
+msgstr "Nežinomas albumas"
+
+#: ../thunar-plugin/audio-tags-page.c:328
+msgid "<b>Track:</b>"
+msgstr "<b>Takelis:</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:343
+msgid "Enter the track number here."
+msgstr "Čia įveskite takelio numerį."
+
+#: ../thunar-plugin/audio-tags-page.c:351
+msgid "<b>Year:</b>"
+msgstr "<b>Metai:</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:366
+msgid "Enter the release year here."
+msgstr "Čia įveskite išleidimo metus."
+
+#: ../thunar-plugin/audio-tags-page.c:374
+msgid "<b>Artist:</b>"
+msgstr "<b>Atlikėjas:</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:381
+msgid "Enter the name of the artist or author of this file here."
+msgstr "Čia įveskite šio failo atlikėjo ar autoriaus vardą."
+
+#: ../thunar-plugin/audio-tags-page.c:389
+msgid "<b>Title:</b>"
+msgstr "<b>Pavadinimas:</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:396
+msgid "Enter the song title here."
+msgstr "Čia įveskite dainos pavadinimą."
+
+#: ../thunar-plugin/audio-tags-page.c:403
+msgid "<b>Album:</b>"
+msgstr "<b>Albumas:</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:410
+msgid "Enter the album/record title here."
+msgstr "Čia įveskite albumo/įrašo pavadinimą."
+
+#: ../thunar-plugin/audio-tags-page.c:417
+msgid "<b>Comment:</b>"
+msgstr "<b>Komentaras:</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:424
+msgid "Enter your comments here."
+msgstr "Čia įveskite savo komentarą."
+
+#: ../thunar-plugin/audio-tags-page.c:431
+msgid "<b>Genre:</b>"
+msgstr "<b>Žanras:</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:438
+msgid "Select or enter the genre of this song here."
+msgstr "Pasirinkite arba įveskite šios dainos žanrą."
+
+#. Create and add the save action
+#: ../thunar-plugin/audio-tags-page.c:449
+msgid "_Save"
+msgstr "Iš_saugoti"
+
+#: ../thunar-plugin/audio-tags-page.c:449
+msgid "Save audio tags."
+msgstr "Išsaugoti audio žymes."
+
+#. Create and add the info action
+#: ../thunar-plugin/audio-tags-page.c:456
+msgid "_Information"
+msgstr "_Informacija"
+
+#: ../thunar-plugin/audio-tags-page.c:456
+msgid "Display more detailed information about this audio file."
+msgstr "Rodyti išsamesnę informaciją apie šį audio failą."
+
+#: ../thunar-plugin/audio-tags-page.c:524
+msgid "Audio"
+msgstr "Audio"
+
+#. Set up the dialog
+#: ../thunar-plugin/audio-tags-page.c:560
+msgid "Edit Tags"
+msgstr "Redaguoti žymes"
+
+#. Create dialog
+#: ../thunar-plugin/audio-tags-page.c:982
+msgid "Audio Information"
+msgstr "Garso informacija"
+
+#: ../thunar-plugin/audio-tags-page.c:993
+#, c-format
+msgid "%d:%d Minutes"
+msgstr "%d:%d Minutės"
+
+#: ../thunar-plugin/audio-tags-page.c:994
+#, c-format
+msgid "%d KBit/s"
+msgstr "%d KBit/s"
+
+#: ../thunar-plugin/audio-tags-page.c:995
+#, c-format
+msgid "%d Hz"
+msgstr "%d Hz"
+
+#: ../thunar-plugin/audio-tags-page.c:1019
+msgid "<b>Filename:</b>"
+msgstr "<b>Failo vardas:</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:1032
+msgid "<b>Filesize:</b>"
+msgstr "<b>Failo dydis:</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:1045
+msgid "<b>MIME Type:</b>"
+msgstr "<b>MIME tipas:</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:1058
+msgid "<b>Bitrate:</b>"
+msgstr "<b>Bitų dažnis:</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:1071
+msgid "<b>Samplerate:</b>"
+msgstr "<b>Diskretizacijos dažnis:</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:1084
+msgid "<b>Channels:</b>"
+msgstr "<b>Kanalai:</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:1097
+msgid "<b>Length:</b>"
+msgstr "<b>Trukmė:</b>"
