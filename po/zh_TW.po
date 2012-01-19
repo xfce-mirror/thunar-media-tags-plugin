@@ -7,16 +7,18 @@ msgid ""
 msgstr ""
 "Project-Id-Version: thunar-media-tags-plugin 0.1.2svn\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-09-11 11:38+0200\n"
-"PO-Revision-Date: 2006-04-06 01:06+0800\n"
-"Last-Translator: Hydonsingore Cia <hydonsingore@mail.educities.edu.tw>\n"
+"POT-Creation-Date: 2012-01-19 03:51+0000\n"
+"PO-Revision-Date: 2012-01-19 15:26+0800\n"
+"Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
 "Language-Team: Chinese (traditional) <xfce-i18n@xfce.org>\n"
+"Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../thunar-plugin/tag-renamer.c:59
+#: ../thunar-plugin/tag-renamer.c:657
 msgid "Title"
 msgstr "曲名"
 
@@ -44,185 +46,219 @@ msgstr "曲目. 演出者 - 曲名"
 msgid "Artist - Track - Title"
 msgstr "演出者 - 曲目 - 曲名"
 
+#: ../thunar-plugin/tag-renamer.c:67
+msgid "Custom"
+msgstr "自訂"
+
+#. Custom format
+#: ../thunar-plugin/tag-renamer.c:243
+msgid "Cust_om format:"
+msgstr "自訂格式(_O):"
+
 #. Format label
-#: ../thunar-plugin/tag-renamer.c:223
+#: ../thunar-plugin/tag-renamer.c:271
 msgid "_Format:"
 msgstr "格式(_F):"
 
-#: ../thunar-plugin/tag-renamer.c:246
+#: ../thunar-plugin/tag-renamer.c:312
 msgid "_Underscores"
 msgstr "底線(_U)"
 
-#: ../thunar-plugin/tag-renamer.c:248
-msgid ""
-"Activating this option will replace all spaces in the target filename with "
-"underscores."
+#: ../thunar-plugin/tag-renamer.c:314
+msgid "Activating this option will replace all spaces in the target filename with underscores."
 msgstr "啟動本選項會以底線取代檔名中所有的空白。"
 
-#: ../thunar-plugin/tag-renamer.c:253
+#: ../thunar-plugin/tag-renamer.c:319
 msgid "_Lowercase"
 msgstr "小寫(_L)"
 
-#: ../thunar-plugin/tag-renamer.c:255
-msgid ""
-"If you activate this, the resulting filename will only contain lowercase "
-"letters."
+#: ../thunar-plugin/tag-renamer.c:321
+msgid "If you activate this, the resulting filename will only contain lowercase letters."
 msgstr "如果您啟動本項，檔名將只會包含小寫字母。"
 
-#: ../thunar-plugin/tag-renamer.c:264 ../thunar-plugin/tag-renamer.c:702
-#: ../thunar-plugin/audio-tags-page.c:183
+#: ../thunar-plugin/tag-renamer.c:464
+#: ../thunar-plugin/audio-tags-page.c:182
 msgid "Unknown Artist"
 msgstr "未知的演出者"
 
-#: ../thunar-plugin/tag-renamer.c:265 ../thunar-plugin/tag-renamer.c:750
-#: ../thunar-plugin/audio-tags-page.c:209
+#: ../thunar-plugin/tag-renamer.c:472
+#: ../thunar-plugin/audio-tags-page.c:208
 msgid "Unknown Title"
 msgstr "未知的曲名"
 
 #. Edit tags action
-#: ../thunar-plugin/tag-renamer.c:523
+#: ../thunar-plugin/tag-renamer.c:627
 msgid "Edit _Tags"
 msgstr "編輯標籤(_T)"
 
-#: ../thunar-plugin/tag-renamer.c:523
+#: ../thunar-plugin/tag-renamer.c:627
 msgid "Edit ID3/OGG tags of this file."
 msgstr "編輯本檔案的 ID3/OGG 標籤。"
 
-#: ../thunar-plugin/tag-renamer.c:545
+#: ../thunar-plugin/tag-renamer.c:646
+msgid "Tag Help"
+msgstr "標籤幫助"
+
+#: ../thunar-plugin/tag-renamer.c:657
+msgid "Artist"
+msgstr "演出者"
+
+#: ../thunar-plugin/tag-renamer.c:658
+msgid "Album"
+msgstr "專輯"
+
+#: ../thunar-plugin/tag-renamer.c:658
+msgid "Genre"
+msgstr "曲風"
+
+#: ../thunar-plugin/tag-renamer.c:659
+msgid "Track number"
+msgstr "曲目編號"
+
+#: ../thunar-plugin/tag-renamer.c:659
+msgid "Year"
+msgstr "年份"
+
+#: ../thunar-plugin/tag-renamer.c:660
+msgid "Comment"
+msgstr "評註"
+
+#: ../thunar-plugin/tag-renamer.c:717
 msgid "Audio Tags"
 msgstr "音效標籤"
 
-#: ../thunar-plugin/audio-tags-page.c:196
+#: ../thunar-plugin/audio-tags-page.c:195
 msgid "Unknown Album"
 msgstr "未知的專輯"
 
-#: ../thunar-plugin/audio-tags-page.c:305
+#: ../thunar-plugin/audio-tags-page.c:328
 msgid "<b>Track:</b>"
 msgstr "<b>曲目:</b>"
 
-#: ../thunar-plugin/audio-tags-page.c:320
+#: ../thunar-plugin/audio-tags-page.c:343
 msgid "Enter the track number here."
 msgstr "在這裡鍵入曲目。"
 
-#: ../thunar-plugin/audio-tags-page.c:328
+#: ../thunar-plugin/audio-tags-page.c:351
 msgid "<b>Year:</b>"
-msgstr "<b>年:</b>"
+msgstr "<b>年份:</b>"
 
-#: ../thunar-plugin/audio-tags-page.c:343
+#: ../thunar-plugin/audio-tags-page.c:366
 msgid "Enter the release year here."
 msgstr "在這裡鍵入發行年份。"
 
-#: ../thunar-plugin/audio-tags-page.c:351
+#: ../thunar-plugin/audio-tags-page.c:374
 msgid "<b>Artist:</b>"
 msgstr "<b>演出者:</b>"
 
-#: ../thunar-plugin/audio-tags-page.c:358
+#: ../thunar-plugin/audio-tags-page.c:381
 msgid "Enter the name of the artist or author of this file here."
 msgstr "在這裡鍵入本檔案的演出者或作者名稱。"
 
-#: ../thunar-plugin/audio-tags-page.c:366
+#: ../thunar-plugin/audio-tags-page.c:389
 msgid "<b>Title:</b>"
 msgstr "<b>曲名:</b>"
 
-#: ../thunar-plugin/audio-tags-page.c:373
+#: ../thunar-plugin/audio-tags-page.c:396
 msgid "Enter the song title here."
 msgstr "在這裡鍵入歌曲標題。"
 
-#: ../thunar-plugin/audio-tags-page.c:380
+#: ../thunar-plugin/audio-tags-page.c:403
 msgid "<b>Album:</b>"
 msgstr "<b>專輯:</b>"
 
-#: ../thunar-plugin/audio-tags-page.c:387
+#: ../thunar-plugin/audio-tags-page.c:410
 msgid "Enter the album/record title here."
 msgstr "在這裡鍵入專輯標題。"
 
-#: ../thunar-plugin/audio-tags-page.c:394
+#: ../thunar-plugin/audio-tags-page.c:417
 msgid "<b>Comment:</b>"
-msgstr "<b>評語:</b>"
+msgstr "<b>評註:</b>"
 
-#: ../thunar-plugin/audio-tags-page.c:401
+#: ../thunar-plugin/audio-tags-page.c:424
 msgid "Enter your comments here."
-msgstr "在這裡鍵入您的評語。"
+msgstr "在這裡鍵入您的評註。"
 
-#: ../thunar-plugin/audio-tags-page.c:408
+#: ../thunar-plugin/audio-tags-page.c:431
 msgid "<b>Genre:</b>"
 msgstr "<b>曲風:</b>"
 
-#: ../thunar-plugin/audio-tags-page.c:415
+#: ../thunar-plugin/audio-tags-page.c:438
 msgid "Select or enter the genre of this song here."
 msgstr "在這裡選取或鍵入本曲的曲風。"
 
 #. Create and add the save action
-#: ../thunar-plugin/audio-tags-page.c:454
+#: ../thunar-plugin/audio-tags-page.c:449
 msgid "_Save"
 msgstr "儲存(_S)"
 
-#: ../thunar-plugin/audio-tags-page.c:454
+#: ../thunar-plugin/audio-tags-page.c:449
 msgid "Save audio tags."
 msgstr "儲存音效標籤。"
 
 #. Create and add the info action
-#: ../thunar-plugin/audio-tags-page.c:461
+#: ../thunar-plugin/audio-tags-page.c:456
 msgid "_Information"
 msgstr "資訊(_I)"
 
-#: ../thunar-plugin/audio-tags-page.c:461
+#: ../thunar-plugin/audio-tags-page.c:456
 msgid "Display more detailed information about this audio file."
 msgstr "顯示本音效檔案的詳細資訊。"
 
-#: ../thunar-plugin/audio-tags-page.c:528
+#: ../thunar-plugin/audio-tags-page.c:524
 msgid "Audio"
 msgstr "聲音"
 
 #. Set up the dialog
-#: ../thunar-plugin/audio-tags-page.c:564
+#: ../thunar-plugin/audio-tags-page.c:560
 msgid "Edit Tags"
 msgstr "編輯標籤"
 
 #. Create dialog
-#: ../thunar-plugin/audio-tags-page.c:992
+#: ../thunar-plugin/audio-tags-page.c:982
 msgid "Audio Information"
 msgstr "音效資訊"
 
-#: ../thunar-plugin/audio-tags-page.c:1003
+#: ../thunar-plugin/audio-tags-page.c:993
 #, c-format
 msgid "%d:%d Minutes"
 msgstr "%d:%d 分"
 
-#: ../thunar-plugin/audio-tags-page.c:1004
+#: ../thunar-plugin/audio-tags-page.c:994
 #, c-format
 msgid "%d KBit/s"
 msgstr "%d KBit/秒"
 
-#: ../thunar-plugin/audio-tags-page.c:1005
+#: ../thunar-plugin/audio-tags-page.c:995
 #, c-format
 msgid "%d Hz"
 msgstr "%d Hz"
 
-#: ../thunar-plugin/audio-tags-page.c:1025
+#: ../thunar-plugin/audio-tags-page.c:1019
 msgid "<b>Filename:</b>"
 msgstr "<b>檔案名稱:</b>"
 
-#: ../thunar-plugin/audio-tags-page.c:1038
+#: ../thunar-plugin/audio-tags-page.c:1032
 msgid "<b>Filesize:</b>"
 msgstr "<b>檔案大小:</b>"
 
-#: ../thunar-plugin/audio-tags-page.c:1051
+#: ../thunar-plugin/audio-tags-page.c:1045
 msgid "<b>MIME Type:</b>"
 msgstr "<b>MIME 類型:</b>"
 
-#: ../thunar-plugin/audio-tags-page.c:1064
+#: ../thunar-plugin/audio-tags-page.c:1058
 msgid "<b>Bitrate:</b>"
-msgstr "<b>Bitrate:</b>"
+msgstr "<b>位元率：</b>"
 
-#: ../thunar-plugin/audio-tags-page.c:1077
+#: ../thunar-plugin/audio-tags-page.c:1071
 msgid "<b>Samplerate:</b>"
 msgstr "<b>取樣率:</b>"
 
-#: ../thunar-plugin/audio-tags-page.c:1090
+#: ../thunar-plugin/audio-tags-page.c:1084
 msgid "<b>Channels:</b>"
 msgstr "<b>聲道數:</b>"
 
-#: ../thunar-plugin/audio-tags-page.c:1103
+#: ../thunar-plugin/audio-tags-page.c:1097
 msgid "<b>Length:</b>"
 msgstr "<b>長度:</b>"
+
