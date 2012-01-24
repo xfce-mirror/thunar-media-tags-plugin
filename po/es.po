@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: thunar-media-tags-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-01-03 08:54+0000\n"
+"POT-Creation-Date: 2012-01-24 16:36+0000\n"
 "PO-Revision-Date: 2008-10-20 20:27+0100\n"
 "Last-Translator: Abel Martín <abel.martin.ruiz@gmail.com>\n"
 "Language-Team: Spanish <xfce-i18n@xfce.org>\n"
@@ -45,7 +45,6 @@ msgid "Artist - Track - Title"
 msgstr "Artista - Pista - Título"
 
 #: ../thunar-plugin/tag-renamer.c:67
-#, fuzzy
 msgid "Custom"
 msgstr "Personalizado"
 
@@ -102,7 +101,7 @@ msgstr "Editar etiquetas ID3/OGG de este archivo."
 
 #: ../thunar-plugin/tag-renamer.c:646
 msgid "Tag Help"
-msgstr ""
+msgstr "Etiqueta"
 
 #: ../thunar-plugin/tag-renamer.c:657
 msgid "Artist"
