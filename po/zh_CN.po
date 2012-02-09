@@ -3,15 +3,15 @@
 # This file is distributed under the same license as
 # the thunar-media-tags-plugin package.
 # Hunt Xu <huntxu@live.cn>, 2008.
-# Chipong Luo <chipong_l@yahoo.com>, 2011.
+# Chipong Luo <chipong.luo@yahoo.com>, 2011, 2012.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: thunar-media-tags-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-12-07 10:18+0000\n"
+"POT-Creation-Date: 2012-02-09 03:48+0000\n"
 "PO-Revision-Date: 2008-12-04 16:51+0800\n"
-"Last-Translator: Chipong Luo <chipong_l@yahoo.com>\n"
+"Last-Translator: Chipong Luo <chipong.luo@yahoo.com>\n"
 "Language-Team: Chinese (Simplified) <xfce-i18n@xfce.org>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
@@ -68,7 +68,7 @@ msgstr "下划线(_U)"
 msgid ""
 "Activating this option will replace all spaces in the target filename with "
 "underscores."
-msgstr "激活此选项将会用下划线代替目标文件名中的所有空格"
+msgstr "激活此项会用下划线代替目标文件名中的所有空格"
 
 #: ../thunar-plugin/tag-renamer.c:319
 msgid "_Lowercase"
@@ -78,7 +78,7 @@ msgstr "小写字母(_L)"
 msgid ""
 "If you activate this, the resulting filename will only contain lowercase "
 "letters."
-msgstr "激活此项将使文件名中只包含小写字母"
+msgstr "激活此项会使最终文件名中只包含小写字母。"
 
 #: ../thunar-plugin/tag-renamer.c:464 ../thunar-plugin/audio-tags-page.c:182
 msgid "Unknown Artist"
@@ -155,7 +155,7 @@ msgstr "<b>艺术家：</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:381
 msgid "Enter the name of the artist or author of this file here."
-msgstr "在这里输入艺术家或此文件作者姓名。"
+msgstr "在这里输入艺术家或此文件作者的姓名。"
 
 #: ../thunar-plugin/audio-tags-page.c:389
 msgid "<b>Title:</b>"
@@ -167,7 +167,7 @@ msgstr "在这里输入歌曲标题。"
 
 #: ../thunar-plugin/audio-tags-page.c:403
 msgid "<b>Album:</b>"
-msgstr "<b>专辑名：</b>"
+msgstr "<b>专辑：</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:410
 msgid "Enter the album/record title here."
