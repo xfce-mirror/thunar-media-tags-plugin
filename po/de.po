@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: thunar-media-tags-plugin 0.1.2svn\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-01-04 15:24+0000\n"
+"POT-Creation-Date: 2012-02-16 21:36+0000\n"
 "PO-Revision-Date: 2007-12-01 18:38+0000\n"
 "Last-Translator: Fabian Nowak <timystery@arcor.de>\n"
 "Language-Team: German <xfce-i18n@xfce.org>\n"
@@ -100,7 +100,7 @@ msgstr "ID3- und OGG-Tags dieser Datei bearbeiten."
 #: ../thunar-plugin/tag-renamer.c:646
 #, fuzzy
 msgid "Tag Help"
-msgstr "Tag Hilfe"
+msgstr "Tag-Hilfe"
 
 #: ../thunar-plugin/tag-renamer.c:657
 msgid "Artist"
@@ -111,14 +111,13 @@ msgid "Album"
 msgstr "Album"
 
 #: ../thunar-plugin/tag-renamer.c:658
-#, fuzzy
 msgid "Genre"
 msgstr "Genre"
 
 #: ../thunar-plugin/tag-renamer.c:659
 #, fuzzy
 msgid "Track number"
-msgstr "Titel Nummer"
+msgstr "Titelnummer"
 
 #: ../thunar-plugin/tag-renamer.c:659
 msgid "Year"
