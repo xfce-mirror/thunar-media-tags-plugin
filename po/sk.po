@@ -127,7 +127,7 @@ msgstr "Komentár"
 
 #: ../thunar-plugin/tag-renamer.c:717
 msgid "Audio Tags"
-msgstr "Tagy nahrávky"
+msgstr "Značky nahrávky"
 
 #: ../thunar-plugin/audio-tags-page.c:195
 msgid "Unknown Album"
@@ -196,7 +196,7 @@ msgstr "_Uložiť"
 
 #: ../thunar-plugin/audio-tags-page.c:449
 msgid "Save audio tags."
-msgstr "Uložiť tagy nahrávky."
+msgstr "Uložiť značky nahrávky."
 
 #. Create and add the info action
 #: ../thunar-plugin/audio-tags-page.c:456
@@ -214,7 +214,7 @@ msgstr "Nahrávka"
 #. Set up the dialog
 #: ../thunar-plugin/audio-tags-page.c:560
 msgid "Edit Tags"
-msgstr "Upraviť tagy"
+msgstr "Upraviť značky"
 
 #. Create dialog
 #: ../thunar-plugin/audio-tags-page.c:982
