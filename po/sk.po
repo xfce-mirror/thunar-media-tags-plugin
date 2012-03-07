@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-01-04 09:18+0000\n"
+"POT-Creation-Date: 2012-03-07 20:39+0000\n"
 "PO-Revision-Date: 2009-10-12 17:21+0200\n"
 "Last-Translator: Robert Hartl <hartl.robert@gmail.com>\n"
 "Language-Team: Slovak <sk-i18n@lists.linux.sk>\n"
@@ -91,15 +91,15 @@ msgstr "Neznámy názov"
 #. Edit tags action
 #: ../thunar-plugin/tag-renamer.c:627
 msgid "Edit _Tags"
-msgstr "Upraviť _tagy"
+msgstr "Upraviť _značky"
 
 #: ../thunar-plugin/tag-renamer.c:627
 msgid "Edit ID3/OGG tags of this file."
-msgstr "Upraviť tagy ID3 alebo OGG tohto súboru."
+msgstr "Upraviť značky ID3 alebo OGG tohto súboru."
 
 #: ../thunar-plugin/tag-renamer.c:646
 msgid "Tag Help"
-msgstr ""
+msgstr "Pomocník značiek"
 
 #: ../thunar-plugin/tag-renamer.c:657
 msgid "Artist"
