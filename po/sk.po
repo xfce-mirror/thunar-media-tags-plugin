@@ -229,7 +229,7 @@ msgstr "%d:%d minút"
 #: ../thunar-plugin/audio-tags-page.c:994
 #, c-format
 msgid "%d KBit/s"
-msgstr "%d KBit/s"
+msgstr "%d kBit/s"
 
 #: ../thunar-plugin/audio-tags-page.c:995
 #, c-format
