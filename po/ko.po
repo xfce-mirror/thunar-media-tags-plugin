@@ -128,7 +128,7 @@ msgstr "설명"
 
 #: ../thunar-plugin/tag-renamer.c:717
 msgid "Audio Tags"
-msgstr "오디오 태그"
+msgstr "음악 태그"
 
 #: ../thunar-plugin/audio-tags-page.c:195
 msgid "Unknown Album"
@@ -197,7 +197,7 @@ msgstr "저장(_S)"
 
 #: ../thunar-plugin/audio-tags-page.c:449
 msgid "Save audio tags."
-msgstr "오디오 태그를 저장합니다."
+msgstr "음악 태그를 저장합니다."
 
 #. Create and add the info action
 #: ../thunar-plugin/audio-tags-page.c:456
@@ -206,11 +206,11 @@ msgstr "정보(_I)"
 
 #: ../thunar-plugin/audio-tags-page.c:456
 msgid "Display more detailed information about this audio file."
-msgstr "이 오디오 파일에 대한 자세한 정보를 보여줍니다."
+msgstr "이 음악 파일에 대한 자세한 정보를 보여줍니다."
 
 #: ../thunar-plugin/audio-tags-page.c:524
 msgid "Audio"
-msgstr "오디오"
+msgstr "음악"
 
 #. Set up the dialog
 #: ../thunar-plugin/audio-tags-page.c:560
@@ -220,7 +220,7 @@ msgstr "태그 편집"
 #. Create dialog
 #: ../thunar-plugin/audio-tags-page.c:982
 msgid "Audio Information"
-msgstr "오디오 정보"
+msgstr "음악 정보"
 
 #: ../thunar-plugin/audio-tags-page.c:993
 #, c-format
