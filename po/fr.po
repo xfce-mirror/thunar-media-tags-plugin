@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: thunar-media-tags-plugin 0.1.2svn\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-01 12:15+0000\n"
+"POT-Creation-Date: 2012-04-13 18:18+0000\n"
 "PO-Revision-Date: 2007-01-29 00:41+0100\n"
 "Last-Translator: Maximilian Schleiss <maximilian@xfce.org>\n"
 "Language-Team: French <xfce-i18n@xfce.org>\n"
@@ -47,13 +47,12 @@ msgstr "Artiste - Piste - Titre"
 
 #: ../thunar-plugin/tag-renamer.c:67
 msgid "Custom"
-msgstr ""
+msgstr "Personnalisé"
 
 #. Custom format
 #: ../thunar-plugin/tag-renamer.c:243
-#, fuzzy
 msgid "Cust_om format:"
-msgstr "_Format :"
+msgstr "F_ormat personnalisé :"
 
 #. Format label
 #: ../thunar-plugin/tag-renamer.c:271
