@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: thunar-media-tags-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-02 17:15+0000\n"
+"POT-Creation-Date: 2012-04-15 10:33+0000\n"
 "PO-Revision-Date: 2011-05-28 17:11+0200\n"
 "Last-Translator: Ivica Kolić <ikoli@yahoo.com>\n"
 "Language-Team: Croatian <ikoli@yahoo.com>\n"
@@ -50,7 +50,7 @@ msgstr "Umjetnik - Zapis -NAslov"
 
 #: ../thunar-plugin/tag-renamer.c:67
 msgid "Custom"
-msgstr ""
+msgstr "Prilagođeno"
 
 #. Custom format
 #: ../thunar-plugin/tag-renamer.c:243
@@ -109,19 +109,19 @@ msgstr "Umjetnik "
 
 #: ../thunar-plugin/tag-renamer.c:658
 msgid "Album"
-msgstr ""
+msgstr "Album"
 
 #: ../thunar-plugin/tag-renamer.c:658
 msgid "Genre"
-msgstr ""
+msgstr "Vrsta"
 
 #: ../thunar-plugin/tag-renamer.c:659
 msgid "Track number"
-msgstr ""
+msgstr "Broj zapisa"
 
 #: ../thunar-plugin/tag-renamer.c:659
 msgid "Year"
-msgstr ""
+msgstr "Godina"
 
 #: ../thunar-plugin/tag-renamer.c:660
 msgid "Comment"
@@ -189,7 +189,7 @@ msgstr "<b>Vrsta:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:438
 msgid "Select or enter the genre of this song here."
-msgstr ""
+msgstr "Odaberite ili unesite vrstu za ovu pjesmu ovdje."
 
 #. Create and add the save action
 #: ../thunar-plugin/audio-tags-page.c:449
