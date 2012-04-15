@@ -101,7 +101,7 @@ msgstr "Uredi ID3/OGG oznake ove datoteke"
 
 #: ../thunar-plugin/tag-renamer.c:646
 msgid "Tag Help"
-msgstr ""
+msgstr "Pomoć oznaka"
 
 #: ../thunar-plugin/tag-renamer.c:657
 msgid "Artist"
@@ -141,7 +141,7 @@ msgstr "<b>Zapis:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:343
 msgid "Enter the track number here."
-msgstr "Unesite e broj zapisa ovdje."
+msgstr "Unesite  broj zapisa ovdje."
 
 #: ../thunar-plugin/audio-tags-page.c:351
 msgid "<b>Year:</b>"
@@ -189,7 +189,7 @@ msgstr "<b>Vrsta:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:438
 msgid "Select or enter the genre of this song here."
-msgstr "Odaberite ili unesite vrstu za ovu pjesmu ovdje."
+msgstr "Odaberite ili unesite vrstu  ovdje za ovu pjesmu."
 
 #. Create and add the save action
 #: ../thunar-plugin/audio-tags-page.c:449
@@ -249,10 +249,12 @@ msgstr "<b>Veličina datoteke:</b>"
 #: ../thunar-plugin/audio-tags-page.c:1045
 msgid "<b>MIME Type:</b>"
 msgstr ""
+"\t\r\n"
+"<b>MIME tip:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:1058
 msgid "<b>Bitrate:</b>"
-msgstr ""
+msgstr "<b>Protok bitova:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:1071
 msgid "<b>Samplerate:</b>"
