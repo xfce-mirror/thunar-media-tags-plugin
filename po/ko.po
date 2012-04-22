@@ -247,7 +247,7 @@ msgstr "<b>파일 크기:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:1045
 msgid "<b>MIME Type:</b>"
-msgstr "<b>MIME 유형:</b>"
+msgstr "<b>MIME 형식:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:1058
 msgid "<b>Bitrate:</b>"
