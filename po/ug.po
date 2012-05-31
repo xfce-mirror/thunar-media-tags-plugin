@@ -2,7 +2,7 @@
 # Copyright (C) 2006-2007 Jannis Pohlmann <jannis@xfce.org>
 # This file is distributed under the same license as the thunar-media-tags-plugin package.
 # Gheyret T.Kenji <gheyret@gmail.com>, 2010
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: thunar-media-tags-plugin 0.1.2svn\n"
@@ -22,32 +22,32 @@ msgstr "ماۋزۇ"
 
 #: ../thunar-plugin/tag-renamer.c:60
 msgid "Artist - Title"
-msgstr "سەنئەتكار - ماۋزۇ"
+msgstr "ئورۇنلىغۇچى - ماۋزۇ"
 
 #: ../thunar-plugin/tag-renamer.c:61
 msgid "Track - Title"
-msgstr "Track - ماۋزۇ"
+msgstr "نەغمە - ماۋزۇ"
 
 #: ../thunar-plugin/tag-renamer.c:62
 msgid "Track - Artist - Title"
-msgstr "Track - سەنئەتكار - ماۋزۇ"
+msgstr "نەغمە - ئورۇنلىغۇچى - ماۋزۇ"
 
 #: ../thunar-plugin/tag-renamer.c:63
 msgid "Track. Title"
-msgstr "Track. ماۋزۇ"
+msgstr "نەغمە. ماۋزۇ"
 
 #: ../thunar-plugin/tag-renamer.c:64
 msgid "Track. Artist - Title"
-msgstr "Track. سەنئەتكار - ماۋزۇ"
+msgstr "نەغمە. ئورۇنلىغۇچى - ماۋزۇ"
 
 #: ../thunar-plugin/tag-renamer.c:65
 msgid "Artist - Track - Title"
-msgstr "سەنئەتكار - Track - ماۋزۇ"
+msgstr "ئورۇنلىغۇچى - نەغمە - ماۋزۇ"
 
 #. Format label
 #: ../thunar-plugin/tag-renamer.c:223
 msgid "_Format:"
-msgstr "فورمات(_F):"
+msgstr "پىچىم(_F):"
 
 #: ../thunar-plugin/tag-renamer.c:246
 msgid "_Underscores"
@@ -57,9 +57,7 @@ msgstr "پەس سىزىق(_U)"
 msgid ""
 "Activating this option will replace all spaces in the target filename with "
 "underscores."
-msgstr ""
-"بۇ تاللانما تاللانسا، ھۆججەت نامىدىكى بارلىق بوشلۇقلار پەس سىزىققا "
-"ئالماشتۇرۇلىدۇ."
+msgstr "بۇ تاللانما تاللانسا، ھۆججەت نامىدىكى بارلىق بوشلۇقلار پەس سىزىققا ئالماشتۇرۇلىدۇ."
 
 #: ../thunar-plugin/tag-renamer.c:253
 msgid "_Lowercase"
@@ -69,13 +67,12 @@ msgstr "كىچىك يېزىلىشى(_L)"
 msgid ""
 "If you activate this, the resulting filename will only contain lowercase "
 "letters."
-msgstr ""
-"بۇ تاللانما تاللانسا، ھۆججەت نامىدىكى بارلىق ھەرپلەر كىچىك يېزىلىشتا بولىدۇ."
+msgstr "بۇ تاللانما تاللانسا، ھۆججەت نامىدىكى بارلىق ھەرپلەر كىچىك يېزىلىشتا بولىدۇ."
 
 #: ../thunar-plugin/tag-renamer.c:264 ../thunar-plugin/tag-renamer.c:702
 #: ../thunar-plugin/audio-tags-page.c:183
 msgid "Unknown Artist"
-msgstr "نامەلۇم سەنئەتكار"
+msgstr "نامەلۇم ئورۇنلىغۇچى"
 
 #: ../thunar-plugin/tag-renamer.c:265 ../thunar-plugin/tag-renamer.c:750
 #: ../thunar-plugin/audio-tags-page.c:209
@@ -101,11 +98,11 @@ msgstr "نامەلۇم ئالبوم"
 
 #: ../thunar-plugin/audio-tags-page.c:305
 msgid "<b>Track:</b>"
-msgstr "<b>Track:</b>"
+msgstr "<b>نەغمە:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:320
 msgid "Enter the track number here."
-msgstr "Track نومۇرىنى بۇ يەرگە كىرگۈزۈڭ."
+msgstr "نەغمە نومۇرىنى بۇ يەرگە كىرگۈزۈڭ."
 
 #: ../thunar-plugin/audio-tags-page.c:328
 msgid "<b>Year:</b>"
@@ -117,11 +114,11 @@ msgstr "تارقىتىلغان يىلىنى بۇ يەرگە كىرگۈزۈڭ:"
 
 #: ../thunar-plugin/audio-tags-page.c:351
 msgid "<b>Artist:</b>"
-msgstr "<b>سەنئەتكار:</b>"
+msgstr "<b>ئورۇنلىغۇچى:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:358
 msgid "Enter the name of the artist or author of this file here."
-msgstr "سەنئەتكار ئاتىنى ياكى بۇ ھۆججەتنىڭ ئاپتورىنى بۇ يەرگە كىرگۈزۈڭ."
+msgstr "ئورۇنلىغۇچى ئاتىنى ياكى بۇ ھۆججەتنىڭ ئاپتورىنى بۇ يەرگە كىرگۈزۈڭ."
 
 #: ../thunar-plugin/audio-tags-page.c:366
 msgid "<b>Title:</b>"
@@ -195,7 +192,7 @@ msgstr "%d:%d مىنۇت"
 #: ../thunar-plugin/audio-tags-page.c:1004
 #, c-format
 msgid "%d KBit/s"
-msgstr "%d Kbit/سېكۇنت"
+msgstr "%d كىلوبىت/سېكۇنت"
 
 #: ../thunar-plugin/audio-tags-page.c:1005
 #, c-format
@@ -229,4 +226,3 @@ msgstr "<b>قانال سانى:</b>"
 #: ../thunar-plugin/audio-tags-page.c:1103
 msgid "<b>Length:</b>"
 msgstr "<b>ئۇزۇنلۇقى:</b>"
-
