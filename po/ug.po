@@ -168,7 +168,7 @@ msgstr "ئۇچۇر(_I)"
 
 #: ../thunar-plugin/audio-tags-page.c:461
 msgid "Display more detailed information about this audio file."
-msgstr "بۇ ئۈن ھۆججىتى ھەققىدىكى تېخىمۇ كوپ ئۇچۇرلارنى كۆرسىتىدۇ."
+msgstr "بۇ ئۈن ھۆججىتى ھەققىدىكى تېخىمۇ كۆپ ئۇچۇرلارنى كۆرسىتىدۇ."
 
 #: ../thunar-plugin/audio-tags-page.c:528
 msgid "Audio"
