@@ -3,21 +3,22 @@
 # This file is distributed under the same license as the thunar-media-tags-plugin package.
 # Stephane Roy <sroy@j2n.net>, 2006.
 # Maximilian Schleiss <maximilian@xfce.org>, 2007.
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: thunar-media-tags-plugin 0.1.2svn\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-13 18:18+0000\n"
-"PO-Revision-Date: 2007-01-29 00:41+0100\n"
-"Last-Translator: Maximilian Schleiss <maximilian@xfce.org>\n"
+"POT-Creation-Date: 2012-08-29 13:36+0000\n"
+"PO-Revision-Date: 2012-08-29 16:03+0100\n"
+"Last-Translator: \n"
 "Language-Team: French <xfce-i18n@xfce.org>\n"
+"Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: fr\n"
 
-#: ../thunar-plugin/tag-renamer.c:59 ../thunar-plugin/tag-renamer.c:657
+#: ../thunar-plugin/tag-renamer.c:59
+#: ../thunar-plugin/tag-renamer.c:657
 msgid "Title"
 msgstr "Titre"
 
@@ -64,30 +65,24 @@ msgid "_Underscores"
 msgstr "So_ulignement"
 
 #: ../thunar-plugin/tag-renamer.c:314
-msgid ""
-"Activating this option will replace all spaces in the target filename with "
-"underscores."
-msgstr ""
-"Activer cette option remplacera toutes les espaces dans le nom de fichier "
-"cible par des soulignements."
+msgid "Activating this option will replace all spaces in the target filename with underscores."
+msgstr "Activer cette option remplacera toutes les espaces dans le nom de fichier cible par des soulignements."
 
 #: ../thunar-plugin/tag-renamer.c:319
 msgid "_Lowercase"
 msgstr "_Minuscules"
 
 #: ../thunar-plugin/tag-renamer.c:321
-msgid ""
-"If you activate this, the resulting filename will only contain lowercase "
-"letters."
-msgstr ""
-"De l'activation de cette option résultera un nom de fichier ne contenant que "
-"des lettres minuscules."
+msgid "If you activate this, the resulting filename will only contain lowercase letters."
+msgstr "De l'activation de cette option résultera un nom de fichier ne contenant que des lettres minuscules."
 
-#: ../thunar-plugin/tag-renamer.c:464 ../thunar-plugin/audio-tags-page.c:182
+#: ../thunar-plugin/tag-renamer.c:464
+#: ../thunar-plugin/audio-tags-page.c:182
 msgid "Unknown Artist"
 msgstr "Artiste inconnu"
 
-#: ../thunar-plugin/tag-renamer.c:472 ../thunar-plugin/audio-tags-page.c:208
+#: ../thunar-plugin/tag-renamer.c:472
+#: ../thunar-plugin/audio-tags-page.c:208
 msgid "Unknown Title"
 msgstr "Titre inconnu"
 
@@ -102,7 +97,7 @@ msgstr "Éditer les balises ID3/OGG de ce fichier."
 
 #: ../thunar-plugin/tag-renamer.c:646
 msgid "Tag Help"
-msgstr ""
+msgstr "Aide balise"
 
 #: ../thunar-plugin/tag-renamer.c:657
 msgid "Artist"
@@ -208,8 +203,7 @@ msgstr "_Information"
 
 #: ../thunar-plugin/audio-tags-page.c:456
 msgid "Display more detailed information about this audio file."
-msgstr ""
-"Afficher des informations plus détaillées à propos de ce fichier audio."
+msgstr "Afficher des informations plus détaillées à propos de ce fichier audio."
 
 #: ../thunar-plugin/audio-tags-page.c:524
 msgid "Audio"
@@ -228,7 +222,7 @@ msgstr "Information audio"
 #: ../thunar-plugin/audio-tags-page.c:993
 #, c-format
 msgid "%d:%d Minutes"
-msgstr "%d:%d minutes"
+msgstr "%d :%d minutes"
 
 #: ../thunar-plugin/audio-tags-page.c:994
 #, c-format
