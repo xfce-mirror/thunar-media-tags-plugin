@@ -50,9 +50,8 @@ msgstr "Własne"
 
 #. Custom format
 #: ../thunar-plugin/tag-renamer.c:243
-#, fuzzy
 msgid "Cust_om format:"
-msgstr "_Format:"
+msgstr "_Własny format:"
 
 #. Format label
 #: ../thunar-plugin/tag-renamer.c:271
