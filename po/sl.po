@@ -1,21 +1,23 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Slovenian translation for thunar-media-tags-plugin.
+# Copyright (C) 2013 The Xfce Development Team.
+# This file is distributed under the same license as the thunar-media-tags-plugin package.
 #
-#, fuzzy
+# Klemen KoÅ¡ir <klemen913@gmail.com>, 2013.
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: thunar-media-tags-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-01-18 18:54+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Nenad Latinović <nenadlatinovic@lavabit.com>\n"
-"Language-Team: Slovenian\n"
-"Language: Sl\n"
+"POT-Creation-Date: 2013-05-08 22:54+0000\n"
+"PO-Revision-Date: 2013-05-09 01:26+0100\n"
+"Last-Translator: Klemen Košir <klemen913@gmail.com>\n"
+"Language-Team: Slovenian <lugos-slo@lugos.si>\n"
+"Language: sl\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
+"%100==4 ? 3 : 0);\n"
 
 #: ../thunar-plugin/tag-renamer.c:59 ../thunar-plugin/tag-renamer.c:657
 msgid "Title"
@@ -27,23 +29,23 @@ msgstr "Izvajalec - Naslov"
 
 #: ../thunar-plugin/tag-renamer.c:61
 msgid "Track - Title"
-msgstr "Skladba - Naslov"
+msgstr "Št. skladbe - Naslov"
 
 #: ../thunar-plugin/tag-renamer.c:62
 msgid "Track - Artist - Title"
-msgstr "Skladba - Izvajalec - Naslov"
+msgstr "Št. skladbe - Izvajalec - Naslov"
 
 #: ../thunar-plugin/tag-renamer.c:63
 msgid "Track. Title"
-msgstr "Skladba. Naslov"
+msgstr "Št. skladbe. Naslov"
 
 #: ../thunar-plugin/tag-renamer.c:64
 msgid "Track. Artist - Title"
-msgstr "Skladba. Izvajalec - Naslov"
+msgstr "Št. skladbe. Izvajalec - Naslov"
 
 #: ../thunar-plugin/tag-renamer.c:65
 msgid "Artist - Track - Title"
-msgstr "Izvajalec - Skladba - Naslov"
+msgstr "Izvajalec - Št. skladbe - Naslov"
 
 #: ../thunar-plugin/tag-renamer.c:67
 msgid "Custom"
@@ -52,12 +54,12 @@ msgstr "Po meri"
 #. Custom format
 #: ../thunar-plugin/tag-renamer.c:243
 msgid "Cust_om format:"
-msgstr "Obl_ika po meri"
+msgstr "Oblika po _meri:"
 
 #. Format label
 #: ../thunar-plugin/tag-renamer.c:271
 msgid "_Format:"
-msgstr "_Format"
+msgstr "_Oblika:"
 
 #: ../thunar-plugin/tag-renamer.c:312
 msgid "_Underscores"
@@ -67,21 +69,17 @@ msgstr "_Podčrtaji"
 msgid ""
 "Activating this option will replace all spaces in the target filename with "
 "underscores."
-msgstr ""
-"Če omogočite to opcijo, boste vse presledke v ciljnem datotečnem imenu zamenjali s"
-"podčrtaji"
+msgstr "Vsi presledki v imenu datoteke bodo zamenjani s podčrtaji"
 
 #: ../thunar-plugin/tag-renamer.c:319
 msgid "_Lowercase"
-msgstr "_Majhne črke"
+msgstr "Majhne _črke"
 
 #: ../thunar-plugin/tag-renamer.c:321
 msgid ""
 "If you activate this, the resulting filename will only contain lowercase "
 "letters."
-msgstr ""
-"Če omogočite to opcijo, bo ciljno datotečno ime vsebovalo samo majhne"
-"črke."
+msgstr "Ime datoteke naj vsebuje samo majhne črke"
 
 #: ../thunar-plugin/tag-renamer.c:464 ../thunar-plugin/audio-tags-page.c:182
 msgid "Unknown Artist"
@@ -98,11 +96,11 @@ msgstr "Uredi _oznake"
 
 #: ../thunar-plugin/tag-renamer.c:627
 msgid "Edit ID3/OGG tags of this file."
-msgstr "Uredi ID3/OGG oznake datoteke."
+msgstr "Uredi oznake ID3/OGG"
 
 #: ../thunar-plugin/tag-renamer.c:646
 msgid "Tag Help"
-msgstr "Pomoč oznak"
+msgstr "Pomoč"
 
 #: ../thunar-plugin/tag-renamer.c:657
 msgid "Artist"
@@ -126,11 +124,11 @@ msgstr "Leto"
 
 #: ../thunar-plugin/tag-renamer.c:660
 msgid "Comment"
-msgstr "Komentar"
+msgstr "Opomba"
 
 #: ../thunar-plugin/tag-renamer.c:717
 msgid "Audio Tags"
-msgstr "Audio oznake"
+msgstr "Oznake"
 
 #: ../thunar-plugin/audio-tags-page.c:195
 msgid "Unknown Album"
@@ -138,11 +136,11 @@ msgstr "Neznan album"
 
 #: ../thunar-plugin/audio-tags-page.c:328
 msgid "<b>Track:</b>"
-msgstr "<b>Skladba:</b>"
+msgstr "<b>Št. skladbe:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:343
 msgid "Enter the track number here."
-msgstr "Semkaj vnesite številko skladbe."
+msgstr "Številka skladbe"
 
 #: ../thunar-plugin/audio-tags-page.c:351
 msgid "<b>Year:</b>"
@@ -150,7 +148,7 @@ msgstr "<b>Leto:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:366
 msgid "Enter the release year here."
-msgstr "Semkaj vnesite leto izdaje."
+msgstr "Leto izdaje"
 
 #: ../thunar-plugin/audio-tags-page.c:374
 msgid "<b>Artist:</b>"
@@ -158,7 +156,7 @@ msgstr "<b>Izvajalec:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:381
 msgid "Enter the name of the artist or author of this file here."
-msgstr "Semkaj vnesite ime izvajalca ali avtorja te datoteke."
+msgstr "Izvajalec skladbe"
 
 #: ../thunar-plugin/audio-tags-page.c:389
 msgid "<b>Title:</b>"
@@ -166,7 +164,7 @@ msgstr "<b>Naslov:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:396
 msgid "Enter the song title here."
-msgstr "Semkaj vnesite naslov pesmi."
+msgstr "Naslov skladbe"
 
 #: ../thunar-plugin/audio-tags-page.c:403
 msgid "<b>Album:</b>"
@@ -174,15 +172,15 @@ msgstr "<b>Album:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:410
 msgid "Enter the album/record title here."
-msgstr "Semkaj vnesite naslov plošče/albuma."
+msgstr "Naslov albuma"
 
 #: ../thunar-plugin/audio-tags-page.c:417
 msgid "<b>Comment:</b>"
-msgstr "<b>Komentar:</b>"
+msgstr "<b>Opomba:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:424
 msgid "Enter your comments here."
-msgstr "Semkaj vnesite svoje komentarje."
+msgstr "Opombe skladbe"
 
 #: ../thunar-plugin/audio-tags-page.c:431
 msgid "<b>Genre:</b>"
@@ -190,7 +188,7 @@ msgstr "<b>Zvrst:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:438
 msgid "Select or enter the genre of this song here."
-msgstr "Tukaj izberite ali vnesite zvrst skladbe."
+msgstr "Zvrst skladbe"
 
 #. Create and add the save action
 #: ../thunar-plugin/audio-tags-page.c:449
@@ -199,20 +197,21 @@ msgstr "_Shrani"
 
 #: ../thunar-plugin/audio-tags-page.c:449
 msgid "Save audio tags."
-msgstr "Shrani audio oznake."
+msgstr "Shrani oznake"
 
 #. Create and add the info action
 #: ../thunar-plugin/audio-tags-page.c:456
 msgid "_Information"
-msgstr "_Informacije"
+msgstr "_Podatki"
 
 #: ../thunar-plugin/audio-tags-page.c:456
 msgid "Display more detailed information about this audio file."
-msgstr "Prikaži podrobnejše podatke o tej zvočni datoteki."
+msgstr "Podrobni podatki o zvočni datoteki"
 
+# Ime zavihka v lastnostih datoteke
 #: ../thunar-plugin/audio-tags-page.c:524
 msgid "Audio"
-msgstr "Audio"
+msgstr "Podrobnosti"
 
 #. Set up the dialog
 #: ../thunar-plugin/audio-tags-page.c:560
@@ -249,15 +248,15 @@ msgstr "<b>Velikost datoteke:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:1045
 msgid "<b>MIME Type:</b>"
-msgstr "<b>MIME Tip:</b>"
+msgstr "<b>Vrsta MIME:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:1058
 msgid "<b>Bitrate:</b>"
-msgstr "<b>Bitraža:</b>"
+msgstr "<b>Bitna hitrost:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:1071
 msgid "<b>Samplerate:</b>"
-msgstr "<b>Samplerate:</b>"
+msgstr "<b>Hitrost vzorčenja:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:1084
 msgid "<b>Channels:</b>"
@@ -265,4 +264,4 @@ msgstr "<b>Kanali:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:1097
 msgid "<b>Length:</b>"
-msgstr "<b>Dolžina:</b>"
+msgstr "<b>Trajanje:</b>"
