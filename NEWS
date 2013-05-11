@@ -1,3 +1,13 @@
+0.2.1
+=====
+- Automake updates.
+- Translation updates: Arabic, Bulgarian, Catalan (Valencian), Czech,
+  Danish, German, English (United Kingdom), Spanish (Castilian),
+  Basque, French, Croatian, Indonesian, Italian, Kazakh, Korean,
+  Lithuanian, Latvian, Dutch (Flemish), Polish, Portuguese, Portuguese
+  (Brazilian), Russian, Slovak, Slovenian, Serbian, Turkish, Uyghur,
+  Ukrainian, Chinese (China), Chinese (Taiwan).
+
 0.2.0
 =====
 - Use thunarx-2 and exo-1 API.
