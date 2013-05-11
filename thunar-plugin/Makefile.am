@@ -32,10 +32,12 @@ thunar_media_tags_plugin_la_LDFLAGS =					\
 	-avoid-version							\
 	-export-dynamic							\
 	-module								\
+	$(PLATFORM_LDFLAGS)
+
+thunar_media_tags_plugin_la_LIBADD =					\
 	$(EXO_LIBS)							\
 	$(THUNARX_LIBS)							\
 	$(TAGLIB_LIBS)							\
-	$(TAGLIBC_LIBS)							\
-	$(PLATFORM_LDFLAGS)
+	$(TAGLIBC_LIBS)
 
 # vi:set ts=8 sw=8 noet ai nocindent syntax=automake:
