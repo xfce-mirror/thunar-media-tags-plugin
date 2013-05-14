@@ -2,19 +2,23 @@
 # Copyright (C) 2006-2007 Jannis Pohlmann <jannis@xfce.org>
 # This file is distributed under the same license as the thunar-media-tags-plugin package.
 # Piotr Maliński <admin@rk.edu.pl>, 2006.
-# 
+# Piotr Sokół <psokol@jabster.pl>, 2013.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: thunar-media-tags-plugin 0.1.2svn\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-10-07 08:30+0000\n"
-"PO-Revision-Date: 2009-03-25 09:19+0100\n"
-"Last-Translator: Piotr Sokół <piotr.sokol@10g.pl>\n"
-"Language-Team: Polish <xfce-i18n@xfce.org>\n"
+"POT-Creation-Date: 2013-05-14 08:30+0000\n"
+"PO-Revision-Date: 2013-05-14 12:14+0200\n"
+"Last-Translator: Piotr Sokół <psokol@jabster.pl>\n"
+"Language-Team: polski <>\n"
+"Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Language: pl\n"
+"Content-Transfer-Encoding: 8bits\n"
+"Plural-Forms: nplurals=3; plural=((n==1) ? 0 : ((n%10>=2 && n%10<=4 && (n"
+"%100<10 || n%100>=20)) ? 1 : 2));\n"
+"X-Generator: Gtranslator 2.91.5\n"
 
 #: ../thunar-plugin/tag-renamer.c:59 ../thunar-plugin/tag-renamer.c:657
 msgid "Title"
@@ -22,7 +26,7 @@ msgstr "Tytuł"
 
 #: ../thunar-plugin/tag-renamer.c:60
 msgid "Artist - Title"
-msgstr "Artysta - tytuł"
+msgstr "Wykonawca - tytuł"
 
 #: ../thunar-plugin/tag-renamer.c:61
 msgid "Track - Title"
@@ -30,7 +34,7 @@ msgstr "Ścieżka - tytuł"
 
 #: ../thunar-plugin/tag-renamer.c:62
 msgid "Track - Artist - Title"
-msgstr "Ścieżka - artysta - tytuł"
+msgstr "Ścieżka - wykonawca - tytuł"
 
 #: ../thunar-plugin/tag-renamer.c:63
 msgid "Track. Title"
@@ -38,11 +42,11 @@ msgstr "Ścieżka. tytuł"
 
 #: ../thunar-plugin/tag-renamer.c:64
 msgid "Track. Artist - Title"
-msgstr "Ścieżka. artysta - tytuł"
+msgstr "Ścieżka. wykonawca - tytuł"
 
 #: ../thunar-plugin/tag-renamer.c:65
 msgid "Artist - Track - Title"
-msgstr "Artysta - ścieżka - tytuł"
+msgstr "Wykonawca - ścieżka - tytuł"
 
 #: ../thunar-plugin/tag-renamer.c:67
 msgid "Custom"
@@ -80,7 +84,7 @@ msgstr "Używa tyko małych liter w nazwie pliku docelowego"
 
 #: ../thunar-plugin/tag-renamer.c:464 ../thunar-plugin/audio-tags-page.c:182
 msgid "Unknown Artist"
-msgstr "Nieznany artysta"
+msgstr "Nieznany wykonawca"
 
 #: ../thunar-plugin/tag-renamer.c:472 ../thunar-plugin/audio-tags-page.c:208
 msgid "Unknown Title"
@@ -101,7 +105,7 @@ msgstr "Pomoc etykiet"
 
 #: ../thunar-plugin/tag-renamer.c:657
 msgid "Artist"
-msgstr "Artysta"
+msgstr "Wykonawca"
 
 #: ../thunar-plugin/tag-renamer.c:658
 msgid "Album"
@@ -149,11 +153,11 @@ msgstr "Wprowadza rok publikacji"
 
 #: ../thunar-plugin/audio-tags-page.c:374
 msgid "<b>Artist:</b>"
-msgstr "<b>Artysta:</b>"
+msgstr "<b>Wykonawca:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:381
 msgid "Enter the name of the artist or author of this file here."
-msgstr "Wprowadza nazwisko autora lub artysty"
+msgstr "Wprowadza nazwisko autora lub wykonawcy"
 
 #: ../thunar-plugin/audio-tags-page.c:389
 msgid "<b>Title:</b>"
@@ -169,7 +173,7 @@ msgstr "<b>Album:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:410
 msgid "Enter the album/record title here."
-msgstr "Wprowadza nazwę albumu lub nagrania"
+msgstr "Wprowadza nazwę albumu"
 
 #: ../thunar-plugin/audio-tags-page.c:417
 msgid "<b>Comment:</b>"
@@ -185,7 +189,7 @@ msgstr "<b>Gatunek:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:438
 msgid "Select or enter the genre of this song here."
-msgstr "Wprowadza gatunek utwory"
+msgstr "Wprowadza gatunek utworu"
 
 #. Create and add the save action
 #: ../thunar-plugin/audio-tags-page.c:449
@@ -248,7 +252,7 @@ msgstr "<b>Typ MIME:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:1058
 msgid "<b>Bitrate:</b>"
-msgstr "<b>Gęstość bitowa:</b>"
+msgstr "<b>Tempo transmisji:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:1071
 msgid "<b>Samplerate:</b>"
