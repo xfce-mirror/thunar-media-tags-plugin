@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: thunar media tags plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-01-07 22:39+0000\n"
+"POT-Creation-Date: 2013-06-10 13:54+0000\n"
 "PO-Revision-Date: 2007-11-06 08:23-0300\n"
 "Last-Translator: Fábio Nogueira <deb-user-ba@ubuntu.com>\n"
 "Language-Team: Brazilian Portuguese <ldp-br@bazar2.conectiva.com.br>\n"
@@ -52,7 +52,7 @@ msgstr "Personalizado"
 #. Custom format
 #: ../thunar-plugin/tag-renamer.c:243
 msgid "Cust_om format:"
-msgstr "F_ormato Personalizado:"
+msgstr "F_ormato personalizado:"
 
 #. Format label
 #: ../thunar-plugin/tag-renamer.c:271
@@ -84,16 +84,16 @@ msgstr ""
 
 #: ../thunar-plugin/tag-renamer.c:464 ../thunar-plugin/audio-tags-page.c:182
 msgid "Unknown Artist"
-msgstr "Artista Desconhecido"
+msgstr "Artista desconhecido"
 
 #: ../thunar-plugin/tag-renamer.c:472 ../thunar-plugin/audio-tags-page.c:208
 msgid "Unknown Title"
-msgstr "Título Desconhecido"
+msgstr "Título desconhecido"
 
 #. Edit tags action
 #: ../thunar-plugin/tag-renamer.c:627
 msgid "Edit _Tags"
-msgstr "Editar E_tiqueta"
+msgstr "Editar e_tiqueta"
 
 #: ../thunar-plugin/tag-renamer.c:627
 msgid "Edit ID3/OGG tags of this file."
@@ -101,7 +101,7 @@ msgstr "Editar etiquetas ID3/OGG deste arquivo."
 
 #: ../thunar-plugin/tag-renamer.c:646
 msgid "Tag Help"
-msgstr "Etiqueta de Ajuda"
+msgstr "Etiqueta de ajuda"
 
 #: ../thunar-plugin/tag-renamer.c:657
 msgid "Artist"
@@ -129,11 +129,11 @@ msgstr "Comentário"
 
 #: ../thunar-plugin/tag-renamer.c:717
 msgid "Audio Tags"
-msgstr "Etiquetas do Áudio"
+msgstr "Etiquetas do áudio"
 
 #: ../thunar-plugin/audio-tags-page.c:195
 msgid "Unknown Album"
-msgstr "Álbum Desconhecido"
+msgstr "Álbum desconhecido"
 
 #: ../thunar-plugin/audio-tags-page.c:328
 msgid "<b>Track:</b>"
@@ -141,7 +141,7 @@ msgstr "<b>Faixa:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:343
 msgid "Enter the track number here."
-msgstr "Entre com a número da faixa aqui."
+msgstr "Digite o número da faixa aqui."
 
 #: ../thunar-plugin/audio-tags-page.c:351
 msgid "<b>Year:</b>"
@@ -149,7 +149,7 @@ msgstr "<b>Ano:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:366
 msgid "Enter the release year here."
-msgstr "Entre com o ano do lançamento aqui."
+msgstr "Digite o ano do lançamento aqui."
 
 #: ../thunar-plugin/audio-tags-page.c:374
 msgid "<b>Artist:</b>"
@@ -157,7 +157,7 @@ msgstr "<b>Artista:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:381
 msgid "Enter the name of the artist or author of this file here."
-msgstr "Entre com o nome do artista ou autor deste arquivo aqui."
+msgstr "Digite o nome do artista ou autor deste arquivo aqui."
 
 #: ../thunar-plugin/audio-tags-page.c:389
 msgid "<b>Title:</b>"
@@ -165,7 +165,7 @@ msgstr "<b>Título:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:396
 msgid "Enter the song title here."
-msgstr "Entre com o título da música aqui."
+msgstr "Digite o título da música aqui."
 
 #: ../thunar-plugin/audio-tags-page.c:403
 msgid "<b>Album:</b>"
@@ -173,7 +173,7 @@ msgstr "<b>Álbum:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:410
 msgid "Enter the album/record title here."
-msgstr "Entre com o título do álbum/gravação aqui."
+msgstr "Digite o título do álbum/gravação aqui."
 
 #: ../thunar-plugin/audio-tags-page.c:417
 msgid "<b>Comment:</b>"
@@ -181,7 +181,7 @@ msgstr "<b>Comentário:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:424
 msgid "Enter your comments here."
-msgstr "Entre seus comentários aqui."
+msgstr "Digite seus comentários aqui."
 
 #: ../thunar-plugin/audio-tags-page.c:431
 msgid "<b>Genre:</b>"
@@ -189,7 +189,7 @@ msgstr "<b>Gênero:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:438
 msgid "Select or enter the genre of this song here."
-msgstr "Selecione ou entre com o gênero da música aqui."
+msgstr "Selecione ou digite o gênero da música aqui."
 
 #. Create and add the save action
 #: ../thunar-plugin/audio-tags-page.c:449
@@ -216,17 +216,17 @@ msgstr "Áudio"
 #. Set up the dialog
 #: ../thunar-plugin/audio-tags-page.c:560
 msgid "Edit Tags"
-msgstr "Editar Etiquetas"
+msgstr "Editar etiquetas"
 
 #. Create dialog
 #: ../thunar-plugin/audio-tags-page.c:982
 msgid "Audio Information"
-msgstr "Informações sobre o Áudio"
+msgstr "Informações sobre o áudio"
 
 #: ../thunar-plugin/audio-tags-page.c:993
 #, c-format
 msgid "%d:%d Minutes"
-msgstr "%d:%d Minutos"
+msgstr "%d:%d minutos"
 
 #: ../thunar-plugin/audio-tags-page.c:994
 #, c-format
@@ -252,7 +252,7 @@ msgstr "<b>Tipo MIME:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:1058
 msgid "<b>Bitrate:</b>"
-msgstr "<b>Bitrate:</b>"
+msgstr "<b>Taxa de bits:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:1071
 msgid "<b>Samplerate:</b>"
