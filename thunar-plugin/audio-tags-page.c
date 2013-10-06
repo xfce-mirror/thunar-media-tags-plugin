@@ -990,7 +990,7 @@ audio_tags_page_info_activate (GtkAction *action,
 
   /* Retrieve audio information */
   properties = taglib_file_audioproperties (page->taglib_file);
-  length = g_strdup_printf (_("%d:%d Minutes"), taglib_audioproperties_length (properties) / 60, taglib_audioproperties_length (properties) % 60);
+  length = g_strdup_printf (_("%d:%02d Minutes"), taglib_audioproperties_length (properties) / 60, taglib_audioproperties_length (properties) % 60);
   bitrate = g_strdup_printf (_("%d KBit/s"), taglib_audioproperties_bitrate (properties));
   samplerate = g_strdup_printf (_("%d Hz"), taglib_audioproperties_samplerate (properties));
   channels = g_strdup_printf ("%d", taglib_audioproperties_channels (properties));
