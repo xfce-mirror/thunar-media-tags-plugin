@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-03 20:09+0200\n"
-"PO-Revision-Date: 2013-10-16 11:11+0000\n"
+"PO-Revision-Date: 2013-11-06 16:21+0000\n"
 "Last-Translator: Sveinn í Felli <sveinki@nett.is>\n"
 "Language-Team: Icelandic (http://www.transifex.com/projects/p/xfce/language/is/)\n"
 "MIME-Version: 1.0\n"
@@ -62,13 +62,13 @@ msgstr "_Snið:"
 
 #: ../thunar-plugin/tag-renamer.c:312
 msgid "_Underscores"
-msgstr ""
+msgstr "_Undirstrik"
 
 #: ../thunar-plugin/tag-renamer.c:314
 msgid ""
 "Activating this option will replace all spaces in the target filename with "
 "underscores."
-msgstr ""
+msgstr "Við það að virkja þennan valkost verður öllum bilum í heitum úttaksskráa skipt út fyrir undirstrik."
 
 #: ../thunar-plugin/tag-renamer.c:319
 msgid "_Lowercase"
@@ -78,7 +78,7 @@ msgstr "_Lágstafa"
 msgid ""
 "If you activate this, the resulting filename will only contain lowercase "
 "letters."
-msgstr ""
+msgstr "Við það að virkja þennan valkost verða heiti úttaksskráa alfarið í lágstöfum."
 
 #: ../thunar-plugin/tag-renamer.c:464 ../thunar-plugin/audio-tags-page.c:182
 msgid "Unknown Artist"
@@ -91,15 +91,15 @@ msgstr "Óþekktur titill"
 #. Edit tags action
 #: ../thunar-plugin/tag-renamer.c:627
 msgid "Edit _Tags"
-msgstr "Breyta merkjum"
+msgstr "Brey_ta merkjum"
 
 #: ../thunar-plugin/tag-renamer.c:627
 msgid "Edit ID3/OGG tags of this file."
-msgstr ""
+msgstr "Breyta ID3/OGG merkjum í þessari skrá."
 
 #: ../thunar-plugin/tag-renamer.c:646
 msgid "Tag Help"
-msgstr ""
+msgstr "Hjálp með merki"
 
 #: ../thunar-plugin/tag-renamer.c:657
 msgid "Artist"
@@ -127,7 +127,7 @@ msgstr "Athugasemd"
 
 #: ../thunar-plugin/tag-renamer.c:717
 msgid "Audio Tags"
-msgstr ""
+msgstr "Merki á hljóðskrám"
 
 #: ../thunar-plugin/audio-tags-page.c:195
 msgid "Unknown Album"
@@ -139,7 +139,7 @@ msgstr "<b>Spor:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:343
 msgid "Enter the track number here."
-msgstr ""
+msgstr "Settu hér inn númer spors/lags."
 
 #: ../thunar-plugin/audio-tags-page.c:351
 msgid "<b>Year:</b>"
@@ -147,7 +147,7 @@ msgstr "<b>Ár:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:366
 msgid "Enter the release year here."
-msgstr ""
+msgstr "Settu hér inn útgáfuár."
 
 #: ../thunar-plugin/audio-tags-page.c:374
 msgid "<b>Artist:</b>"
@@ -155,7 +155,7 @@ msgstr "<b>Flytjandi:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:381
 msgid "Enter the name of the artist or author of this file here."
-msgstr ""
+msgstr "Settu hér inn nafn flytjanda eða höfundi skráarinnar."
 
 #: ../thunar-plugin/audio-tags-page.c:389
 msgid "<b>Title:</b>"
@@ -163,7 +163,7 @@ msgstr "<b>Titill:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:396
 msgid "Enter the song title here."
-msgstr ""
+msgstr "Settu hér inn heiti lags."
 
 #: ../thunar-plugin/audio-tags-page.c:403
 msgid "<b>Album:</b>"
@@ -171,7 +171,7 @@ msgstr "<b>Albúm:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:410
 msgid "Enter the album/record title here."
-msgstr ""
+msgstr "Settu hér inn titil plötu/disks."
 
 #: ../thunar-plugin/audio-tags-page.c:417
 msgid "<b>Comment:</b>"
@@ -179,7 +179,7 @@ msgstr "<b>Athugasemd:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:424
 msgid "Enter your comments here."
-msgstr ""
+msgstr "Settu hér inn athugasemdir."
 
 #: ../thunar-plugin/audio-tags-page.c:431
 msgid "<b>Genre:</b>"
@@ -187,7 +187,7 @@ msgstr "<b>Tegund:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:438
 msgid "Select or enter the genre of this song here."
-msgstr ""
+msgstr "Settu hér inn tegund eða tónlistarstefnu lagsins."
 
 #. Create and add the save action
 #: ../thunar-plugin/audio-tags-page.c:449
@@ -196,7 +196,7 @@ msgstr "_Vista"
 
 #: ../thunar-plugin/audio-tags-page.c:449
 msgid "Save audio tags."
-msgstr ""
+msgstr "Vista merkingar hljóðskráa."
 
 #. Create and add the info action
 #: ../thunar-plugin/audio-tags-page.c:456
@@ -205,7 +205,7 @@ msgstr "_Upplýsingar"
 
 #: ../thunar-plugin/audio-tags-page.c:456
 msgid "Display more detailed information about this audio file."
-msgstr ""
+msgstr "Birta nákvæmari upplýsingar um þessa hljóðskrá."
 
 #: ../thunar-plugin/audio-tags-page.c:524
 msgid "Audio"
@@ -238,28 +238,28 @@ msgstr "%d Hz"
 
 #: ../thunar-plugin/audio-tags-page.c:1019
 msgid "<b>Filename:</b>"
-msgstr ""
+msgstr "<b>Skráarheiti:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:1032
 msgid "<b>Filesize:</b>"
-msgstr ""
+msgstr "<b>Skráastærð:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:1045
 msgid "<b>MIME Type:</b>"
-msgstr ""
+msgstr "<b>MIME-tegund:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:1058
 msgid "<b>Bitrate:</b>"
-msgstr ""
+msgstr "<b>Bitahraði:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:1071
 msgid "<b>Samplerate:</b>"
-msgstr ""
+msgstr "<b>Safntíðni:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:1084
 msgid "<b>Channels:</b>"
-msgstr ""
+msgstr "<b>Rásir:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:1097
 msgid "<b>Length:</b>"
-msgstr ""
+msgstr "<b>Lengd:</b>"
