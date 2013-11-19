@@ -1,23 +1,25 @@
-# Greek translation of the thunar-media-tags-plugin.
-# Copyright (C) 2006-2007 Jannis Pohlmann <jannis@xfce.org>
-# This file is distributed under the same license as the thunar-media-tags-plugin package.
-# Stavros Giannouris <stavrosg@gmail.com>, 2006, 2011.
-# Evaggelos Balaskas <ebalaskas@ebalaskas.gr>, 2009.
-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# ebal <ebalaskas@ebalaskas.gr>, 2009
+# Stavros Giannouris <stavrosg@gmail.com>, 2006,2011
 msgid ""
 msgstr ""
-"Project-Id-Version: thunar-media-tags-plugin 0.1.2svn\n"
+"Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-09-11 11:38+0200\n"
-"PO-Revision-Date: 2011-01-06 16:44+0200\n"
-"Last-Translator: Stavros Giannouris <stavrosg@hellug.gr>\n"
-"Language-Team: Greek <xfce-i18n@xfce.org>\n"
+"POT-Creation-Date: 2013-07-03 20:09+0200\n"
+"PO-Revision-Date: 2013-11-19 14:40+0000\n"
+"Last-Translator: Nick <nick@xfce.org>\n"
+"Language-Team: Greek (http://www.transifex.com/projects/p/xfce/language/el/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: el\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../thunar-plugin/tag-renamer.c:59
+#: ../thunar-plugin/tag-renamer.c:59 ../thunar-plugin/tag-renamer.c:657
 msgid "Title"
 msgstr "Τίτλος"
 
@@ -45,203 +47,220 @@ msgstr "Αριθμός. Καλλιτέχνης  - Τίτλος"
 msgid "Artist - Track - Title"
 msgstr "Καλλιτέχνης - Αριθμός - Τίτλος"
 
+#: ../thunar-plugin/tag-renamer.c:67
+msgid "Custom"
+msgstr ""
+
+#. Custom format
+#: ../thunar-plugin/tag-renamer.c:243
+msgid "Cust_om format:"
+msgstr ""
+
 #. Format label
-#: ../thunar-plugin/tag-renamer.c:223
+#: ../thunar-plugin/tag-renamer.c:271
 msgid "_Format:"
 msgstr "_Μορφή:"
 
-#: ../thunar-plugin/tag-renamer.c:246
+#: ../thunar-plugin/tag-renamer.c:312
 msgid "_Underscores"
 msgstr "Κάτω παύ_λες"
 
-#: ../thunar-plugin/tag-renamer.c:248
-msgid "Activating this option will replace all spaces in the target filename with underscores."
+#: ../thunar-plugin/tag-renamer.c:314
+msgid ""
+"Activating this option will replace all spaces in the target filename with "
+"underscores."
 msgstr "Μετατρέπει όλα τα κενά διαστήματα σε κάτω παύλες στα νέα ονόματα αρχείων."
 
-#: ../thunar-plugin/tag-renamer.c:253
+#: ../thunar-plugin/tag-renamer.c:319
 msgid "_Lowercase"
 msgstr "Πε_ζά"
 
-#: ../thunar-plugin/tag-renamer.c:255
-msgid "If you activate this, the resulting filename will only contain lowercase letters."
+#: ../thunar-plugin/tag-renamer.c:321
+msgid ""
+"If you activate this, the resulting filename will only contain lowercase "
+"letters."
 msgstr "Μετατρέπει όλους τους χαρακτήρες στα ονόματα αρχείων σε πεζούς."
 
-#: ../thunar-plugin/tag-renamer.c:264
-#: ../thunar-plugin/tag-renamer.c:702
-#: ../thunar-plugin/audio-tags-page.c:183
+#: ../thunar-plugin/tag-renamer.c:464 ../thunar-plugin/audio-tags-page.c:182
 msgid "Unknown Artist"
 msgstr "Άγνωστος καλλιτέχνης"
 
-#: ../thunar-plugin/tag-renamer.c:265
-#: ../thunar-plugin/tag-renamer.c:750
-#: ../thunar-plugin/audio-tags-page.c:209
+#: ../thunar-plugin/tag-renamer.c:472 ../thunar-plugin/audio-tags-page.c:208
 msgid "Unknown Title"
 msgstr "Άγνωστος τίτλος"
 
 #. Edit tags action
-#: ../thunar-plugin/tag-renamer.c:523
+#: ../thunar-plugin/tag-renamer.c:627
 msgid "Edit _Tags"
 msgstr "Επεξεργασία ε_τικετών"
 
-#: ../thunar-plugin/tag-renamer.c:523
+#: ../thunar-plugin/tag-renamer.c:627
 msgid "Edit ID3/OGG tags of this file."
 msgstr "Επεξεργασία των ετικετών ID3/OGG του αρχείου."
 
-#: ../thunar-plugin/tag-renamer.c:545
+#: ../thunar-plugin/tag-renamer.c:646
+msgid "Tag Help"
+msgstr ""
+
+#: ../thunar-plugin/tag-renamer.c:657
+msgid "Artist"
+msgstr ""
+
+#: ../thunar-plugin/tag-renamer.c:658
+msgid "Album"
+msgstr ""
+
+#: ../thunar-plugin/tag-renamer.c:658
+msgid "Genre"
+msgstr ""
+
+#: ../thunar-plugin/tag-renamer.c:659
+msgid "Track number"
+msgstr ""
+
+#: ../thunar-plugin/tag-renamer.c:659
+msgid "Year"
+msgstr ""
+
+#: ../thunar-plugin/tag-renamer.c:660
+msgid "Comment"
+msgstr ""
+
+#: ../thunar-plugin/tag-renamer.c:717
 msgid "Audio Tags"
 msgstr "Ετικέτες ήχου"
 
-#: ../thunar-plugin/audio-tags-page.c:196
+#: ../thunar-plugin/audio-tags-page.c:195
 msgid "Unknown Album"
 msgstr "Άγνωστος δίσκος."
 
-#: ../thunar-plugin/audio-tags-page.c:305
+#: ../thunar-plugin/audio-tags-page.c:328
 msgid "<b>Track:</b>"
 msgstr "<b>Κομμάτι:</b>"
 
-#: ../thunar-plugin/audio-tags-page.c:320
+#: ../thunar-plugin/audio-tags-page.c:343
 msgid "Enter the track number here."
 msgstr "Αριθμός κομματιού"
 
-#: ../thunar-plugin/audio-tags-page.c:328
+#: ../thunar-plugin/audio-tags-page.c:351
 msgid "<b>Year:</b>"
 msgstr "<b>Έτος:</b>"
 
-#: ../thunar-plugin/audio-tags-page.c:343
+#: ../thunar-plugin/audio-tags-page.c:366
 msgid "Enter the release year here."
 msgstr "Έτος κυκλοφορίας"
 
-#: ../thunar-plugin/audio-tags-page.c:351
+#: ../thunar-plugin/audio-tags-page.c:374
 msgid "<b>Artist:</b>"
 msgstr "<b>Καλλιτέχνης:</b>"
 
-#: ../thunar-plugin/audio-tags-page.c:358
+#: ../thunar-plugin/audio-tags-page.c:381
 msgid "Enter the name of the artist or author of this file here."
 msgstr "Καλλιτέχνης ή συγγραφέας των αρχείων."
 
-#: ../thunar-plugin/audio-tags-page.c:366
+#: ../thunar-plugin/audio-tags-page.c:389
 msgid "<b>Title:</b>"
 msgstr "<b>Τίτλος:</b>"
 
-#: ../thunar-plugin/audio-tags-page.c:373
+#: ../thunar-plugin/audio-tags-page.c:396
 msgid "Enter the song title here."
 msgstr "Τίτλος τραγουδιού"
 
-#: ../thunar-plugin/audio-tags-page.c:380
+#: ../thunar-plugin/audio-tags-page.c:403
 msgid "<b>Album:</b>"
 msgstr "<b>Άλμπουμ:</b>"
 
-#: ../thunar-plugin/audio-tags-page.c:387
+#: ../thunar-plugin/audio-tags-page.c:410
 msgid "Enter the album/record title here."
 msgstr "Τίτλος άλμπουμ/δίσκου."
 
-#: ../thunar-plugin/audio-tags-page.c:394
+#: ../thunar-plugin/audio-tags-page.c:417
 msgid "<b>Comment:</b>"
 msgstr "<b>Σχόλιο:</b>"
 
-#: ../thunar-plugin/audio-tags-page.c:401
+#: ../thunar-plugin/audio-tags-page.c:424
 msgid "Enter your comments here."
 msgstr "Εισάγετε το σχόλιο εδώ."
 
-#: ../thunar-plugin/audio-tags-page.c:408
+#: ../thunar-plugin/audio-tags-page.c:431
 msgid "<b>Genre:</b>"
 msgstr "<b>Είδος:</b>"
 
-#: ../thunar-plugin/audio-tags-page.c:415
+#: ../thunar-plugin/audio-tags-page.c:438
 msgid "Select or enter the genre of this song here."
 msgstr "Επιλέξτε ή εισάγετε το είδος."
 
 #. Create and add the save action
-#: ../thunar-plugin/audio-tags-page.c:454
+#: ../thunar-plugin/audio-tags-page.c:449
 msgid "_Save"
 msgstr "Απο_θήκευση"
 
-#: ../thunar-plugin/audio-tags-page.c:454
+#: ../thunar-plugin/audio-tags-page.c:449
 msgid "Save audio tags."
 msgstr "Αποθήκευση ετικετών."
 
 #. Create and add the info action
-#: ../thunar-plugin/audio-tags-page.c:461
+#: ../thunar-plugin/audio-tags-page.c:456
 msgid "_Information"
 msgstr "_Πληροφορίες"
 
-#: ../thunar-plugin/audio-tags-page.c:461
+#: ../thunar-plugin/audio-tags-page.c:456
 msgid "Display more detailed information about this audio file."
 msgstr "Εμφάνιση περισσότερων πληροφοριών για το αρχείο."
 
-#: ../thunar-plugin/audio-tags-page.c:528
+#: ../thunar-plugin/audio-tags-page.c:524
 msgid "Audio"
 msgstr "Ήχος"
 
 #. Set up the dialog
-#: ../thunar-plugin/audio-tags-page.c:564
+#: ../thunar-plugin/audio-tags-page.c:560
 msgid "Edit Tags"
 msgstr "Επεξεργασία ετικετών"
 
 #. Create dialog
-#: ../thunar-plugin/audio-tags-page.c:992
+#: ../thunar-plugin/audio-tags-page.c:982
 msgid "Audio Information"
 msgstr "Πληροφορίες ήχου"
 
-#: ../thunar-plugin/audio-tags-page.c:1003
+#: ../thunar-plugin/audio-tags-page.c:993
 #, c-format
 msgid "%d:%d Minutes"
 msgstr "%d:%d λεπτά"
 
-#: ../thunar-plugin/audio-tags-page.c:1004
+#: ../thunar-plugin/audio-tags-page.c:994
 #, c-format
 msgid "%d KBit/s"
 msgstr "%d KBit/s"
 
-#: ../thunar-plugin/audio-tags-page.c:1005
+#: ../thunar-plugin/audio-tags-page.c:995
 #, c-format
 msgid "%d Hz"
 msgstr "%d Hz"
 
-#: ../thunar-plugin/audio-tags-page.c:1025
+#: ../thunar-plugin/audio-tags-page.c:1019
 msgid "<b>Filename:</b>"
 msgstr "<b>Όνομα αρχείου:</b>"
 
-#: ../thunar-plugin/audio-tags-page.c:1038
+#: ../thunar-plugin/audio-tags-page.c:1032
 msgid "<b>Filesize:</b>"
 msgstr "<b>Μέγεθος:</b>"
 
-#: ../thunar-plugin/audio-tags-page.c:1051
+#: ../thunar-plugin/audio-tags-page.c:1045
 msgid "<b>MIME Type:</b>"
 msgstr "<b>Τύπος MIME:</b>"
 
-#: ../thunar-plugin/audio-tags-page.c:1064
+#: ../thunar-plugin/audio-tags-page.c:1058
 msgid "<b>Bitrate:</b>"
 msgstr "<b>Bitrate:</b>"
 
-#: ../thunar-plugin/audio-tags-page.c:1077
+#: ../thunar-plugin/audio-tags-page.c:1071
 msgid "<b>Samplerate:</b>"
 msgstr "<b>Ρυθμός δειγματοληψίας:</b>"
 
-#: ../thunar-plugin/audio-tags-page.c:1090
+#: ../thunar-plugin/audio-tags-page.c:1084
 msgid "<b>Channels:</b>"
 msgstr "<b>Κανάλια:</b>"
 
-#: ../thunar-plugin/audio-tags-page.c:1103
+#: ../thunar-plugin/audio-tags-page.c:1097
 msgid "<b>Length:</b>"
 msgstr "<b>Διάρκεια:</b>"
-
-#~ msgid "Custom"
-#~ msgstr "Προσαρμογή"
-#~ msgid "Cust_om format:"
-#~ msgstr "Πρ_οσαρμοσμένη μορφή:"
-#~ msgid "Tag Help"
-#~ msgstr "Βοήθεια ετικετών"
-#~ msgid "Artist"
-#~ msgstr "Καλλιτέχνης"
-#~ msgid "Album"
-#~ msgstr "Άλμπουμ"
-#~ msgid "Genre"
-#~ msgstr "Είδος"
-#~ msgid "Track number"
-#~ msgstr "Αριθμός τραγουδιού"
-#~ msgid "Year"
-#~ msgstr "Έτος"
-#~ msgid "Comment"
-#~ msgstr "Σχόλιο"
-
