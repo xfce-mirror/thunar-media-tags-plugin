@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-03 20:09+0200\n"
-"PO-Revision-Date: 2014-02-16 23:30+0000\n"
+"PO-Revision-Date: 2014-02-16 23:31+0000\n"
 "Last-Translator: schizo <eveskovic@gmail.com>\n"
 "Language-Team: Croatian (http://www.transifex.com/projects/p/xfce/language/hr/)\n"
 "MIME-Version: 1.0\n"
@@ -173,7 +173,7 @@ msgstr "<b>Album:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:410
 msgid "Enter the album/record title here."
-msgstr ""
+msgstr "Ovdje unesite ime albuma/ploče."
 
 #: ../thunar-plugin/audio-tags-page.c:417
 msgid "<b>Comment:</b>"
