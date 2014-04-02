@@ -4,15 +4,15 @@
 # 
 # Translators:
 # schizo <eveskovic@gmail.com>, 2014
-# Ivica  Kolić <ikoli@yahoo.com>, 2013
+# Ivica  Kolić <ikoli@yahoo.com>, 2013-2014
 # Ivica  Kolić <ikoli@yahoo.com>, 2011
 msgid ""
 msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-03 20:09+0200\n"
-"PO-Revision-Date: 2014-02-21 13:01+0000\n"
-"Last-Translator: schizo <eveskovic@gmail.com>\n"
+"PO-Revision-Date: 2014-04-02 17:14+0000\n"
+"Last-Translator: Ivica  Kolić <ikoli@yahoo.com>\n"
 "Language-Team: Croatian (http://www.transifex.com/projects/p/xfce/language/hr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -64,13 +64,13 @@ msgstr "_Format:"
 
 #: ../thunar-plugin/tag-renamer.c:312
 msgid "_Underscores"
-msgstr "_Podcrte"
+msgstr "_Podvlačenja"
 
 #: ../thunar-plugin/tag-renamer.c:314
 msgid ""
 "Activating this option will replace all spaces in the target filename with "
 "underscores."
-msgstr "Aktiviranjem ove opcije svi razmaci u ciljanom imenu datoteke bit će zamijenjeni podcrtama."
+msgstr "Aktiviranjem ove opcije svi razmaci u ciljanom imenu datoteke bit će zamijenjeni podvlačenjima."
 
 #: ../thunar-plugin/tag-renamer.c:319
 msgid "_Lowercase"
