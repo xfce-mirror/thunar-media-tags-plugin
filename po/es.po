@@ -1,20 +1,23 @@
-# Spanish translation of the thunar-media-tags-plugin.
-# Copyright (C) 2006-2007 Jannis Pohlmann <jannis@xfce.org>
-# This file is distributed under the same license as the thunar-media-tags-plugin package.
-# Abel Martín <abel.martin.ruiz@gmail.com>, 2008.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
 # 
+# Translators:
+# Abel Martín <abel.martin.ruiz@gmail.com>, 2008
+# Pablo Roberto Francisco Lezaeta Reyes <prflr88@gmail.com>, 2014
 msgid ""
 msgstr ""
-"Project-Id-Version: thunar-media-tags-plugin\n"
+"Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-01-24 16:36+0000\n"
-"PO-Revision-Date: 2008-10-20 20:27+0100\n"
-"Last-Translator: Abel Martín <abel.martin.ruiz@gmail.com>\n"
-"Language-Team: Spanish <xfce-i18n@xfce.org>\n"
+"POT-Creation-Date: 2013-07-03 20:09+0200\n"
+"PO-Revision-Date: 2014-12-26 06:04+0000\n"
+"Last-Translator: Pablo Roberto Francisco Lezaeta Reyes <prflr88@gmail.com>\n"
+"Language-Team: Spanish (http://www.transifex.com/projects/p/thunar-plugins/language/es/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../thunar-plugin/tag-renamer.c:59 ../thunar-plugin/tag-renamer.c:657
 msgid "Title"
@@ -66,9 +69,7 @@ msgstr "_Subrayados"
 msgid ""
 "Activating this option will replace all spaces in the target filename with "
 "underscores."
-msgstr ""
-"Activar esta opción sustituirá todos los espacios en el nombre del archivo "
-"objetivo con subrayados."
+msgstr "Activar esta opción sustituirá todos los espacios en el nombre del archivo objetivo con subrayados."
 
 #: ../thunar-plugin/tag-renamer.c:319
 msgid "_Lowercase"
@@ -78,9 +79,7 @@ msgstr "_Minúsculas"
 msgid ""
 "If you activate this, the resulting filename will only contain lowercase "
 "letters."
-msgstr ""
-"Si activa esta opción, el nombre de archivo resultante sólo contendrá letras "
-"minúsculas."
+msgstr "Si activa esta opción, el nombre de archivo resultante solamente contendrá letras minúsculas."
 
 #: ../thunar-plugin/tag-renamer.c:464 ../thunar-plugin/audio-tags-page.c:182
 msgid "Unknown Artist"
@@ -113,7 +112,7 @@ msgstr "Álbum"
 
 #: ../thunar-plugin/tag-renamer.c:658
 msgid "Genre"
-msgstr "Genero"
+msgstr "Género"
 
 #: ../thunar-plugin/tag-renamer.c:659
 msgid "Track number"
@@ -244,7 +243,7 @@ msgstr "<b>Nombre de archivo:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:1032
 msgid "<b>Filesize:</b>"
-msgstr "<b>Tamaño de archivo:</b>"
+msgstr "<b>Tamaño del archivo:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:1045
 msgid "<b>MIME Type:</b>"
