@@ -3,6 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# Efstathios Iosifidis <iefstathios@gmail.com>, 2014
 # ebal <ebalaskas@ebalaskas.gr>, 2009
 # Stavros Giannouris <stavrosg@gmail.com>, 2006,2011
 msgid ""
@@ -10,9 +11,9 @@ msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-03 20:09+0200\n"
-"PO-Revision-Date: 2013-11-19 14:40+0000\n"
-"Last-Translator: Nick <nick@xfce.org>\n"
-"Language-Team: Greek (http://www.transifex.com/projects/p/xfce/language/el/)\n"
+"PO-Revision-Date: 2014-12-26 20:07+0000\n"
+"Last-Translator: Efstathios Iosifidis <iefstathios@gmail.com>\n"
+"Language-Team: Greek (http://www.transifex.com/projects/p/thunar-plugins/language/el/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -104,11 +105,11 @@ msgstr ""
 
 #: ../thunar-plugin/tag-renamer.c:657
 msgid "Artist"
-msgstr ""
+msgstr "Καλλιτέχνης"
 
 #: ../thunar-plugin/tag-renamer.c:658
 msgid "Album"
-msgstr ""
+msgstr "Άλμπουμ"
 
 #: ../thunar-plugin/tag-renamer.c:658
 msgid "Genre"
@@ -120,11 +121,11 @@ msgstr ""
 
 #: ../thunar-plugin/tag-renamer.c:659
 msgid "Year"
-msgstr ""
+msgstr "Χρόνος"
 
 #: ../thunar-plugin/tag-renamer.c:660
 msgid "Comment"
-msgstr ""
+msgstr "Σχόλιο"
 
 #: ../thunar-plugin/tag-renamer.c:717
 msgid "Audio Tags"
