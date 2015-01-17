@@ -1,20 +1,23 @@
-# Russian translation of the thunar-media-tags-plugin.
-# Copyright (C) 2006-2007 Jannis Pohlmann <jannis@xfce.org>
-# This file is distributed under the same license as the thunar-media-tags-plugin package.
-# Andrey Fedoseev <andrey.fedoseev@gmail.com>, 2006.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
 # 
+# Translators:
+# Andrey Fedoseev <andrey.fedoseev@gmail.com>, 2006
+# Lowrider <pams@imail.ru>, 2015
 msgid ""
 msgstr ""
-"Project-Id-Version: thunar-media-tags-plugin 0.1.2svn\n"
+"Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-03-08 02:27+0000\n"
-"PO-Revision-Date: 2006-04-09 16:27+0600\n"
-"Last-Translator: Andrey Fedoseev <andrey.fedoseev@gmail.com>\n"
-"Language-Team: Russian <xfce-i18n@xfce.org>\n"
+"POT-Creation-Date: 2013-07-03 20:09+0200\n"
+"PO-Revision-Date: 2015-01-17 20:19+0000\n"
+"Last-Translator: Lowrider <pams@imail.ru>\n"
+"Language-Team: Russian (http://www.transifex.com/projects/p/thunar-plugins/language/ru/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: ru\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #: ../thunar-plugin/tag-renamer.c:59 ../thunar-plugin/tag-renamer.c:657
 msgid "Title"
@@ -22,7 +25,7 @@ msgstr "Название"
 
 #: ../thunar-plugin/tag-renamer.c:60
 msgid "Artist - Title"
-msgstr "Артист - Название"
+msgstr "Исполнитель - Название"
 
 #: ../thunar-plugin/tag-renamer.c:61
 msgid "Track - Title"
@@ -30,7 +33,7 @@ msgstr "Номер - Название"
 
 #: ../thunar-plugin/tag-renamer.c:62
 msgid "Track - Artist - Title"
-msgstr "Номер - Артист - Название"
+msgstr "Номер - Исполнитель - Название"
 
 #: ../thunar-plugin/tag-renamer.c:63
 msgid "Track. Title"
@@ -38,11 +41,11 @@ msgstr "Номер. Название"
 
 #: ../thunar-plugin/tag-renamer.c:64
 msgid "Track. Artist - Title"
-msgstr "Номер. Артист - Название"
+msgstr "Номер. Исполнитель - Название"
 
 #: ../thunar-plugin/tag-renamer.c:65
 msgid "Artist - Track - Title"
-msgstr "Артист - Номер - Название"
+msgstr "Исполнитель - Номер - Название"
 
 #: ../thunar-plugin/tag-renamer.c:67
 msgid "Custom"
@@ -66,9 +69,7 @@ msgstr "Подчеркивания"
 msgid ""
 "Activating this option will replace all spaces in the target filename with "
 "underscores."
-msgstr ""
-"При активации этого параметра все пробелы в имени файла будут заменены на "
-"знак подчеркивания."
+msgstr "При активации этого параметра все пробелы в имени файла будут заменены на знак подчеркивания."
 
 #: ../thunar-plugin/tag-renamer.c:319
 msgid "_Lowercase"
@@ -78,13 +79,11 @@ msgstr "Нижний регистр"
 msgid ""
 "If you activate this, the resulting filename will only contain lowercase "
 "letters."
-msgstr ""
-"Если вы активируете этот параметр, то получившееся имя файла будет содержать "
-"только буквы в нижнем регистре."
+msgstr "Если вы активируете этот параметр, то получившееся имя файла будет содержать только буквы в нижнем регистре."
 
 #: ../thunar-plugin/tag-renamer.c:464 ../thunar-plugin/audio-tags-page.c:182
 msgid "Unknown Artist"
-msgstr "Артист неизвестен"
+msgstr "Исполнитель неизвестен"
 
 #: ../thunar-plugin/tag-renamer.c:472 ../thunar-plugin/audio-tags-page.c:208
 msgid "Unknown Title"
@@ -93,15 +92,15 @@ msgstr "Название неизвестно"
 #. Edit tags action
 #: ../thunar-plugin/tag-renamer.c:627
 msgid "Edit _Tags"
-msgstr "Редактировать теги"
+msgstr "Редактировать _метки"
 
 #: ../thunar-plugin/tag-renamer.c:627
 msgid "Edit ID3/OGG tags of this file."
-msgstr "Редактировать ID3/OGG теги этого файла."
+msgstr "Изменить метки ID3/OGG этого файла."
 
 #: ../thunar-plugin/tag-renamer.c:646
 msgid "Tag Help"
-msgstr "Список тэгов"
+msgstr "Список меток"
 
 #: ../thunar-plugin/tag-renamer.c:657
 msgid "Artist"
@@ -129,7 +128,7 @@ msgstr "Примечание"
 
 #: ../thunar-plugin/tag-renamer.c:717
 msgid "Audio Tags"
-msgstr "Аудио теги"
+msgstr "Аудио метки"
 
 #: ../thunar-plugin/audio-tags-page.c:195
 msgid "Unknown Album"
@@ -141,7 +140,7 @@ msgstr "<b>Номер:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:343
 msgid "Enter the track number here."
-msgstr "Укажите здесь номер трека."
+msgstr "Укажите здесь номер дорожки."
 
 #: ../thunar-plugin/audio-tags-page.c:351
 msgid "<b>Year:</b>"
@@ -153,11 +152,11 @@ msgstr "Укажите здесь год выпуска композиции."
 
 #: ../thunar-plugin/audio-tags-page.c:374
 msgid "<b>Artist:</b>"
-msgstr "<b>Артист:</b>"
+msgstr "<b>Исполнитель:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:381
 msgid "Enter the name of the artist or author of this file here."
-msgstr "Укажите здесь имя артиста или автора композиции."
+msgstr "Укажите здесь имя исполнителя или автора композиции."
 
 #: ../thunar-plugin/audio-tags-page.c:389
 msgid "<b>Title:</b>"
@@ -198,7 +197,7 @@ msgstr "Сохранить"
 
 #: ../thunar-plugin/audio-tags-page.c:449
 msgid "Save audio tags."
-msgstr "Сохранить аудио теги."
+msgstr "Сохранить аудио метки."
 
 #. Create and add the info action
 #: ../thunar-plugin/audio-tags-page.c:456
@@ -216,7 +215,7 @@ msgstr "Аудио"
 #. Set up the dialog
 #: ../thunar-plugin/audio-tags-page.c:560
 msgid "Edit Tags"
-msgstr "Редактировать теги"
+msgstr "Редактировать метки"
 
 #. Create dialog
 #: ../thunar-plugin/audio-tags-page.c:982
@@ -252,11 +251,11 @@ msgstr "<b>Тип:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:1058
 msgid "<b>Bitrate:</b>"
-msgstr "<b>Битрейт:</b>"
+msgstr "<b>Качество звука:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:1071
 msgid "<b>Samplerate:</b>"
-msgstr "<b>Сэмплрейт:</b>"
+msgstr "<b>Частота дискретизации:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:1084
 msgid "<b>Channels:</b>"
