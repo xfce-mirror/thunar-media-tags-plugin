@@ -1,18 +1,20 @@
-# Portuguese translations for thunar media tags plugin package.
-# Copyright (C) 2007 THE thunar media tags plugin'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the thunar media tags plugin package.
-# Fábio Nogueira <deb-user-ba@ubuntu.com>, 2007.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
 # 
+# Translators:
+# André Miranda <andreldm1989@gmail.com>, 2015
+# Fábio Nogueira <deb-user-ba@ubuntu.com>, 2007
 msgid ""
 msgstr ""
-"Project-Id-Version: thunar media tags plugin\n"
+"Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-06-10 13:54+0000\n"
-"PO-Revision-Date: 2007-11-06 08:23-0300\n"
-"Last-Translator: Fábio Nogueira <deb-user-ba@ubuntu.com>\n"
-"Language-Team: Brazilian Portuguese <ldp-br@bazar2.conectiva.com.br>\n"
+"POT-Creation-Date: 2015-02-11 18:30+0100\n"
+"PO-Revision-Date: 2015-02-12 17:01+0000\n"
+"Last-Translator: André Miranda <andreldm1989@gmail.com>\n"
+"Language-Team: Portuguese (Brazil) (http://www.transifex.com/projects/p/thunar-plugins/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: pt_BR\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
@@ -67,8 +69,7 @@ msgstr "S_ublinhados"
 msgid ""
 "Activating this option will replace all spaces in the target filename with "
 "underscores."
-msgstr ""
-"Ativando esta opção serão substituídos todos os espaços por sublinhados."
+msgstr "Ativando esta opção serão substituídos todos os espaços por sublinhados."
 
 #: ../thunar-plugin/tag-renamer.c:319
 msgid "_Lowercase"
@@ -78,9 +79,7 @@ msgstr "Minúscu_las"
 msgid ""
 "If you activate this, the resulting filename will only contain lowercase "
 "letters."
-msgstr ""
-"Se você ativar isto, resultará que os nomes dos arquivos fiquem em "
-"minúsculas."
+msgstr "Se você ativar isto, o nome do arquivo resultante irá conter apenas letras minúsculas."
 
 #: ../thunar-plugin/tag-renamer.c:464 ../thunar-plugin/audio-tags-page.c:182
 msgid "Unknown Artist"
@@ -225,8 +224,8 @@ msgstr "Informações sobre o áudio"
 
 #: ../thunar-plugin/audio-tags-page.c:993
 #, c-format
-msgid "%d:%d Minutes"
-msgstr "%d:%d minutos"
+msgid "%d:%02d Minutes"
+msgstr "%d:%02d Minutos"
 
 #: ../thunar-plugin/audio-tags-page.c:994
 #, c-format
