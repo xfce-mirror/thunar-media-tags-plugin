@@ -1,24 +1,26 @@
-# Traditional Chinese translation of the thunar-media-tags-plugin.
-# Copyright (C) 2006-2007 Jannis Pohlmann <jannis@xfce.org>
-# This file is distributed under the same license as the thunar-media-tags-plugin package.
-# Hydonsingore Cia <hydonsingore@mail.educities.edu.tw>, 2006.
-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# Hydonsingore Cia <hydonsingore@mail.educities.edu.tw>, 2006
+# Jeff Huang <s8321414@gmail.com>, 2015
+# Walter Cheuk <wwycheuk@gmail.com>, 2013
 msgid ""
 msgstr ""
-"Project-Id-Version: thunar-media-tags-plugin 0.1.2svn\n"
+"Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-01-19 03:51+0000\n"
-"PO-Revision-Date: 2012-01-19 15:26+0800\n"
-"Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
-"Language-Team: Chinese (traditional) <xfce-i18n@xfce.org>\n"
-"Language: zh_TW\n"
+"POT-Creation-Date: 2015-02-11 18:30+0100\n"
+"PO-Revision-Date: 2015-02-12 02:42+0000\n"
+"Last-Translator: Jeff Huang <s8321414@gmail.com>\n"
+"Language-Team: Chinese (Taiwan) (http://www.transifex.com/projects/p/thunar-plugins/language/zh_TW/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: zh_TW\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../thunar-plugin/tag-renamer.c:59
-#: ../thunar-plugin/tag-renamer.c:657
+#: ../thunar-plugin/tag-renamer.c:59 ../thunar-plugin/tag-renamer.c:657
 msgid "Title"
 msgstr "曲名"
 
@@ -53,19 +55,21 @@ msgstr "自訂"
 #. Custom format
 #: ../thunar-plugin/tag-renamer.c:243
 msgid "Cust_om format:"
-msgstr "自訂格式(_O):"
+msgstr "自訂格式(_O)："
 
 #. Format label
 #: ../thunar-plugin/tag-renamer.c:271
 msgid "_Format:"
-msgstr "格式(_F):"
+msgstr "格式(_F)："
 
 #: ../thunar-plugin/tag-renamer.c:312
 msgid "_Underscores"
 msgstr "底線(_U)"
 
 #: ../thunar-plugin/tag-renamer.c:314
-msgid "Activating this option will replace all spaces in the target filename with underscores."
+msgid ""
+"Activating this option will replace all spaces in the target filename with "
+"underscores."
 msgstr "啟動本選項會以底線取代檔名中所有的空白。"
 
 #: ../thunar-plugin/tag-renamer.c:319
@@ -73,16 +77,16 @@ msgid "_Lowercase"
 msgstr "小寫(_L)"
 
 #: ../thunar-plugin/tag-renamer.c:321
-msgid "If you activate this, the resulting filename will only contain lowercase letters."
+msgid ""
+"If you activate this, the resulting filename will only contain lowercase "
+"letters."
 msgstr "如果您啟動本項，檔名將只會包含小寫字母。"
 
-#: ../thunar-plugin/tag-renamer.c:464
-#: ../thunar-plugin/audio-tags-page.c:182
+#: ../thunar-plugin/tag-renamer.c:464 ../thunar-plugin/audio-tags-page.c:182
 msgid "Unknown Artist"
 msgstr "未知的演出者"
 
-#: ../thunar-plugin/tag-renamer.c:472
-#: ../thunar-plugin/audio-tags-page.c:208
+#: ../thunar-plugin/tag-renamer.c:472 ../thunar-plugin/audio-tags-page.c:208
 msgid "Unknown Title"
 msgstr "未知的曲名"
 
@@ -133,7 +137,7 @@ msgstr "未知的專輯"
 
 #: ../thunar-plugin/audio-tags-page.c:328
 msgid "<b>Track:</b>"
-msgstr "<b>曲目:</b>"
+msgstr "<b>曲目：</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:343
 msgid "Enter the track number here."
@@ -141,7 +145,7 @@ msgstr "在這裡鍵入曲目。"
 
 #: ../thunar-plugin/audio-tags-page.c:351
 msgid "<b>Year:</b>"
-msgstr "<b>年份:</b>"
+msgstr "<b>年份：</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:366
 msgid "Enter the release year here."
@@ -149,7 +153,7 @@ msgstr "在這裡鍵入發行年份。"
 
 #: ../thunar-plugin/audio-tags-page.c:374
 msgid "<b>Artist:</b>"
-msgstr "<b>演出者:</b>"
+msgstr "<b>演出者：</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:381
 msgid "Enter the name of the artist or author of this file here."
@@ -157,7 +161,7 @@ msgstr "在這裡鍵入本檔案的演出者或作者名稱。"
 
 #: ../thunar-plugin/audio-tags-page.c:389
 msgid "<b>Title:</b>"
-msgstr "<b>曲名:</b>"
+msgstr "<b>曲名：</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:396
 msgid "Enter the song title here."
@@ -165,7 +169,7 @@ msgstr "在這裡鍵入歌曲標題。"
 
 #: ../thunar-plugin/audio-tags-page.c:403
 msgid "<b>Album:</b>"
-msgstr "<b>專輯:</b>"
+msgstr "<b>專輯：</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:410
 msgid "Enter the album/record title here."
@@ -173,7 +177,7 @@ msgstr "在這裡鍵入專輯標題。"
 
 #: ../thunar-plugin/audio-tags-page.c:417
 msgid "<b>Comment:</b>"
-msgstr "<b>評註:</b>"
+msgstr "<b>評註：</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:424
 msgid "Enter your comments here."
@@ -181,7 +185,7 @@ msgstr "在這裡鍵入您的評註。"
 
 #: ../thunar-plugin/audio-tags-page.c:431
 msgid "<b>Genre:</b>"
-msgstr "<b>曲風:</b>"
+msgstr "<b>曲風：</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:438
 msgid "Select or enter the genre of this song here."
@@ -221,8 +225,8 @@ msgstr "音效資訊"
 
 #: ../thunar-plugin/audio-tags-page.c:993
 #, c-format
-msgid "%d:%d Minutes"
-msgstr "%d:%d 分"
+msgid "%d:%02d Minutes"
+msgstr "%d:%02d 分鐘"
 
 #: ../thunar-plugin/audio-tags-page.c:994
 #, c-format
@@ -236,15 +240,15 @@ msgstr "%d Hz"
 
 #: ../thunar-plugin/audio-tags-page.c:1019
 msgid "<b>Filename:</b>"
-msgstr "<b>檔案名稱:</b>"
+msgstr "<b>檔案名稱：</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:1032
 msgid "<b>Filesize:</b>"
-msgstr "<b>檔案大小:</b>"
+msgstr "<b>檔案大小：</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:1045
 msgid "<b>MIME Type:</b>"
-msgstr "<b>MIME 類型:</b>"
+msgstr "<b>MIME 類型：</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:1058
 msgid "<b>Bitrate:</b>"
@@ -252,13 +256,12 @@ msgstr "<b>位元率：</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:1071
 msgid "<b>Samplerate:</b>"
-msgstr "<b>取樣率:</b>"
+msgstr "<b>取樣率：</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:1084
 msgid "<b>Channels:</b>"
-msgstr "<b>聲道數:</b>"
+msgstr "<b>聲道數：</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:1097
 msgid "<b>Length:</b>"
-msgstr "<b>長度:</b>"
-
+msgstr "<b>長度：</b>"
