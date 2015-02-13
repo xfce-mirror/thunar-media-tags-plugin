@@ -1,21 +1,23 @@
-# Serbian translation of thunar-media-tags-plugin.
-# Copyright (C) 2012 THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the thunar-media-tags-plugin package.
-# Мирослав Николић <miroslavnikolic@rocketmail.com>, 2012.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# Мирослав Николић <miroslavnikolic@rocketmail.com>, 2012
+# Саша Петровић <salepetronije@gmail.com>, 2015
 msgid ""
 msgstr ""
-"Project-Id-Version: thunar-media-tags-plugin.master\n"
+"Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-07-06 04:12+0000\n"
-"PO-Revision-Date: 2012-07-06 07:00+0200\n"
-"Last-Translator: Мирослав Николић <miroslavnikolic@rocketmail.com>\n"
-"Language-Team: српски <xfce-i18n@xfce.org>\n"
-"Language: sr\n"
+"POT-Creation-Date: 2015-02-11 18:30+0100\n"
+"PO-Revision-Date: 2015-02-13 21:25+0000\n"
+"Last-Translator: Саша Петровић <salepetronije@gmail.com>\n"
+"Language-Team: Serbian (http://www.transifex.com/projects/p/thunar-plugins/language/sr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
-"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Language: sr\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #: ../thunar-plugin/tag-renamer.c:59 ../thunar-plugin/tag-renamer.c:657
 msgid "Title"
@@ -23,27 +25,27 @@ msgstr "Наслов"
 
 #: ../thunar-plugin/tag-renamer.c:60
 msgid "Artist - Title"
-msgstr "Извођач — Наслов"
+msgstr "Извођач - Наслов"
 
 #: ../thunar-plugin/tag-renamer.c:61
 msgid "Track - Title"
-msgstr "Нумера — Наслов"
+msgstr "Звучна стаза - Наслов"
 
 #: ../thunar-plugin/tag-renamer.c:62
 msgid "Track - Artist - Title"
-msgstr "Нумера — Извођач — Наслов"
+msgstr "Звучна стаза - Извођач - Наслов"
 
 #: ../thunar-plugin/tag-renamer.c:63
 msgid "Track. Title"
-msgstr "Нумера. Наслов"
+msgstr "Звучна стаза. Наслов"
 
 #: ../thunar-plugin/tag-renamer.c:64
 msgid "Track. Artist - Title"
-msgstr "Нумера. Извођач — Наслов"
+msgstr "Звучна стаза. Извођач - Наслов"
 
 #: ../thunar-plugin/tag-renamer.c:65
 msgid "Artist - Track - Title"
-msgstr "Извођач — Нумера — Наслов"
+msgstr "Извођач - Звучна стаза - Наслов"
 
 #: ../thunar-plugin/tag-renamer.c:67
 msgid "Custom"
@@ -67,9 +69,7 @@ msgstr "_Подвлаке"
 msgid ""
 "Activating this option will replace all spaces in the target filename with "
 "underscores."
-msgstr ""
-"Укључивање ове могућности ће све размаке у називу циљне датотеке заменити "
-"подвлакама."
+msgstr "Укључивање ове могућности ће све размаке у називу циљне датотеке заменити подвлакама."
 
 #: ../thunar-plugin/tag-renamer.c:319
 msgid "_Lowercase"
@@ -79,17 +79,15 @@ msgstr "_Мала слова"
 msgid ""
 "If you activate this, the resulting filename will only contain lowercase "
 "letters."
-msgstr ""
-"Ако укључите ову могућност, назив резултирајуће датотеке ће садржати само "
-"мала слова."
+msgstr "Ако укључите ову могућност, назив излазне датотеке ће садржати само мала слова."
 
 #: ../thunar-plugin/tag-renamer.c:464 ../thunar-plugin/audio-tags-page.c:182
 msgid "Unknown Artist"
-msgstr "Непознат извођач"
+msgstr "Непознати извођач"
 
 #: ../thunar-plugin/tag-renamer.c:472 ../thunar-plugin/audio-tags-page.c:208
 msgid "Unknown Title"
-msgstr "Непознат наслов"
+msgstr "Непознати наслов"
 
 #. Edit tags action
 #: ../thunar-plugin/tag-renamer.c:627
@@ -100,11 +98,9 @@ msgstr "Уреди _ознаке"
 msgid "Edit ID3/OGG tags of this file."
 msgstr "Уредите ИД3/ОГГ ознаке ове датотеке."
 
-# #-#-#-#-#  libslab.master.sr.po (YaST2 (@memory@))  #-#-#-#-#
-#  popup heading
 #: ../thunar-plugin/tag-renamer.c:646
 msgid "Tag Help"
-msgstr "Помоћ ознака"
+msgstr "Помоћ за ознаке"
 
 #: ../thunar-plugin/tag-renamer.c:657
 msgid "Artist"
@@ -116,11 +112,11 @@ msgstr "Албум"
 
 #: ../thunar-plugin/tag-renamer.c:658
 msgid "Genre"
-msgstr "Жанр"
+msgstr "Род"
 
 #: ../thunar-plugin/tag-renamer.c:659
 msgid "Track number"
-msgstr "Број песме"
+msgstr "Број звучне стазе"
 
 #: ../thunar-plugin/tag-renamer.c:659
 msgid "Year"
@@ -136,15 +132,15 @@ msgstr "Ознаке звука"
 
 #: ../thunar-plugin/audio-tags-page.c:195
 msgid "Unknown Album"
-msgstr "Непознат албум"
+msgstr "Непознати албум"
 
 #: ../thunar-plugin/audio-tags-page.c:328
 msgid "<b>Track:</b>"
-msgstr "<b>Нумере:</b>"
+msgstr "<b>Звучна стаза:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:343
 msgid "Enter the track number here."
-msgstr "Овде унесите број нумере."
+msgstr "Овде унесите број звучне стазе."
 
 #: ../thunar-plugin/audio-tags-page.c:351
 msgid "<b>Year:</b>"
@@ -160,7 +156,7 @@ msgstr "<b>Извођач:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:381
 msgid "Enter the name of the artist or author of this file here."
-msgstr "Овде унесите име извођача или аутора ове нумере."
+msgstr "Овде унесите име извођача или ствараоца ове нумере."
 
 #: ../thunar-plugin/audio-tags-page.c:389
 msgid "<b>Title:</b>"
@@ -180,19 +176,19 @@ msgstr "Овде унесите наслов албума/снимка."
 
 #: ../thunar-plugin/audio-tags-page.c:417
 msgid "<b>Comment:</b>"
-msgstr "<b>Примедба:</b>"
+msgstr "<b>Напомена:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:424
 msgid "Enter your comments here."
-msgstr "Овде унесите вашу примедбу."
+msgstr "Овде унесите своју напомену."
 
 #: ../thunar-plugin/audio-tags-page.c:431
 msgid "<b>Genre:</b>"
-msgstr "<b>Жанр:</b>"
+msgstr "<b>Род:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:438
 msgid "Select or enter the genre of this song here."
-msgstr "Овде изаберите или унесите жанр ове песме."
+msgstr "Овде изаберите или унесите род ове песме."
 
 #. Create and add the save action
 #: ../thunar-plugin/audio-tags-page.c:449
@@ -210,7 +206,7 @@ msgstr "_Подаци"
 
 #: ../thunar-plugin/audio-tags-page.c:456
 msgid "Display more detailed information about this audio file."
-msgstr "Прикажите више података о овој звучној датотеци."
+msgstr "Прикажи више података о овој звучној датотеци."
 
 #: ../thunar-plugin/audio-tags-page.c:524
 msgid "Audio"
@@ -226,11 +222,10 @@ msgstr "Уредите ознаке"
 msgid "Audio Information"
 msgstr "Подаци о звуку"
 
-# bug: plural-forms
 #: ../thunar-plugin/audio-tags-page.c:993
 #, c-format
-msgid "%d:%d Minutes"
-msgstr "%d:%d минута"
+msgid "%d:%02d Minutes"
+msgstr "%d:%02d minuta"
 
 #: ../thunar-plugin/audio-tags-page.c:994
 #, c-format
