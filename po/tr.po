@@ -3,15 +3,16 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# Natavan Mirzayeva <mirzayevanatavan@gmail.com>, 2015
 # Necdet Yücel <necdetyucel@gmail.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-07-03 20:09+0200\n"
-"PO-Revision-Date: 2013-09-11 11:15+0000\n"
-"Last-Translator: Necdet Yücel <necdetyucel@gmail.com>\n"
-"Language-Team: Turkish (http://www.transifex.com/projects/p/xfce/language/tr/)\n"
+"POT-Creation-Date: 2015-02-11 18:30+0100\n"
+"PO-Revision-Date: 2015-02-17 12:10+0000\n"
+"Last-Translator: Natavan Mirzayeva <mirzayevanatavan@gmail.com>\n"
+"Language-Team: Turkish (http://www.transifex.com/projects/p/thunar-plugins/language/tr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -223,8 +224,8 @@ msgstr "Müzik Bilgisi"
 
 #: ../thunar-plugin/audio-tags-page.c:993
 #, c-format
-msgid "%d:%d Minutes"
-msgstr "%d:%d Dakika"
+msgid "%d:%02d Minutes"
+msgstr "%d:%02d Dakika"
 
 #: ../thunar-plugin/audio-tags-page.c:994
 #, c-format
