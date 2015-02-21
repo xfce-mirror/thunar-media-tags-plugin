@@ -1,24 +1,24 @@
-# thunar-media-tags-plugin to kazakh.
+# SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# Baurzhan Muftakhidinov <baurthefirst@gmail.com>, 2010.
-#
+# 
+# Translators:
+# Baurzhan Muftakhidinov <baurthefirst@gmail.com>, 2010,2015
 msgid ""
 msgstr ""
-"Project-Id-Version: trunk\n"
+"Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-12-17 14:18+0000\n"
-"PO-Revision-Date: 2011-12-18 00:01+0600\n"
+"POT-Creation-Date: 2015-02-11 18:30+0100\n"
+"PO-Revision-Date: 2015-02-21 10:24+0000\n"
 "Last-Translator: Baurzhan Muftakhidinov <baurthefirst@gmail.com>\n"
-"Language-Team: Kazakh <kk_KZ@googlegroups.com>\n"
-"Language: kk\n"
+"Language-Team: Kazakh (http://www.transifex.com/projects/p/thunar-plugins/language/kk/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0\n"
+"Language: kk\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../thunar-plugin/tag-renamer.c:59
-#: ../thunar-plugin/tag-renamer.c:657
+#: ../thunar-plugin/tag-renamer.c:59 ../thunar-plugin/tag-renamer.c:657
 msgid "Title"
 msgstr "Атауы"
 
@@ -65,7 +65,9 @@ msgid "_Underscores"
 msgstr "_Астыңғы сызу"
 
 #: ../thunar-plugin/tag-renamer.c:314
-msgid "Activating this option will replace all spaces in the target filename with underscores."
+msgid ""
+"Activating this option will replace all spaces in the target filename with "
+"underscores."
 msgstr "Бұл опцияны белсенді ету нәтижесінде мақсат файл атында барлық бос орындар астыңғы сызулармен алмастырылады."
 
 #: ../thunar-plugin/tag-renamer.c:319
@@ -73,16 +75,16 @@ msgid "_Lowercase"
 msgstr "Кі_ші әріптер"
 
 #: ../thunar-plugin/tag-renamer.c:321
-msgid "If you activate this, the resulting filename will only contain lowercase letters."
+msgid ""
+"If you activate this, the resulting filename will only contain lowercase "
+"letters."
 msgstr "Осыны белсенді етсеңіз, шыққан файл атында тек кіші әріптер болады."
 
-#: ../thunar-plugin/tag-renamer.c:464
-#: ../thunar-plugin/audio-tags-page.c:182
+#: ../thunar-plugin/tag-renamer.c:464 ../thunar-plugin/audio-tags-page.c:182
 msgid "Unknown Artist"
 msgstr "Белгісіз әртіс"
 
-#: ../thunar-plugin/tag-renamer.c:472
-#: ../thunar-plugin/audio-tags-page.c:208
+#: ../thunar-plugin/tag-renamer.c:472 ../thunar-plugin/audio-tags-page.c:208
 msgid "Unknown Title"
 msgstr "Белгісіз атауы"
 
@@ -185,7 +187,7 @@ msgstr "<b>Жанры:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:438
 msgid "Select or enter the genre of this song here."
-msgstr "Бұл өленнің жанрын таңдаңыз не осында енгізіңіз."
+msgstr "Бұл өлеңнің жанрын таңдаңыз не осында енгізіңіз."
 
 #. Create and add the save action
 #: ../thunar-plugin/audio-tags-page.c:449
@@ -221,8 +223,8 @@ msgstr "Аудио ақпараты"
 
 #: ../thunar-plugin/audio-tags-page.c:993
 #, c-format
-msgid "%d:%d Minutes"
-msgstr "%d:%d минут"
+msgid "%d:%02d Minutes"
+msgstr "%d:%02d минут"
 
 #: ../thunar-plugin/audio-tags-page.c:994
 #, c-format
@@ -261,4 +263,3 @@ msgstr "<b>Арналары:</b>"
 #: ../thunar-plugin/audio-tags-page.c:1097
 msgid "<b>Length:</b>"
 msgstr "<b>Ұзындығы:</b>"
-
