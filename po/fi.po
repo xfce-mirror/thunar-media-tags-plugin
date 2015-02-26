@@ -1,24 +1,26 @@
-# Finnish translation for thunar-media-tags-plugin
-# Copyright (c) (c) 2006 Canonical Ltd, and Rosetta Contributors 2006
-# This file is distributed under the same license as the thunar-media-tags-plugin package.
-# Elias Julkunen <elias.julkunen@gmail.com>, 2006.
-# Jari Rahkonen <jari.rahkonen@pp1.inet.fi>, 2008.
-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# Elias Julkunen <elias.julkunen@gmail.com>, 2006
+# Jari Rahkonen <jari.rahkonen@pp1.inet.fi>, 2008
+# Pasi Lallinaho <pasi@shimmerproject.org>, 2015
 msgid ""
 msgstr ""
-"Project-Id-Version: thunar-media-tags-plugin\n"
+"Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-06-24 20:27+0300\n"
-"PO-Revision-Date: 2008-06-24 20:27+0300\n"
-"Last-Translator: Jari Rahkonen <jari.rahkonen@pp1.inet.fi>\n"
-"Language-Team: Finnish <fi@li.org>\n"
+"POT-Creation-Date: 2015-02-11 18:30+0100\n"
+"PO-Revision-Date: 2015-02-26 00:26+0000\n"
+"Last-Translator: Pasi Lallinaho <pasi@shimmerproject.org>\n"
+"Language-Team: Finnish (http://www.transifex.com/projects/p/thunar-plugins/language/fi/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2008-06-21 16:00+0000\n"
-"X-Generator: Launchpad (build Unknown)\n"
+"Language: fi\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../thunar-plugin/tag-renamer.c:59 ../thunar-plugin/tag-renamer.c:673
+#: ../thunar-plugin/tag-renamer.c:59 ../thunar-plugin/tag-renamer.c:657
 msgid "Title"
 msgstr "Kappale"
 
@@ -51,218 +53,215 @@ msgid "Custom"
 msgstr "Mukautettu"
 
 #. Custom format
-#: ../thunar-plugin/tag-renamer.c:252
+#: ../thunar-plugin/tag-renamer.c:243
 msgid "Cust_om format:"
 msgstr "M_ukautettu muoto:"
 
 #. Format label
-#: ../thunar-plugin/tag-renamer.c:280
+#: ../thunar-plugin/tag-renamer.c:271
 msgid "_Format:"
 msgstr "_Muoto:"
 
-#: ../thunar-plugin/tag-renamer.c:321
+#: ../thunar-plugin/tag-renamer.c:312
 msgid "_Underscores"
 msgstr "_Alaviivat"
 
-#: ../thunar-plugin/tag-renamer.c:323
+#: ../thunar-plugin/tag-renamer.c:314
 msgid ""
 "Activating this option will replace all spaces in the target filename with "
 "underscores."
-msgstr ""
-"Valitse tämä korvataksesi kaikki välit tiedoston nimessä alaviivoilla."
+msgstr "Valitse tämä korvataksesi kaikki välit tiedoston nimessä alaviivoilla."
 
-#: ../thunar-plugin/tag-renamer.c:328
+#: ../thunar-plugin/tag-renamer.c:319
 msgid "_Lowercase"
 msgstr "_Pienaakkoset"
 
-#: ../thunar-plugin/tag-renamer.c:330
+#: ../thunar-plugin/tag-renamer.c:321
 msgid ""
 "If you activate this, the resulting filename will only contain lowercase "
 "letters."
-msgstr ""
-"Valitse tämä, jos haluat että tiedostonimissä käytetään ainoastaan "
-"pienaakkosia."
+msgstr "Valitse tämä, jos haluat että tiedostonimissä käytetään ainoastaan pienaakkosia."
 
-#: ../thunar-plugin/tag-renamer.c:480 ../thunar-plugin/audio-tags-page.c:183
+#: ../thunar-plugin/tag-renamer.c:464 ../thunar-plugin/audio-tags-page.c:182
 msgid "Unknown Artist"
 msgstr "Tuntematon esittäjä"
 
-#: ../thunar-plugin/tag-renamer.c:488 ../thunar-plugin/audio-tags-page.c:209
+#: ../thunar-plugin/tag-renamer.c:472 ../thunar-plugin/audio-tags-page.c:208
 msgid "Unknown Title"
 msgstr "Tuntematon kappale"
 
 #. Edit tags action
-#: ../thunar-plugin/tag-renamer.c:643
+#: ../thunar-plugin/tag-renamer.c:627
 msgid "Edit _Tags"
 msgstr "Muokkaa _tunnisteita"
 
-#: ../thunar-plugin/tag-renamer.c:643
+#: ../thunar-plugin/tag-renamer.c:627
 msgid "Edit ID3/OGG tags of this file."
 msgstr "Muokkaa tiedoston ID3/OGG -tunnisteita."
 
-#: ../thunar-plugin/tag-renamer.c:662
+#: ../thunar-plugin/tag-renamer.c:646
 msgid "Tag Help"
 msgstr "Tunnisteohje"
 
-#: ../thunar-plugin/tag-renamer.c:673
+#: ../thunar-plugin/tag-renamer.c:657
 msgid "Artist"
 msgstr "Esittäjä"
 
-#: ../thunar-plugin/tag-renamer.c:674
+#: ../thunar-plugin/tag-renamer.c:658
 msgid "Album"
 msgstr "Albumi"
 
-#: ../thunar-plugin/tag-renamer.c:674
+#: ../thunar-plugin/tag-renamer.c:658
 msgid "Genre"
 msgstr "Tyylilaji"
 
-#: ../thunar-plugin/tag-renamer.c:675
+#: ../thunar-plugin/tag-renamer.c:659
 msgid "Track number"
 msgstr "Raitanumero"
 
-#: ../thunar-plugin/tag-renamer.c:675
+#: ../thunar-plugin/tag-renamer.c:659
 msgid "Year"
 msgstr "Vuosi"
 
-#: ../thunar-plugin/tag-renamer.c:676
+#: ../thunar-plugin/tag-renamer.c:660
 msgid "Comment"
 msgstr "Kommentti"
 
-#: ../thunar-plugin/tag-renamer.c:733
+#: ../thunar-plugin/tag-renamer.c:717
 msgid "Audio Tags"
 msgstr "Äänitunnisteet"
 
-#: ../thunar-plugin/audio-tags-page.c:196
+#: ../thunar-plugin/audio-tags-page.c:195
 msgid "Unknown Album"
 msgstr "Tuntematon albumi"
 
-#: ../thunar-plugin/audio-tags-page.c:305
+#: ../thunar-plugin/audio-tags-page.c:328
 msgid "<b>Track:</b>"
 msgstr "<b>Raita:</b>"
 
-#: ../thunar-plugin/audio-tags-page.c:320
+#: ../thunar-plugin/audio-tags-page.c:343
 msgid "Enter the track number here."
 msgstr "Kirjoita raidan numero tähän."
 
-#: ../thunar-plugin/audio-tags-page.c:328
+#: ../thunar-plugin/audio-tags-page.c:351
 msgid "<b>Year:</b>"
 msgstr "<b>Vuosi:</b>"
 
-#: ../thunar-plugin/audio-tags-page.c:343
+#: ../thunar-plugin/audio-tags-page.c:366
 msgid "Enter the release year here."
 msgstr "Kirjoita tähän julkaisuvuosi."
 
-#: ../thunar-plugin/audio-tags-page.c:351
+#: ../thunar-plugin/audio-tags-page.c:374
 msgid "<b>Artist:</b>"
 msgstr "<b>Esittäjä:</b>"
 
-#: ../thunar-plugin/audio-tags-page.c:358
+#: ../thunar-plugin/audio-tags-page.c:381
 msgid "Enter the name of the artist or author of this file here."
 msgstr "Kirjoita tähän esittäjän tai tiedoston tekijän nimi."
 
-#: ../thunar-plugin/audio-tags-page.c:366
+#: ../thunar-plugin/audio-tags-page.c:389
 msgid "<b>Title:</b>"
 msgstr "<b>Kappale:</b>"
 
-#: ../thunar-plugin/audio-tags-page.c:373
+#: ../thunar-plugin/audio-tags-page.c:396
 msgid "Enter the song title here."
 msgstr "Kirjoita laulun nimi tähän."
 
-#: ../thunar-plugin/audio-tags-page.c:380
+#: ../thunar-plugin/audio-tags-page.c:403
 msgid "<b>Album:</b>"
 msgstr "<b>Albumi:</b>"
 
-#: ../thunar-plugin/audio-tags-page.c:387
+#: ../thunar-plugin/audio-tags-page.c:410
 msgid "Enter the album/record title here."
 msgstr "Kirjoita tähän albumin/äänityksen nimi."
 
-#: ../thunar-plugin/audio-tags-page.c:394
+#: ../thunar-plugin/audio-tags-page.c:417
 msgid "<b>Comment:</b>"
 msgstr "<b>Kommentti:</b>"
 
-#: ../thunar-plugin/audio-tags-page.c:401
+#: ../thunar-plugin/audio-tags-page.c:424
 msgid "Enter your comments here."
 msgstr "Kirjoita tähän kommenttisi."
 
-#: ../thunar-plugin/audio-tags-page.c:408
+#: ../thunar-plugin/audio-tags-page.c:431
 msgid "<b>Genre:</b>"
 msgstr "<b>Tyylilaji:</b>"
 
-#: ../thunar-plugin/audio-tags-page.c:415
+#: ../thunar-plugin/audio-tags-page.c:438
 msgid "Select or enter the genre of this song here."
 msgstr "Valitse tai kirjoita laulun tyylilaji."
 
 #. Create and add the save action
-#: ../thunar-plugin/audio-tags-page.c:454
+#: ../thunar-plugin/audio-tags-page.c:449
 msgid "_Save"
 msgstr "_Tallenna"
 
-#: ../thunar-plugin/audio-tags-page.c:454
+#: ../thunar-plugin/audio-tags-page.c:449
 msgid "Save audio tags."
 msgstr "Tallenna äänitunnisteet."
 
 #. Create and add the info action
-#: ../thunar-plugin/audio-tags-page.c:461
+#: ../thunar-plugin/audio-tags-page.c:456
 msgid "_Information"
 msgstr "_Tietoja"
 
-#: ../thunar-plugin/audio-tags-page.c:461
+#: ../thunar-plugin/audio-tags-page.c:456
 msgid "Display more detailed information about this audio file."
 msgstr "Näytä lisää tietoja tästä äänitiedostosta."
 
-#: ../thunar-plugin/audio-tags-page.c:528
+#: ../thunar-plugin/audio-tags-page.c:524
 msgid "Audio"
 msgstr "Ääni"
 
 #. Set up the dialog
-#: ../thunar-plugin/audio-tags-page.c:564
+#: ../thunar-plugin/audio-tags-page.c:560
 msgid "Edit Tags"
 msgstr "Muokkaa tunnisteita"
 
 #. Create dialog
-#: ../thunar-plugin/audio-tags-page.c:992
+#: ../thunar-plugin/audio-tags-page.c:982
 msgid "Audio Information"
 msgstr "Tietoja äänitiedostosta"
 
-#: ../thunar-plugin/audio-tags-page.c:1003
+#: ../thunar-plugin/audio-tags-page.c:993
 #, c-format
-msgid "%d:%d Minutes"
-msgstr "%d:%d minuuttia"
+msgid "%d:%02d Minutes"
+msgstr "%d:%02d minuuttia"
 
-#: ../thunar-plugin/audio-tags-page.c:1004
+#: ../thunar-plugin/audio-tags-page.c:994
 #, c-format
 msgid "%d KBit/s"
 msgstr "%d KBit/s"
 
-#: ../thunar-plugin/audio-tags-page.c:1005
+#: ../thunar-plugin/audio-tags-page.c:995
 #, c-format
 msgid "%d Hz"
 msgstr "%d Hz"
 
-#: ../thunar-plugin/audio-tags-page.c:1025
+#: ../thunar-plugin/audio-tags-page.c:1019
 msgid "<b>Filename:</b>"
 msgstr "<b>Tiedostonimi:</b>"
 
-#: ../thunar-plugin/audio-tags-page.c:1038
+#: ../thunar-plugin/audio-tags-page.c:1032
 msgid "<b>Filesize:</b>"
 msgstr "<b>Tiedoston koko:</b>"
 
-#: ../thunar-plugin/audio-tags-page.c:1051
+#: ../thunar-plugin/audio-tags-page.c:1045
 msgid "<b>MIME Type:</b>"
 msgstr "<b>MIME-Tyyppi:</b>"
 
-#: ../thunar-plugin/audio-tags-page.c:1064
+#: ../thunar-plugin/audio-tags-page.c:1058
 msgid "<b>Bitrate:</b>"
 msgstr "<b>Bittinopeus:</b>"
 
-#: ../thunar-plugin/audio-tags-page.c:1077
+#: ../thunar-plugin/audio-tags-page.c:1071
 msgid "<b>Samplerate:</b>"
 msgstr "<b>Näytetaajuus:</b>"
 
-#: ../thunar-plugin/audio-tags-page.c:1090
+#: ../thunar-plugin/audio-tags-page.c:1084
 msgid "<b>Channels:</b>"
 msgstr "<b>Kanavat:</b>"
 
-#: ../thunar-plugin/audio-tags-page.c:1103
+#: ../thunar-plugin/audio-tags-page.c:1097
 msgid "<b>Length:</b>"
 msgstr "<b>Pituus:</b>"
