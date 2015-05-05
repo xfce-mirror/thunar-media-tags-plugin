@@ -3,15 +3,16 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# Dani MF <dani@damufo.com>, 2015
 # Leandro Regueiro <leandro.regueiro@gmail.com>, 2006,2008-2009
 msgid ""
 msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-07-03 20:09+0200\n"
-"PO-Revision-Date: 2013-11-19 14:40+0000\n"
-"Last-Translator: Nick <nick@xfce.org>\n"
-"Language-Team: Galician (http://www.transifex.com/projects/p/xfce/language/gl/)\n"
+"POT-Creation-Date: 2015-02-11 18:30+0100\n"
+"PO-Revision-Date: 2015-05-05 10:53+0000\n"
+"Last-Translator: Dani MF <dani@damufo.com>\n"
+"Language-Team: Galician (http://www.transifex.com/projects/p/thunar-plugins/language/gl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -48,12 +49,12 @@ msgstr "Artista - Pista - Título"
 
 #: ../thunar-plugin/tag-renamer.c:67
 msgid "Custom"
-msgstr ""
+msgstr "Personalizar"
 
 #. Custom format
 #: ../thunar-plugin/tag-renamer.c:243
 msgid "Cust_om format:"
-msgstr ""
+msgstr "Formato personalizado:"
 
 #. Format label
 #: ../thunar-plugin/tag-renamer.c:271
@@ -99,31 +100,31 @@ msgstr "Editar as etiquetas ID3/OGG deste ficheiro."
 
 #: ../thunar-plugin/tag-renamer.c:646
 msgid "Tag Help"
-msgstr ""
+msgstr "Etiqueta de axuda"
 
 #: ../thunar-plugin/tag-renamer.c:657
 msgid "Artist"
-msgstr ""
+msgstr "Artista"
 
 #: ../thunar-plugin/tag-renamer.c:658
 msgid "Album"
-msgstr ""
+msgstr "Álbum"
 
 #: ../thunar-plugin/tag-renamer.c:658
 msgid "Genre"
-msgstr ""
+msgstr "Xénero"
 
 #: ../thunar-plugin/tag-renamer.c:659
 msgid "Track number"
-msgstr ""
+msgstr "Número de pista"
 
 #: ../thunar-plugin/tag-renamer.c:659
 msgid "Year"
-msgstr ""
+msgstr "Ano"
 
 #: ../thunar-plugin/tag-renamer.c:660
 msgid "Comment"
-msgstr ""
+msgstr "Comentario"
 
 #: ../thunar-plugin/tag-renamer.c:717
 msgid "Audio Tags"
@@ -223,8 +224,8 @@ msgstr "Información do audio"
 
 #: ../thunar-plugin/audio-tags-page.c:993
 #, c-format
-msgid "%d:%d Minutes"
-msgstr "%d:%d minutos"
+msgid "%d:%02d Minutes"
+msgstr "%d:%02d minutos"
 
 #: ../thunar-plugin/audio-tags-page.c:994
 #, c-format
