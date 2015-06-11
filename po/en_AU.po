@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Michael Findlay <keltoiboy@gmail.com>, 2013
+# Michael Findlay <keltoiboy@gmail.com>, 2013,2015
 msgid ""
 msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-07-03 20:09+0200\n"
-"PO-Revision-Date: 2014-09-05 03:19+0000\n"
+"POT-Creation-Date: 2015-02-11 18:30+0100\n"
+"PO-Revision-Date: 2015-06-11 05:29+0000\n"
 "Last-Translator: Michael Findlay <keltoiboy@gmail.com>\n"
 "Language-Team: English (Australia) (http://www.transifex.com/projects/p/thunar-plugins/language/en_AU/)\n"
 "MIME-Version: 1.0\n"
@@ -223,8 +223,8 @@ msgstr "Audio Information"
 
 #: ../thunar-plugin/audio-tags-page.c:993
 #, c-format
-msgid "%d:%d Minutes"
-msgstr "%d:%d Minutes"
+msgid "%d:%02d Minutes"
+msgstr "%d:%02d Minutes"
 
 #: ../thunar-plugin/audio-tags-page.c:994
 #, c-format
