@@ -1,18 +1,21 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
 # 
+# Translators:
 msgid ""
 msgstr ""
-"Project-Id-Version: thunar-media-tags-plugin\n"
+"Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-02-04 19:24+0000\n"
-"PO-Revision-Date: 2011-08-09 18:12-0000\n"
-"Last-Translator: كريم أولاد الشلحة <herr.linux88@gmail.com>\n"
-"Language-Team: Arabic Xfce Translation Team <herr.linux88@gmail.com>\n"
+"POT-Creation-Date: 2015-02-11 18:30+0100\n"
+"PO-Revision-Date: 2015-08-07 17:11+0000\n"
+"Last-Translator: عبدالله رضوان <abbodmar@gmail.com>\n"
+"Language-Team: Arabic (http://www.transifex.com/xfce/thunar-plugins/language/ar/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: \n"
-"X-Poedit-Language: Arabic\n"
-"X-Poedit-Country: Morocco\n"
+"Language: ar\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 
 #: ../thunar-plugin/tag-renamer.c:59 ../thunar-plugin/tag-renamer.c:657
 msgid "Title"
@@ -219,8 +222,8 @@ msgstr "معلومات الصوت"
 
 #: ../thunar-plugin/audio-tags-page.c:993
 #, c-format
-msgid "%d:%d Minutes"
-msgstr "%d:%d دقائق"
+msgid "%d:%02d Minutes"
+msgstr "%d:%02d دقائق"
 
 #: ../thunar-plugin/audio-tags-page.c:994
 #, c-format
