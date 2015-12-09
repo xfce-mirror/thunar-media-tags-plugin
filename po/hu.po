@@ -1,24 +1,25 @@
-# Hungarian translation of thunar-media-tags-plugin 
-# Copyright 2009. Free Software Foundation, Inc.
-# This file is distributed under the same license as the thunar-media-tags-plugin package.
-#
-# SZERVÁC Attila <sas@321.hu>, 2006-2007.
-# Gabor Kelemen <kelemeng at gnome dot hu>, 2009.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# Balázs Úr <urbalazs@gmail.com>, 2015
+# Gabor Kelemen <kelemeng at gnome dot hu>, 2009
 msgid ""
 msgstr ""
-"Project-Id-Version: thunar-media-tags-plugin\n"
+"Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-07-22 22:45+0200\n"
-"PO-Revision-Date: 2009-07-23 00:45+0200\n"
-"Last-Translator: Gabor Kelemen <kelemeng at gnome dot hu>\n"
-"Language-Team: Hungarian <gnome at gnome dot hu>\n"
+"POT-Creation-Date: 2015-02-11 18:30+0100\n"
+"PO-Revision-Date: 2015-12-09 15:42+0000\n"
+"Last-Translator: Balázs Úr <urbalazs@gmail.com>\n"
+"Language-Team: Hungarian (http://www.transifex.com/xfce/thunar-plugins/language/hu/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
-"Plural-Forms:  nplurals=2; plural=(n != 1);\n"
+"Language: hu\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../thunar-plugin/tag-renamer.c:59 ../thunar-plugin/tag-renamer.c:673
+#: ../thunar-plugin/tag-renamer.c:59 ../thunar-plugin/tag-renamer.c:657
 msgid "Title"
 msgstr "Cím"
 
@@ -51,216 +52,215 @@ msgid "Custom"
 msgstr "Egyéni"
 
 #. Custom format
-#: ../thunar-plugin/tag-renamer.c:252
+#: ../thunar-plugin/tag-renamer.c:243
 msgid "Cust_om format:"
 msgstr "_Egyéni formátum:"
 
 #. Format label
-#: ../thunar-plugin/tag-renamer.c:280
+#: ../thunar-plugin/tag-renamer.c:271
 msgid "_Format:"
 msgstr "_Formátum:"
 
-#: ../thunar-plugin/tag-renamer.c:321
+#: ../thunar-plugin/tag-renamer.c:312
 msgid "_Underscores"
 msgstr "_Aláhúzások"
 
-#: ../thunar-plugin/tag-renamer.c:323
+#: ../thunar-plugin/tag-renamer.c:314
 msgid ""
 "Activating this option will replace all spaces in the target filename with "
 "underscores."
 msgstr "Minden szóköz cseréje a cél fájlnévben aláhúzásokra."
 
-#: ../thunar-plugin/tag-renamer.c:328
+#: ../thunar-plugin/tag-renamer.c:319
 msgid "_Lowercase"
 msgstr "_Kisbetűk"
 
-#: ../thunar-plugin/tag-renamer.c:330
+#: ../thunar-plugin/tag-renamer.c:321
 msgid ""
 "If you activate this, the resulting filename will only contain lowercase "
 "letters."
 msgstr "Az eredményül kapott fájlnév csak kisbetűket fog tartalmazni."
 
-#: ../thunar-plugin/tag-renamer.c:480 ../thunar-plugin/audio-tags-page.c:183
+#: ../thunar-plugin/tag-renamer.c:464 ../thunar-plugin/audio-tags-page.c:182
 msgid "Unknown Artist"
 msgstr "Ismeretlen előadó"
 
-#: ../thunar-plugin/tag-renamer.c:488 ../thunar-plugin/audio-tags-page.c:209
+#: ../thunar-plugin/tag-renamer.c:472 ../thunar-plugin/audio-tags-page.c:208
 msgid "Unknown Title"
 msgstr "Ismeretlen cím"
 
 #. Edit tags action
-#: ../thunar-plugin/tag-renamer.c:643
+#: ../thunar-plugin/tag-renamer.c:627
 msgid "Edit _Tags"
 msgstr "_Címkék szerkesztése"
 
-#: ../thunar-plugin/tag-renamer.c:643
+#: ../thunar-plugin/tag-renamer.c:627
 msgid "Edit ID3/OGG tags of this file."
 msgstr "Ezen fájl ID3/OGG címkéjének szerkesztése."
 
-#: ../thunar-plugin/tag-renamer.c:662
+#: ../thunar-plugin/tag-renamer.c:646
 msgid "Tag Help"
 msgstr "Címkesúgó"
 
-#: ../thunar-plugin/tag-renamer.c:673
+#: ../thunar-plugin/tag-renamer.c:657
 msgid "Artist"
 msgstr "Előadó"
 
-#: ../thunar-plugin/tag-renamer.c:674
+#: ../thunar-plugin/tag-renamer.c:658
 msgid "Album"
 msgstr "Album"
 
-#: ../thunar-plugin/tag-renamer.c:674
+#: ../thunar-plugin/tag-renamer.c:658
 msgid "Genre"
 msgstr "Műfaj"
 
-#: ../thunar-plugin/tag-renamer.c:675
+#: ../thunar-plugin/tag-renamer.c:659
 msgid "Track number"
 msgstr "Szám sorszáma"
 
-#: ../thunar-plugin/tag-renamer.c:675
+#: ../thunar-plugin/tag-renamer.c:659
 msgid "Year"
 msgstr "Év"
 
-#: ../thunar-plugin/tag-renamer.c:676
+#: ../thunar-plugin/tag-renamer.c:660
 msgid "Comment"
 msgstr "Megjegyzés"
 
-#: ../thunar-plugin/tag-renamer.c:733
+#: ../thunar-plugin/tag-renamer.c:717
 msgid "Audio Tags"
 msgstr "Hangcímkék"
 
-#: ../thunar-plugin/audio-tags-page.c:196
+#: ../thunar-plugin/audio-tags-page.c:195
 msgid "Unknown Album"
 msgstr "Ismeretlen album"
 
-#: ../thunar-plugin/audio-tags-page.c:305
+#: ../thunar-plugin/audio-tags-page.c:328
 msgid "<b>Track:</b>"
 msgstr "<b>Szám:</b>"
 
-#: ../thunar-plugin/audio-tags-page.c:320
+#: ../thunar-plugin/audio-tags-page.c:343
 msgid "Enter the track number here."
 msgstr "Adja meg a szám sorszámát."
 
-#: ../thunar-plugin/audio-tags-page.c:328
+#: ../thunar-plugin/audio-tags-page.c:351
 msgid "<b>Year:</b>"
 msgstr "<b>Év:</b>"
 
-#: ../thunar-plugin/audio-tags-page.c:343
+#: ../thunar-plugin/audio-tags-page.c:366
 msgid "Enter the release year here."
 msgstr "Adja meg a kiadási évet."
 
-#: ../thunar-plugin/audio-tags-page.c:351
+#: ../thunar-plugin/audio-tags-page.c:374
 msgid "<b>Artist:</b>"
 msgstr "<b>Előadó:</b>"
 
-#: ../thunar-plugin/audio-tags-page.c:358
+#: ../thunar-plugin/audio-tags-page.c:381
 msgid "Enter the name of the artist or author of this file here."
 msgstr "Adja meg a fájl előadójának vagy szerzőjének nevét."
 
-#: ../thunar-plugin/audio-tags-page.c:366
+#: ../thunar-plugin/audio-tags-page.c:389
 msgid "<b>Title:</b>"
 msgstr "<b>Cím:</b>"
 
-#: ../thunar-plugin/audio-tags-page.c:373
+#: ../thunar-plugin/audio-tags-page.c:396
 msgid "Enter the song title here."
 msgstr "Adja meg a szám címét."
 
-#: ../thunar-plugin/audio-tags-page.c:380
+#: ../thunar-plugin/audio-tags-page.c:403
 msgid "<b>Album:</b>"
 msgstr "<b>Album:</b>"
 
-#: ../thunar-plugin/audio-tags-page.c:387
+#: ../thunar-plugin/audio-tags-page.c:410
 msgid "Enter the album/record title here."
 msgstr "Adja meg az album/felvétel címét."
 
-#: ../thunar-plugin/audio-tags-page.c:394
+#: ../thunar-plugin/audio-tags-page.c:417
 msgid "<b>Comment:</b>"
 msgstr "<b>Megjegyzés:</b>"
 
-#: ../thunar-plugin/audio-tags-page.c:401
+#: ../thunar-plugin/audio-tags-page.c:424
 msgid "Enter your comments here."
 msgstr "Adja meg megjegyzéseit."
 
-#: ../thunar-plugin/audio-tags-page.c:408
+#: ../thunar-plugin/audio-tags-page.c:431
 msgid "<b>Genre:</b>"
 msgstr "<b>Műfaj:</b>"
 
-#: ../thunar-plugin/audio-tags-page.c:415
+#: ../thunar-plugin/audio-tags-page.c:438
 msgid "Select or enter the genre of this song here."
 msgstr "Adja meg vagy válassza ki a szám műfaját."
 
 #. Create and add the save action
-#: ../thunar-plugin/audio-tags-page.c:454
+#: ../thunar-plugin/audio-tags-page.c:449
 msgid "_Save"
 msgstr "M_entés"
 
-#: ../thunar-plugin/audio-tags-page.c:454
+#: ../thunar-plugin/audio-tags-page.c:449
 msgid "Save audio tags."
 msgstr "Hangcímkék mentése."
 
 #. Create and add the info action
-#: ../thunar-plugin/audio-tags-page.c:461
+#: ../thunar-plugin/audio-tags-page.c:456
 msgid "_Information"
 msgstr "_Információk"
 
-#: ../thunar-plugin/audio-tags-page.c:461
+#: ../thunar-plugin/audio-tags-page.c:456
 msgid "Display more detailed information about this audio file."
 msgstr "Részletesebb információk megjelenítése erről a hangfájlról."
 
-#: ../thunar-plugin/audio-tags-page.c:528
+#: ../thunar-plugin/audio-tags-page.c:524
 msgid "Audio"
 msgstr "Hang"
 
 #. Set up the dialog
-#: ../thunar-plugin/audio-tags-page.c:564
+#: ../thunar-plugin/audio-tags-page.c:560
 msgid "Edit Tags"
 msgstr "Címkék szerkesztése"
 
 #. Create dialog
-#: ../thunar-plugin/audio-tags-page.c:992
+#: ../thunar-plugin/audio-tags-page.c:982
 msgid "Audio Information"
 msgstr "Hanginformációk"
 
-#: ../thunar-plugin/audio-tags-page.c:1003
+#: ../thunar-plugin/audio-tags-page.c:993
 #, c-format
-msgid "%d:%d Minutes"
-msgstr "%d:%d perc"
+msgid "%d:%02d Minutes"
+msgstr "%d.%02d perc"
 
-#: ../thunar-plugin/audio-tags-page.c:1004
+#: ../thunar-plugin/audio-tags-page.c:994
 #, c-format
 msgid "%d KBit/s"
 msgstr "%d KBit/mp"
 
-#: ../thunar-plugin/audio-tags-page.c:1005
+#: ../thunar-plugin/audio-tags-page.c:995
 #, c-format
 msgid "%d Hz"
 msgstr "%d Hz"
 
-#: ../thunar-plugin/audio-tags-page.c:1025
+#: ../thunar-plugin/audio-tags-page.c:1019
 msgid "<b>Filename:</b>"
 msgstr "<b>Fájlnév:</b>"
 
-#: ../thunar-plugin/audio-tags-page.c:1038
+#: ../thunar-plugin/audio-tags-page.c:1032
 msgid "<b>Filesize:</b>"
 msgstr "<b>Fájlméret:</b>"
 
-#: ../thunar-plugin/audio-tags-page.c:1051
+#: ../thunar-plugin/audio-tags-page.c:1045
 msgid "<b>MIME Type:</b>"
 msgstr "<b>MIME-típus:</b>"
 
-#: ../thunar-plugin/audio-tags-page.c:1064
+#: ../thunar-plugin/audio-tags-page.c:1058
 msgid "<b>Bitrate:</b>"
 msgstr "<b>Bitsebesség:</b>"
 
-#: ../thunar-plugin/audio-tags-page.c:1077
+#: ../thunar-plugin/audio-tags-page.c:1071
 msgid "<b>Samplerate:</b>"
 msgstr "<b>Mintavételezési gyakoriság:</b>"
 
-#: ../thunar-plugin/audio-tags-page.c:1090
+#: ../thunar-plugin/audio-tags-page.c:1084
 msgid "<b>Channels:</b>"
 msgstr "<b>Csatornák:</b>"
 
-#: ../thunar-plugin/audio-tags-page.c:1103
+#: ../thunar-plugin/audio-tags-page.c:1097
 msgid "<b>Length:</b>"
 msgstr "<b>Hossz:</b>"
-
