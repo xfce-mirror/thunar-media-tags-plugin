@@ -3,15 +3,16 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# Elishai Eliyahu <e1907@mm.st>, 2016
 # GenghisKhan <genghiskhan@gmx.ca>, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-02-11 18:30+0100\n"
-"PO-Revision-Date: 2015-02-26 16:59+0000\n"
-"Last-Translator: GenghisKhan <genghiskhan@gmx.ca>\n"
-"Language-Team: Hebrew (http://www.transifex.com/projects/p/thunar-plugins/language/he/)\n"
+"PO-Revision-Date: 2016-01-25 19:43+0000\n"
+"Last-Translator: Elishai Eliyahu <e1907@mm.st>\n"
+"Language-Team: Hebrew (http://www.transifex.com/xfce/thunar-plugins/language/he/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -62,23 +63,23 @@ msgstr "_פורמט:"
 
 #: ../thunar-plugin/tag-renamer.c:312
 msgid "_Underscores"
-msgstr ""
+msgstr "קוים תחתונים"
 
 #: ../thunar-plugin/tag-renamer.c:314
 msgid ""
 "Activating this option will replace all spaces in the target filename with "
 "underscores."
-msgstr ""
+msgstr "הפעלת אפשרות זו תחליף את כל הרווחים בשם קובץ המטרה עם קוים תחתונים."
 
 #: ../thunar-plugin/tag-renamer.c:319
 msgid "_Lowercase"
-msgstr ""
+msgstr "אותיות קטנות"
 
 #: ../thunar-plugin/tag-renamer.c:321
 msgid ""
 "If you activate this, the resulting filename will only contain lowercase "
 "letters."
-msgstr ""
+msgstr "אם תפעיל זאת, שם הקובץ יכיל רק אותיות קטנות."
 
 #: ../thunar-plugin/tag-renamer.c:464 ../thunar-plugin/audio-tags-page.c:182
 msgid "Unknown Artist"
@@ -91,15 +92,15 @@ msgstr "כותרת לא ידועה"
 #. Edit tags action
 #: ../thunar-plugin/tag-renamer.c:627
 msgid "Edit _Tags"
-msgstr ""
+msgstr "ערוך תוויות"
 
 #: ../thunar-plugin/tag-renamer.c:627
 msgid "Edit ID3/OGG tags of this file."
-msgstr ""
+msgstr "ערוך תוויות ID3/OGG של קובץ זה."
 
 #: ../thunar-plugin/tag-renamer.c:646
 msgid "Tag Help"
-msgstr ""
+msgstr "עזרת תווית"
 
 #: ../thunar-plugin/tag-renamer.c:657
 msgid "Artist"
@@ -127,7 +128,7 @@ msgstr "הערה"
 
 #: ../thunar-plugin/tag-renamer.c:717
 msgid "Audio Tags"
-msgstr ""
+msgstr "תוויות אודיו"
 
 #: ../thunar-plugin/audio-tags-page.c:195
 msgid "Unknown Album"
@@ -139,7 +140,7 @@ msgstr "<b>רצועה:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:343
 msgid "Enter the track number here."
-msgstr ""
+msgstr "הכנס את מספר הרצועה כאן."
 
 #: ../thunar-plugin/audio-tags-page.c:351
 msgid "<b>Year:</b>"
@@ -147,7 +148,7 @@ msgstr "<b>שנה:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:366
 msgid "Enter the release year here."
-msgstr ""
+msgstr "הכנס את שנת הפרסום כאן."
 
 #: ../thunar-plugin/audio-tags-page.c:374
 msgid "<b>Artist:</b>"
@@ -155,7 +156,7 @@ msgstr "<b>אמן:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:381
 msgid "Enter the name of the artist or author of this file here."
-msgstr ""
+msgstr "הכנס את שם האומן או היוצר של קובץ זה כאן."
 
 #: ../thunar-plugin/audio-tags-page.c:389
 msgid "<b>Title:</b>"
@@ -163,7 +164,7 @@ msgstr "<b>כותרת:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:396
 msgid "Enter the song title here."
-msgstr ""
+msgstr "הכנס את שם השיר כאן."
 
 #: ../thunar-plugin/audio-tags-page.c:403
 msgid "<b>Album:</b>"
@@ -171,7 +172,7 @@ msgstr "<b>אלבום:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:410
 msgid "Enter the album/record title here."
-msgstr ""
+msgstr "הכנס את שם האלבום/התקליט כאן."
 
 #: ../thunar-plugin/audio-tags-page.c:417
 msgid "<b>Comment:</b>"
@@ -179,7 +180,7 @@ msgstr "<b>הערה:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:424
 msgid "Enter your comments here."
-msgstr ""
+msgstr "הכנס את ההערות שלך כאן."
 
 #: ../thunar-plugin/audio-tags-page.c:431
 msgid "<b>Genre:</b>"
@@ -187,7 +188,7 @@ msgstr "<b>ז׳אנר:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:438
 msgid "Select or enter the genre of this song here."
-msgstr ""
+msgstr "בחר או הכנס את הסגנון של שיר זה כאן."
 
 #. Create and add the save action
 #: ../thunar-plugin/audio-tags-page.c:449
@@ -196,7 +197,7 @@ msgstr "_שמור"
 
 #: ../thunar-plugin/audio-tags-page.c:449
 msgid "Save audio tags."
-msgstr ""
+msgstr "שמור תוויות אודיו."
 
 #. Create and add the info action
 #: ../thunar-plugin/audio-tags-page.c:456
@@ -205,7 +206,7 @@ msgstr "_מידע"
 
 #: ../thunar-plugin/audio-tags-page.c:456
 msgid "Display more detailed information about this audio file."
-msgstr ""
+msgstr "הצג מידע מפורט יותר על קובץ אודיו זה."
 
 #: ../thunar-plugin/audio-tags-page.c:524
 msgid "Audio"
@@ -214,7 +215,7 @@ msgstr "שמע"
 #. Set up the dialog
 #: ../thunar-plugin/audio-tags-page.c:560
 msgid "Edit Tags"
-msgstr ""
+msgstr "ערוך תוויות"
 
 #. Create dialog
 #: ../thunar-plugin/audio-tags-page.c:982
@@ -229,7 +230,7 @@ msgstr "%d:%02d דקות"
 #: ../thunar-plugin/audio-tags-page.c:994
 #, c-format
 msgid "%d KBit/s"
-msgstr ""
+msgstr "%d KBit/s"
 
 #: ../thunar-plugin/audio-tags-page.c:995
 #, c-format
