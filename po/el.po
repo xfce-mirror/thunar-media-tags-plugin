@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-02-11 18:30+0100\n"
-"PO-Revision-Date: 2016-02-04 21:20+0000\n"
+"PO-Revision-Date: 2016-02-06 18:59+0000\n"
 "Last-Translator: Apostolos Papadimitriu <apostolos.papadimitriu@gmail.com>\n"
 "Language-Team: Greek (http://www.transifex.com/xfce/thunar-plugins/language/el/)\n"
 "MIME-Version: 1.0\n"
@@ -51,12 +51,12 @@ msgstr "Καλλιτέχνης - Αριθμός - Τίτλος"
 
 #: ../thunar-plugin/tag-renamer.c:67
 msgid "Custom"
-msgstr ""
+msgstr "Προσαρμοσμένο"
 
 #. Custom format
 #: ../thunar-plugin/tag-renamer.c:243
 msgid "Cust_om format:"
-msgstr ""
+msgstr "Προσαρμοσμένη μορφή:"
 
 #. Format label
 #: ../thunar-plugin/tag-renamer.c:271
@@ -102,7 +102,7 @@ msgstr "Επεξεργασία των ετικετών ID3/OGG του αρχεί
 
 #: ../thunar-plugin/tag-renamer.c:646
 msgid "Tag Help"
-msgstr ""
+msgstr "Βοήθεια ετικετών"
 
 #: ../thunar-plugin/tag-renamer.c:657
 msgid "Artist"
