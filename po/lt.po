@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-02-11 18:30+0100\n"
-"PO-Revision-Date: 2016-03-01 20:48+0000\n"
+"PO-Revision-Date: 2016-03-17 18:17+0000\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian (http://www.transifex.com/xfce/thunar-plugins/language/lt/)\n"
 "MIME-Version: 1.0\n"
@@ -193,11 +193,11 @@ msgstr "Pasirinkite arba įveskite šios dainos žanrą."
 #. Create and add the save action
 #: ../thunar-plugin/audio-tags-page.c:449
 msgid "_Save"
-msgstr "Iš_saugoti"
+msgstr "Į_rašyti"
 
 #: ../thunar-plugin/audio-tags-page.c:449
 msgid "Save audio tags."
-msgstr "Išsaugoti audio žymes."
+msgstr "Įrašyti audio žymes."
 
 #. Create and add the info action
 #: ../thunar-plugin/audio-tags-page.c:456
