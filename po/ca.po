@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-02-11 18:30+0100\n"
-"PO-Revision-Date: 2016-05-01 06:08+0000\n"
+"PO-Revision-Date: 2016-05-02 13:42+0000\n"
 "Last-Translator: Robert Antoni Buj i Gelonch <rbuj@fedoraproject.org>\n"
 "Language-Team: Catalan (http://www.transifex.com/xfce/thunar-plugins/language/ca/)\n"
 "MIME-Version: 1.0\n"
@@ -181,7 +181,7 @@ msgstr "<b>Comentari:</b> "
 
 #: ../thunar-plugin/audio-tags-page.c:424
 msgid "Enter your comments here."
-msgstr "Introduïu llur comentari."
+msgstr "Introduïu aquí els vostres comentaris."
 
 #: ../thunar-plugin/audio-tags-page.c:431
 msgid "<b>Genre:</b>"
