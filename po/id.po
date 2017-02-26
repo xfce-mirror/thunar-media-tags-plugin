@@ -1,20 +1,22 @@
-# Indonesian translations for thunar-media-tags-plugin package.
-# Copyright (C) 2006-2007 Jannis Pohlmann <jannis@xfce.org>
-# This file is distributed under the same license as the thunar-media-tags-plugin package.
-# Andhika Padmawan <andhika.padmawan@gmail.com>, 2008.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
 # 
+# Translators:
+# Andhika Padmawan <andhika.padmawan@gmail.com>, 2008
 msgid ""
 msgstr ""
-"Project-Id-Version: thunar-media-tags-plugin 0.1.2svn\n"
+"Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-03-13 04:15+0000\n"
-"PO-Revision-Date: 2008-06-11 11:22+0700\n"
-"Last-Translator: Andhika Padmawan <andhika.padmawan@gmail.com>\n"
-"Language-Team: Indonesian <id@li.org>\n"
+"POT-Creation-Date: 2015-02-11 18:30+0100\n"
+"PO-Revision-Date: 2017-02-26 05:07+0000\n"
+"Last-Translator: Kukuh Syafaat <syafaatkukuh@gmail.com>\n"
+"Language-Team: Indonesian (http://www.transifex.com/xfce/thunar-plugins/language/id/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: id\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../thunar-plugin/tag-renamer.c:59 ../thunar-plugin/tag-renamer.c:657
 msgid "Title"
@@ -66,9 +68,7 @@ msgstr "_Garis Bawah"
 msgid ""
 "Activating this option will replace all spaces in the target filename with "
 "underscores."
-msgstr ""
-"Mengaktifkan opsi ini akan mengganti semua spasi di nama berkas tujuan "
-"dengan garis bawah."
+msgstr "Mengaktifkan opsi ini akan mengganti semua spasi di nama berkas tujuan dengan garis bawah."
 
 #: ../thunar-plugin/tag-renamer.c:319
 msgid "_Lowercase"
@@ -78,9 +78,7 @@ msgstr "_Huruf Bawah"
 msgid ""
 "If you activate this, the resulting filename will only contain lowercase "
 "letters."
-msgstr ""
-"Jika anda mengaktifkan ini, hasil dari nama berkas hanya akan terdiri dari "
-"huruf sosok bawah."
+msgstr "Jika anda mengaktifkan ini, hasil dari nama berkas hanya akan terdiri dari huruf sosok bawah."
 
 #: ../thunar-plugin/tag-renamer.c:464 ../thunar-plugin/audio-tags-page.c:182
 msgid "Unknown Artist"
@@ -225,8 +223,8 @@ msgstr "Informasi Audio"
 
 #: ../thunar-plugin/audio-tags-page.c:993
 #, c-format
-msgid "%d:%d Minutes"
-msgstr "%d:%d Menit"
+msgid "%d:%02d Minutes"
+msgstr "%d:%02d Menit"
 
 #: ../thunar-plugin/audio-tags-page.c:994
 #, c-format
