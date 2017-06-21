@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-02-11 18:30+0100\n"
-"PO-Revision-Date: 2017-04-13 13:44+0000\n"
+"PO-Revision-Date: 2017-06-20 22:54+0000\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian (http://www.transifex.com/xfce/thunar-plugins/language/lt/)\n"
 "MIME-Version: 1.0\n"
@@ -69,7 +69,7 @@ msgstr "_Brūkšniai apačioje"
 msgid ""
 "Activating this option will replace all spaces in the target filename with "
 "underscores."
-msgstr "Aktyvavus šį parametrą, paskirties failo varde visi tarpai bus pakeisti brūkšniu apačioje."
+msgstr "Aktyvavus šį parametrą, paskirties failo pavadinime visi tarpai bus pakeisti pabraukimais."
 
 #: ../thunar-plugin/tag-renamer.c:319
 msgid "_Lowercase"
@@ -79,7 +79,7 @@ msgstr "_Mažosios raidės"
 msgid ""
 "If you activate this, the resulting filename will only contain lowercase "
 "letters."
-msgstr "Jei aktyvuosite, rezultate failo vardas turės tik mažąsias raides."
+msgstr "Jeigu tai aktyvuosite, galutiniame failo pavadinime bus tik mažosios raidės."
 
 #: ../thunar-plugin/tag-renamer.c:464 ../thunar-plugin/audio-tags-page.c:182
 msgid "Unknown Artist"
@@ -239,7 +239,7 @@ msgstr "%d Hz"
 
 #: ../thunar-plugin/audio-tags-page.c:1019
 msgid "<b>Filename:</b>"
-msgstr "<b>Failo vardas:</b>"
+msgstr "<b>Failo pavadinimas:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:1032
 msgid "<b>Filesize:</b>"
