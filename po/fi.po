@@ -4,16 +4,16 @@
 # 
 # Translators:
 # Elias Julkunen <elias.julkunen@gmail.com>, 2006
-# Jari Rahkonen <jari.rahkonen@pp1.inet.fi>, 2008
+# Jari Rahkonen <inactive+jari@transifex.com>, 2008
 # Pasi Lallinaho <pasi@shimmerproject.org>, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-02-11 18:30+0100\n"
-"PO-Revision-Date: 2015-02-26 00:26+0000\n"
+"PO-Revision-Date: 2017-09-19 18:03+0000\n"
 "Last-Translator: Pasi Lallinaho <pasi@shimmerproject.org>\n"
-"Language-Team: Finnish (http://www.transifex.com/projects/p/thunar-plugins/language/fi/)\n"
+"Language-Team: Finnish (http://www.transifex.com/xfce/thunar-plugins/language/fi/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
