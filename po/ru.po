@@ -5,19 +5,20 @@
 # Translators:
 # Andrey Fedoseev <andrey.fedoseev@gmail.com>, 2006
 # Lowrider <pams@imail.ru>, 2015
+# Sergey Alyoshin <alyoshin.s@gmail.com>, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-07-03 20:09+0200\n"
-"PO-Revision-Date: 2015-01-17 20:19+0000\n"
-"Last-Translator: Lowrider <pams@imail.ru>\n"
-"Language-Team: Russian (http://www.transifex.com/projects/p/thunar-plugins/language/ru/)\n"
+"POT-Creation-Date: 2015-02-11 18:30+0100\n"
+"PO-Revision-Date: 2017-09-19 18:03+0000\n"
+"Last-Translator: Sergey Alyoshin <alyoshin.s@gmail.com>\n"
+"Language-Team: Russian (http://www.transifex.com/xfce/thunar-plugins/language/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: ru\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
 
 #: ../thunar-plugin/tag-renamer.c:59 ../thunar-plugin/tag-renamer.c:657
 msgid "Title"
@@ -224,13 +225,13 @@ msgstr "Аудио информация"
 
 #: ../thunar-plugin/audio-tags-page.c:993
 #, c-format
-msgid "%d:%d Minutes"
-msgstr "%d:%d минут"
+msgid "%d:%02d Minutes"
+msgstr "%d:%02d мин"
 
 #: ../thunar-plugin/audio-tags-page.c:994
 #, c-format
 msgid "%d KBit/s"
-msgstr "%d кБит/сек"
+msgstr "%d кбит/с"
 
 #: ../thunar-plugin/audio-tags-page.c:995
 #, c-format
