@@ -107,7 +107,7 @@ static gchar    *tag_renamer_process               (ThunarxRenamer  *renamer,
                                                     ThunarxFileInfo *file,
                                                     const gchar     *text,
                                                     guint            index);
-static GList    *tag_renamer_get_actions           (ThunarxRenamer  *renamer,
+static GList    *tag_renamer_get_menu_items        (ThunarxRenamer  *renamer,
                                                     GtkWindow       *window,
                                                     GList           *files);
 static void      tag_renamer_help_clicked          (GtkWidget       *button);
@@ -116,7 +116,7 @@ static gboolean  tag_renamer_combo_separator_func  (GtkTreeModel    *model,
                                                     gpointer         user_data);
 static void      tag_renamer_combo_changed         (GtkComboBox     *combo_box,
                                                     GtkWidget       *entry);
-static void      tag_renamer_edit_tags_activated   (GtkAction       *action,
+static void      tag_renamer_edit_tags_activated   (ThunarxMenuItem *item,
                                                     ThunarxFileInfo *file);
 
 
@@ -156,7 +156,7 @@ tag_renamer_class_init (TagRenamerClass *klass)
 
   thunarxrenamer_class = THUNARX_RENAMER_CLASS (klass);
   thunarxrenamer_class->process = tag_renamer_process;
-  thunarxrenamer_class->get_actions = tag_renamer_get_actions;
+  thunarxrenamer_class->get_menu_items = tag_renamer_get_menu_items;
 
   /**
    * TagRenamer:format:
@@ -602,13 +602,13 @@ tag_renamer_process (ThunarxRenamer  *renamer,
 
 
 static GList*
-tag_renamer_get_actions (ThunarxRenamer *renamer,
-                         GtkWindow      *window,
-                         GList          *files)
+tag_renamer_get_menu_items (ThunarxRenamer *renamer,
+                            GtkWindow      *window,
+                            GList          *files)
 {
-  GtkAction       *action;
+  ThunarxMenuItem *item;
   GList           *file;
-  GList           *actions = NULL;
+  GList           *items = NULL;
   ThunarxFileInfo *info;
 
   if (g_list_length (files) != 1)
@@ -624,13 +624,13 @@ tag_renamer_get_actions (ThunarxRenamer *renamer,
   if (G_LIKELY (media_tags_get_audio_file_supported (info)))
     {
       /* Edit tags action */
-      action = gtk_action_new ("edit-tags", _("Edit _Tags"), _("Edit ID3/OGG tags of this file."), GTK_STOCK_EDIT);
-      g_object_set_data_full (G_OBJECT (action), "window", g_object_ref (G_OBJECT (window)), (GDestroyNotify)g_object_unref);
-      g_signal_connect (G_OBJECT (action), "activate", G_CALLBACK (tag_renamer_edit_tags_activated), info);
-      actions = g_list_prepend (actions, action);
+      item = thunarx_menu_item_new ("edit-tags", _("Edit _Tags"), _("Edit ID3/OGG tags of this file."), "gtk-edit");
+      g_object_set_data_full (G_OBJECT (item), "window", g_object_ref (G_OBJECT (window)), (GDestroyNotify)g_object_unref);
+      g_signal_connect (G_OBJECT (item), "activate", G_CALLBACK (tag_renamer_edit_tags_activated), info);
+      items = g_list_prepend (items, item);
     }
 
-  return actions;
+  return items;
 }
 
 
@@ -893,14 +893,14 @@ tag_renamer_set_lowercase (TagRenamer *tag_renamer,
 
 
 static void
-tag_renamer_edit_tags_activated (GtkAction *action,
+tag_renamer_edit_tags_activated (ThunarxMenuItem *item,
                                  ThunarxFileInfo *file)
 {
   GtkWindow *window;
   GtkWidget *dialog;
 
   /* Determine the parent window */
-  window = g_object_get_data (G_OBJECT (action), "window");
+  window = g_object_get_data (G_OBJECT (item), "window");
   if (G_UNLIKELY (window == NULL))
     return;
 
