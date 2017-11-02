@@ -568,7 +568,7 @@ audio_tags_page_dialog_new (GtkWindow *window,
   gtk_dialog_set_has_separator (GTK_DIALOG (dialog), FALSE);
 
   /* Add page to the dialog */
-  gtk_container_add (GTK_CONTAINER (GTK_DIALOG (dialog)->vbox), GTK_WIDGET (page));
+  gtk_container_add (GTK_CONTAINER (gtk_dialog_get_content_area (GTK_DIALOG (dialog))), GTK_WIDGET (page));
   gtk_widget_show (GTK_WIDGET (page));
 
   /* Create save button */
@@ -1009,7 +1009,7 @@ audio_tags_page_info_activate (GtkAction *action,
   table = gtk_table_new (7, 2, FALSE);
   gtk_table_set_row_spacings (GTK_TABLE (table), 6);
   gtk_table_set_col_spacings (GTK_TABLE (table), 12);
-  gtk_container_add (GTK_CONTAINER (GTK_DIALOG (dialog)->vbox), table);
+  gtk_container_add (GTK_CONTAINER (gtk_dialog_get_content_area (GTK_DIALOG (dialog))), table);
   gtk_container_set_border_width (GTK_CONTAINER (table), 12);
   gtk_widget_show (table);
 
