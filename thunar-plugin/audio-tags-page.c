@@ -433,14 +433,14 @@ audio_tags_page_init (AudioTagsPage *page)
   gtk_widget_show (label);
 
   /* Genre combo box */
-  combo = gtk_combo_box_entry_new_text ();
-  exo_mutual_binding_new (G_OBJECT (GTK_BIN (combo)->child), "text", G_OBJECT (page), "genre");
+  combo = gtk_combo_box_text_new_with_entry ();
+  exo_mutual_binding_new (G_OBJECT (gtk_bin_get_child (GTK_BIN (combo))), "text", G_OBJECT (page), "genre");
   gtk_widget_set_tooltip_text (GTK_WIDGET (combo), _("Select or enter the genre of this song here."));
   gtk_table_attach (GTK_TABLE (page->table), combo, 1, 4, 5, 6, GTK_FILL, 0, 0, 0);
   gtk_widget_show (combo);
 
   for (i=0; i<G_N_ELEMENTS (genres); i++)
-    gtk_combo_box_append_text (GTK_COMBO_BOX (combo), genres[i]);
+    gtk_combo_box_text_append_text (GTK_COMBO_BOX (combo), genres[i]);
 
   /* Create action group for the page */
   page->action_group = gtk_action_group_new ("audio-tags-page-actions");
