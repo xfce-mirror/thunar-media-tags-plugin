@@ -575,7 +575,7 @@ audio_tags_page_dialog_new (GtkWindow *window,
 
   /* Connect save button to the "save" action */
   action = gtk_action_group_get_action (page->action_group, "save");
-  gtk_action_connect_proxy (action, button);
+  gtk_activatable_set_related_action (GTK_ACTIVATABLE (button), action);
 
   /* Add save button to the dialog */
   gtk_dialog_add_action_widget (GTK_DIALOG (dialog), button, GTK_RESPONSE_OK);
@@ -1200,7 +1200,7 @@ audio_tags_page_set_show_save_button (AudioTagsPage   *page,
 
       /* Connect to info action */
       action = gtk_action_group_get_action (page->action_group, "info");
-      gtk_action_connect_proxy (action, page->info_button);
+      gtk_activatable_set_related_action (GTK_ACTIVATABLE (page->info_button), action);
 
       /* Save button */
       page->save_button = gtk_button_new_from_stock (GTK_STOCK_SAVE);
@@ -1209,7 +1209,7 @@ audio_tags_page_set_show_save_button (AudioTagsPage   *page,
 
       /* Connect to save action */
       action = gtk_action_group_get_action (page->action_group, "save");
-      gtk_action_connect_proxy (action, page->save_button);
+      gtk_activatable_set_related_action (GTK_ACTIVATABLE (page->save_button), action);
     }
   else
     {
