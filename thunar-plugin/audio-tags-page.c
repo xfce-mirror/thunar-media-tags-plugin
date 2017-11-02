@@ -268,16 +268,16 @@ audio_tags_page_class_init (AudioTagsPageClass *klass)
 static void
 audio_tags_page_init (AudioTagsPage *page)
 {
-  GtkWidget *adjustment;
-  GtkWidget *vbox;
-  GtkWidget *alignment;
-  GtkWidget *label;
-  GtkWidget *entry;
-  GtkWidget *combo;
-  GtkWidget *spin;
-  GtkWidget *toplevel;
-  GtkAction *action;
-  guint      i;
+  GtkAdjustment *adjustment;
+  GtkWidget     *vbox;
+  GtkWidget     *alignment;
+  GtkWidget     *label;
+  GtkWidget     *entry;
+  GtkWidget     *combo;
+  GtkWidget     *spin;
+  GtkWidget     *toplevel;
+  GtkAction     *action;
+  guint          i;
 
   /* Default genre list */
   static const gchar *genres[] = {
@@ -338,7 +338,7 @@ audio_tags_page_init (AudioTagsPage *page)
   adjustment = gtk_adjustment_new (0, 0, 999, 1, 5, 0);
 
   /* Track spin button */
-  spin = gtk_spin_button_new (GTK_ADJUSTMENT (adjustment), 0.0, 0);
+  spin = gtk_spin_button_new (adjustment, 0.0, 0);
   exo_mutual_binding_new (G_OBJECT (adjustment), "value", G_OBJECT (page), "track");
   gtk_widget_set_tooltip_text (GTK_WIDGET (spin), _("Enter the track number here."));
   gtk_container_add (GTK_CONTAINER (alignment), spin);
@@ -361,7 +361,7 @@ audio_tags_page_init (AudioTagsPage *page)
   adjustment = gtk_adjustment_new (2006, 1700, 9999, 1, 10, 0);
 
   /* Year spin button */
-  spin = gtk_spin_button_new (GTK_ADJUSTMENT (adjustment), 1, 0);
+  spin = gtk_spin_button_new (adjustment, 1, 0);
   exo_mutual_binding_new (G_OBJECT (adjustment), "value", G_OBJECT (page), "year");
   gtk_widget_set_tooltip_text (GTK_WIDGET (spin), _("Enter the release year here."));
   gtk_container_add (GTK_CONTAINER (alignment), spin);
@@ -440,7 +440,7 @@ audio_tags_page_init (AudioTagsPage *page)
   gtk_widget_show (combo);
 
   for (i=0; i<G_N_ELEMENTS (genres); i++)
-    gtk_combo_box_text_append_text (GTK_COMBO_BOX (combo), genres[i]);
+    gtk_combo_box_text_append_text (GTK_COMBO_BOX_TEXT (combo), genres[i]);
 
   /* Create action group for the page */
   page->action_group = gtk_action_group_new ("audio-tags-page-actions");
