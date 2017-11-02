@@ -268,7 +268,7 @@ audio_tags_page_class_init (AudioTagsPageClass *klass)
 static void
 audio_tags_page_init (AudioTagsPage *page)
 {
-  GtkObject *adjustment;
+  GtkWidget *adjustment;
   GtkWidget *vbox;
   GtkWidget *alignment;
   GtkWidget *label;
