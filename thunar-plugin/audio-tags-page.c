@@ -565,7 +565,6 @@ audio_tags_page_dialog_new (GtkWindow *window,
                                         NULL);
 
   gtk_dialog_set_default_response (GTK_DIALOG (dialog), GTK_RESPONSE_OK);
-  gtk_dialog_set_has_separator (GTK_DIALOG (dialog), FALSE);
 
   /* Add page to the dialog */
   gtk_container_add (GTK_CONTAINER (gtk_dialog_get_content_area (GTK_DIALOG (dialog))), GTK_WIDGET (page));
@@ -985,8 +984,6 @@ audio_tags_page_info_activate (GtkAction *action,
                                         GTK_STOCK_CLOSE,
                                         GTK_RESPONSE_CLOSE,
                                         NULL);
-
-  gtk_dialog_set_has_separator (GTK_DIALOG (dialog), FALSE);
 
   /* Retrieve audio information */
   properties = taglib_file_audioproperties (page->taglib_file);
