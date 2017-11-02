@@ -458,7 +458,7 @@ audio_tags_page_init (AudioTagsPage *page)
 
   /* Determine parent window and assign it to the action */
   toplevel = gtk_widget_get_toplevel (GTK_WIDGET (page));
-  if (GTK_WIDGET_TOPLEVEL (toplevel))
+  if (gtk_widget_is_toplevel (toplevel))
     g_object_set_data_full (G_OBJECT (action), "window", g_object_ref (G_OBJECT (toplevel)), (GDestroyNotify)g_object_unref);
 
   /* Connect to the info action */
