@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-02-11 18:30+0100\n"
-"PO-Revision-Date: 2017-09-19 18:03+0000\n"
+"PO-Revision-Date: 2017-11-17 14:55+0000\n"
 "Last-Translator: scootergrisen\n"
 "Language-Team: Danish (http://www.transifex.com/xfce/thunar-plugins/language/da/)\n"
 "MIME-Version: 1.0\n"
@@ -94,11 +94,11 @@ msgstr "Ukendt titel"
 #. Edit tags action
 #: ../thunar-plugin/tag-renamer.c:627
 msgid "Edit _Tags"
-msgstr "Redigér _mærker"
+msgstr "Rediger _mærker"
 
 #: ../thunar-plugin/tag-renamer.c:627
 msgid "Edit ID3/OGG tags of this file."
-msgstr "Redigér ID3/OGG-mærker af denne fil."
+msgstr "Rediger ID3/OGG-mærker af denne fil."
 
 #: ../thunar-plugin/tag-renamer.c:646
 msgid "Tag Help"
@@ -217,7 +217,7 @@ msgstr "Lyd"
 #. Set up the dialog
 #: ../thunar-plugin/audio-tags-page.c:560
 msgid "Edit Tags"
-msgstr "Redigér mærker"
+msgstr "Rediger mærker"
 
 #. Create dialog
 #: ../thunar-plugin/audio-tags-page.c:982
