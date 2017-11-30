@@ -1,0 +1,265 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# Yupy <yupy_17y@yahoo.com>, 2017
+msgid ""
+msgstr ""
+"Project-Id-Version: Thunar Plugins\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-02-11 18:30+0100\n"
+"PO-Revision-Date: 2017-11-30 19:06+0000\n"
+"Last-Translator: Yupy <yupy_17y@yahoo.com>\n"
+"Language-Team: Romanian (http://www.transifex.com/xfce/thunar-plugins/language/ro/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ro\n"
+"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));\n"
+
+#: ../thunar-plugin/tag-renamer.c:59 ../thunar-plugin/tag-renamer.c:657
+msgid "Title"
+msgstr "Titlu"
+
+#: ../thunar-plugin/tag-renamer.c:60
+msgid "Artist - Title"
+msgstr "Titlu - Artist"
+
+#: ../thunar-plugin/tag-renamer.c:61
+msgid "Track - Title"
+msgstr "Titlu - Pistă"
+
+#: ../thunar-plugin/tag-renamer.c:62
+msgid "Track - Artist - Title"
+msgstr "Pistă - Artist - Titlu "
+
+#: ../thunar-plugin/tag-renamer.c:63
+msgid "Track. Title"
+msgstr "Pistă. Titlu"
+
+#: ../thunar-plugin/tag-renamer.c:64
+msgid "Track. Artist - Title"
+msgstr "Pistă. Artist - Titlu"
+
+#: ../thunar-plugin/tag-renamer.c:65
+msgid "Artist - Track - Title"
+msgstr "Artist - Pistă - Titlu"
+
+#: ../thunar-plugin/tag-renamer.c:67
+msgid "Custom"
+msgstr "Personalizat"
+
+#. Custom format
+#: ../thunar-plugin/tag-renamer.c:243
+msgid "Cust_om format:"
+msgstr "Format Cust_om:"
+
+#. Format label
+#: ../thunar-plugin/tag-renamer.c:271
+msgid "_Format:"
+msgstr "_Format:"
+
+#: ../thunar-plugin/tag-renamer.c:312
+msgid "_Underscores"
+msgstr "_Subliniere"
+
+#: ../thunar-plugin/tag-renamer.c:314
+msgid ""
+"Activating this option will replace all spaces in the target filename with "
+"underscores."
+msgstr "Activarea acestei opțiuni va înlocui toate spațiile din numele fișierului țintă cu subliniere."
+
+#: ../thunar-plugin/tag-renamer.c:319
+msgid "_Lowercase"
+msgstr "_Minuscule"
+
+#: ../thunar-plugin/tag-renamer.c:321
+msgid ""
+"If you activate this, the resulting filename will only contain lowercase "
+"letters."
+msgstr "Dacă activați acest lucru, numele de fișier rezultat va conține numai litere mici."
+
+#: ../thunar-plugin/tag-renamer.c:464 ../thunar-plugin/audio-tags-page.c:182
+msgid "Unknown Artist"
+msgstr "Artist Necunoscut"
+
+#: ../thunar-plugin/tag-renamer.c:472 ../thunar-plugin/audio-tags-page.c:208
+msgid "Unknown Title"
+msgstr "Titlu Necunoscut"
+
+#. Edit tags action
+#: ../thunar-plugin/tag-renamer.c:627
+msgid "Edit _Tags"
+msgstr "Editează _Etichete"
+
+#: ../thunar-plugin/tag-renamer.c:627
+msgid "Edit ID3/OGG tags of this file."
+msgstr "Editați etichetele ID3/OGG ale acestui fișier."
+
+#: ../thunar-plugin/tag-renamer.c:646
+msgid "Tag Help"
+msgstr "Etichetă de Ajutor"
+
+#: ../thunar-plugin/tag-renamer.c:657
+msgid "Artist"
+msgstr "Artist"
+
+#: ../thunar-plugin/tag-renamer.c:658
+msgid "Album"
+msgstr "Album"
+
+#: ../thunar-plugin/tag-renamer.c:658
+msgid "Genre"
+msgstr "Gen"
+
+#: ../thunar-plugin/tag-renamer.c:659
+msgid "Track number"
+msgstr "Numărul piesei"
+
+#: ../thunar-plugin/tag-renamer.c:659
+msgid "Year"
+msgstr "An"
+
+#: ../thunar-plugin/tag-renamer.c:660
+msgid "Comment"
+msgstr "Comentariu"
+
+#: ../thunar-plugin/tag-renamer.c:717
+msgid "Audio Tags"
+msgstr "Etichete Audio"
+
+#: ../thunar-plugin/audio-tags-page.c:195
+msgid "Unknown Album"
+msgstr "Album Necunoscut"
+
+#: ../thunar-plugin/audio-tags-page.c:328
+msgid "<b>Track:</b>"
+msgstr "<b>Piesă:</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:343
+msgid "Enter the track number here."
+msgstr "Introduceți aici numărul piesei."
+
+#: ../thunar-plugin/audio-tags-page.c:351
+msgid "<b>Year:</b>"
+msgstr "<b>An:</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:366
+msgid "Enter the release year here."
+msgstr "Introduceți anul de lansare aici."
+
+#: ../thunar-plugin/audio-tags-page.c:374
+msgid "<b>Artist:</b>"
+msgstr "<b>Artist:</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:381
+msgid "Enter the name of the artist or author of this file here."
+msgstr "Introduceți aici numele artistului sau al autorului acestui fișier."
+
+#: ../thunar-plugin/audio-tags-page.c:389
+msgid "<b>Title:</b>"
+msgstr "<b>Titlu:</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:396
+msgid "Enter the song title here."
+msgstr "Introduceți titlul cântecului aici."
+
+#: ../thunar-plugin/audio-tags-page.c:403
+msgid "<b>Album:</b>"
+msgstr "<b>Album:</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:410
+msgid "Enter the album/record title here."
+msgstr "Introduceți titlul albumului/înregistrării aici."
+
+#: ../thunar-plugin/audio-tags-page.c:417
+msgid "<b>Comment:</b>"
+msgstr "<b>Comentariu:</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:424
+msgid "Enter your comments here."
+msgstr "Introdu comentariile tale aici:"
+
+#: ../thunar-plugin/audio-tags-page.c:431
+msgid "<b>Genre:</b>"
+msgstr "<b>Gen:</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:438
+msgid "Select or enter the genre of this song here."
+msgstr "Selectați sau introduceți genul acestei melodii aici."
+
+#. Create and add the save action
+#: ../thunar-plugin/audio-tags-page.c:449
+msgid "_Save"
+msgstr "_Salvați"
+
+#: ../thunar-plugin/audio-tags-page.c:449
+msgid "Save audio tags."
+msgstr "Salvați etichetele audio."
+
+#. Create and add the info action
+#: ../thunar-plugin/audio-tags-page.c:456
+msgid "_Information"
+msgstr "_Informație"
+
+#: ../thunar-plugin/audio-tags-page.c:456
+msgid "Display more detailed information about this audio file."
+msgstr "Afișați informații mai detaliate despre acest fișier audio."
+
+#: ../thunar-plugin/audio-tags-page.c:524
+msgid "Audio"
+msgstr "Audio"
+
+#. Set up the dialog
+#: ../thunar-plugin/audio-tags-page.c:560
+msgid "Edit Tags"
+msgstr "Editați Etichete"
+
+#. Create dialog
+#: ../thunar-plugin/audio-tags-page.c:982
+msgid "Audio Information"
+msgstr "Informații Audio"
+
+#: ../thunar-plugin/audio-tags-page.c:993
+#, c-format
+msgid "%d:%02d Minutes"
+msgstr "%d:%02d Minute"
+
+#: ../thunar-plugin/audio-tags-page.c:994
+#, c-format
+msgid "%d KBit/s"
+msgstr "%dKBit/s "
+
+#: ../thunar-plugin/audio-tags-page.c:995
+#, c-format
+msgid "%d Hz"
+msgstr "%d Hz"
+
+#: ../thunar-plugin/audio-tags-page.c:1019
+msgid "<b>Filename:</b>"
+msgstr "<b>Nume fișier:</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:1032
+msgid "<b>Filesize:</b>"
+msgstr "<b>Mărime fișier:</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:1045
+msgid "<b>MIME Type:</b>"
+msgstr "<b>Tip MIME:</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:1058
+msgid "<b>Bitrate:</b>"
+msgstr "<b>Bitrate:</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:1071
+msgid "<b>Samplerate:</b>"
+msgstr "<b>Rată mostră:</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:1084
+msgid "<b>Channels:</b>"
+msgstr "<b>Canale:</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:1097
+msgid "<b>Length:</b>"
+msgstr "<b>Lungime:</b>"
