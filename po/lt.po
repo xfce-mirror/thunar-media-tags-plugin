@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-02-11 18:30+0100\n"
-"PO-Revision-Date: 2017-09-19 18:03+0000\n"
+"PO-Revision-Date: 2017-12-03 19:28+0000\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian (http://www.transifex.com/xfce/thunar-plugins/language/lt/)\n"
 "MIME-Version: 1.0\n"
@@ -128,7 +128,7 @@ msgstr "Komentaras"
 
 #: ../thunar-plugin/tag-renamer.c:717
 msgid "Audio Tags"
-msgstr "Audio žymės"
+msgstr "Garso žymės"
 
 #: ../thunar-plugin/audio-tags-page.c:195
 msgid "Unknown Album"
@@ -197,7 +197,7 @@ msgstr "Į_rašyti"
 
 #: ../thunar-plugin/audio-tags-page.c:449
 msgid "Save audio tags."
-msgstr "Įrašyti audio žymes."
+msgstr "Įrašyti garso žymes."
 
 #. Create and add the info action
 #: ../thunar-plugin/audio-tags-page.c:456
@@ -210,7 +210,7 @@ msgstr "Rodyti išsamesnę informaciją apie šį garso failą."
 
 #: ../thunar-plugin/audio-tags-page.c:524
 msgid "Audio"
-msgstr "Audio"
+msgstr "Garsas"
 
 #. Set up the dialog
 #: ../thunar-plugin/audio-tags-page.c:560
