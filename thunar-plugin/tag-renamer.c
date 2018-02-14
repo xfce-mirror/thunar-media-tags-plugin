@@ -63,7 +63,7 @@ tag_renamer_register_enum_types (ThunarxProviderPlugin *plugin)
     { TAG_RENAMER_FORMAT_TRACK_DOT_TITLE,        "TAG_RENAMER_FORMAT_TRACK_DOT_TITLE",        N_ ("Track. Title"), },
     { TAG_RENAMER_FORMAT_TRACK_DOT_ARTIST_TITLE, "TAG_RENAMER_FORMAT_TRACK_DOT_ARTIST_TITLE", N_ ("Track. Artist - Title"), },
     { TAG_RENAMER_FORMAT_ARTIST_TRACK_TITLE,     "TAG_RENAMER_FORMAT_ARTIST_TRACK_TITLE",     N_ ("Artist - Track - Title"), },
-    { TAG_RENAMER_FORMAT_SEPARATOR,              "TAG_RENAMER_FORMAT_SEPARATOR",              "", },
+    { TAG_RENAMER_FORMAT_SEPARATOR,              "TAG_RENAMER_FORMAT_SEPARATOR",              " ", },
     { TAG_RENAMER_FORMAT_CUSTOM,                 "TAG_RENAMER_FORMAT_CUSTOM",                 N_ ("Custom"), },
     { 0,                                         NULL,                                        NULL, },
   };
