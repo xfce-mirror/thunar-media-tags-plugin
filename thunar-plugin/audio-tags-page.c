@@ -69,7 +69,8 @@ static void     audio_tags_page_file_changed        (ThunarxFileInfo    *file,
 static void     audio_tags_page_taglib_file_changed (TagLib_File        *taglib_file,
                                                      AudioTagsPage      *page);
 static gboolean audio_tags_page_activate            (AudioTagsPage      *page);
-static gboolean audio_tags_page_info_activate       (GtkAction          *action,
+static gboolean audio_tags_page_info_activate       (GSimpleAction      *action,
+                                                     GVariant           *parameter,
                                                      AudioTagsPage      *page);
 static gboolean audio_tags_page_load_tags           (gpointer            data);
 
@@ -106,7 +107,7 @@ struct _AudioTagsPage
   guint            year;
 
   /* <private> */
-  GtkActionGroup  *action_group;
+  GActionGroup    *action_group;
 
   /* garbage collector of files */
   GSList           *files_gc;
@@ -276,7 +277,7 @@ audio_tags_page_init (AudioTagsPage *page)
   GtkWidget     *combo;
   GtkWidget     *spin;
   GtkWidget     *toplevel;
-  GtkAction     *action;
+  GSimpleAction *action;
   guint          i;
 
   /* Default genre list */
@@ -447,18 +448,19 @@ audio_tags_page_init (AudioTagsPage *page)
     gtk_combo_box_text_append_text (GTK_COMBO_BOX_TEXT (combo), genres[i]);
 
   /* Create action group for the page */
-  page->action_group = gtk_action_group_new ("audio-tags-page-actions");
+  page->action_group = G_ACTION_GROUP (g_simple_action_group_new ());
+  gtk_widget_insert_action_group (GTK_WIDGET (page), "audio-tags-page-actions", page->action_group);
 
   /* Create and add the save action */
-  action = gtk_action_new ("save", _("_Save"), _("Save audio tags."), GTK_STOCK_SAVE);
-  gtk_action_group_add_action (page->action_group, action);
+  action = g_simple_action_new ("save", NULL);
+  g_action_map_add_action (G_ACTION_MAP (page->action_group), G_ACTION (action));
 
   /* Connect to save action */
   g_signal_connect_swapped (G_OBJECT (action), "activate", G_CALLBACK (audio_tags_page_activate), page);
 
   /* Create and add the info action */
-  action = gtk_action_new ("info", _("_Information"), _("Display more detailed information about this audio file."), GTK_STOCK_PROPERTIES);
-  gtk_action_group_add_action (page->action_group, action);
+  action = g_simple_action_new ("info", NULL);
+  g_action_map_add_action (G_ACTION_MAP (page->action_group), G_ACTION (action));
 
   /* Determine parent window and assign it to the action */
   toplevel = gtk_widget_get_toplevel (GTK_WIDGET (page));
@@ -552,7 +554,6 @@ audio_tags_page_dialog_new (GtkWindow *window,
   GtkWidget     *dialog;
   GtkWidget     *button;
   AudioTagsPage *page;
-  GtkAction     *action;
 
   /* Create the audio tags page */
   page = audio_tags_page_new ();
@@ -578,8 +579,8 @@ audio_tags_page_dialog_new (GtkWindow *window,
   button = gtk_dialog_add_button (GTK_DIALOG (dialog), _("_Save"), GTK_RESPONSE_OK);
 
   /* Connect save button to the "save" action */
-  action = gtk_action_group_get_action (page->action_group, "save");
-  gtk_activatable_set_related_action (GTK_ACTIVATABLE (button), action);
+  gtk_actionable_set_action_name (GTK_ACTIONABLE (button), "audio-tags-page-actions.save");
+  gtk_widget_insert_action_group (GTK_WIDGET (dialog), "audio-tags-page-actions", page->action_group);
 
   return dialog;
 }
@@ -949,8 +950,9 @@ audio_tags_page_activate (AudioTagsPage *page)
 
 
 static gboolean
-audio_tags_page_info_activate (GtkAction *action,
-                               AudioTagsPage *page)
+audio_tags_page_info_activate (GSimpleAction      *action,
+                               GVariant           *parameter,
+                               AudioTagsPage      *page)
 {
   const TagLib_AudioProperties *properties;
 
@@ -1182,11 +1184,8 @@ void
 audio_tags_page_set_show_save_button (AudioTagsPage   *page,
                                       gboolean         show)
 {
-  GtkAction *action;
-
   g_return_if_fail (IS_AUDIO_TAGS_PAGE (page));
   g_return_if_fail (page->grid != NULL || GTK_IS_GRID (page->grid));
-  g_return_if_fail (page->action_group != NULL || GTK_IS_ACTION_GROUP (page->action_group));
 
   if (G_LIKELY (show))
     {
@@ -1201,8 +1200,7 @@ audio_tags_page_set_show_save_button (AudioTagsPage   *page,
       gtk_widget_show (page->info_button);
 
       /* Connect to info action */
-      action = gtk_action_group_get_action (page->action_group, "info");
-      gtk_activatable_set_related_action (GTK_ACTIVATABLE (page->info_button), action);
+      gtk_actionable_set_action_name (GTK_ACTIONABLE (page->info_button), "audio-tags-page-actions.info");
 
       /* Save button */
       page->save_button = gtk_button_new_with_mnemonic (_("_Save"));
@@ -1211,8 +1209,7 @@ audio_tags_page_set_show_save_button (AudioTagsPage   *page,
       gtk_widget_show (page->save_button);
 
       /* Connect to save action */
-      action = gtk_action_group_get_action (page->action_group, "save");
-      gtk_activatable_set_related_action (GTK_ACTIVATABLE (page->save_button), action);
+      gtk_actionable_set_action_name (GTK_ACTIONABLE (page->save_button), "audio-tags-page-actions.save");
     }
   else
     {
