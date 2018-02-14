@@ -271,7 +271,6 @@ audio_tags_page_init (AudioTagsPage *page)
 {
   GtkAdjustment *adjustment;
   GtkWidget     *vbox;
-  GtkWidget     *alignment;
   GtkWidget     *label;
   GtkWidget     *entry;
   GtkWidget     *combo;
@@ -325,15 +324,10 @@ audio_tags_page_init (AudioTagsPage *page)
 
   /* Track label */
   label = gtk_label_new ("");
-  gtk_misc_set_alignment (GTK_MISC (label), 1.0f, 0.5f);
+  gtk_label_set_xalign (GTK_LABEL (label), 1.0f);
   gtk_label_set_markup (GTK_LABEL (label), _("<b>Track:</b>"));
   gtk_grid_attach (GTK_GRID (page->grid), label, 0, 0, 1, 1);
   gtk_widget_show (label);
-
-  /* Track spin button alignment */
-  alignment = gtk_alignment_new (0.0, 0.5, 0.0, 0.0);
-  gtk_grid_attach (GTK_GRID (page->grid), alignment, 1, 0, 1, 1);
-  gtk_widget_show (alignment);
 
   /* Track adjustment */
   adjustment = gtk_adjustment_new (0, 0, 999, 1, 5, 0);
@@ -341,22 +335,18 @@ audio_tags_page_init (AudioTagsPage *page)
   /* Track spin button */
   spin = gtk_spin_button_new (adjustment, 0.0, 0);
   exo_mutual_binding_new (G_OBJECT (adjustment), "value", G_OBJECT (page), "track");
-  gtk_widget_set_tooltip_text (GTK_WIDGET (spin), _("Enter the track number here."));
-  gtk_container_add (GTK_CONTAINER (alignment), spin);
+  gtk_widget_set_tooltip_text (spin, _("Enter the track number here."));
+  gtk_widget_set_halign (spin, GTK_ALIGN_START);
+  gtk_grid_attach (GTK_GRID (page->grid), spin, 1, 0, 1, 1);
   gtk_label_set_mnemonic_widget (GTK_LABEL (label), spin);
   gtk_widget_show (spin);
 
   /* Year label */
   label = gtk_label_new ("");
-  gtk_misc_set_alignment (GTK_MISC (label), 1.0f, 0.5f);
+  gtk_label_set_xalign (GTK_LABEL (label), 1.0f);
   gtk_label_set_markup (GTK_LABEL (label), _("<b>Year:</b>"));
   gtk_grid_attach (GTK_GRID (page->grid), label, 2, 0, 1, 1);
   gtk_widget_show (label);
-
-  /* Year spin button alignment */
-  alignment = gtk_alignment_new (0.0, 0.5, 0.0, 0.0);
-  gtk_grid_attach (GTK_GRID (page->grid), alignment, 3, 0, 1, 1);
-  gtk_widget_show (alignment);
 
   /* Year spin button range description */
   adjustment = gtk_adjustment_new (2006, 1700, 9999, 1, 10, 0);
@@ -364,14 +354,15 @@ audio_tags_page_init (AudioTagsPage *page)
   /* Year spin button */
   spin = gtk_spin_button_new (adjustment, 1, 0);
   exo_mutual_binding_new (G_OBJECT (adjustment), "value", G_OBJECT (page), "year");
-  gtk_widget_set_tooltip_text (GTK_WIDGET (spin), _("Enter the release year here."));
-  gtk_container_add (GTK_CONTAINER (alignment), spin);
+  gtk_widget_set_tooltip_text (spin, _("Enter the release year here."));
+  gtk_widget_set_halign (spin, GTK_ALIGN_START);
+  gtk_grid_attach (GTK_GRID (page->grid), spin, 3, 0, 1, 1);
   gtk_label_set_mnemonic_widget (GTK_LABEL (label), spin);
   gtk_widget_show (spin);
 
   /* Artist label */
   label = gtk_label_new ("");
-  gtk_misc_set_alignment (GTK_MISC (label), 1.0f, 0.5f);
+  gtk_label_set_xalign (GTK_LABEL (label), 1.0f);
   gtk_label_set_markup (GTK_LABEL (label), _("<b>Artist:</b>"));
   gtk_grid_attach (GTK_GRID (page->grid), label, 0, 1, 1, 1);
   gtk_widget_show (label);
@@ -387,7 +378,7 @@ audio_tags_page_init (AudioTagsPage *page)
 
   /* Title label */
   label = gtk_label_new ("");
-  gtk_misc_set_alignment (GTK_MISC (label), 1.0f, 0.5f);
+  gtk_label_set_xalign (GTK_LABEL (label), 1.0f);
   gtk_label_set_markup (GTK_LABEL (label), _("<b>Title:</b>"));
   gtk_grid_attach (GTK_GRID (page->grid), label, 0, 2, 1, 1);
   gtk_widget_show (label);
@@ -402,7 +393,7 @@ audio_tags_page_init (AudioTagsPage *page)
 
   /* Album label */
   label = gtk_label_new ("");
-  gtk_misc_set_alignment (GTK_MISC (label), 1.0f, 0.5f);
+  gtk_label_set_xalign (GTK_LABEL (label), 1.0f);
   gtk_label_set_markup (GTK_LABEL (label), _("<b>Album:</b>"));
   gtk_grid_attach (GTK_GRID (page->grid), label, 0, 3, 1, 1);
   gtk_widget_show (label);
@@ -417,7 +408,7 @@ audio_tags_page_init (AudioTagsPage *page)
 
   /* Comment label */
   label = gtk_label_new ("");
-  gtk_misc_set_alignment (GTK_MISC (label), 1.0f, 0.5f);
+  gtk_label_set_xalign (GTK_LABEL (label), 1.0f);
   gtk_label_set_markup (GTK_LABEL (label), _("<b>Comment:</b>"));
   gtk_grid_attach (GTK_GRID (page->grid), label, 0, 4, 1, 1);
   gtk_widget_show (label);
@@ -432,7 +423,7 @@ audio_tags_page_init (AudioTagsPage *page)
 
   /* Genre label */
   label = gtk_label_new ("");
-  gtk_misc_set_alignment (GTK_MISC (label), 1.0f, 0.5f);
+  gtk_label_set_xalign (GTK_LABEL (label), 1.0f);
   gtk_label_set_markup (GTK_LABEL (label), _("<b>Genre:</b>"));
   gtk_grid_attach (GTK_GRID (page->grid), label, 0, 5, 1, 1);
   gtk_widget_show (label);
@@ -1015,92 +1006,92 @@ audio_tags_page_info_activate (GSimpleAction      *action,
 
   /* Filename label */
   label = gtk_label_new ("");
-  gtk_misc_set_alignment (GTK_MISC (label), 1.0f, 0.5f);
+  gtk_label_set_xalign (GTK_LABEL (label), 1.0f);
   gtk_label_set_markup (GTK_LABEL (label), _("<b>Filename:</b>"));
   gtk_grid_attach (GTK_GRID (grid), label, 0, 0, 1, 1);
   gtk_widget_show (label);
 
   /* Filename display */
   label = gtk_label_new (filename);
-  gtk_misc_set_alignment (GTK_MISC (label), 0.0f, 0.5f);
+  gtk_label_set_xalign (GTK_LABEL (label), 0.0f);
   gtk_grid_attach (GTK_GRID (grid), label, 1, 0, 1, 1);
   gtk_widget_show (label);
 
   /* Filesize label */
   label = gtk_label_new ("");
-  gtk_misc_set_alignment (GTK_MISC (label), 1.0f, 0.5f);
+  gtk_label_set_xalign (GTK_LABEL (label), 1.0f);
   gtk_label_set_markup (GTK_LABEL (label), _("<b>Filesize:</b>"));
   gtk_grid_attach (GTK_GRID (grid), label, 0, 1, 1, 1);
   gtk_widget_show (label);
 
   /* Filesize display */
   label = gtk_label_new (filesize);
-  gtk_misc_set_alignment (GTK_MISC (label), 0.0f, 0.5f);
+  gtk_label_set_xalign (GTK_LABEL (label), 0.0f);
   gtk_grid_attach (GTK_GRID (grid), label, 1, 1, 1, 1);
   gtk_widget_show (label);
 
   /* Mimetype label */
   label = gtk_label_new ("");
-  gtk_misc_set_alignment (GTK_MISC (label), 1.0f, 0.5f);
+  gtk_label_set_xalign (GTK_LABEL (label), 1.0f);
   gtk_label_set_markup (GTK_LABEL (label), _("<b>MIME Type:</b>"));
   gtk_grid_attach (GTK_GRID (grid), label, 0, 2, 1, 1);
   gtk_widget_show (label);
 
   /* Mimetype display */
   label = gtk_label_new (mimetype);
-  gtk_misc_set_alignment (GTK_MISC (label), 0.0f, 0.5f);
+  gtk_label_set_xalign (GTK_LABEL (label), 0.0f);
   gtk_grid_attach (GTK_GRID (grid), label, 1, 2, 1, 1);
   gtk_widget_show (label);
 
   /* Bitrate label */
   label = gtk_label_new ("");
-  gtk_misc_set_alignment (GTK_MISC (label), 1.0f, 0.5f);
+  gtk_label_set_xalign (GTK_LABEL (label), 1.0f);
   gtk_label_set_markup (GTK_LABEL (label), _("<b>Bitrate:</b>"));
   gtk_grid_attach (GTK_GRID (grid), label, 0, 3, 1, 1);
   gtk_widget_show (label);
 
   /* Bitrate display */
   label = gtk_label_new (bitrate);
-  gtk_misc_set_alignment (GTK_MISC (label), 0.0f, 0.5f);
+  gtk_label_set_xalign (GTK_LABEL (label), 0.0f);
   gtk_grid_attach (GTK_GRID (grid), label, 1, 3, 1, 1);
   gtk_widget_show (label);
 
   /* Samplerate label */
   label = gtk_label_new ("");
-  gtk_misc_set_alignment (GTK_MISC (label), 1.0f, 0.5f);
+  gtk_label_set_xalign (GTK_LABEL (label), 1.0f);
   gtk_label_set_markup (GTK_LABEL (label), _("<b>Samplerate:</b>"));
   gtk_grid_attach (GTK_GRID (grid), label, 0, 4, 1, 1);
   gtk_widget_show (label);
 
   /* Samplerate display */
   label = gtk_label_new (samplerate);
-  gtk_misc_set_alignment (GTK_MISC (label), 0.0f, 0.5f);
+  gtk_label_set_xalign (GTK_LABEL (label), 0.0f);
   gtk_grid_attach (GTK_GRID (grid), label, 1, 4, 1, 1);
   gtk_widget_show (label);
 
   /* Channels label */
   label = gtk_label_new ("");
-  gtk_misc_set_alignment (GTK_MISC (label), 1.0f, 0.5f);
+  gtk_label_set_xalign (GTK_LABEL (label), 1.0f);
   gtk_label_set_markup (GTK_LABEL (label), _("<b>Channels:</b>"));
   gtk_grid_attach (GTK_GRID (grid), label, 0, 5, 1, 1);
   gtk_widget_show (label);
 
   /* Channels display */
   label = gtk_label_new (channels);
-  gtk_misc_set_alignment (GTK_MISC (label), 0.0f, 0.5f);
+  gtk_label_set_xalign (GTK_LABEL (label), 0.0f);
   gtk_grid_attach (GTK_GRID (grid), label, 1, 5, 1, 1);
   gtk_widget_show (label);
 
   /* Length label */
   label = gtk_label_new ("");
-  gtk_misc_set_alignment (GTK_MISC (label), 1.0f, 0.5f);
+  gtk_label_set_xalign (GTK_LABEL (label), 1.0f);
   gtk_label_set_markup (GTK_LABEL (label), _("<b>Length:</b>"));
   gtk_grid_attach (GTK_GRID (grid), label, 0, 6, 1, 1);
   gtk_widget_show (label);
 
   /* Length display */
   label = gtk_label_new (length);
-  gtk_misc_set_alignment (GTK_MISC (label), 0.0f, 0.5f);
+  gtk_label_set_xalign (GTK_LABEL (label), 0.0f);
   gtk_grid_attach (GTK_GRID (grid), label, 1, 6, 1, 1);
   gtk_widget_show (label);
 

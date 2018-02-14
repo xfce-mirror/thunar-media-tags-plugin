@@ -241,7 +241,7 @@ tag_renamer_init (TagRenamer *tag_renamer)
 
   /* Custom format */
   label = gtk_label_new_with_mnemonic (_("Cust_om format:"));
-  gtk_misc_set_alignment (GTK_MISC (label), 1.00f,  0.5f);
+  gtk_label_set_xalign (GTK_LABEL (label), 1.0f);
   gtk_grid_attach (GTK_GRID (grid), label, 0, 1, 1, 1);
   gtk_widget_show (label);
 
@@ -270,7 +270,7 @@ tag_renamer_init (TagRenamer *tag_renamer)
 
   /* Format label */
   label = gtk_label_new_with_mnemonic (_("_Format:"));
-  gtk_misc_set_alignment (GTK_MISC (label), 1.00f,  0.5f);
+  gtk_label_set_xalign (GTK_LABEL (label), 1.0f);
   gtk_grid_attach (GTK_GRID (grid), label, 0, 0, 1, 1);
   gtk_widget_show (label);
 
