@@ -221,7 +221,7 @@ tag_renamer_init (TagRenamer *tag_renamer)
   AtkRelationSet  *relations;
   AtkRelation     *relation;
   AtkObject       *object;
-  GtkWidget       *table;
+  GtkWidget       *grid;
   GtkWidget       *label;
   GtkWidget       *combo;
   GtkWidget       *image;
@@ -233,26 +233,27 @@ tag_renamer_init (TagRenamer *tag_renamer)
   GtkTreeIter      iter;
   guint            n;
 
-  table = gtk_table_new (2, 4, FALSE);
-  gtk_table_set_row_spacings (GTK_TABLE (table), 6);
-  gtk_table_set_col_spacings (GTK_TABLE (table), 12);
-  gtk_box_pack_start (GTK_BOX (tag_renamer), table, FALSE, FALSE, 0);
-  gtk_widget_show (table);
+  grid = gtk_grid_new ();
+  gtk_grid_set_row_spacing (GTK_GRID (grid), 6);
+  gtk_grid_set_column_spacing (GTK_GRID (grid), 12);
+  gtk_box_pack_start (GTK_BOX (tag_renamer), grid, FALSE, FALSE, 0);
+  gtk_widget_show (grid);
 
   /* Custom format */
   label = gtk_label_new_with_mnemonic (_("Cust_om format:"));
   gtk_misc_set_alignment (GTK_MISC (label), 1.00f,  0.5f);
-  gtk_table_attach (GTK_TABLE (table), label, 0, 1, 1, 2, GTK_FILL, 0, 0, 0);
+  gtk_grid_attach (GTK_GRID (grid), label, 0, 1, 1, 1);
   gtk_widget_show (label);
 
   entry = gtk_entry_new ();
-  gtk_table_attach (GTK_TABLE (table), entry, 1, 2, 1, 2, GTK_EXPAND | GTK_FILL, 0, 0, 0);
+  gtk_widget_set_hexpand (entry, TRUE);
+  gtk_grid_attach (GTK_GRID (grid), entry, 1, 1, 1, 1);
   exo_mutual_binding_new (G_OBJECT (entry), "text", G_OBJECT (tag_renamer), "text");
   gtk_label_set_mnemonic_widget (GTK_LABEL (label), entry);
   gtk_widget_show (entry);
 
   button = gtk_button_new ();
-  gtk_table_attach (GTK_TABLE (table), button, 2, 3, 1, 2, GTK_SHRINK, GTK_SHRINK, 0, 0);
+  gtk_grid_attach (GTK_GRID (grid), button, 2, 1, 1, 1);
   g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (tag_renamer_help_clicked), NULL);
   gtk_widget_show (button);
 
@@ -270,7 +271,7 @@ tag_renamer_init (TagRenamer *tag_renamer)
   /* Format label */
   label = gtk_label_new_with_mnemonic (_("_Format:"));
   gtk_misc_set_alignment (GTK_MISC (label), 1.00f,  0.5f);
-  gtk_table_attach (GTK_TABLE (table), label, 0, 1, 0, 1, GTK_FILL, 0, 0, 0);
+  gtk_grid_attach (GTK_GRID (grid), label, 0, 0, 1, 1);
   gtk_widget_show (label);
 
   /* Create combo box store */
@@ -295,7 +296,8 @@ tag_renamer_init (TagRenamer *tag_renamer)
     }
   g_type_class_unref (klass);
   exo_mutual_binding_new (G_OBJECT (tag_renamer), "format", G_OBJECT (combo), "active");
-  gtk_table_attach (GTK_TABLE (table), combo, 1, 3, 0, 1, GTK_EXPAND | GTK_FILL, GTK_FILL, 0, 0);
+  gtk_widget_set_hexpand (combo, TRUE);
+  gtk_grid_attach (GTK_GRID (grid), combo, 1, 0, 2, 1);
   gtk_label_set_mnemonic_widget (GTK_LABEL (label), combo);
   gtk_widget_show (combo);
 
@@ -313,13 +315,13 @@ tag_renamer_init (TagRenamer *tag_renamer)
   exo_mutual_binding_new (G_OBJECT (button), "active", G_OBJECT (tag_renamer), "replace-spaces");
   gtk_widget_set_tooltip_text (GTK_WIDGET (button), _("Activating this option will replace all spaces in the target filename "
         "with underscores."));
-  gtk_table_attach (GTK_TABLE (table), button, 3, 4, 0, 1, GTK_FILL, 0, 0, 0);
+  gtk_grid_attach (GTK_GRID (grid), button, 3, 0, 1, 1);
   gtk_widget_show (button);
 
   button = gtk_check_button_new_with_mnemonic (_("_Lowercase"));
   exo_mutual_binding_new (G_OBJECT (button), "active", G_OBJECT (tag_renamer), "lowercase");
   gtk_widget_set_tooltip_text (GTK_WIDGET (button), _("If you activate this, the resulting filename will only contain lowercase letters."));
-  gtk_table_attach (GTK_TABLE (table), button, 3, 4, 1, 2, GTK_FILL, 0, 0, 0);
+  gtk_grid_attach (GTK_GRID (grid), button, 3, 1, 1, 1);
   gtk_widget_show (button);
 }
 
