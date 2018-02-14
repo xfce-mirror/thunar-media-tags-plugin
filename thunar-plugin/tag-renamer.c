@@ -257,7 +257,7 @@ tag_renamer_init (TagRenamer *tag_renamer)
   g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (tag_renamer_help_clicked), NULL);
   gtk_widget_show (button);
 
-  image = gtk_image_new_from_stock (GTK_STOCK_INFO, GTK_ICON_SIZE_MENU);
+  image = gtk_image_new_from_icon_name ("dialog-information", GTK_ICON_SIZE_MENU);
   gtk_container_add (GTK_CONTAINER (button), image);
   gtk_widget_show (image);
 

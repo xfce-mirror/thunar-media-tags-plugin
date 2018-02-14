@@ -564,7 +564,7 @@ audio_tags_page_dialog_new (GtkWindow *window,
   dialog = gtk_dialog_new_with_buttons (_("Edit Tags"),
                                         window,
                                         GTK_DIALOG_MODAL | GTK_DIALOG_DESTROY_WITH_PARENT,
-                                        GTK_STOCK_CANCEL,
+                                        _("_Cancel"),
                                         GTK_RESPONSE_CANCEL,
                                         NULL);
 
@@ -575,14 +575,11 @@ audio_tags_page_dialog_new (GtkWindow *window,
   gtk_widget_show (GTK_WIDGET (page));
 
   /* Create save button */
-  button = gtk_button_new_from_stock (GTK_STOCK_SAVE);
+  button = gtk_dialog_add_button (GTK_DIALOG (dialog), _("_Save"), GTK_RESPONSE_OK);
 
   /* Connect save button to the "save" action */
   action = gtk_action_group_get_action (page->action_group, "save");
   gtk_activatable_set_related_action (GTK_ACTIVATABLE (button), action);
-
-  /* Add save button to the dialog */
-  gtk_dialog_add_action_widget (GTK_DIALOG (dialog), button, GTK_RESPONSE_OK);
 
   return dialog;
 }
@@ -985,7 +982,7 @@ audio_tags_page_info_activate (GtkAction *action,
   dialog = gtk_dialog_new_with_buttons (_("Audio Information"),
                                         window,
                                         GTK_DIALOG_MODAL | GTK_DIALOG_DESTROY_WITH_PARENT,
-                                        GTK_STOCK_CLOSE,
+                                        _("_Close"),
                                         GTK_RESPONSE_CLOSE,
                                         NULL);
 
@@ -1198,7 +1195,8 @@ audio_tags_page_set_show_save_button (AudioTagsPage   *page,
         return;
 
       /* Info button */
-      page->info_button = gtk_button_new_from_stock (GTK_STOCK_PROPERTIES);
+      page->info_button = gtk_button_new_with_mnemonic (_("_Information"));
+      gtk_widget_set_tooltip_text (page->info_button, _("Display more detailed information about this audio file."));
       gtk_grid_attach (GTK_GRID (page->grid), page->info_button, 2, 6, 1, 1);
       gtk_widget_show (page->info_button);
 
@@ -1207,7 +1205,8 @@ audio_tags_page_set_show_save_button (AudioTagsPage   *page,
       gtk_activatable_set_related_action (GTK_ACTIVATABLE (page->info_button), action);
 
       /* Save button */
-      page->save_button = gtk_button_new_from_stock (GTK_STOCK_SAVE);
+      page->save_button = gtk_button_new_with_mnemonic (_("_Save"));
+      gtk_widget_set_tooltip_text (page->save_button, _("Save audio tags."));
       gtk_grid_attach (GTK_GRID (page->grid), page->save_button, 3, 6, 1, 1);
       gtk_widget_show (page->save_button);
 
