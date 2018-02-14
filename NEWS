@@ -1,3 +1,17 @@
+0.3.0
+=====
+- GTK3 Port.
+- Thunarx-3 Port (Thunar >=1.7.0 required).
+- Do not use empty string as separator (Bug #4822)
+- Translation updates: Albanian, Arabic, Asturian, Basque, Bulgarian, Catalan,
+  Chinese (China), Chinese (Taiwan), Croatian, Czech, Danish, Dutch,
+  English (Australia), English (United Kingdom), Finnish, French, Galician,
+  German, Greek, Hebrew, Hungarian, Icelandic, Indonesian, Italian, Japanese,
+  Kazakh, Korean, Latvian, Lithuanian, Malay, Norwegian Bokmål, Occitan, Polish,
+  Portuguese, Portuguese (Brazil), Punjabi, Romanian, Russian, Serbian, Slovak,
+  Slovenian, Spanish, Swedish, Thai, Turkish, Ukrainian, Urdu, Urdu (Pakistan),
+  Uyghur, Uzbek, Vietnamese.
+
 0.2.1
 =====
 - Automake updates.
