@@ -1,0 +1,276 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# Iris Ilexiris <iris.ilexiris@gmail.com>, 2018
+# Robin van der Vliet <info@robinvandervliet.nl>, 2016
+msgid ""
+msgstr ""
+"Project-Id-Version: Thunar Plugins\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-02-15 00:30+0100\n"
+"PO-Revision-Date: 2018-02-15 13:24+0000\n"
+"Last-Translator: Iris Ilexiris <iris.ilexiris@gmail.com>\n"
+"Language-Team: Esperanto (http://www.transifex.com/xfce/thunar-plugins/language/eo/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: eo\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../thunar-plugin/tag-renamer.c:59 ../thunar-plugin/tag-renamer.c:659
+msgid "Title"
+msgstr "Titolo"
+
+#: ../thunar-plugin/tag-renamer.c:60
+msgid "Artist - Title"
+msgstr "Artisto - Titolo"
+
+#: ../thunar-plugin/tag-renamer.c:61
+msgid "Track - Title"
+msgstr "Trako - Titolo"
+
+#: ../thunar-plugin/tag-renamer.c:62
+msgid "Track - Artist - Title"
+msgstr "Trako - Artisto - Titolo"
+
+#: ../thunar-plugin/tag-renamer.c:63
+msgid "Track. Title"
+msgstr "Trako. Titolo"
+
+#: ../thunar-plugin/tag-renamer.c:64
+msgid "Track. Artist - Title"
+msgstr "Trako. Artisto - Titolo"
+
+#: ../thunar-plugin/tag-renamer.c:65
+msgid "Artist - Track - Title"
+msgstr "Artisto - Trako - Titolo"
+
+#: ../thunar-plugin/tag-renamer.c:67
+msgid "Custom"
+msgstr ""
+
+#. Custom format
+#: ../thunar-plugin/tag-renamer.c:243
+msgid "Cust_om format:"
+msgstr ""
+
+#. Format label
+#: ../thunar-plugin/tag-renamer.c:272
+msgid "_Format:"
+msgstr ""
+
+#: ../thunar-plugin/tag-renamer.c:314
+msgid "_Underscores"
+msgstr ""
+
+#: ../thunar-plugin/tag-renamer.c:316
+msgid ""
+"Activating this option will replace all spaces in the target filename with "
+"underscores."
+msgstr ""
+
+#: ../thunar-plugin/tag-renamer.c:321
+msgid "_Lowercase"
+msgstr ""
+
+#: ../thunar-plugin/tag-renamer.c:323
+msgid ""
+"If you activate this, the resulting filename will only contain lowercase "
+"letters."
+msgstr ""
+
+#: ../thunar-plugin/tag-renamer.c:466 ../thunar-plugin/audio-tags-page.c:183
+msgid "Unknown Artist"
+msgstr "Nekonata artisto"
+
+#: ../thunar-plugin/tag-renamer.c:474 ../thunar-plugin/audio-tags-page.c:209
+msgid "Unknown Title"
+msgstr "Nekonata titolo"
+
+#. Edit tags action
+#: ../thunar-plugin/tag-renamer.c:629
+msgid "Edit _Tags"
+msgstr "Redakti _etikedojn"
+
+#: ../thunar-plugin/tag-renamer.c:629
+msgid "Edit ID3/OGG tags of this file."
+msgstr ""
+
+#: ../thunar-plugin/tag-renamer.c:648
+msgid "Tag Help"
+msgstr "Etikeda helpo"
+
+#: ../thunar-plugin/tag-renamer.c:659
+msgid "Artist"
+msgstr "Artisto"
+
+#: ../thunar-plugin/tag-renamer.c:660
+msgid "Album"
+msgstr "Album"
+
+#: ../thunar-plugin/tag-renamer.c:660
+msgid "Genre"
+msgstr "Ĝenro"
+
+#: ../thunar-plugin/tag-renamer.c:661
+msgid "Track number"
+msgstr "Traka numero"
+
+#: ../thunar-plugin/tag-renamer.c:661
+msgid "Year"
+msgstr "Jaro"
+
+#: ../thunar-plugin/tag-renamer.c:662
+msgid "Comment"
+msgstr "Komento"
+
+#: ../thunar-plugin/tag-renamer.c:719
+msgid "Audio Tags"
+msgstr ""
+
+#: ../thunar-plugin/audio-tags-page.c:196
+msgid "Unknown Album"
+msgstr "Nekonata albumo"
+
+#: ../thunar-plugin/audio-tags-page.c:328
+msgid "<b>Track:</b>"
+msgstr "<b>Trako:</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:338
+msgid "Enter the track number here."
+msgstr "Skribu la trakan numeron ĉi tie."
+
+#: ../thunar-plugin/audio-tags-page.c:347
+msgid "<b>Year:</b>"
+msgstr "<b>Jaro:</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:357
+msgid "Enter the release year here."
+msgstr ""
+
+#: ../thunar-plugin/audio-tags-page.c:366
+msgid "<b>Artist:</b>"
+msgstr "<b>Artisto:</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:373
+msgid "Enter the name of the artist or author of this file here."
+msgstr ""
+
+#: ../thunar-plugin/audio-tags-page.c:382
+msgid "<b>Title:</b>"
+msgstr "<b>Titolo:</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:389
+msgid "Enter the song title here."
+msgstr "Skribu la kantan titolon ĉi tie."
+
+#: ../thunar-plugin/audio-tags-page.c:397
+msgid "<b>Album:</b>"
+msgstr "<b>Albumo:</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:404
+msgid "Enter the album/record title here."
+msgstr "Skribu la albuman titolon ĉi tie."
+
+#: ../thunar-plugin/audio-tags-page.c:412
+msgid "<b>Comment:</b>"
+msgstr "<b>Komento:</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:419
+msgid "Enter your comments here."
+msgstr "Skribu viajn komentojn ĉi tie."
+
+#: ../thunar-plugin/audio-tags-page.c:427
+msgid "<b>Genre:</b>"
+msgstr "<b>Ĝenro:</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:434
+msgid "Select or enter the genre of this song here."
+msgstr "Elektu aŭ skribu la kantan ĝenron ĉi tie."
+
+#: ../thunar-plugin/audio-tags-page.c:521
+msgid "Audio"
+msgstr ""
+
+#. Set up the dialog
+#: ../thunar-plugin/audio-tags-page.c:556
+msgid "Edit Tags"
+msgstr "Redakti etikedojn"
+
+#: ../thunar-plugin/audio-tags-page.c:559
+msgid "_Cancel"
+msgstr "_Nuligi"
+
+#. Create save button
+#. Save button
+#: ../thunar-plugin/audio-tags-page.c:570
+#: ../thunar-plugin/audio-tags-page.c:1197
+msgid "_Save"
+msgstr "_Konservi"
+
+#. Create dialog
+#: ../thunar-plugin/audio-tags-page.c:975
+msgid "Audio Information"
+msgstr ""
+
+#: ../thunar-plugin/audio-tags-page.c:978
+msgid "_Close"
+msgstr "_Fermi"
+
+#: ../thunar-plugin/audio-tags-page.c:984
+#, c-format
+msgid "%d:%02d Minutes"
+msgstr "%d:%02d minutoj"
+
+#: ../thunar-plugin/audio-tags-page.c:985
+#, c-format
+msgid "%d KBit/s"
+msgstr ""
+
+#: ../thunar-plugin/audio-tags-page.c:986
+#, c-format
+msgid "%d Hz"
+msgstr "%d Hz"
+
+#: ../thunar-plugin/audio-tags-page.c:1010
+msgid "<b>Filename:</b>"
+msgstr "<b>Dosiernomo:</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:1023
+msgid "<b>Filesize:</b>"
+msgstr "<b>Dosiergrandeco:</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:1036
+msgid "<b>MIME Type:</b>"
+msgstr "<b>MIME-tipo:</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:1049
+msgid "<b>Bitrate:</b>"
+msgstr ""
+
+#: ../thunar-plugin/audio-tags-page.c:1062
+msgid "<b>Samplerate:</b>"
+msgstr ""
+
+#: ../thunar-plugin/audio-tags-page.c:1075
+msgid "<b>Channels:</b>"
+msgstr "<b>Kanaloj:</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:1088
+msgid "<b>Length:</b>"
+msgstr "<b>Daŭro:</b>"
+
+#. Info button
+#: ../thunar-plugin/audio-tags-page.c:1188
+msgid "_Information"
+msgstr "_Informoj"
+
+#: ../thunar-plugin/audio-tags-page.c:1189
+msgid "Display more detailed information about this audio file."
+msgstr ""
+
+#: ../thunar-plugin/audio-tags-page.c:1198
+msgid "Save audio tags."
+msgstr ""
