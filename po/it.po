@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-02-15 00:30+0100\n"
-"PO-Revision-Date: 2018-03-31 10:53+0000\n"
+"PO-Revision-Date: 2018-05-13 12:58+0000\n"
 "Last-Translator: Emanuele Petriglia <inbox@emanuelepetriglia.me>\n"
 "Language-Team: Italian (http://www.transifex.com/xfce/thunar-plugins/language/it/)\n"
 "MIME-Version: 1.0\n"
@@ -142,7 +142,7 @@ msgstr "<b>Traccia:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:338
 msgid "Enter the track number here."
-msgstr "Inserire qui il numero della traccia"
+msgstr "Inserire qui il numero della traccia."
 
 #: ../thunar-plugin/audio-tags-page.c:347
 msgid "<b>Year:</b>"
@@ -150,7 +150,7 @@ msgstr "<b>Anno:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:357
 msgid "Enter the release year here."
-msgstr "Inserire qui l'anno di uscita"
+msgstr "Inserire qui l'anno di uscita."
 
 #: ../thunar-plugin/audio-tags-page.c:366
 msgid "<b>Artist:</b>"
@@ -158,7 +158,7 @@ msgstr "<b>Artista:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:373
 msgid "Enter the name of the artist or author of this file here."
-msgstr "Inserire qui il nome dell'artista o dell'autore del file"
+msgstr "Inserire qui il nome dell'artista o dell'autore del file."
 
 #: ../thunar-plugin/audio-tags-page.c:382
 msgid "<b>Title:</b>"
@@ -166,7 +166,7 @@ msgstr "<b>Titolo:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:389
 msgid "Enter the song title here."
-msgstr "Inserire qui il titolo della canzone"
+msgstr "Inserire qui il titolo della canzone."
 
 #: ../thunar-plugin/audio-tags-page.c:397
 msgid "<b>Album:</b>"
@@ -174,7 +174,7 @@ msgstr "<b>Album:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:404
 msgid "Enter the album/record title here."
-msgstr "Inserire qui il titolo dell'album o del disco"
+msgstr "Inserire qui il titolo dell'album o del disco."
 
 #: ../thunar-plugin/audio-tags-page.c:412
 msgid "<b>Comment:</b>"
@@ -182,7 +182,7 @@ msgstr "<b>Commenti:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:419
 msgid "Enter your comments here."
-msgstr "Inserire qui i propri commenti"
+msgstr "Inserire qui i propri commenti."
 
 #: ../thunar-plugin/audio-tags-page.c:427
 msgid "<b>Genre:</b>"
@@ -190,7 +190,7 @@ msgstr "<b>Genere:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:434
 msgid "Select or enter the genre of this song here."
-msgstr "Scegliere o inserire qui il genere della canzone"
+msgstr "Scegliere o inserire qui il genere della canzone."
 
 #: ../thunar-plugin/audio-tags-page.c:521
 msgid "Audio"
@@ -238,11 +238,11 @@ msgstr "%d Hz"
 
 #: ../thunar-plugin/audio-tags-page.c:1010
 msgid "<b>Filename:</b>"
-msgstr "<b>Nome file:</b>"
+msgstr "<b>Nome del file:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:1023
 msgid "<b>Filesize:</b>"
-msgstr "<b>Dimensione file:</b>"
+msgstr "<b>Dimensione del file:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:1036
 msgid "<b>MIME Type:</b>"
@@ -262,7 +262,7 @@ msgstr "<b>Canali:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:1088
 msgid "<b>Length:</b>"
-msgstr "<b>Lunghezza:</b>"
+msgstr "<b>Durata:</b>"
 
 #. Info button
 #: ../thunar-plugin/audio-tags-page.c:1188
