@@ -9,14 +9,14 @@
 # Maximilian Schleiss <maximilian@xfce.org>, 2007
 # Stephane Roy <sroy@j2n.net>, 2006
 # Urien Desterres <urien.desterres@gmail.com>, 2014-2015
-# Yannick Le Guen <leguen.yannick@gmail.com>, 2014-2015
+# Yannick Le Guen <leguen.yannick@gmail.com>, 2014-2015,2018
 msgid ""
 msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-02-15 00:30+0100\n"
-"PO-Revision-Date: 2018-03-13 16:40+0000\n"
-"Last-Translator: Charles Monzat <superboa@hotmail.fr>\n"
+"PO-Revision-Date: 2018-06-17 08:40+0000\n"
+"Last-Translator: Yannick Le Guen <leguen.yannick@gmail.com>\n"
 "Language-Team: French (http://www.transifex.com/xfce/thunar-plugins/language/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -64,7 +64,7 @@ msgstr "F_ormat personnalisé :"
 #. Format label
 #: ../thunar-plugin/tag-renamer.c:272
 msgid "_Format:"
-msgstr "_Format :"
+msgstr "_Format :"
 
 #: ../thunar-plugin/tag-renamer.c:314
 msgid "_Underscores"
@@ -141,7 +141,7 @@ msgstr "Album inconnu"
 
 #: ../thunar-plugin/audio-tags-page.c:328
 msgid "<b>Track:</b>"
-msgstr "<b>Piste :</b>"
+msgstr "<b>Piste :</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:338
 msgid "Enter the track number here."
@@ -149,7 +149,7 @@ msgstr "Entrez le numéro de la piste ici."
 
 #: ../thunar-plugin/audio-tags-page.c:347
 msgid "<b>Year:</b>"
-msgstr "<b>Année :</b>"
+msgstr "<b>Année :</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:357
 msgid "Enter the release year here."
@@ -157,7 +157,7 @@ msgstr "Entrez la date de sortie ici."
 
 #: ../thunar-plugin/audio-tags-page.c:366
 msgid "<b>Artist:</b>"
-msgstr "<b>Artiste :</b>"
+msgstr "<b>Artiste :</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:373
 msgid "Enter the name of the artist or author of this file here."
@@ -165,7 +165,7 @@ msgstr "Entrez le nom de l’artiste ou de l’auteur de ce fichier ici."
 
 #: ../thunar-plugin/audio-tags-page.c:382
 msgid "<b>Title:</b>"
-msgstr "<b>Titre :</b>"
+msgstr "<b>Titre :</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:389
 msgid "Enter the song title here."
@@ -173,7 +173,7 @@ msgstr "Entrez le titre de la chanson ici."
 
 #: ../thunar-plugin/audio-tags-page.c:397
 msgid "<b>Album:</b>"
-msgstr "<b>Album :</b>"
+msgstr "<b>Album :</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:404
 msgid "Enter the album/record title here."
@@ -181,7 +181,7 @@ msgstr "Entrez le titre de l’album / enregistrement ici."
 
 #: ../thunar-plugin/audio-tags-page.c:412
 msgid "<b>Comment:</b>"
-msgstr "<b>Commentaire :</b>"
+msgstr "<b>Commentaire :</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:419
 msgid "Enter your comments here."
@@ -189,7 +189,7 @@ msgstr "Entrez vos commentaires ici."
 
 #: ../thunar-plugin/audio-tags-page.c:427
 msgid "<b>Genre:</b>"
-msgstr "<b>Genre :</b>"
+msgstr "<b>Genre :</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:434
 msgid "Select or enter the genre of this song here."
@@ -241,19 +241,19 @@ msgstr "%d Hz"
 
 #: ../thunar-plugin/audio-tags-page.c:1010
 msgid "<b>Filename:</b>"
-msgstr "<b>Nom du fichier :</b>"
+msgstr "<b>Nom du fichier :</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:1023
 msgid "<b>Filesize:</b>"
-msgstr "<b>Taille du fichier :</b>"
+msgstr "<b>Taille du fichier :</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:1036
 msgid "<b>MIME Type:</b>"
-msgstr "<b>Type MIME :</b>"
+msgstr "<b>Type MIME :</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:1049
 msgid "<b>Bitrate:</b>"
-msgstr "<b>Débit :</b>"
+msgstr "<b>Débit :</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:1062
 msgid "<b>Samplerate:</b>"
@@ -261,11 +261,11 @@ msgstr "<b>Fréq. d’échantillonnage :</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:1075
 msgid "<b>Channels:</b>"
-msgstr "<b>Canaux :</b>"
+msgstr "<b>Canaux :</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:1088
 msgid "<b>Length:</b>"
-msgstr "<b>Durée :</b>"
+msgstr "<b>Durée :</b>"
 
 #. Info button
 #: ../thunar-plugin/audio-tags-page.c:1188
