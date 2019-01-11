@@ -4,19 +4,20 @@
 # 
 # Translators:
 # Michal Várady <miko.vaji@gmail.com>, 2015,2018
+# Pavel Borecki <pavel.borecki@gmail.com>, 2019
 msgid ""
 msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-02-15 00:30+0100\n"
-"PO-Revision-Date: 2018-02-18 09:42+0000\n"
-"Last-Translator: Michal Várady <miko.vaji@gmail.com>\n"
+"PO-Revision-Date: 2019-01-11 08:04+0000\n"
+"Last-Translator: Pavel Borecki <pavel.borecki@gmail.com>\n"
 "Language-Team: Czech (http://www.transifex.com/xfce/thunar-plugins/language/cs/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: cs\n"
-"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n >= 2 && n <= 4 && n % 1 == 0) ? 1: (n % 1 != 0 ) ? 2 : 3;\n"
 
 #: ../thunar-plugin/tag-renamer.c:59 ../thunar-plugin/tag-renamer.c:659
 msgid "Title"
@@ -53,7 +54,7 @@ msgstr "Vlastní"
 #. Custom format
 #: ../thunar-plugin/tag-renamer.c:243
 msgid "Cust_om format:"
-msgstr "_Vlastní formát:"
+msgstr "Vlastní f_ormát:"
 
 #. Format label
 #: ../thunar-plugin/tag-renamer.c:272
@@ -78,7 +79,7 @@ msgstr "_Malá písmena"
 msgid ""
 "If you activate this, the resulting filename will only contain lowercase "
 "letters."
-msgstr "Použijete-li tuto volbu, výsledné názvy budou obsahovat pouze malá písmena."
+msgstr "Pokud použijete tuto volbu, výsledné názvy budou obsahovat pouze malá písmena."
 
 #: ../thunar-plugin/tag-renamer.c:466 ../thunar-plugin/audio-tags-page.c:183
 msgid "Unknown Artist"
@@ -91,15 +92,15 @@ msgstr "Neznámý název"
 #. Edit tags action
 #: ../thunar-plugin/tag-renamer.c:629
 msgid "Edit _Tags"
-msgstr "Upravit _tagy"
+msgstr "Upravit _štítky (tag)"
 
 #: ../thunar-plugin/tag-renamer.c:629
 msgid "Edit ID3/OGG tags of this file."
-msgstr "Upraví tagy ID3 nebo OGG tohoto souboru."
+msgstr "Upraví ID3 nebo OGG štítky tohoto souboru."
 
 #: ../thunar-plugin/tag-renamer.c:648
 msgid "Tag Help"
-msgstr "Nápověda tagů"
+msgstr "Nápověda ke štítkům"
 
 #: ../thunar-plugin/tag-renamer.c:659
 msgid "Artist"
@@ -127,7 +128,7 @@ msgstr "Komentář"
 
 #: ../thunar-plugin/tag-renamer.c:719
 msgid "Audio Tags"
-msgstr "Tagy nahrávky"
+msgstr "Štítky nahrávky"
 
 #: ../thunar-plugin/audio-tags-page.c:196
 msgid "Unknown Album"
@@ -179,7 +180,7 @@ msgstr "<b>Komentář:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:419
 msgid "Enter your comments here."
-msgstr "Sem zadejte Váš komentář."
+msgstr "Sem zadejte váš komentář."
 
 #: ../thunar-plugin/audio-tags-page.c:427
 msgid "<b>Genre:</b>"
@@ -196,11 +197,11 @@ msgstr "Nahrávka"
 #. Set up the dialog
 #: ../thunar-plugin/audio-tags-page.c:556
 msgid "Edit Tags"
-msgstr "Upravit tagy"
+msgstr "Upravit štítky"
 
 #: ../thunar-plugin/audio-tags-page.c:559
 msgid "_Cancel"
-msgstr "_Zrušit"
+msgstr "_Storno"
 
 #. Create save button
 #. Save button
@@ -243,7 +244,7 @@ msgstr "<b>Velikost souboru:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:1036
 msgid "<b>MIME Type:</b>"
-msgstr "<b>Typ MIME:</b>"
+msgstr "<b>MIME typ:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:1049
 msgid "<b>Bitrate:</b>"
@@ -272,4 +273,4 @@ msgstr "Zobrazí podrobné informace o tomto zvukovém souboru."
 
 #: ../thunar-plugin/audio-tags-page.c:1198
 msgid "Save audio tags."
-msgstr "Uloží tagy nahrávky."
+msgstr "Uložit štítky nahrávky."
