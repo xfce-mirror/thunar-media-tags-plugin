@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Zmicer Turok <zmicerturok@gmail.com>, 2018
+# Zmicer Turok <zmicerturok@gmail.com>, 2018-2019
 msgid ""
 msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-02-15 00:30+0100\n"
-"PO-Revision-Date: 2018-09-14 00:15+0000\n"
+"PO-Revision-Date: 2019-01-16 20:34+0000\n"
 "Last-Translator: Zmicer Turok <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian (http://www.transifex.com/xfce/thunar-plugins/language/be/)\n"
 "MIME-Version: 1.0\n"
@@ -78,7 +78,7 @@ msgstr "_Ніжні рэгістр"
 msgid ""
 "If you activate this, the resulting filename will only contain lowercase "
 "letters."
-msgstr "Калі вы ўключыце гэты параметр, канцавая назва файла будзе складацца з літар ніжняга рэгістру."
+msgstr "Калі вы ўключыце гэты параметр, канцавая назва файла будзе складацца з літар ніжняга рэгістра."
 
 #: ../thunar-plugin/tag-renamer.c:466 ../thunar-plugin/audio-tags-page.c:183
 msgid "Unknown Artist"
@@ -212,7 +212,7 @@ msgstr "_Захаваць"
 #. Create dialog
 #: ../thunar-plugin/audio-tags-page.c:975
 msgid "Audio Information"
-msgstr "Аздыязвесткі"
+msgstr "Аўдыязвесткі"
 
 #: ../thunar-plugin/audio-tags-page.c:978
 msgid "_Close"
