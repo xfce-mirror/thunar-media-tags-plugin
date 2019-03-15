@@ -5,12 +5,13 @@
 # Translators:
 # Besnik <besnik@programeshqip.org>, 2007
 # Besnik <besnik@programeshqip.org>, 2007
+# Besnik <besnik@programeshqip.org>, 2019
 msgid ""
 msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-02-15 00:30+0100\n"
-"PO-Revision-Date: 2018-03-02 23:35+0000\n"
+"PO-Revision-Date: 2019-03-15 11:09+0000\n"
 "Last-Translator: Besnik <besnik@programeshqip.org>\n"
 "Language-Team: Albanian (http://www.transifex.com/xfce/thunar-plugins/language/sq/)\n"
 "MIME-Version: 1.0\n"
@@ -244,7 +245,7 @@ msgstr "<b>Madhësi kartele:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:1036
 msgid "<b>MIME Type:</b>"
-msgstr "<b>Tip MIME:</b>"
+msgstr "<b>Lloj MIME:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:1049
 msgid "<b>Bitrate:</b>"
