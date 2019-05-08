@@ -4,7 +4,7 @@
 # 
 # Translators:
 # Balázs Meskó <meskobalazs@gmail.com>, 2018
-# Balázs Úr <urbalazs@gmail.com>, 2015
+# Balázs Úr, 2015
 # Gabor Kelemen <kelemeng at gnome dot hu>, 2009
 msgid ""
 msgstr ""
