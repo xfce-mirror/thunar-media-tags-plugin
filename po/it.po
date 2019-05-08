@@ -5,7 +5,7 @@
 # Translators:
 # Alfredo Natale <alfredonatale996@gmail.com>, 2018
 # Cristian Marchi <cri.penta@gmail.com>, 2013,2015
-# Emanuele Petriglia <inbox@emanuelepetriglia.me>, 2018
+# Emanuele Petriglia <transifex@emanuelepetriglia.com>, 2018
 # Fabio Riga <usul@aruba.it>, 2007
 msgid ""
 msgstr ""
