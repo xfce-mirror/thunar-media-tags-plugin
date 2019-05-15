@@ -6,13 +6,13 @@
 # Aputsiak Niels Janussen (Skjalden) <aj@isit.gl>, 2015
 # Jens Hyllegaard <jens.hyllegaard@gmail.com>, 2007
 # Per Kongstad <p_kongstad@op.pl>, 2008
-# scootergrisen, 2017-2018
+# scootergrisen, 2017-2019
 msgid ""
 msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-02-15 00:30+0100\n"
-"PO-Revision-Date: 2018-02-15 18:49+0000\n"
+"PO-Revision-Date: 2019-05-15 17:49+0000\n"
 "Last-Translator: scootergrisen\n"
 "Language-Team: Danish (http://www.transifex.com/xfce/thunar-plugins/language/da/)\n"
 "MIME-Version: 1.0\n"
@@ -142,7 +142,7 @@ msgstr "<b>Spor:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:338
 msgid "Enter the track number here."
-msgstr "Angiv spornummer her."
+msgstr "Indtast spornummeret her."
 
 #: ../thunar-plugin/audio-tags-page.c:347
 msgid "<b>Year:</b>"
@@ -150,7 +150,7 @@ msgstr "<b>År:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:357
 msgid "Enter the release year here."
-msgstr "Angiv udgivelsesåret her."
+msgstr "Indtast udgivelsesåret her."
 
 #: ../thunar-plugin/audio-tags-page.c:366
 msgid "<b>Artist:</b>"
@@ -158,7 +158,7 @@ msgstr "<b>Kunstner:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:373
 msgid "Enter the name of the artist or author of this file here."
-msgstr "Angiv navnet på kunstneren eller forfatteren af denne fil her."
+msgstr "Indtast navnet på kunstneren eller forfatteren af denne fil her."
 
 #: ../thunar-plugin/audio-tags-page.c:382
 msgid "<b>Title:</b>"
@@ -166,7 +166,7 @@ msgstr "<b>Titel:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:389
 msgid "Enter the song title here."
-msgstr "Angiv sangtitel her."
+msgstr "Indtast sangtitlen her."
 
 #: ../thunar-plugin/audio-tags-page.c:397
 msgid "<b>Album:</b>"
@@ -174,7 +174,7 @@ msgstr "<b>Album:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:404
 msgid "Enter the album/record title here."
-msgstr "Angiv albummet/melodi-titel her."
+msgstr "Indtast titlen for albummet/optagelsen her."
 
 #: ../thunar-plugin/audio-tags-page.c:412
 msgid "<b>Comment:</b>"
@@ -182,7 +182,7 @@ msgstr "<b>Kommentarer:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:419
 msgid "Enter your comments here."
-msgstr "Angiv dine kommentarer her."
+msgstr "Indtast dine kommentarer her."
 
 #: ../thunar-plugin/audio-tags-page.c:427
 msgid "<b>Genre:</b>"
@@ -190,7 +190,7 @@ msgstr "<b>Genre:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:434
 msgid "Select or enter the genre of this song here."
-msgstr "Vælg eller angiv genren af denne sang her."
+msgstr "Vælg eller indtast genren af denne sang her."
 
 #: ../thunar-plugin/audio-tags-page.c:521
 msgid "Audio"
