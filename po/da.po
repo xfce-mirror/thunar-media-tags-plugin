@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-02-15 00:30+0100\n"
-"PO-Revision-Date: 2019-05-15 17:49+0000\n"
+"PO-Revision-Date: 2019-05-17 10:44+0000\n"
 "Last-Translator: scootergrisen\n"
 "Language-Team: Danish (http://www.transifex.com/xfce/thunar-plugins/language/da/)\n"
 "MIME-Version: 1.0\n"
@@ -65,13 +65,13 @@ msgstr "_Format:"
 
 #: ../thunar-plugin/tag-renamer.c:314
 msgid "_Underscores"
-msgstr "_Bundstreger"
+msgstr "_Underscores"
 
 #: ../thunar-plugin/tag-renamer.c:316
 msgid ""
 "Activating this option will replace all spaces in the target filename with "
 "underscores."
-msgstr "Aktivering af denne indstilling vil erstatte alle mellemrum i filnavne med bundstreger."
+msgstr "Aktivering af denne indstilling vil erstatte alle mellemrum i filnavnet med underscores."
 
 #: ../thunar-plugin/tag-renamer.c:321
 msgid "_Lowercase"
@@ -81,7 +81,7 @@ msgstr "_Små bogstaver"
 msgid ""
 "If you activate this, the resulting filename will only contain lowercase "
 "letters."
-msgstr "Hvis du aktiverer denne, vil filnavnet kun blive skrevet med små bogstaver."
+msgstr "Hvis du aktiverer denne, vil filnavnet kun indeholde små bogstaver."
 
 #: ../thunar-plugin/tag-renamer.c:466 ../thunar-plugin/audio-tags-page.c:183
 msgid "Unknown Artist"
@@ -94,15 +94,15 @@ msgstr "Ukendt titel"
 #. Edit tags action
 #: ../thunar-plugin/tag-renamer.c:629
 msgid "Edit _Tags"
-msgstr "Rediger _mærker"
+msgstr "Rediger _mærkater"
 
 #: ../thunar-plugin/tag-renamer.c:629
 msgid "Edit ID3/OGG tags of this file."
-msgstr "Rediger ID3/OGG-mærker af denne fil."
+msgstr "Rediger ID3-/OGG-mærkater af filen."
 
 #: ../thunar-plugin/tag-renamer.c:648
 msgid "Tag Help"
-msgstr "Markeringshjælp"
+msgstr "Hjælp til mærkater"
 
 #: ../thunar-plugin/tag-renamer.c:659
 msgid "Artist"
@@ -130,7 +130,7 @@ msgstr "Kommentar"
 
 #: ../thunar-plugin/tag-renamer.c:719
 msgid "Audio Tags"
-msgstr "Lydmærker"
+msgstr "Lydmærkater"
 
 #: ../thunar-plugin/audio-tags-page.c:196
 msgid "Unknown Album"
@@ -158,7 +158,7 @@ msgstr "<b>Kunstner:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:373
 msgid "Enter the name of the artist or author of this file here."
-msgstr "Indtast navnet på kunstneren eller forfatteren af denne fil her."
+msgstr "Indtast navnet på kunstneren eller forfatteren af filen her."
 
 #: ../thunar-plugin/audio-tags-page.c:382
 msgid "<b>Title:</b>"
@@ -174,7 +174,7 @@ msgstr "<b>Album:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:404
 msgid "Enter the album/record title here."
-msgstr "Indtast titlen for albummet/optagelsen her."
+msgstr "Indtast titlen på albummet/optagelsen her."
 
 #: ../thunar-plugin/audio-tags-page.c:412
 msgid "<b>Comment:</b>"
@@ -190,7 +190,7 @@ msgstr "<b>Genre:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:434
 msgid "Select or enter the genre of this song here."
-msgstr "Vælg eller indtast genren af denne sang her."
+msgstr "Vælg eller indtast genren af sangen her."
 
 #: ../thunar-plugin/audio-tags-page.c:521
 msgid "Audio"
@@ -199,7 +199,7 @@ msgstr "Lyd"
 #. Set up the dialog
 #: ../thunar-plugin/audio-tags-page.c:556
 msgid "Edit Tags"
-msgstr "Rediger mærker"
+msgstr "Rediger mærkater"
 
 #: ../thunar-plugin/audio-tags-page.c:559
 msgid "_Cancel"
@@ -254,7 +254,7 @@ msgstr "<b>Bithastighed:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:1062
 msgid "<b>Samplerate:</b>"
-msgstr "<b>Målefrekvens:</b>"
+msgstr "<b>Samplefrekvens:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:1075
 msgid "<b>Channels:</b>"
@@ -271,8 +271,8 @@ msgstr "_Information"
 
 #: ../thunar-plugin/audio-tags-page.c:1189
 msgid "Display more detailed information about this audio file."
-msgstr "Vis mere detaljerede informationer om denne lydfil."
+msgstr "Vis mere detaljerede information om lydfilen."
 
 #: ../thunar-plugin/audio-tags-page.c:1198
 msgid "Save audio tags."
-msgstr "Gem lydmærker."
+msgstr "Gem lydmærkater."
