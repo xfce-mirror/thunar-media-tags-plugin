@@ -5,13 +5,14 @@
 # Translators:
 # Natavan Mirzayeva <mirzayevanatavan@gmail.com>, 2015
 # Necdet Yücel <necdetyucel@gmail.com>, 2013,2018
+# Serdar Sağlam <teknomobil@msn.com>, 2019
 msgid ""
 msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-02-15 00:30+0100\n"
-"PO-Revision-Date: 2018-09-14 00:15+0000\n"
-"Last-Translator: Demiray Muhterem <mdemiray@msn.com>\n"
+"PO-Revision-Date: 2019-05-23 05:46+0000\n"
+"Last-Translator: Serdar Sağlam <teknomobil@msn.com>\n"
 "Language-Team: Turkish (http://www.transifex.com/xfce/thunar-plugins/language/tr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,31 +22,31 @@ msgstr ""
 
 #: ../thunar-plugin/tag-renamer.c:59 ../thunar-plugin/tag-renamer.c:659
 msgid "Title"
-msgstr "Şarkı Adı"
+msgstr "Başlık"
 
 #: ../thunar-plugin/tag-renamer.c:60
 msgid "Artist - Title"
-msgstr "Sanatçı - Şarkı Adı"
+msgstr "Sanatçı - Başlık"
 
 #: ../thunar-plugin/tag-renamer.c:61
 msgid "Track - Title"
-msgstr "Parça - Şarkı Adı"
+msgstr "Parça - Başlık"
 
 #: ../thunar-plugin/tag-renamer.c:62
 msgid "Track - Artist - Title"
-msgstr "Parça - Sanatçı - Şarkı Adı"
+msgstr "Parça - Sanatçı - Başlık"
 
 #: ../thunar-plugin/tag-renamer.c:63
 msgid "Track. Title"
-msgstr "Parça. Şarkı Adı"
+msgstr "Parça. Başlık"
 
 #: ../thunar-plugin/tag-renamer.c:64
 msgid "Track. Artist - Title"
-msgstr "Parça. Sanatçı - Şarkı Adı"
+msgstr "Parça. Sanatçı - Başlık"
 
 #: ../thunar-plugin/tag-renamer.c:65
 msgid "Artist - Track - Title"
-msgstr "Sanatçı - Parça - Şarkı Adı"
+msgstr "Sanatçı - Parça - Başlık"
 
 #: ../thunar-plugin/tag-renamer.c:67
 msgid "Custom"
@@ -73,7 +74,7 @@ msgstr "Bu seçeneği etkinleştirmek hedef dosyadaki tüm boşlukları alt çiz
 
 #: ../thunar-plugin/tag-renamer.c:321
 msgid "_Lowercase"
-msgstr "_Küçük Harf"
+msgstr "_Küçükharf"
 
 #: ../thunar-plugin/tag-renamer.c:323
 msgid ""
@@ -87,7 +88,7 @@ msgstr "Bilinmeyen Sanatçı"
 
 #: ../thunar-plugin/tag-renamer.c:474 ../thunar-plugin/audio-tags-page.c:209
 msgid "Unknown Title"
-msgstr "Bilinmeyen Şarkı Adı"
+msgstr "Bilinmeyen Başlık"
 
 #. Edit tags action
 #: ../thunar-plugin/tag-renamer.c:629
@@ -100,7 +101,7 @@ msgstr "Bu dosyanın ID3/OGG etiketlerini düzenle."
 
 #: ../thunar-plugin/tag-renamer.c:648
 msgid "Tag Help"
-msgstr "Sekme Yardımı"
+msgstr "Etiket Yardımı"
 
 #: ../thunar-plugin/tag-renamer.c:659
 msgid "Artist"
@@ -112,7 +113,7 @@ msgstr "Albüm"
 
 #: ../thunar-plugin/tag-renamer.c:660
 msgid "Genre"
-msgstr "Tarz"
+msgstr "Tür"
 
 #: ../thunar-plugin/tag-renamer.c:661
 msgid "Track number"
@@ -160,11 +161,11 @@ msgstr "Sanatçı adını bu alana yazabilirsiniz."
 
 #: ../thunar-plugin/audio-tags-page.c:382
 msgid "<b>Title:</b>"
-msgstr "<b>İsim:</b>"
+msgstr "<b>Başlık:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:389
 msgid "Enter the song title here."
-msgstr "Şarkı adını bu alana yazabilirsiniz."
+msgstr "Parça adını bu alana yazabilirsiniz."
 
 #: ../thunar-plugin/audio-tags-page.c:397
 msgid "<b>Album:</b>"
@@ -256,7 +257,7 @@ msgstr "<b>Örnekleme Sıklığı:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:1075
 msgid "<b>Channels:</b>"
-msgstr "<b>Kanal:</b>"
+msgstr "<b>Kanallar:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:1088
 msgid "<b>Length:</b>"
