@@ -1,0 +1,275 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# Hayk Andreasyan <hayk.andreasyan@realschool.am>, 2019
+msgid ""
+msgstr ""
+"Project-Id-Version: Thunar Plugins\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-02-15 00:30+0100\n"
+"PO-Revision-Date: 2019-06-12 11:08+0000\n"
+"Last-Translator: Hayk Andreasyan <hayk.andreasyan@realschool.am>\n"
+"Language-Team: Armenian (Armenia) (http://www.transifex.com/xfce/thunar-plugins/language/hy_AM/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: hy_AM\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../thunar-plugin/tag-renamer.c:59 ../thunar-plugin/tag-renamer.c:659
+msgid "Title"
+msgstr "Անուն"
+
+#: ../thunar-plugin/tag-renamer.c:60
+msgid "Artist - Title"
+msgstr "Կատարող ֊ Անուն"
+
+#: ../thunar-plugin/tag-renamer.c:61
+msgid "Track - Title"
+msgstr "Շաւիղ - Անուն"
+
+#: ../thunar-plugin/tag-renamer.c:62
+msgid "Track - Artist - Title"
+msgstr "Շաւիղ ֊ Կատարող ֊ Անուն"
+
+#: ../thunar-plugin/tag-renamer.c:63
+msgid "Track. Title"
+msgstr "Շաիւ․ Անուն"
+
+#: ../thunar-plugin/tag-renamer.c:64
+msgid "Track. Artist - Title"
+msgstr "Շաւիղ․ Կատարող ֊ Անուն"
+
+#: ../thunar-plugin/tag-renamer.c:65
+msgid "Artist - Track - Title"
+msgstr "Կատարող ֊ Շաւիղ ֊ Անուն"
+
+#: ../thunar-plugin/tag-renamer.c:67
+msgid "Custom"
+msgstr "Ընտրովի"
+
+#. Custom format
+#: ../thunar-plugin/tag-renamer.c:243
+msgid "Cust_om format:"
+msgstr "Ընտ_րովի ձեւաչափ․"
+
+#. Format label
+#: ../thunar-plugin/tag-renamer.c:272
+msgid "_Format:"
+msgstr "_Ձեւաչափ․"
+
+#: ../thunar-plugin/tag-renamer.c:314
+msgid "_Underscores"
+msgstr "_Ընդգծեր"
+
+#: ../thunar-plugin/tag-renamer.c:316
+msgid ""
+"Activating this option will replace all spaces in the target filename with "
+"underscores."
+msgstr "Թիրախային նշանուան բոլոր բացատները կը փոխարինուեն ընդգծերով։"
+
+#: ../thunar-plugin/tag-renamer.c:321
+msgid "_Lowercase"
+msgstr "_Փոքրատառ"
+
+#: ../thunar-plugin/tag-renamer.c:323
+msgid ""
+"If you activate this, the resulting filename will only contain lowercase "
+"letters."
+msgstr "Թիրախային նշանուան բոլոր տառերը կը լինեն փոքրատառ։"
+
+#: ../thunar-plugin/tag-renamer.c:466 ../thunar-plugin/audio-tags-page.c:183
+msgid "Unknown Artist"
+msgstr "Անյայտ կատարող"
+
+#: ../thunar-plugin/tag-renamer.c:474 ../thunar-plugin/audio-tags-page.c:209
+msgid "Unknown Title"
+msgstr "Անյայտ անուն"
+
+#. Edit tags action
+#: ../thunar-plugin/tag-renamer.c:629
+msgid "Edit _Tags"
+msgstr "Խմբագրել _պիտակները"
+
+#: ../thunar-plugin/tag-renamer.c:629
+msgid "Edit ID3/OGG tags of this file."
+msgstr "Խմբագրել նիշի ID3/OGG պիտակները "
+
+#: ../thunar-plugin/tag-renamer.c:648
+msgid "Tag Help"
+msgstr "Աջակցութիւն"
+
+#: ../thunar-plugin/tag-renamer.c:659
+msgid "Artist"
+msgstr "Կատարող"
+
+#: ../thunar-plugin/tag-renamer.c:660
+msgid "Album"
+msgstr "Հաւաքածու"
+
+#: ../thunar-plugin/tag-renamer.c:660
+msgid "Genre"
+msgstr "Ոճ"
+
+#: ../thunar-plugin/tag-renamer.c:661
+msgid "Track number"
+msgstr "Շաւիղի համար"
+
+#: ../thunar-plugin/tag-renamer.c:661
+msgid "Year"
+msgstr "Թողարկման տարի"
+
+#: ../thunar-plugin/tag-renamer.c:662
+msgid "Comment"
+msgstr "Մեկնաբանութիւն"
+
+#: ../thunar-plugin/tag-renamer.c:719
+msgid "Audio Tags"
+msgstr "Պիտակներ"
+
+#: ../thunar-plugin/audio-tags-page.c:196
+msgid "Unknown Album"
+msgstr "Անյայտ հաւաքածու"
+
+#: ../thunar-plugin/audio-tags-page.c:328
+msgid "<b>Track:</b>"
+msgstr "<b>Շաւիղ․</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:338
+msgid "Enter the track number here."
+msgstr "Մուտքագրել շաւիղի համարն այստեղ։"
+
+#: ../thunar-plugin/audio-tags-page.c:347
+msgid "<b>Year:</b>"
+msgstr "<b>Տարի․</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:357
+msgid "Enter the release year here."
+msgstr "Մուտքագրէք թողարկման ամսաթիւն այստեղ․"
+
+#: ../thunar-plugin/audio-tags-page.c:366
+msgid "<b>Artist:</b>"
+msgstr "<b>Կատարող․</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:373
+msgid "Enter the name of the artist or author of this file here."
+msgstr "Մուտքագրէք կատարողի կամ հեղինակի անունն այստեղ։"
+
+#: ../thunar-plugin/audio-tags-page.c:382
+msgid "<b>Title:</b>"
+msgstr "<b>Անուն․</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:389
+msgid "Enter the song title here."
+msgstr "Մուտքագրէք ստեղծագործութեանն անունն այստեղ։"
+
+#: ../thunar-plugin/audio-tags-page.c:397
+msgid "<b>Album:</b>"
+msgstr "<b>Հաւաքածու․</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:404
+msgid "Enter the album/record title here."
+msgstr "Մուտքագրէք հաւաքածուի/ձայնագրման անունն այստեղ։"
+
+#: ../thunar-plugin/audio-tags-page.c:412
+msgid "<b>Comment:</b>"
+msgstr "<b>Մեկնաբանութիւն․</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:419
+msgid "Enter your comments here."
+msgstr "Մուտքագրէք մեկնաբանութիւններն այստեղ։"
+
+#: ../thunar-plugin/audio-tags-page.c:427
+msgid "<b>Genre:</b>"
+msgstr "<b>Ոճ․</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:434
+msgid "Select or enter the genre of this song here."
+msgstr "Ընտրէք կամ մուտքագրէք ստեղծագործութեան ոճն այստեղ։"
+
+#: ../thunar-plugin/audio-tags-page.c:521
+msgid "Audio"
+msgstr "Ձայնագրութիւն"
+
+#. Set up the dialog
+#: ../thunar-plugin/audio-tags-page.c:556
+msgid "Edit Tags"
+msgstr "Պիտակներ"
+
+#: ../thunar-plugin/audio-tags-page.c:559
+msgid "_Cancel"
+msgstr "_Չեղարկել"
+
+#. Create save button
+#. Save button
+#: ../thunar-plugin/audio-tags-page.c:570
+#: ../thunar-plugin/audio-tags-page.c:1197
+msgid "_Save"
+msgstr "_Պահել"
+
+#. Create dialog
+#: ../thunar-plugin/audio-tags-page.c:975
+msgid "Audio Information"
+msgstr "Տեղեկոյթ"
+
+#: ../thunar-plugin/audio-tags-page.c:978
+msgid "_Close"
+msgstr "_Փակել"
+
+#: ../thunar-plugin/audio-tags-page.c:984
+#, c-format
+msgid "%d:%02d Minutes"
+msgstr "%d․%02d րոպէ"
+
+#: ../thunar-plugin/audio-tags-page.c:985
+#, c-format
+msgid "%d KBit/s"
+msgstr "%dԿԲիթ/վ"
+
+#: ../thunar-plugin/audio-tags-page.c:986
+#, c-format
+msgid "%d Hz"
+msgstr "%dՀց"
+
+#: ../thunar-plugin/audio-tags-page.c:1010
+msgid "<b>Filename:</b>"
+msgstr "<b>Նշանուն․</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:1023
+msgid "<b>Filesize:</b>"
+msgstr "<b>Չափ․</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:1036
+msgid "<b>MIME Type:</b>"
+msgstr "<b>MIME տիպ․</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:1049
+msgid "<b>Bitrate:</b>"
+msgstr "<b>Ձայնի որակ․</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:1062
+msgid "<b>Samplerate:</b>"
+msgstr "<b>Յաճախականութիւն․</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:1075
+msgid "<b>Channels:</b>"
+msgstr "<b>Ալիք․</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:1088
+msgid "<b>Length:</b>"
+msgstr "<b>Տեւողութիւն․</b>"
+
+#. Info button
+#: ../thunar-plugin/audio-tags-page.c:1188
+msgid "_Information"
+msgstr "_Տեղեկոյթ"
+
+#: ../thunar-plugin/audio-tags-page.c:1189
+msgid "Display more detailed information about this audio file."
+msgstr "Ցուցադրել աւելի մանրամասն տեղեկոյթ ձայնանիշի վերաբերեալ։"
+
+#: ../thunar-plugin/audio-tags-page.c:1198
+msgid "Save audio tags."
+msgstr "Պահել ձայնապիտակները։"
