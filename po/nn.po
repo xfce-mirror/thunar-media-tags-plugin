@@ -1,0 +1,275 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# Kevin Brubeck Unhammer <unhammer+dill@mm.st>, 2018-2019
+msgid ""
+msgstr ""
+"Project-Id-Version: Thunar Plugins\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-02-15 00:30+0100\n"
+"PO-Revision-Date: 2019-08-08 08:59+0000\n"
+"Last-Translator: Kevin Brubeck Unhammer <unhammer+dill@mm.st>\n"
+"Language-Team: Norwegian Nynorsk (http://www.transifex.com/xfce/thunar-plugins/language/nn/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: nn\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../thunar-plugin/tag-renamer.c:59 ../thunar-plugin/tag-renamer.c:659
+msgid "Title"
+msgstr "Tittel"
+
+#: ../thunar-plugin/tag-renamer.c:60
+msgid "Artist - Title"
+msgstr "Artist - Tittel"
+
+#: ../thunar-plugin/tag-renamer.c:61
+msgid "Track - Title"
+msgstr "Spor - Tittel"
+
+#: ../thunar-plugin/tag-renamer.c:62
+msgid "Track - Artist - Title"
+msgstr "Spor - Artist - Tittel"
+
+#: ../thunar-plugin/tag-renamer.c:63
+msgid "Track. Title"
+msgstr "Spor. Tittel"
+
+#: ../thunar-plugin/tag-renamer.c:64
+msgid "Track. Artist - Title"
+msgstr "Spor. Artist - Tittel"
+
+#: ../thunar-plugin/tag-renamer.c:65
+msgid "Artist - Track - Title"
+msgstr "Artist - Spor - Tittel"
+
+#: ../thunar-plugin/tag-renamer.c:67
+msgid "Custom"
+msgstr "Sjølvvald"
+
+#. Custom format
+#: ../thunar-plugin/tag-renamer.c:243
+msgid "Cust_om format:"
+msgstr "_Sjølvvald format:"
+
+#. Format label
+#: ../thunar-plugin/tag-renamer.c:272
+msgid "_Format:"
+msgstr "_Format"
+
+#: ../thunar-plugin/tag-renamer.c:314
+msgid "_Underscores"
+msgstr "_Lågstrek"
+
+#: ../thunar-plugin/tag-renamer.c:316
+msgid ""
+"Activating this option will replace all spaces in the target filename with "
+"underscores."
+msgstr ""
+
+#: ../thunar-plugin/tag-renamer.c:321
+msgid "_Lowercase"
+msgstr "_Små bokstavar"
+
+#: ../thunar-plugin/tag-renamer.c:323
+msgid ""
+"If you activate this, the resulting filename will only contain lowercase "
+"letters."
+msgstr ""
+
+#: ../thunar-plugin/tag-renamer.c:466 ../thunar-plugin/audio-tags-page.c:183
+msgid "Unknown Artist"
+msgstr "Ukjend artist"
+
+#: ../thunar-plugin/tag-renamer.c:474 ../thunar-plugin/audio-tags-page.c:209
+msgid "Unknown Title"
+msgstr "Ukjend tittel"
+
+#. Edit tags action
+#: ../thunar-plugin/tag-renamer.c:629
+msgid "Edit _Tags"
+msgstr ""
+
+#: ../thunar-plugin/tag-renamer.c:629
+msgid "Edit ID3/OGG tags of this file."
+msgstr ""
+
+#: ../thunar-plugin/tag-renamer.c:648
+msgid "Tag Help"
+msgstr ""
+
+#: ../thunar-plugin/tag-renamer.c:659
+msgid "Artist"
+msgstr "Artist"
+
+#: ../thunar-plugin/tag-renamer.c:660
+msgid "Album"
+msgstr "Album"
+
+#: ../thunar-plugin/tag-renamer.c:660
+msgid "Genre"
+msgstr "Sjanger"
+
+#: ../thunar-plugin/tag-renamer.c:661
+msgid "Track number"
+msgstr "Spornummer"
+
+#: ../thunar-plugin/tag-renamer.c:661
+msgid "Year"
+msgstr "År"
+
+#: ../thunar-plugin/tag-renamer.c:662
+msgid "Comment"
+msgstr "Kommentar"
+
+#: ../thunar-plugin/tag-renamer.c:719
+msgid "Audio Tags"
+msgstr ""
+
+#: ../thunar-plugin/audio-tags-page.c:196
+msgid "Unknown Album"
+msgstr "Ukjend album"
+
+#: ../thunar-plugin/audio-tags-page.c:328
+msgid "<b>Track:</b>"
+msgstr "<b>Spor:</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:338
+msgid "Enter the track number here."
+msgstr "Skriv inn spornummer her."
+
+#: ../thunar-plugin/audio-tags-page.c:347
+msgid "<b>Year:</b>"
+msgstr "<b>År</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:357
+msgid "Enter the release year here."
+msgstr "Skriv inn utgjevingsåret her."
+
+#: ../thunar-plugin/audio-tags-page.c:366
+msgid "<b>Artist:</b>"
+msgstr "<b>Artist:</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:373
+msgid "Enter the name of the artist or author of this file here."
+msgstr ""
+
+#: ../thunar-plugin/audio-tags-page.c:382
+msgid "<b>Title:</b>"
+msgstr "<b>Tittel:</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:389
+msgid "Enter the song title here."
+msgstr ""
+
+#: ../thunar-plugin/audio-tags-page.c:397
+msgid "<b>Album:</b>"
+msgstr "<b>Album:</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:404
+msgid "Enter the album/record title here."
+msgstr ""
+
+#: ../thunar-plugin/audio-tags-page.c:412
+msgid "<b>Comment:</b>"
+msgstr "<b>Kommentar:</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:419
+msgid "Enter your comments here."
+msgstr ""
+
+#: ../thunar-plugin/audio-tags-page.c:427
+msgid "<b>Genre:</b>"
+msgstr "<b>Sjanger:</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:434
+msgid "Select or enter the genre of this song here."
+msgstr ""
+
+#: ../thunar-plugin/audio-tags-page.c:521
+msgid "Audio"
+msgstr "Lyd"
+
+#. Set up the dialog
+#: ../thunar-plugin/audio-tags-page.c:556
+msgid "Edit Tags"
+msgstr ""
+
+#: ../thunar-plugin/audio-tags-page.c:559
+msgid "_Cancel"
+msgstr "_Avbryt"
+
+#. Create save button
+#. Save button
+#: ../thunar-plugin/audio-tags-page.c:570
+#: ../thunar-plugin/audio-tags-page.c:1197
+msgid "_Save"
+msgstr "_Lagra"
+
+#. Create dialog
+#: ../thunar-plugin/audio-tags-page.c:975
+msgid "Audio Information"
+msgstr ""
+
+#: ../thunar-plugin/audio-tags-page.c:978
+msgid "_Close"
+msgstr "L_ukk"
+
+#: ../thunar-plugin/audio-tags-page.c:984
+#, c-format
+msgid "%d:%02d Minutes"
+msgstr "%d:%02d Minutt"
+
+#: ../thunar-plugin/audio-tags-page.c:985
+#, c-format
+msgid "%d KBit/s"
+msgstr "%d KBit/s"
+
+#: ../thunar-plugin/audio-tags-page.c:986
+#, c-format
+msgid "%d Hz"
+msgstr "%d Hz"
+
+#: ../thunar-plugin/audio-tags-page.c:1010
+msgid "<b>Filename:</b>"
+msgstr "<b>Filnamn:</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:1023
+msgid "<b>Filesize:</b>"
+msgstr "<b>Filstorleik:</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:1036
+msgid "<b>MIME Type:</b>"
+msgstr "<b>MIME-type:</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:1049
+msgid "<b>Bitrate:</b>"
+msgstr "<b>Bitrate:</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:1062
+msgid "<b>Samplerate:</b>"
+msgstr ""
+
+#: ../thunar-plugin/audio-tags-page.c:1075
+msgid "<b>Channels:</b>"
+msgstr "<b>Kanalar:</b>"
+
+#: ../thunar-plugin/audio-tags-page.c:1088
+msgid "<b>Length:</b>"
+msgstr "<b>Lengd:</b>"
+
+#. Info button
+#: ../thunar-plugin/audio-tags-page.c:1188
+msgid "_Information"
+msgstr "_Informasjon"
+
+#: ../thunar-plugin/audio-tags-page.c:1189
+msgid "Display more detailed information about this audio file."
+msgstr ""
+
+#: ../thunar-plugin/audio-tags-page.c:1198
+msgid "Save audio tags."
+msgstr ""
