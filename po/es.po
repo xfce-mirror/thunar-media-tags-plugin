@@ -5,14 +5,15 @@
 # Translators:
 # Abel Martín <abel.martin.ruiz@gmail.com>, 2008
 # Jaime Marquínez Ferrándiz, 2018
-# Pablo Lezaeta Reyes [pˈaβ̞lo lˌe̞θaˈeta rˈejɛ] <prflr88@gmail.com>, 2014-2015
+# prflr88 <prflr88@gmail.com>, 2014-2015
+# Toni Estévez <toni.estevez@gmail.com>, 2019
 msgid ""
 msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-02-15 00:30+0100\n"
-"PO-Revision-Date: 2018-02-16 15:40+0000\n"
-"Last-Translator: Jaime Marquínez Ferrándiz\n"
+"PO-Revision-Date: 2019-11-09 17:01+0000\n"
+"Last-Translator: Toni Estévez <toni.estevez@gmail.com>\n"
 "Language-Team: Spanish (http://www.transifex.com/xfce/thunar-plugins/language/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -50,7 +51,7 @@ msgstr "Artista - Pista - Título"
 
 #: ../thunar-plugin/tag-renamer.c:67
 msgid "Custom"
-msgstr "Personalizado"
+msgstr "Personalizar"
 
 #. Custom format
 #: ../thunar-plugin/tag-renamer.c:243
@@ -93,11 +94,11 @@ msgstr "Título desconocido"
 #. Edit tags action
 #: ../thunar-plugin/tag-renamer.c:629
 msgid "Edit _Tags"
-msgstr "Editar _etiquetas"
+msgstr "Editar las _etiquetas"
 
 #: ../thunar-plugin/tag-renamer.c:629
 msgid "Edit ID3/OGG tags of this file."
-msgstr "Editar etiquetas ID3/OGG de este archivo."
+msgstr "Editar las etiquetas ID3/OGG de este archivo."
 
 #: ../thunar-plugin/tag-renamer.c:648
 msgid "Tag Help"
@@ -198,7 +199,7 @@ msgstr "Audio"
 #. Set up the dialog
 #: ../thunar-plugin/audio-tags-page.c:556
 msgid "Edit Tags"
-msgstr "Editar etiquetas"
+msgstr "Editar las etiquetas"
 
 #: ../thunar-plugin/audio-tags-page.c:559
 msgid "_Cancel"
@@ -223,7 +224,7 @@ msgstr "_Cerrar"
 #: ../thunar-plugin/audio-tags-page.c:984
 #, c-format
 msgid "%d:%02d Minutes"
-msgstr "%d:%02d Minutos"
+msgstr "%d:%02d minutos"
 
 #: ../thunar-plugin/audio-tags-page.c:985
 #, c-format
@@ -274,4 +275,4 @@ msgstr "Mostrar información más detallada sobre este archivo de audio."
 
 #: ../thunar-plugin/audio-tags-page.c:1198
 msgid "Save audio tags."
-msgstr "Guardar etiquetas de audio."
+msgstr "Guardar las etiquetas de audio."
