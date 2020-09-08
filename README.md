@@ -1,0 +1,53 @@
+[![License](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://gitlab.xfce.org/xfce/thunar-media-tags-plugin/COPYING)
+
+thunar-media-tags-plugin
+====================
+
+ The Thunar Media Tags Plugin (thunar-media-tags-plugin) adds special features for media files to the Thunar File Manager.
+
+Currently, these are:
+
+  * A bulk renamer option, which allows users to rename multiple audio files at once, based on their tags (e.g. ID3 or OGG/Vorbis),
+  * An audio tag editor which is reachable from the file properties page,
+  * A special media file page for the file properties dialog, which displays detailed information about quality, length, etc.
+
+----
+
+### Homepage
+
+[thunar-media-tags-plugin documentation](https://docs.xfce.org/xfce/thunar-media-tags-plugin/start)
+
+### Changelog
+
+See [NEWS](https://gitlab.xfce.org/xfce/thunar-media-tags-plugin/-/blob/master/NEWS) for details on changes and fixes made in the current release.
+
+### Source Code Repository
+
+[thunar-media-tags-plugin source code](https://gitlab.xfce.org/xfce/thunar-media-tags-plugin)
+
+### Download A Release Tarball
+
+[thunar-media-tags-plugin archive](https://archive.xfce.org/src/xfce/thunar-media-tags-plugin)
+    or
+[thunar-media-tags-plugin tags](https://gitlab.xfce.org/xfce/thunar-media-tags-plugin/-/tags)
+### Installation
+
+From source: 
+
+    % cd thunar-media-tags-plugin
+    % ./autogen.sh
+    % make
+    % make install
+
+From release tarball:
+
+    % tar xf thunar-media-tags-plugin-<version>.tar.bz2
+    % cd thunar-media-tags-plugin-<version>
+    % ./configure
+    % make
+    % make install
+
+### Reporting Bugs
+
+Visit the [reporting bugs](https://docs.xfce.org/xfce/thunar-media-tags-plugin/bugs) page to view currently open bug reports and instructions on reporting new bugs or submitting bugfixes.
+
