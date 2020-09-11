@@ -1,4 +1,4 @@
-[![License](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://gitlab.xfce.org/xfce/thunar-media-tags-plugin/COPYING)
+[![License](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://gitlab.xfce.org/thunar-plugins/thunar-media-tags-plugin/-/blob/master/COPYING)
 
 thunar-media-tags-plugin
 ====================
@@ -15,21 +15,21 @@ Currently, these are:
 
 ### Homepage
 
-[thunar-media-tags-plugin documentation](https://docs.xfce.org/xfce/thunar-media-tags-plugin/start)
+[thunar-media-tags-plugin documentation](https://docs.xfce.org/xfce/thunar/media-tags)
 
 ### Changelog
 
-See [NEWS](https://gitlab.xfce.org/xfce/thunar-media-tags-plugin/-/blob/master/NEWS) for details on changes and fixes made in the current release.
+See [NEWS](https://gitlab.xfce.org/thunar-plugins/thunar-media-tags-plugin/-/blob/master/NEWS) for details on changes and fixes made in the current release.
 
 ### Source Code Repository
 
-[thunar-media-tags-plugin source code](https://gitlab.xfce.org/xfce/thunar-media-tags-plugin)
+[thunar-media-tags-plugin source code](https://gitlab.xfce.org/thunar-plugins/thunar-media-tags-plugin)
 
 ### Download A Release Tarball
 
-[thunar-media-tags-plugin archive](https://archive.xfce.org/src/xfce/thunar-media-tags-plugin)
+[thunar-media-tags-plugin archive](https://archive.xfce.org/src/thunar-plugins/thunar-media-tags-plugin)
     or
-[thunar-media-tags-plugin tags](https://gitlab.xfce.org/xfce/thunar-media-tags-plugin/-/tags)
+[thunar-media-tags-plugin tags](https://gitlab.xfce.org/thunar-plugins/thunar-media-tags-plugin/-/tags)
 ### Installation
 
 From source: 
@@ -49,5 +49,5 @@ From release tarball:
 
 ### Reporting Bugs
 
-Visit the [reporting bugs](https://docs.xfce.org/xfce/thunar-media-tags-plugin/bugs) page to view currently open bug reports and instructions on reporting new bugs or submitting bugfixes.
+Visit the [reporting bugs](https://docs.xfce.org/xfce/thunar/thunar-media-tags-plugin/bugs) page to view currently open bug reports and instructions on reporting new bugs or submitting bugfixes.
 
