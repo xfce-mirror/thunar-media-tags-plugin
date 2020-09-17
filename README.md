@@ -15,7 +15,7 @@ Currently, these are:
 
 ### Homepage
 
-[thunar-media-tags-plugin documentation](https://docs.xfce.org/xfce/thunar/media-tags)
+[Thunar-media-tags-plugin documentation](https://docs.xfce.org/xfce/thunar/media-tags)
 
 ### Changelog
 
@@ -23,13 +23,13 @@ See [NEWS](https://gitlab.xfce.org/thunar-plugins/thunar-media-tags-plugin/-/blo
 
 ### Source Code Repository
 
-[thunar-media-tags-plugin source code](https://gitlab.xfce.org/thunar-plugins/thunar-media-tags-plugin)
+[Thunar-media-tags-plugin source code](https://gitlab.xfce.org/thunar-plugins/thunar-media-tags-plugin)
 
-### Download A Release Tarball
+### Download a Release Tarball
 
-[thunar-media-tags-plugin archive](https://archive.xfce.org/src/thunar-plugins/thunar-media-tags-plugin)
+[Thunar-media-tags-plugin archive](https://archive.xfce.org/src/thunar-plugins/thunar-media-tags-plugin)
     or
-[thunar-media-tags-plugin tags](https://gitlab.xfce.org/thunar-plugins/thunar-media-tags-plugin/-/tags)
+[Thunar-media-tags-plugin tags](https://gitlab.xfce.org/thunar-plugins/thunar-media-tags-plugin/-/tags)
 ### Installation
 
 From source: 
