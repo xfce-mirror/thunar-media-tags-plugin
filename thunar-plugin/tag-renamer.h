@@ -64,7 +64,7 @@ typedef struct _TagRenamer TagRenamer;
 GType            tag_renamer_get_type           (void) G_GNUC_CONST G_GNUC_INTERNAL;
 void             tag_renamer_register_type      (ThunarxProviderPlugin *plugin) G_GNUC_INTERNAL;
 
-TagRenamer      *tag_renamer_new                (void) G_GNUC_CONST G_GNUC_INTERNAL G_GNUC_MALLOC;
+TagRenamer      *tag_renamer_new                (void) G_GNUC_INTERNAL G_GNUC_MALLOC;
 
 TagRenamerFormat tag_renamer_get_format         (TagRenamer            *tag_renamer) G_GNUC_INTERNAL;
 void             tag_renamer_set_format         (TagRenamer            *tag_renamer,

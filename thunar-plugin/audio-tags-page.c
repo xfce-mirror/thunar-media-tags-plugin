@@ -468,6 +468,14 @@ audio_tags_page_init (AudioTagsPage *page)
 
 
 static void
+audio_tags_free (gpointer data)
+{
+  taglib_file_free ((TagLib_File *) data);
+}
+
+
+
+static void
 audio_tags_page_finalize (GObject *object)
 {
   AudioTagsPage *page = AUDIO_TAGS_PAGE (object);
@@ -489,8 +497,7 @@ audio_tags_page_finalize (GObject *object)
   audio_tags_page_set_taglib_file (page, NULL);
 
   /* Cleanup garbage */
-  g_slist_foreach (page->files_gc, (GFunc) taglib_file_free, NULL);
-  g_slist_free (page->files_gc);
+  g_slist_free_full (page->files_gc, audio_tags_free);
 
   /* Free strings */
   if (G_LIKELY (page->artist != NULL))
