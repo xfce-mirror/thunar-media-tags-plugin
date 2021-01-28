@@ -39,10 +39,10 @@ typedef struct _AudioTagsPage      AudioTagsPage;
 GType            audio_tags_page_get_type             (void) G_GNUC_CONST G_GNUC_INTERNAL;
 void             audio_tags_page_register_type        (ThunarxProviderPlugin *plugin) G_GNUC_INTERNAL;
 
-AudioTagsPage   *audio_tags_page_new                  (void) G_GNUC_CONST G_GNUC_INTERNAL G_GNUC_MALLOC;
-AudioTagsPage   *audio_tags_page_new_with_save_button (void) G_GNUC_CONST G_GNUC_INTERNAL G_GNUC_MALLOC;
+AudioTagsPage   *audio_tags_page_new                  (void) G_GNUC_INTERNAL G_GNUC_MALLOC;
+AudioTagsPage   *audio_tags_page_new_with_save_button (void) G_GNUC_INTERNAL G_GNUC_MALLOC;
 GtkWidget       *audio_tags_page_dialog_new           (GtkWindow       *window, 
-                                                       ThunarxFileInfo *file) G_GNUC_CONST G_GNUC_INTERNAL G_GNUC_MALLOC;
+                                                       ThunarxFileInfo *file) G_GNUC_INTERNAL G_GNUC_MALLOC;
 
 ThunarxFileInfo *audio_tags_page_get_file             (AudioTagsPage         *page) G_GNUC_INTERNAL;
 void             audio_tags_page_set_file             (AudioTagsPage         *page,
