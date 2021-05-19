@@ -334,7 +334,7 @@ audio_tags_page_init (AudioTagsPage *page)
 
   /* Track spin button */
   spin = gtk_spin_button_new (adjustment, 0.0, 0);
-  exo_mutual_binding_new (G_OBJECT (adjustment), "value", G_OBJECT (page), "track");
+  g_object_bind_property (G_OBJECT (adjustment), "value", G_OBJECT (page), "track", G_BINDING_BIDIRECTIONAL | G_BINDING_SYNC_CREATE);
   gtk_widget_set_tooltip_text (spin, _("Enter the track number here."));
   gtk_widget_set_halign (spin, GTK_ALIGN_START);
   gtk_grid_attach (GTK_GRID (page->grid), spin, 1, 0, 1, 1);
@@ -353,7 +353,7 @@ audio_tags_page_init (AudioTagsPage *page)
 
   /* Year spin button */
   spin = gtk_spin_button_new (adjustment, 1, 0);
-  exo_mutual_binding_new (G_OBJECT (adjustment), "value", G_OBJECT (page), "year");
+  g_object_bind_property (G_OBJECT (adjustment), "value", G_OBJECT (page), "year", G_BINDING_BIDIRECTIONAL | G_BINDING_SYNC_CREATE);
   gtk_widget_set_tooltip_text (spin, _("Enter the release year here."));
   gtk_widget_set_halign (spin, GTK_ALIGN_START);
   gtk_grid_attach (GTK_GRID (page->grid), spin, 3, 0, 1, 1);
@@ -369,7 +369,7 @@ audio_tags_page_init (AudioTagsPage *page)
 
   /* Artist entry */
   entry = gtk_entry_new ();
-  exo_mutual_binding_new (G_OBJECT (entry), "text", G_OBJECT (page), "artist");
+  g_object_bind_property (G_OBJECT (entry), "text", G_OBJECT (page), "artist", G_BINDING_BIDIRECTIONAL | G_BINDING_SYNC_CREATE);
   gtk_widget_set_tooltip_text (GTK_WIDGET (entry), _("Enter the name of the artist or author of this file here."));
   gtk_widget_set_hexpand (entry, TRUE);
   gtk_grid_attach (GTK_GRID (page->grid), entry, 1, 1, 3, 1);
@@ -385,7 +385,7 @@ audio_tags_page_init (AudioTagsPage *page)
 
   /* Title entry */
   entry = gtk_entry_new ();
-  exo_mutual_binding_new (G_OBJECT (entry), "text", G_OBJECT (page), "title");
+  g_object_bind_property (G_OBJECT (entry), "text", G_OBJECT (page), "title", G_BINDING_BIDIRECTIONAL | G_BINDING_SYNC_CREATE);
   gtk_widget_set_tooltip_text (GTK_WIDGET (entry), _("Enter the song title here."));
   gtk_widget_set_hexpand (entry, TRUE);
   gtk_grid_attach (GTK_GRID (page->grid), entry, 1, 2, 3, 1);
@@ -400,7 +400,7 @@ audio_tags_page_init (AudioTagsPage *page)
 
   /* Album entry */
   entry = gtk_entry_new ();
-  exo_mutual_binding_new (G_OBJECT (entry), "text", G_OBJECT (page), "album");
+  g_object_bind_property (G_OBJECT (entry), "text", G_OBJECT (page), "album", G_BINDING_BIDIRECTIONAL | G_BINDING_SYNC_CREATE);
   gtk_widget_set_tooltip_text (GTK_WIDGET (entry), _("Enter the album/record title here."));
   gtk_widget_set_hexpand (entry, TRUE);
   gtk_grid_attach (GTK_GRID (page->grid), entry, 1, 3, 3, 1);
@@ -415,7 +415,7 @@ audio_tags_page_init (AudioTagsPage *page)
 
   /* Comment entry */
   entry = gtk_entry_new ();
-  exo_mutual_binding_new (G_OBJECT (entry), "text", G_OBJECT (page), "comment");
+  g_object_bind_property (G_OBJECT (entry), "text", G_OBJECT (page), "comment", G_BINDING_BIDIRECTIONAL | G_BINDING_SYNC_CREATE);
   gtk_widget_set_tooltip_text (GTK_WIDGET (entry), _("Enter your comments here."));
   gtk_widget_set_hexpand (entry, TRUE);
   gtk_grid_attach (GTK_GRID (page->grid), entry, 1, 4, 3, 1);
@@ -430,7 +430,7 @@ audio_tags_page_init (AudioTagsPage *page)
 
   /* Genre combo box */
   combo = gtk_combo_box_text_new_with_entry ();
-  exo_mutual_binding_new (G_OBJECT (gtk_bin_get_child (GTK_BIN (combo))), "text", G_OBJECT (page), "genre");
+  g_object_bind_property (G_OBJECT (gtk_bin_get_child (GTK_BIN (combo))), "text", G_OBJECT (page), "genre", G_BINDING_BIDIRECTIONAL | G_BINDING_SYNC_CREATE);
   gtk_widget_set_tooltip_text (GTK_WIDGET (combo), _("Select or enter the genre of this song here."));
   gtk_grid_attach (GTK_GRID (page->grid), combo, 1, 5, 3, 1);
   gtk_widget_show (combo);
