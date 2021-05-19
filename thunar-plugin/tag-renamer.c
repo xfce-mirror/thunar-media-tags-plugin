@@ -248,7 +248,7 @@ tag_renamer_init (TagRenamer *tag_renamer)
   entry = gtk_entry_new ();
   gtk_widget_set_hexpand (entry, TRUE);
   gtk_grid_attach (GTK_GRID (grid), entry, 1, 1, 1, 1);
-  exo_mutual_binding_new (G_OBJECT (entry), "text", G_OBJECT (tag_renamer), "text");
+  g_object_bind_property (G_OBJECT (entry), "text", G_OBJECT (tag_renamer), "text", G_BINDING_BIDIRECTIONAL | G_BINDING_SYNC_CREATE);
   gtk_label_set_mnemonic_widget (GTK_LABEL (label), entry);
   gtk_widget_show (entry);
 
@@ -295,7 +295,7 @@ tag_renamer_init (TagRenamer *tag_renamer)
       gtk_list_store_set (store, &iter, COLUMN_TEXT, _(klass->values[n].value_nick), COLUMN_NUMBER, n, -1);
     }
   g_type_class_unref (klass);
-  exo_mutual_binding_new (G_OBJECT (tag_renamer), "format", G_OBJECT (combo), "active");
+  g_object_bind_property (G_OBJECT (tag_renamer), "format", G_OBJECT (combo), "active", G_BINDING_BIDIRECTIONAL | G_BINDING_SYNC_CREATE);
   gtk_widget_set_hexpand (combo, TRUE);
   gtk_grid_attach (GTK_GRID (grid), combo, 1, 0, 2, 1);
   gtk_label_set_mnemonic_widget (GTK_LABEL (label), combo);
@@ -312,14 +312,14 @@ tag_renamer_init (TagRenamer *tag_renamer)
   g_object_unref (G_OBJECT (relation));
 
   button = gtk_check_button_new_with_mnemonic (_("_Underscores"));
-  exo_mutual_binding_new (G_OBJECT (button), "active", G_OBJECT (tag_renamer), "replace-spaces");
+  g_object_bind_property (G_OBJECT (button), "active", G_OBJECT (tag_renamer), "replace-spaces", G_BINDING_BIDIRECTIONAL | G_BINDING_SYNC_CREATE);
   gtk_widget_set_tooltip_text (GTK_WIDGET (button), _("Activating this option will replace all spaces in the target filename "
         "with underscores."));
   gtk_grid_attach (GTK_GRID (grid), button, 3, 0, 1, 1);
   gtk_widget_show (button);
 
   button = gtk_check_button_new_with_mnemonic (_("_Lowercase"));
-  exo_mutual_binding_new (G_OBJECT (button), "active", G_OBJECT (tag_renamer), "lowercase");
+  g_object_bind_property (G_OBJECT (button), "active", G_OBJECT (tag_renamer), "lowercase", G_BINDING_BIDIRECTIONAL | G_BINDING_SYNC_CREATE);
   gtk_widget_set_tooltip_text (GTK_WIDGET (button), _("If you activate this, the resulting filename will only contain lowercase letters."));
   gtk_grid_attach (GTK_GRID (grid), button, 3, 1, 1, 1);
   gtk_widget_show (button);
