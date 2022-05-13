@@ -4,6 +4,8 @@
 # 
 # Translators:
 # Ápo. <apostolos.papadimitriu@gmail.com>, 2016
+# Ápo. <apostolos.papadimitriu@gmail.com>, 2016
+# ebal <ebalaskas@ebalaskas.gr>, 2009
 # Efstathios Iosifidis <iefstathios@gmail.com>, 2014,2018
 # ebal <ebalaskas@ebalaskas.gr>, 2009
 # Stavros Giannouris <stavrosg@gmail.com>, 2006,2011
@@ -12,8 +14,8 @@ msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-02-15 00:30+0100\n"
-"PO-Revision-Date: 2018-06-27 08:19+0000\n"
-"Last-Translator: Efstathios Iosifidis <iefstathios@gmail.com>\n"
+"PO-Revision-Date: 2013-07-03 18:09+0000\n"
+"Last-Translator: Stavros Giannouris <stavrosg@gmail.com>, 2006,2011\n"
 "Language-Team: Greek (http://www.transifex.com/xfce/thunar-plugins/language/el/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -51,7 +53,7 @@ msgstr "Καλλιτέχνης - Αριθμός - Τίτλος"
 
 #: ../thunar-plugin/tag-renamer.c:67
 msgid "Custom"
-msgstr "Προσαρμοσμένο"
+msgstr "Προσαρμογή"
 
 #. Custom format
 #: ../thunar-plugin/tag-renamer.c:243
@@ -71,7 +73,7 @@ msgstr "Κάτω παύ_λες"
 msgid ""
 "Activating this option will replace all spaces in the target filename with "
 "underscores."
-msgstr "Μετατρέπει όλα τα κενά διαστήματα σε κάτω παύλες στα νέα ονόματα αρχείων."
+msgstr "Μετατρέπει στα ονόματα των αρχείων, όλα τα κενά διαστήματα σε κάτω παύλες."
 
 #: ../thunar-plugin/tag-renamer.c:321
 msgid "_Lowercase"
@@ -81,7 +83,7 @@ msgstr "Πε_ζά"
 msgid ""
 "If you activate this, the resulting filename will only contain lowercase "
 "letters."
-msgstr "Μετατρέπει όλους τους χαρακτήρες στα ονόματα αρχείων σε πεζούς."
+msgstr "Μετατρέπει στα ονόματα των αρχείων, όλους τους χαρακτήρες σε πεζούς."
 
 #: ../thunar-plugin/tag-renamer.c:466 ../thunar-plugin/audio-tags-page.c:183
 msgid "Unknown Artist"
@@ -134,7 +136,7 @@ msgstr "Ετικέτες ήχου"
 
 #: ../thunar-plugin/audio-tags-page.c:196
 msgid "Unknown Album"
-msgstr "Άγνωστος δίσκος."
+msgstr "Άγνωστος δίσκος"
 
 #: ../thunar-plugin/audio-tags-page.c:328
 msgid "<b>Track:</b>"
@@ -142,7 +144,7 @@ msgstr "<b>Κομμάτι:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:338
 msgid "Enter the track number here."
-msgstr "Αριθμός κομματιού"
+msgstr "Εισάγετε εδώ τον αριθμό του κομματιού."
 
 #: ../thunar-plugin/audio-tags-page.c:347
 msgid "<b>Year:</b>"
@@ -158,7 +160,7 @@ msgstr "<b>Καλλιτέχνης:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:373
 msgid "Enter the name of the artist or author of this file here."
-msgstr "Καλλιτέχνης ή συγγραφέας των αρχείων."
+msgstr "Εισάγετε εδώ το καλλιτέχνη ή συγγραφέα του αρχείου."
 
 #: ../thunar-plugin/audio-tags-page.c:382
 msgid "<b>Title:</b>"
@@ -166,7 +168,7 @@ msgstr "<b>Τίτλος:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:389
 msgid "Enter the song title here."
-msgstr "Τίτλος τραγουδιού"
+msgstr "Εισάγετε εδώ το τίτλο του τραγουδιού."
 
 #: ../thunar-plugin/audio-tags-page.c:397
 msgid "<b>Album:</b>"
@@ -174,7 +176,7 @@ msgstr "<b>Άλμπουμ:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:404
 msgid "Enter the album/record title here."
-msgstr "Τίτλος άλμπουμ/δίσκου."
+msgstr "Εισάγετε εδώ το τίτλο του άλμπουμ/δίσκου."
 
 #: ../thunar-plugin/audio-tags-page.c:412
 msgid "<b>Comment:</b>"
@@ -190,7 +192,7 @@ msgstr "<b>Είδος:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:434
 msgid "Select or enter the genre of this song here."
-msgstr "Επιλέξτε ή εισάγετε το είδος."
+msgstr "Επιλέξτε ή εισάγετε εδώ το είδος του τραγουδιού."
 
 #: ../thunar-plugin/audio-tags-page.c:521
 msgid "Audio"
