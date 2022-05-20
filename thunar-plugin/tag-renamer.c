@@ -31,7 +31,7 @@
 
 #include <taglib/tag_c.h>
 
-#include <exo/exo.h>
+#include <libxfce4util/libxfce4util.h>
 
 #include <tag-renamer.h>
 #include <audio-tags-page.h>
@@ -786,7 +786,7 @@ tag_renamer_set_text (TagRenamer  *tag_renamer,
   g_return_if_fail (IS_TAG_RENAMER (tag_renamer));
 
   /* check if we have a new text */
-  if (G_LIKELY (!exo_str_is_equal (tag_renamer->text, text)))
+  if (G_LIKELY (g_strcmp0 (tag_renamer->text, text) != 0))
     {
       /* apply the new text */
       g_free (tag_renamer->text);
