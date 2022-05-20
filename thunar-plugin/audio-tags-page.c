@@ -31,7 +31,7 @@
 
 #include <taglib/tag_c.h>
 
-#include <exo/exo.h>
+#include <libxfce4util/libxfce4util.h>
 
 #include <audio-tags-page.h>
 
