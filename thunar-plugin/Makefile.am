@@ -4,7 +4,6 @@ AM_CPPFLAGS =								\
 	-I$(top_builddir)						\
 	-I$(top_srcdir)							\
 	-DG_LOG_DOMAIN=\"thunar-media-tags-plugin\"			\
-	-DEXO_API_SUBJECT_TO_CHANGE					\
 	-DPACKAGE_LOCALE_DIR=\"$(localedir)\"				\
 	$(PLATFORM_CPPFLAGS)
 
@@ -22,8 +21,8 @@ thunar_media_tags_plugin_la_SOURCES =					\
 	media-tags-plugin.c
 
 thunar_media_tags_plugin_la_CFLAGS =					\
-	$(EXO_CFLAGS)							\
 	$(PLATFORM_CFLAGS)						\
+	$(LIBXFCE4UTIL_CFLAGS)						\
 	$(THUNARX_CFLAGS)						\
 	$(TAGLIB_CFLAGS)						\
 	$(TAGLIBC_CFLAGS)
@@ -35,7 +34,7 @@ thunar_media_tags_plugin_la_LDFLAGS =					\
 	$(PLATFORM_LDFLAGS)
 
 thunar_media_tags_plugin_la_LIBADD =					\
-	$(EXO_LIBS)							\
+	$(LIBXFCE4UTIL_LIBS)						\
 	$(THUNARX_LIBS)							\
 	$(TAGLIB_LIBS)							\
 	$(TAGLIBC_LIBS)
