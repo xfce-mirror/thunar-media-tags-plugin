@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-15 00:30+0100\n"
+"POT-Creation-Date: 2022-11-28 14:59+0100\n"
 "PO-Revision-Date: 2013-07-03 18:09+0000\n"
 "Last-Translator: Stavros Giannouris <stavrosg@gmail.com>, 2006,2011\n"
 "Language-Team: Greek (http://www.transifex.com/xfce/thunar-plugins/language/el/)\n"
@@ -104,7 +104,7 @@ msgstr "Επεξεργασία των ετικετών ID3/OGG του αρχεί
 
 #: ../thunar-plugin/tag-renamer.c:648
 msgid "Tag Help"
-msgstr "Βοήθεια ετικετών"
+msgstr "Βοήθεια"
 
 #: ../thunar-plugin/tag-renamer.c:659
 msgid "Artist"
@@ -144,7 +144,7 @@ msgstr "<b>Κομμάτι:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:338
 msgid "Enter the track number here."
-msgstr "Εισάγετε εδώ τον αριθμό του κομματιού."
+msgstr "Εισαγωγή αριθμού του κομματιού."
 
 #: ../thunar-plugin/audio-tags-page.c:347
 msgid "<b>Year:</b>"
@@ -152,7 +152,7 @@ msgstr "<b>Έτος:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:357
 msgid "Enter the release year here."
-msgstr "Έτος κυκλοφορίας"
+msgstr "Εισαγωγή έτους κυκλοφορίας."
 
 #: ../thunar-plugin/audio-tags-page.c:366
 msgid "<b>Artist:</b>"
@@ -160,7 +160,7 @@ msgstr "<b>Καλλιτέχνης:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:373
 msgid "Enter the name of the artist or author of this file here."
-msgstr "Εισάγετε εδώ το καλλιτέχνη ή συγγραφέα του αρχείου."
+msgstr "Εισαγωγή καλλιτέχνη ή συγγραφέα του αρχείου."
 
 #: ../thunar-plugin/audio-tags-page.c:382
 msgid "<b>Title:</b>"
@@ -168,7 +168,7 @@ msgstr "<b>Τίτλος:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:389
 msgid "Enter the song title here."
-msgstr "Εισάγετε εδώ το τίτλο του τραγουδιού."
+msgstr "Εισαγωγή τίτλου του τραγουδιού."
 
 #: ../thunar-plugin/audio-tags-page.c:397
 msgid "<b>Album:</b>"
@@ -176,7 +176,7 @@ msgstr "<b>Άλμπουμ:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:404
 msgid "Enter the album/record title here."
-msgstr "Εισάγετε εδώ το τίτλο του άλμπουμ/δίσκου."
+msgstr "Εισαγωγή τίτλου του άλμπουμ/δίσκου."
 
 #: ../thunar-plugin/audio-tags-page.c:412
 msgid "<b>Comment:</b>"
@@ -184,7 +184,7 @@ msgstr "<b>Σχόλιο:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:419
 msgid "Enter your comments here."
-msgstr "Εισάγετε το σχόλιο εδώ."
+msgstr "Εισαγωγή σχολίου."
 
 #: ../thunar-plugin/audio-tags-page.c:427
 msgid "<b>Genre:</b>"
@@ -192,89 +192,89 @@ msgstr "<b>Είδος:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:434
 msgid "Select or enter the genre of this song here."
-msgstr "Επιλέξτε ή εισάγετε εδώ το είδος του τραγουδιού."
+msgstr "Επιλογή ή εισαγωγή είδους του τραγουδιού."
 
-#: ../thunar-plugin/audio-tags-page.c:521
+#: ../thunar-plugin/audio-tags-page.c:528
 msgid "Audio"
 msgstr "Ήχος"
 
 #. Set up the dialog
-#: ../thunar-plugin/audio-tags-page.c:556
+#: ../thunar-plugin/audio-tags-page.c:563
 msgid "Edit Tags"
 msgstr "Επεξεργασία ετικετών"
 
-#: ../thunar-plugin/audio-tags-page.c:559
+#: ../thunar-plugin/audio-tags-page.c:566
 msgid "_Cancel"
-msgstr "_Ακύρωση"
+msgstr "Άκ_υρο"
 
 #. Create save button
 #. Save button
-#: ../thunar-plugin/audio-tags-page.c:570
-#: ../thunar-plugin/audio-tags-page.c:1197
+#: ../thunar-plugin/audio-tags-page.c:577
+#: ../thunar-plugin/audio-tags-page.c:1204
 msgid "_Save"
 msgstr "Απο_θήκευση"
 
 #. Create dialog
-#: ../thunar-plugin/audio-tags-page.c:975
+#: ../thunar-plugin/audio-tags-page.c:982
 msgid "Audio Information"
 msgstr "Πληροφορίες ήχου"
 
-#: ../thunar-plugin/audio-tags-page.c:978
+#: ../thunar-plugin/audio-tags-page.c:985
 msgid "_Close"
 msgstr "_Κλείσιμο"
 
-#: ../thunar-plugin/audio-tags-page.c:984
+#: ../thunar-plugin/audio-tags-page.c:991
 #, c-format
 msgid "%d:%02d Minutes"
 msgstr "%d:%02d Λεπτά"
 
-#: ../thunar-plugin/audio-tags-page.c:985
+#: ../thunar-plugin/audio-tags-page.c:992
 #, c-format
 msgid "%d KBit/s"
 msgstr "%d KBit/s"
 
-#: ../thunar-plugin/audio-tags-page.c:986
+#: ../thunar-plugin/audio-tags-page.c:993
 #, c-format
 msgid "%d Hz"
 msgstr "%d Hz"
 
-#: ../thunar-plugin/audio-tags-page.c:1010
+#: ../thunar-plugin/audio-tags-page.c:1017
 msgid "<b>Filename:</b>"
 msgstr "<b>Όνομα αρχείου:</b>"
 
-#: ../thunar-plugin/audio-tags-page.c:1023
+#: ../thunar-plugin/audio-tags-page.c:1030
 msgid "<b>Filesize:</b>"
 msgstr "<b>Μέγεθος:</b>"
 
-#: ../thunar-plugin/audio-tags-page.c:1036
+#: ../thunar-plugin/audio-tags-page.c:1043
 msgid "<b>MIME Type:</b>"
 msgstr "<b>Τύπος MIME:</b>"
 
-#: ../thunar-plugin/audio-tags-page.c:1049
+#: ../thunar-plugin/audio-tags-page.c:1056
 msgid "<b>Bitrate:</b>"
 msgstr "<b>Bitrate:</b>"
 
-#: ../thunar-plugin/audio-tags-page.c:1062
+#: ../thunar-plugin/audio-tags-page.c:1069
 msgid "<b>Samplerate:</b>"
 msgstr "<b>Ρυθμός δειγματοληψίας:</b>"
 
-#: ../thunar-plugin/audio-tags-page.c:1075
+#: ../thunar-plugin/audio-tags-page.c:1082
 msgid "<b>Channels:</b>"
 msgstr "<b>Κανάλια:</b>"
 
-#: ../thunar-plugin/audio-tags-page.c:1088
+#: ../thunar-plugin/audio-tags-page.c:1095
 msgid "<b>Length:</b>"
 msgstr "<b>Διάρκεια:</b>"
 
 #. Info button
-#: ../thunar-plugin/audio-tags-page.c:1188
+#: ../thunar-plugin/audio-tags-page.c:1195
 msgid "_Information"
 msgstr "_Πληροφορίες"
 
-#: ../thunar-plugin/audio-tags-page.c:1189
+#: ../thunar-plugin/audio-tags-page.c:1196
 msgid "Display more detailed information about this audio file."
 msgstr "Εμφάνιση περισσότερων πληροφοριών για το αρχείο."
 
-#: ../thunar-plugin/audio-tags-page.c:1198
+#: ../thunar-plugin/audio-tags-page.c:1205
 msgid "Save audio tags."
 msgstr "Αποθήκευση ετικετών."
