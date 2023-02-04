@@ -35,3 +35,4 @@ missing
 mkinstalldirs
 Makefile.in.in
 POTFILES
+m4/
