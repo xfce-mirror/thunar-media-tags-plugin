@@ -1,3 +1,27 @@
+0.4.0 (2023-02-06)
+=====
+- build: Add GLib requirement
+- build: Fix autotools warnings
+- Replace libexo with libxfce4util
+- Replace ExoBinding with GBinding
+- Fix compilation warnings
+- Adds new README.md and updates
+- AM_INIT_AUTOMAKE macro with foreign option
+- A couple of autotools improvements
+- Translation Updates:
+  Albanian, Arabic, Armenian (Armenia), Asturian, Basque, Belarusian,
+  Bulgarian, Catalan, Chinese (China), Chinese (Taiwan), Croatian,
+  Czech, Danish, Dutch, Eastern Armenian, Eastern Armenian (Russia),
+  English (Australia), English (Canada), English (United Kingdom),
+  Esperanto, Estonian, Finnish, French, Galician, German, Greek,
+  Hebrew, Hungarian, Icelandic, Indonesian, Interlingue, Italian,
+  Japanese, Kabyle, Kazakh, Korean, Latvian, Lithuanian, Malay,
+  Norwegian Bokmål, Norwegian Nynorsk, Occitan (post 1500), Panjabi
+  (Punjabi), Persian (Iran), Polish, Portuguese, Portuguese (Brazil),
+  Romanian, Russian, Serbian, Slovak, Slovenian, Spanish, Swedish,
+  Thai, Turkish, Ukrainian, Urdu, Urdu (Pakistan), Uyghur, Uzbek, Uzbek
+  (Latin), Vietnamese
+
 0.3.0
 =====
 - GTK3 Port.
