@@ -7,27 +7,16 @@ dnl
 dnl ***************************
 dnl *** Version information ***
 dnl ***************************
-m4_define([tmt_version_major], [0])
-m4_define([tmt_version_minor], [4])
-m4_define([tmt_version_micro], [0])
-m4_define([tmt_version_nano],  []) dnl leave this empty to have no nano version
-m4_define([tmt_version_build], [@REVISION@])
-m4_define([tmt_version_tag],   [git])
-m4_define([tmt_version], [tmt_version_major().tmt_version_minor().tmt_version_micro()ifelse(tmt_version_nano(), [], [], [.tmt_version_nano()])ifelse(tmt_version_tag(), [git], [tmt_version_tag()-tmt_version_build()], [tmt_version_tag()])])
-
-dnl *******************************************
-dnl *** Debugging support for GIT snapshots ***
-dnl *******************************************
-m4_define([tmt_debug_default], [ifelse(tmt_version_tag(), [git], [yes], [minimum])])
+XDT_VERSION_INIT([0.4.0], [git])
 
 dnl ***************************
 dnl *** Initialize autoconf ***
 dnl ***************************
 AC_COPYRIGHT([Copyright (c) 2006-2007 Jannis Pohlmann <jannis@xfce.org>.])
-AC_INIT([thunar-media-tags-plugin], [tmt_version], [thunar-dev@xfce.org])
-AC_PREREQ([2.50])
+AC_INIT([thunar-media-tags-plugin], [xdt_version], [https://gitlab.xfce.org/thunar-plugins/thunar-media-tags-plugin])
+AC_PREREQ([2.69])
 AC_CANONICAL_TARGET()
-AC_REVISION([tmt_version_build])
+AC_REVISION([xdt_version_build])
 AC_CONFIG_MACRO_DIRS([m4])
 
 dnl ***************************
@@ -91,7 +80,7 @@ AC_SUBST([TAGLIBC_LIBS])
 dnl ***********************************
 dnl *** Check for debugging support ***
 dnl ***********************************
-XDT_FEATURE_DEBUG([tmt_debug_default])
+XDT_FEATURE_DEBUG([xdt_debug_default])
 
 dnl **************************************
 dnl *** Check for linker optimizations ***

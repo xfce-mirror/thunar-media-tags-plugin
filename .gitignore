@@ -23,13 +23,9 @@ config.log
 config.status
 config.sub
 configure
-configure.ac
 configure.in
 depcomp
 install-sh
-intltool-extract.in
-intltool-merge.in
-intltool-update.in
 libtool
 ltmain.sh
 missing
