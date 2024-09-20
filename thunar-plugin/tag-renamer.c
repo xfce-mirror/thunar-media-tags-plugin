@@ -267,6 +267,7 @@ tag_renamer_init (TagRenamer *tag_renamer)
   relation = atk_relation_new (&object, 1, ATK_RELATION_LABEL_FOR);
   atk_relation_set_add (relations, relation);
   g_object_unref (G_OBJECT (relation));
+  g_object_unref (relations);
 
   /* Format label */
   label = gtk_label_new_with_mnemonic (_("_Format:"));
@@ -310,6 +311,7 @@ tag_renamer_init (TagRenamer *tag_renamer)
   relation = atk_relation_new (&object, 1, ATK_RELATION_LABEL_FOR);
   atk_relation_set_add (relations, relation);
   g_object_unref (G_OBJECT (relation));
+  g_object_unref (relations);
 
   button = gtk_check_button_new_with_mnemonic (_("_Underscores"));
   g_object_bind_property (G_OBJECT (button), "active", G_OBJECT (tag_renamer), "replace-spaces", G_BINDING_BIDIRECTIONAL | G_BINDING_SYNC_CREATE);
