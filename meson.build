@@ -38,13 +38,13 @@ feature_cflags = []
 taglib_c = dependency('taglib_c', required: false)
 if not taglib_c.found()
   taglib_c = cc.find_library('tag_c', required: false)
-  if taglib_c.found()
-    if cc.has_header('taglib/tag_c.h')
-      feature_cflags +='-DHAVE_TAGLIBC=1'
-    else
-      taglib_c = dependency('', required: false)
-    endif
+  if not taglib_c.found() or not cc.has_header('taglib/tag_c.h')
+    taglib_c = dependency('', required: false)
   endif
+endif
+
+if taglib_c.found()
+  feature_cflags +='-DHAVE_TAGLIBC=1'
 endif
 
 extra_cflags = []
