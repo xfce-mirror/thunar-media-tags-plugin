@@ -55,10 +55,10 @@ AC_SEARCH_LIBS([bind_textdomain_codeset], [intl],
 dnl ***********************************
 dnl *** Check for required packages ***
 dnl ***********************************
-XDT_CHECK_PACKAGE([GLIB], [glib-2.0], [2.50.0])
-XDT_CHECK_PACKAGE([GTK], [gtk+-3.0], [3.22.0])
-XDT_CHECK_PACKAGE([LIBXFCE4UTIL], [libxfce4util-1.0], [4.0.0])
-XDT_CHECK_PACKAGE([THUNARX], [thunarx-3], [1.0.1])
+XDT_CHECK_PACKAGE([GLIB], [glib-2.0], [2.66.0])
+XDT_CHECK_PACKAGE([GTK], [gtk+-3.0], [3.24.0])
+XDT_CHECK_PACKAGE([LIBXFCE4UTIL], [libxfce4util-1.0], [4.18.0])
+XDT_CHECK_PACKAGE([THUNARX], [thunarx-3], [4.18.0])
 XDT_CHECK_PACKAGE([TAGLIB], [taglib], [1.4])
 
 dnl ***********************************
