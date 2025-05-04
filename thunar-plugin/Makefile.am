@@ -39,4 +39,7 @@ thunar_media_tags_plugin_la_LIBADD =					\
 	$(TAGLIB_LIBS)							\
 	$(TAGLIBC_LIBS)
 
+EXTRA_DIST =								\
+	meson.build
+
 # vi:set ts=8 sw=8 noet ai nocindent syntax=automake:
