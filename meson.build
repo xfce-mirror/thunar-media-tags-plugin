@@ -22,7 +22,7 @@ i18n = import('i18n')
 dependency_versions = {
   'glib': '>= 2.66.0',
   'gtk': '>= 3.24.0',
-  'taglib': '>=1.4',
+  'taglib': '>= 1.4',
   'xfce4': '>= 4.18.0',
 }
 
@@ -31,21 +31,11 @@ gtk = dependency('gtk+-3.0', version: dependency_versions['gtk'])
 libxfce4util = dependency('libxfce4ui-2', version: dependency_versions['xfce4'])
 thunarx = dependency('thunarx-3', version: dependency_versions['xfce4'])
 taglib = dependency('taglib', version: dependency_versions['taglib'])
+taglib_c = dependency('taglib_c', version: dependency_versions['taglib'])
 
-feature_cflags = []
-
-# check for taglib_c
-taglib_c = dependency('taglib_c', required: false)
-if not taglib_c.found()
-  taglib_c = cc.find_library('tag_c', required: false)
-  if not taglib_c.found() or not cc.has_header('taglib/tag_c.h')
-    taglib_c = dependency('', required: false)
-  endif
-endif
-
-if taglib_c.found()
-  feature_cflags +='-DHAVE_TAGLIBC=1'
-endif
+feature_cflags = [
+  '-DHAVE_TAGLIBC=1'
+]
 
 extra_cflags = []
 extra_cflags_check = [
