@@ -1,14 +1,10 @@
 project(
   'thunar-media-tags-plugin',
   'c',
-  version: '0.5.0-dev',
-  license: 'GPL-2.0-or-later',
-  meson_version: '>= 0.56.0',
-  default_options: [
-    'c_std=gnu11',
-    'buildtype=debugoptimized',
-    'warning_level=2',
-  ]
+version : '0.6.0',
+  license : 'GPL-2.0-or-later',
+  meson_version : '>= 0.56.0',
+  default_options : ['c_std=gnu11', 'buildtype=debugoptimized', 'warning_level=2']
 )
 
 project_namespace = 'thunar-plugins'
