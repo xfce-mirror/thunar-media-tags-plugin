@@ -35,17 +35,17 @@ See [NEWS](https://gitlab.xfce.org/thunar-plugins/thunar-media-tags-plugin/-/blo
 From source: 
 
     % cd thunar-media-tags-plugin
-    % ./autogen.sh
-    % make
-    % make install
+    % meson setup build
+    % meson compile -C build
+    % meson install -C build
 
 From release tarball:
 
-    % tar xf thunar-media-tags-plugin-<version>.tar.bz2
+    % tar xf thunar-media-tags-plugin-<version>.tar.xz
     % cd thunar-media-tags-plugin-<version>
-    % ./configure
-    % make
-    % make install
+    % meson setup build
+    % meson compile -C build
+    % meson install -C build
 
 ### Reporting Bugs
 
