@@ -24,7 +24,7 @@ dependency_versions = {
 
 glib = dependency('glib-2.0', version: dependency_versions['glib'])
 gtk = dependency('gtk+-3.0', version: dependency_versions['gtk'])
-libxfce4util = dependency('libxfce4ui-2', version: dependency_versions['xfce4'])
+libxfce4util = dependency('libxfce4util-1', version: dependency_versions['xfce4'])
 thunarx = dependency('thunarx-3', version: dependency_versions['xfce4'])
 taglib = dependency('taglib', version: dependency_versions['taglib'])
 taglib_c = dependency('taglib_c', version: dependency_versions['taglib'])
