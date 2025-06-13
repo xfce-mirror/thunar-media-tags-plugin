@@ -600,7 +600,7 @@ tag_renamer_process (ThunarxRenamer  *renamer,
       break;
     }
 
-  return tag_renamer_process_format (tag_renamer, file, format);;
+  return tag_renamer_process_format (tag_renamer, file, format);
 }
 
 
