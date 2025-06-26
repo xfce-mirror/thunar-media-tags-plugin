@@ -3,22 +3,23 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Andre Miranda <andre42m@gmail.com>, 2018
-# Andre Miranda <andre42m@gmail.com>, 2015
+# Andre Miranda <andre@andreldm.com>, 2018
+# Andre Miranda <andre@andreldm.com>, 2015
 # Fábio Nogueira <deb-user-ba@ubuntu.com>, 2007
+# Michael Martins, 2025
 msgid ""
 msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-15 00:30+0100\n"
-"PO-Revision-Date: 2018-05-15 21:39+0000\n"
-"Last-Translator: Michael Martins <michaelfm21@gmail.com>\n"
-"Language-Team: Portuguese (Brazil) (http://www.transifex.com/xfce/thunar-plugins/language/pt_BR/)\n"
+"POT-Creation-Date: 2023-05-30 00:46+0200\n"
+"PO-Revision-Date: 2013-07-03 18:09+0000\n"
+"Last-Translator: Michael Martins, 2025\n"
+"Language-Team: Portuguese (Brazil) (http://app.transifex.com/xfce/thunar-plugins/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: pt_BR\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: ../thunar-plugin/tag-renamer.c:59 ../thunar-plugin/tag-renamer.c:659
 msgid "Title"
@@ -70,7 +71,7 @@ msgstr "S_ublinhados"
 msgid ""
 "Activating this option will replace all spaces in the target filename with "
 "underscores."
-msgstr "Ativando esta opção serão substituídos todos os espaços por sublinhados."
+msgstr "Ativar essa opção substituirá todos os espaços no nome do arquivo de destino com sublinhados."
 
 #: ../thunar-plugin/tag-renamer.c:321
 msgid "_Lowercase"
@@ -80,7 +81,7 @@ msgstr "Minúscu_las"
 msgid ""
 "If you activate this, the resulting filename will only contain lowercase "
 "letters."
-msgstr "Se você ativar isto, o nome do arquivo resultante irá conter apenas letras minúsculas."
+msgstr "Se ativar isso, o nome do arquivo resultante conterá apenas letras minúsculas."
 
 #: ../thunar-plugin/tag-renamer.c:466 ../thunar-plugin/audio-tags-page.c:183
 msgid "Unknown Artist"
@@ -93,7 +94,7 @@ msgstr "Título desconhecido"
 #. Edit tags action
 #: ../thunar-plugin/tag-renamer.c:629
 msgid "Edit _Tags"
-msgstr "Editar e_tiqueta"
+msgstr "Editar e_tiquetas"
 
 #: ../thunar-plugin/tag-renamer.c:629
 msgid "Edit ID3/OGG tags of this file."
@@ -141,7 +142,7 @@ msgstr "<b>Faixa:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:338
 msgid "Enter the track number here."
-msgstr "Digite o número da faixa aqui."
+msgstr "Insira o número da faixa aqui."
 
 #: ../thunar-plugin/audio-tags-page.c:347
 msgid "<b>Year:</b>"
@@ -149,7 +150,7 @@ msgstr "<b>Ano:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:357
 msgid "Enter the release year here."
-msgstr "Digite o ano do lançamento aqui."
+msgstr "Insira o ano do lançamento aqui."
 
 #: ../thunar-plugin/audio-tags-page.c:366
 msgid "<b>Artist:</b>"
@@ -157,7 +158,7 @@ msgstr "<b>Artista:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:373
 msgid "Enter the name of the artist or author of this file here."
-msgstr "Digite o nome do artista ou autor deste arquivo aqui."
+msgstr "Insira o nome do artista ou autor deste arquivo aqui."
 
 #: ../thunar-plugin/audio-tags-page.c:382
 msgid "<b>Title:</b>"
@@ -165,7 +166,7 @@ msgstr "<b>Título:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:389
 msgid "Enter the song title here."
-msgstr "Digite o título da música aqui."
+msgstr "Insira o título da música aqui."
 
 #: ../thunar-plugin/audio-tags-page.c:397
 msgid "<b>Album:</b>"
@@ -173,7 +174,7 @@ msgstr "<b>Álbum:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:404
 msgid "Enter the album/record title here."
-msgstr "Digite o título do álbum/gravação aqui."
+msgstr "Insira o título do álbum/gravação aqui."
 
 #: ../thunar-plugin/audio-tags-page.c:412
 msgid "<b>Comment:</b>"
@@ -181,7 +182,7 @@ msgstr "<b>Comentário:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:419
 msgid "Enter your comments here."
-msgstr "Digite seus comentários aqui."
+msgstr "Insira seus comentários aqui."
 
 #: ../thunar-plugin/audio-tags-page.c:427
 msgid "<b>Genre:</b>"
@@ -189,89 +190,89 @@ msgstr "<b>Gênero:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:434
 msgid "Select or enter the genre of this song here."
-msgstr "Selecione ou digite o gênero da música aqui."
+msgstr "Selecione ou insira o gênero da música aqui."
 
-#: ../thunar-plugin/audio-tags-page.c:521
+#: ../thunar-plugin/audio-tags-page.c:528
 msgid "Audio"
 msgstr "Áudio"
 
 #. Set up the dialog
-#: ../thunar-plugin/audio-tags-page.c:556
+#: ../thunar-plugin/audio-tags-page.c:563
 msgid "Edit Tags"
 msgstr "Editar etiquetas"
 
-#: ../thunar-plugin/audio-tags-page.c:559
+#: ../thunar-plugin/audio-tags-page.c:566
 msgid "_Cancel"
 msgstr "_Cancelar"
 
 #. Create save button
 #. Save button
-#: ../thunar-plugin/audio-tags-page.c:570
-#: ../thunar-plugin/audio-tags-page.c:1197
+#: ../thunar-plugin/audio-tags-page.c:577
+#: ../thunar-plugin/audio-tags-page.c:1204
 msgid "_Save"
 msgstr "_Salvar"
 
 #. Create dialog
-#: ../thunar-plugin/audio-tags-page.c:975
+#: ../thunar-plugin/audio-tags-page.c:982
 msgid "Audio Information"
 msgstr "Informações sobre o áudio"
 
-#: ../thunar-plugin/audio-tags-page.c:978
+#: ../thunar-plugin/audio-tags-page.c:985
 msgid "_Close"
 msgstr "_Fechar"
 
-#: ../thunar-plugin/audio-tags-page.c:984
+#: ../thunar-plugin/audio-tags-page.c:991
 #, c-format
 msgid "%d:%02d Minutes"
-msgstr "%d:%02d Minutos"
+msgstr "%d:%02d minutos"
 
-#: ../thunar-plugin/audio-tags-page.c:985
+#: ../thunar-plugin/audio-tags-page.c:992
 #, c-format
 msgid "%d KBit/s"
 msgstr "%d KBit/s"
 
-#: ../thunar-plugin/audio-tags-page.c:986
+#: ../thunar-plugin/audio-tags-page.c:993
 #, c-format
 msgid "%d Hz"
 msgstr "%d Hz"
 
-#: ../thunar-plugin/audio-tags-page.c:1010
+#: ../thunar-plugin/audio-tags-page.c:1017
 msgid "<b>Filename:</b>"
 msgstr "<b>Nome do arquivo:</b>"
 
-#: ../thunar-plugin/audio-tags-page.c:1023
+#: ../thunar-plugin/audio-tags-page.c:1030
 msgid "<b>Filesize:</b>"
 msgstr "<b>Tamanho do arquivo:</b>"
 
-#: ../thunar-plugin/audio-tags-page.c:1036
+#: ../thunar-plugin/audio-tags-page.c:1043
 msgid "<b>MIME Type:</b>"
 msgstr "<b>Tipo MIME:</b>"
 
-#: ../thunar-plugin/audio-tags-page.c:1049
+#: ../thunar-plugin/audio-tags-page.c:1056
 msgid "<b>Bitrate:</b>"
 msgstr "<b>Taxa de bits:</b>"
 
-#: ../thunar-plugin/audio-tags-page.c:1062
+#: ../thunar-plugin/audio-tags-page.c:1069
 msgid "<b>Samplerate:</b>"
 msgstr "<b>Taxa de amostragem:</b>"
 
-#: ../thunar-plugin/audio-tags-page.c:1075
+#: ../thunar-plugin/audio-tags-page.c:1082
 msgid "<b>Channels:</b>"
 msgstr "<b>Canais:</b>"
 
-#: ../thunar-plugin/audio-tags-page.c:1088
+#: ../thunar-plugin/audio-tags-page.c:1095
 msgid "<b>Length:</b>"
 msgstr "<b>Duração:</b>"
 
 #. Info button
-#: ../thunar-plugin/audio-tags-page.c:1188
+#: ../thunar-plugin/audio-tags-page.c:1195
 msgid "_Information"
 msgstr "_Informação"
 
-#: ../thunar-plugin/audio-tags-page.c:1189
+#: ../thunar-plugin/audio-tags-page.c:1196
 msgid "Display more detailed information about this audio file."
-msgstr "Exibir mais informações detalhadas sobre este arquivo de áudio."
+msgstr "Exibir informações mais detalhadas sobre este arquivo de áudio."
 
-#: ../thunar-plugin/audio-tags-page.c:1198
+#: ../thunar-plugin/audio-tags-page.c:1205
 msgid "Save audio tags."
 msgstr "Salvar etiquetas do áudio."
