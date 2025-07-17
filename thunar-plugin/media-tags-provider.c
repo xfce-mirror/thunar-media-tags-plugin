@@ -19,10 +19,6 @@
  * MA 02111-1307 USA.
  */
 
-#ifdef HAVE_CONFIG_H
-#include <config.h>
-#endif
-
 #include <taglib/tag_c.h>
 
 #include <media-tags-provider.h>
