@@ -4,15 +4,16 @@
 # 
 # Translators:
 # Iris Ilexiris <iris.ilexiris@gmail.com>, 2018
-# Robin van der Vliet <info@robinvandervliet.nl>, 2016
+# Robin van der Vliet <info@robinvandervliet.com>, 2016
+# Warut Bunprasert <warut.b@disroot.org>, 2025
 msgid ""
 msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-15 00:30+0100\n"
-"PO-Revision-Date: 2018-02-15 13:24+0000\n"
-"Last-Translator: Iris Ilexiris <iris.ilexiris@gmail.com>\n"
-"Language-Team: Esperanto (http://www.transifex.com/xfce/thunar-plugins/language/eo/)\n"
+"POT-Creation-Date: 2023-05-30 00:46+0200\n"
+"PO-Revision-Date: 2013-07-03 18:09+0000\n"
+"Last-Translator: Warut Bunprasert <warut.b@disroot.org>, 2025\n"
+"Language-Team: Esperanto (http://app.transifex.com/xfce/thunar-plugins/language/eo/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -49,37 +50,37 @@ msgstr "Artisto - Trako - Titolo"
 
 #: ../thunar-plugin/tag-renamer.c:67
 msgid "Custom"
-msgstr ""
+msgstr "Propra"
 
 #. Custom format
 #: ../thunar-plugin/tag-renamer.c:243
 msgid "Cust_om format:"
-msgstr ""
+msgstr "Pro_pra formato"
 
 #. Format label
 #: ../thunar-plugin/tag-renamer.c:272
 msgid "_Format:"
-msgstr ""
+msgstr "_Formato"
 
 #: ../thunar-plugin/tag-renamer.c:314
 msgid "_Underscores"
-msgstr ""
+msgstr "_Substrekoj"
 
 #: ../thunar-plugin/tag-renamer.c:316
 msgid ""
 "Activating this option will replace all spaces in the target filename with "
 "underscores."
-msgstr ""
+msgstr "Aktivigi ĉi tiun opcion anstataŭigos ĉiujn spacojn en la celita dosiernomo per substrekoj."
 
 #: ../thunar-plugin/tag-renamer.c:321
 msgid "_Lowercase"
-msgstr ""
+msgstr "_Minuskligi"
 
 #: ../thunar-plugin/tag-renamer.c:323
 msgid ""
 "If you activate this, the resulting filename will only contain lowercase "
 "letters."
-msgstr ""
+msgstr "Se vi aktivigas ĉi tion, la rezulta dosiernomo nur enhavos minusklajn literojn."
 
 #: ../thunar-plugin/tag-renamer.c:466 ../thunar-plugin/audio-tags-page.c:183
 msgid "Unknown Artist"
@@ -96,7 +97,7 @@ msgstr "Redakti _etikedojn"
 
 #: ../thunar-plugin/tag-renamer.c:629
 msgid "Edit ID3/OGG tags of this file."
-msgstr ""
+msgstr "Redakti etikedojn ID3/OGG de ĉi tiu dosiero."
 
 #: ../thunar-plugin/tag-renamer.c:648
 msgid "Tag Help"
@@ -128,7 +129,7 @@ msgstr "Komento"
 
 #: ../thunar-plugin/tag-renamer.c:719
 msgid "Audio Tags"
-msgstr ""
+msgstr "Sonetikedoj"
 
 #: ../thunar-plugin/audio-tags-page.c:196
 msgid "Unknown Album"
@@ -148,7 +149,7 @@ msgstr "<b>Jaro:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:357
 msgid "Enter the release year here."
-msgstr ""
+msgstr "Skribu la eldonan jaron ĉi tie."
 
 #: ../thunar-plugin/audio-tags-page.c:366
 msgid "<b>Artist:</b>"
@@ -156,7 +157,7 @@ msgstr "<b>Artisto:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:373
 msgid "Enter the name of the artist or author of this file here."
-msgstr ""
+msgstr "Skribu la nomon de la artisto aŭ aŭtoro de ĉi tiu dosiero ĉi tie."
 
 #: ../thunar-plugin/audio-tags-page.c:382
 msgid "<b>Title:</b>"
@@ -190,87 +191,87 @@ msgstr "<b>Ĝenro:</b>"
 msgid "Select or enter the genre of this song here."
 msgstr "Elektu aŭ skribu la kantan ĝenron ĉi tie."
 
-#: ../thunar-plugin/audio-tags-page.c:521
+#: ../thunar-plugin/audio-tags-page.c:528
 msgid "Audio"
-msgstr ""
+msgstr "Sondosiero"
 
 #. Set up the dialog
-#: ../thunar-plugin/audio-tags-page.c:556
+#: ../thunar-plugin/audio-tags-page.c:563
 msgid "Edit Tags"
 msgstr "Redakti etikedojn"
 
-#: ../thunar-plugin/audio-tags-page.c:559
+#: ../thunar-plugin/audio-tags-page.c:566
 msgid "_Cancel"
 msgstr "_Nuligi"
 
 #. Create save button
 #. Save button
-#: ../thunar-plugin/audio-tags-page.c:570
-#: ../thunar-plugin/audio-tags-page.c:1197
+#: ../thunar-plugin/audio-tags-page.c:577
+#: ../thunar-plugin/audio-tags-page.c:1204
 msgid "_Save"
 msgstr "_Konservi"
 
 #. Create dialog
-#: ../thunar-plugin/audio-tags-page.c:975
+#: ../thunar-plugin/audio-tags-page.c:982
 msgid "Audio Information"
-msgstr ""
+msgstr "Informoj pri sondosiero"
 
-#: ../thunar-plugin/audio-tags-page.c:978
+#: ../thunar-plugin/audio-tags-page.c:985
 msgid "_Close"
 msgstr "_Fermi"
 
-#: ../thunar-plugin/audio-tags-page.c:984
+#: ../thunar-plugin/audio-tags-page.c:991
 #, c-format
 msgid "%d:%02d Minutes"
 msgstr "%d:%02d minutoj"
 
-#: ../thunar-plugin/audio-tags-page.c:985
+#: ../thunar-plugin/audio-tags-page.c:992
 #, c-format
 msgid "%d KBit/s"
-msgstr ""
+msgstr "%dKilobito/j"
 
-#: ../thunar-plugin/audio-tags-page.c:986
+#: ../thunar-plugin/audio-tags-page.c:993
 #, c-format
 msgid "%d Hz"
 msgstr "%d Hz"
 
-#: ../thunar-plugin/audio-tags-page.c:1010
+#: ../thunar-plugin/audio-tags-page.c:1017
 msgid "<b>Filename:</b>"
 msgstr "<b>Dosiernomo:</b>"
 
-#: ../thunar-plugin/audio-tags-page.c:1023
+#: ../thunar-plugin/audio-tags-page.c:1030
 msgid "<b>Filesize:</b>"
 msgstr "<b>Dosiergrandeco:</b>"
 
-#: ../thunar-plugin/audio-tags-page.c:1036
+#: ../thunar-plugin/audio-tags-page.c:1043
 msgid "<b>MIME Type:</b>"
 msgstr "<b>MIME-tipo:</b>"
 
-#: ../thunar-plugin/audio-tags-page.c:1049
+#: ../thunar-plugin/audio-tags-page.c:1056
 msgid "<b>Bitrate:</b>"
-msgstr ""
+msgstr "<b>Bitrapido:</b>"
 
-#: ../thunar-plugin/audio-tags-page.c:1062
+#: ../thunar-plugin/audio-tags-page.c:1069
 msgid "<b>Samplerate:</b>"
-msgstr ""
+msgstr "<b>Specimenado:</b>"
 
-#: ../thunar-plugin/audio-tags-page.c:1075
+#: ../thunar-plugin/audio-tags-page.c:1082
 msgid "<b>Channels:</b>"
 msgstr "<b>Kanaloj:</b>"
 
-#: ../thunar-plugin/audio-tags-page.c:1088
+#: ../thunar-plugin/audio-tags-page.c:1095
 msgid "<b>Length:</b>"
 msgstr "<b>Daŭro:</b>"
 
 #. Info button
-#: ../thunar-plugin/audio-tags-page.c:1188
+#: ../thunar-plugin/audio-tags-page.c:1195
 msgid "_Information"
 msgstr "_Informoj"
 
-#: ../thunar-plugin/audio-tags-page.c:1189
+#: ../thunar-plugin/audio-tags-page.c:1196
 msgid "Display more detailed information about this audio file."
-msgstr ""
+msgstr "Montru pli detalajn informojn pri ĉi tiu sondosiero."
 
-#: ../thunar-plugin/audio-tags-page.c:1198
+#: ../thunar-plugin/audio-tags-page.c:1205
 msgid "Save audio tags."
-msgstr ""
+msgstr "Konservi sonetikedojn."
