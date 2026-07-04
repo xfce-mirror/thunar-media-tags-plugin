@@ -36,7 +36,7 @@ typedef struct _AudioTagsPage      AudioTagsPage;
 #define IS_AUDIO_TAGS_PAGE_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass),  TYPE_AUDIO_TAGS_PAGE))
 #define AUDIO_TAGS_PAGE_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj),  TYPE_AUDIO_TAGS_PAGE, AudioTagsPageClass))
 
-GType            audio_tags_page_get_type             (void) G_GNUC_CONST G_GNUC_INTERNAL;
+GType            audio_tags_page_get_type             (void) G_GNUC_INTERNAL;
 void             audio_tags_page_register_type        (ThunarxProviderPlugin *plugin) G_GNUC_INTERNAL;
 
 AudioTagsPage   *audio_tags_page_new                  (void) G_GNUC_INTERNAL G_GNUC_MALLOC;

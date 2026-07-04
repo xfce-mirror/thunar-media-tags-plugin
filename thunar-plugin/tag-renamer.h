@@ -46,7 +46,7 @@ typedef enum
   TAG_RENAMER_FORMAT_CUSTOM,
 } TagRenamerFormat;
 
-GType tag_renamer_format_get_type     (void) G_GNUC_CONST G_GNUC_INTERNAL;
+GType tag_renamer_format_get_type     (void) G_GNUC_INTERNAL;
 void  tag_renamer_register_enum_types (ThunarxProviderPlugin *plugin) G_GNUC_INTERNAL;
 
 
@@ -61,7 +61,7 @@ typedef struct _TagRenamer TagRenamer;
 #define IS_TAG_RENAMER_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), TYPE_TAG_RENAMER))
 #define TAG_RENAMER_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), TYPE_TAG_RENAMER, TagRenamerClass))
 
-GType            tag_renamer_get_type           (void) G_GNUC_CONST G_GNUC_INTERNAL;
+GType            tag_renamer_get_type           (void) G_GNUC_INTERNAL;
 void             tag_renamer_register_type      (ThunarxProviderPlugin *plugin) G_GNUC_INTERNAL;
 
 TagRenamer      *tag_renamer_new                (void) G_GNUC_INTERNAL G_GNUC_MALLOC;
