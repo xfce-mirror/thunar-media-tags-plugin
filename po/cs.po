@@ -3,16 +3,16 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Michal Várady <miko.vaji@gmail.com>, 2015,2018
+# Michal Várady <miko.vaji@gmail.com>, 2015,2018,2026
 # Pavel Borecki <pavel.borecki@gmail.com>, 2019
 msgid ""
 msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-15 00:30+0100\n"
-"PO-Revision-Date: 2019-01-11 08:04+0000\n"
-"Last-Translator: Pavel Borecki <pavel.borecki@gmail.com>\n"
-"Language-Team: Czech (http://www.transifex.com/xfce/thunar-plugins/language/cs/)\n"
+"POT-Creation-Date: 2023-05-30 00:46+0200\n"
+"PO-Revision-Date: 2013-07-03 18:09+0000\n"
+"Last-Translator: Michal Várady <miko.vaji@gmail.com>, 2015,2018,2026\n"
+"Language-Team: Czech (http://app.transifex.com/xfce/thunar-plugins/language/cs/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -92,11 +92,11 @@ msgstr "Neznámý název"
 #. Edit tags action
 #: ../thunar-plugin/tag-renamer.c:629
 msgid "Edit _Tags"
-msgstr "Upravit _štítky (tag)"
+msgstr "Upravit _štítky"
 
 #: ../thunar-plugin/tag-renamer.c:629
 msgid "Edit ID3/OGG tags of this file."
-msgstr "Upraví ID3 nebo OGG štítky tohoto souboru."
+msgstr "Upraví štítky ID3/OGG tohoto souboru."
 
 #: ../thunar-plugin/tag-renamer.c:648
 msgid "Tag Help"
@@ -140,7 +140,7 @@ msgstr "<b>Stopa:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:338
 msgid "Enter the track number here."
-msgstr "Sem zadejte název stopy."
+msgstr "Sem zadejte číslo stopy."
 
 #: ../thunar-plugin/audio-tags-page.c:347
 msgid "<b>Year:</b>"
@@ -180,7 +180,7 @@ msgstr "<b>Komentář:</b>"
 
 #: ../thunar-plugin/audio-tags-page.c:419
 msgid "Enter your comments here."
-msgstr "Sem zadejte váš komentář."
+msgstr "Sem zadejte svůj komentář."
 
 #: ../thunar-plugin/audio-tags-page.c:427
 msgid "<b>Genre:</b>"
@@ -190,87 +190,87 @@ msgstr "<b>Žánr:</b>"
 msgid "Select or enter the genre of this song here."
 msgstr "Sem zadejte nebo zvolte žánr této skladby."
 
-#: ../thunar-plugin/audio-tags-page.c:521
+#: ../thunar-plugin/audio-tags-page.c:528
 msgid "Audio"
-msgstr "Nahrávka"
+msgstr "Zvuk"
 
 #. Set up the dialog
-#: ../thunar-plugin/audio-tags-page.c:556
+#: ../thunar-plugin/audio-tags-page.c:563
 msgid "Edit Tags"
 msgstr "Upravit štítky"
 
-#: ../thunar-plugin/audio-tags-page.c:559
+#: ../thunar-plugin/audio-tags-page.c:566
 msgid "_Cancel"
-msgstr "_Storno"
+msgstr "_Zrušit"
 
 #. Create save button
 #. Save button
-#: ../thunar-plugin/audio-tags-page.c:570
-#: ../thunar-plugin/audio-tags-page.c:1197
+#: ../thunar-plugin/audio-tags-page.c:577
+#: ../thunar-plugin/audio-tags-page.c:1204
 msgid "_Save"
 msgstr "_Uložit"
 
 #. Create dialog
-#: ../thunar-plugin/audio-tags-page.c:975
+#: ../thunar-plugin/audio-tags-page.c:982
 msgid "Audio Information"
 msgstr "Informace o nahrávce"
 
-#: ../thunar-plugin/audio-tags-page.c:978
+#: ../thunar-plugin/audio-tags-page.c:985
 msgid "_Close"
 msgstr "_Zavřít"
 
-#: ../thunar-plugin/audio-tags-page.c:984
+#: ../thunar-plugin/audio-tags-page.c:991
 #, c-format
 msgid "%d:%02d Minutes"
-msgstr "%d:%02d minut"
+msgstr "%d:%02d min"
 
-#: ../thunar-plugin/audio-tags-page.c:985
+#: ../thunar-plugin/audio-tags-page.c:992
 #, c-format
 msgid "%d KBit/s"
-msgstr "%d KBit/s"
+msgstr "%d kbit/s"
 
-#: ../thunar-plugin/audio-tags-page.c:986
+#: ../thunar-plugin/audio-tags-page.c:993
 #, c-format
 msgid "%d Hz"
 msgstr "%d Hz"
 
-#: ../thunar-plugin/audio-tags-page.c:1010
+#: ../thunar-plugin/audio-tags-page.c:1017
 msgid "<b>Filename:</b>"
 msgstr "<b>Název souboru:</b>"
 
-#: ../thunar-plugin/audio-tags-page.c:1023
+#: ../thunar-plugin/audio-tags-page.c:1030
 msgid "<b>Filesize:</b>"
 msgstr "<b>Velikost souboru:</b>"
 
-#: ../thunar-plugin/audio-tags-page.c:1036
+#: ../thunar-plugin/audio-tags-page.c:1043
 msgid "<b>MIME Type:</b>"
-msgstr "<b>MIME typ:</b>"
+msgstr "<b>Typ MIME:</b>"
 
-#: ../thunar-plugin/audio-tags-page.c:1049
+#: ../thunar-plugin/audio-tags-page.c:1056
 msgid "<b>Bitrate:</b>"
 msgstr "<b>Datový tok:</b>"
 
-#: ../thunar-plugin/audio-tags-page.c:1062
+#: ../thunar-plugin/audio-tags-page.c:1069
 msgid "<b>Samplerate:</b>"
 msgstr "<b>Vzorkovací frekvence:</b>"
 
-#: ../thunar-plugin/audio-tags-page.c:1075
+#: ../thunar-plugin/audio-tags-page.c:1082
 msgid "<b>Channels:</b>"
 msgstr "<b>Počet kanálů:</b>"
 
-#: ../thunar-plugin/audio-tags-page.c:1088
+#: ../thunar-plugin/audio-tags-page.c:1095
 msgid "<b>Length:</b>"
 msgstr "<b>Délka:</b>"
 
 #. Info button
-#: ../thunar-plugin/audio-tags-page.c:1188
+#: ../thunar-plugin/audio-tags-page.c:1195
 msgid "_Information"
 msgstr "_Informace"
 
-#: ../thunar-plugin/audio-tags-page.c:1189
+#: ../thunar-plugin/audio-tags-page.c:1196
 msgid "Display more detailed information about this audio file."
 msgstr "Zobrazí podrobné informace o tomto zvukovém souboru."
 
-#: ../thunar-plugin/audio-tags-page.c:1198
+#: ../thunar-plugin/audio-tags-page.c:1205
 msgid "Save audio tags."
-msgstr "Uložit štítky nahrávky."
+msgstr "Uloží štítky nahrávky."
